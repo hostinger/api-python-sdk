@@ -1,0 +1,339 @@
+# hostinger-api.VPSSnapshotsApi
+
+All URIs are relative to *https://developers.hostinger.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**create_snapshot_v1**](VPSSnapshotsApi.md#create_snapshot_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Create snapshot
+[**delete_snapshot_v1**](VPSSnapshotsApi.md#delete_snapshot_v1) | **DELETE** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Delete snapshot
+[**get_snapshot_v1**](VPSSnapshotsApi.md#get_snapshot_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Get snapshot
+[**restore_snapshot_v1**](VPSSnapshotsApi.md#restore_snapshot_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot/restore | Restore snapshot
+
+
+# **create_snapshot_v1**
+> VPSV1ActionActionResource create_snapshot_v1(virtual_machine_id)
+
+Create snapshot
+
+This endpoint creates a snapshot of a specified virtual machine. 
+A snapshot captures the state and data of the virtual machine at a specific point in time, 
+allowing users to restore the virtual machine to that state if needed. 
+This operation is useful for backup purposes, system recovery, 
+and testing changes without affecting the current state of the virtual machine.
+
+**Creating new snapshot will overwrite the existing snapshot!**
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://developers.hostinger.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = hostinger-api.Configuration(
+    host = "https://developers.hostinger.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger-api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger-api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger-api.VPSSnapshotsApi(api_client)
+    virtual_machine_id = 1268054 # int | Virtual Machine ID
+
+    try:
+        # Create snapshot
+        api_response = api_instance.create_snapshot_v1(virtual_machine_id)
+        print("The response of VPSSnapshotsApi->create_snapshot_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling VPSSnapshotsApi->create_snapshot_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **virtual_machine_id** | **int**| Virtual Machine ID | 
+
+### Return type
+
+[**VPSV1ActionActionResource**](VPSV1ActionActionResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_snapshot_v1**
+> VPSV1ActionActionResource delete_snapshot_v1(virtual_machine_id)
+
+Delete snapshot
+
+This endpoint deletes a snapshot of a specified virtual machine.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://developers.hostinger.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = hostinger-api.Configuration(
+    host = "https://developers.hostinger.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger-api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger-api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger-api.VPSSnapshotsApi(api_client)
+    virtual_machine_id = 1268054 # int | Virtual Machine ID
+
+    try:
+        # Delete snapshot
+        api_response = api_instance.delete_snapshot_v1(virtual_machine_id)
+        print("The response of VPSSnapshotsApi->delete_snapshot_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling VPSSnapshotsApi->delete_snapshot_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **virtual_machine_id** | **int**| Virtual Machine ID | 
+
+### Return type
+
+[**VPSV1ActionActionResource**](VPSV1ActionActionResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_snapshot_v1**
+> VPSV1SnapshotSnapshotResource get_snapshot_v1(virtual_machine_id)
+
+Get snapshot
+
+This endpoint retrieves a snapshot for a specified virtual machine.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger-api
+from hostinger-api.models.vpsv1_snapshot_snapshot_resource import VPSV1SnapshotSnapshotResource
+from hostinger-api.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://developers.hostinger.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = hostinger-api.Configuration(
+    host = "https://developers.hostinger.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger-api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger-api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger-api.VPSSnapshotsApi(api_client)
+    virtual_machine_id = 1268054 # int | Virtual Machine ID
+
+    try:
+        # Get snapshot
+        api_response = api_instance.get_snapshot_v1(virtual_machine_id)
+        print("The response of VPSSnapshotsApi->get_snapshot_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling VPSSnapshotsApi->get_snapshot_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **virtual_machine_id** | **int**| Virtual Machine ID | 
+
+### Return type
+
+[**VPSV1SnapshotSnapshotResource**](VPSV1SnapshotSnapshotResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **restore_snapshot_v1**
+> VPSV1ActionActionResource restore_snapshot_v1(virtual_machine_id)
+
+Restore snapshot
+
+This endpoint restores a specified virtual machine to a previous state using a snapshot. 
+Restoring from a snapshot allows users to revert the virtual machine to that state, which is useful for system recovery, undoing changes, or testing.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://developers.hostinger.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = hostinger-api.Configuration(
+    host = "https://developers.hostinger.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger-api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger-api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger-api.VPSSnapshotsApi(api_client)
+    virtual_machine_id = 1268054 # int | Virtual Machine ID
+
+    try:
+        # Restore snapshot
+        api_response = api_instance.restore_snapshot_v1(virtual_machine_id)
+        print("The response of VPSSnapshotsApi->restore_snapshot_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling VPSSnapshotsApi->restore_snapshot_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **virtual_machine_id** | **int**| Virtual Machine ID | 
+
+### Return type
+
+[**VPSV1ActionActionResource**](VPSV1ActionActionResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

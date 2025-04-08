@@ -1,4 +1,4 @@
-# hostinger-api.VPSRecoveryApi
+# hostinger_api.VPSRecoveryApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -25,15 +25,15 @@ Virtual machine will boot recovery disk image and original disk image will be mo
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.models.vpsv1_virtual_machine_recovery_start_request import VPSV1VirtualMachineRecoveryStartRequest
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.models.vpsv1_virtual_machine_recovery_start_request import VPSV1VirtualMachineRecoveryStartRequest
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -43,16 +43,16 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSRecoveryApi(api_client)
+    api_instance = hostinger_api.VPSRecoveryApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
-    vpsv1_virtual_machine_recovery_start_request = hostinger-api.VPSV1VirtualMachineRecoveryStartRequest() # VPSV1VirtualMachineRecoveryStartRequest | 
+    vpsv1_virtual_machine_recovery_start_request = hostinger_api.VPSV1VirtualMachineRecoveryStartRequest() # VPSV1VirtualMachineRecoveryStartRequest | 
 
     try:
         # Start recovery mode
@@ -110,14 +110,14 @@ If virtual machine is not in recovery mode, this operation will fail.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -127,14 +127,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSRecoveryApi(api_client)
+    api_instance = hostinger_api.VPSRecoveryApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:

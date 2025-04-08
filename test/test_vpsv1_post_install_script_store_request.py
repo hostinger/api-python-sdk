@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_post_install_script_store_request import VPSV1PostInstallScriptStoreRequest
+from hostinger_api.models.vpsv1_post_install_script_store_request import VPSV1PostInstallScriptStoreRequest
 
 class TestVPSV1PostInstallScriptStoreRequest(unittest.TestCase):
     """VPSV1PostInstallScriptStoreRequest unit test stubs"""

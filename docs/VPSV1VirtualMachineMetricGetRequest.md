@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger-api.models.vpsv1_virtual_machine_metric_get_request import VPSV1VirtualMachineMetricGetRequest
+from hostinger_api.models.vpsv1_virtual_machine_metric_get_request import VPSV1VirtualMachineMetricGetRequest
 
 # TODO update the JSON string below
 json = "{}"

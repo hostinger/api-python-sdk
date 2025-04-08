@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.api.vps_data_centers_api import VPSDataCentersApi
+from hostinger_api.api.vps_data_centers_api import VPSDataCentersApi
 
 
 class TestVPSDataCentersApi(unittest.TestCase):

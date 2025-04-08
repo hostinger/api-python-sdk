@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_firewall_store_request import VPSV1FirewallStoreRequest
+from hostinger_api.models.vpsv1_firewall_store_request import VPSV1FirewallStoreRequest
 
 class TestVPSV1FirewallStoreRequest(unittest.TestCase):
     """VPSV1FirewallStoreRequest unit test stubs"""

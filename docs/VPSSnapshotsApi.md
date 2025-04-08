@@ -1,4 +1,4 @@
-# hostinger-api.VPSSnapshotsApi
+# hostinger_api.VPSSnapshotsApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -28,14 +28,14 @@ and testing changes without affecting the current state of the virtual machine.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -45,14 +45,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSSnapshotsApi(api_client)
+    api_instance = hostinger_api.VPSSnapshotsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:
@@ -108,14 +108,14 @@ This endpoint deletes a snapshot of a specified virtual machine.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -125,14 +125,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSSnapshotsApi(api_client)
+    api_instance = hostinger_api.VPSSnapshotsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:
@@ -188,14 +188,14 @@ This endpoint retrieves a snapshot for a specified virtual machine.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_snapshot_snapshot_resource import VPSV1SnapshotSnapshotResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_snapshot_snapshot_resource import VPSV1SnapshotSnapshotResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -205,14 +205,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSSnapshotsApi(api_client)
+    api_instance = hostinger_api.VPSSnapshotsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:
@@ -269,14 +269,14 @@ Restoring from a snapshot allows users to revert the virtual machine to that sta
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -286,14 +286,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSSnapshotsApi(api_client)
+    api_instance = hostinger_api.VPSSnapshotsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:

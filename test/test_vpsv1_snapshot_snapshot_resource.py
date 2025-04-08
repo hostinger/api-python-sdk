@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_snapshot_snapshot_resource import VPSV1SnapshotSnapshotResource
+from hostinger_api.models.vpsv1_snapshot_snapshot_resource import VPSV1SnapshotSnapshotResource
 
 class TestVPSV1SnapshotSnapshotResource(unittest.TestCase):
     """VPSV1SnapshotSnapshotResource unit test stubs"""

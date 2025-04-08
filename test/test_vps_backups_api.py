@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.api.vps_backups_api import VPSBackupsApi
+from hostinger_api.api.vps_backups_api import VPSBackupsApi
 
 
 class TestVPSBackupsApi(unittest.TestCase):

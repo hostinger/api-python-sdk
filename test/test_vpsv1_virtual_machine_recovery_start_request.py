@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_virtual_machine_recovery_start_request import VPSV1VirtualMachineRecoveryStartRequest
+from hostinger_api.models.vpsv1_virtual_machine_recovery_start_request import VPSV1VirtualMachineRecoveryStartRequest
 
 class TestVPSV1VirtualMachineRecoveryStartRequest(unittest.TestCase):
     """VPSV1VirtualMachineRecoveryStartRequest unit test stubs"""

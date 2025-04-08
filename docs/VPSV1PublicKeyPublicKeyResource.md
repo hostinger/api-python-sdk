@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger-api.models.vpsv1_public_key_public_key_resource import VPSV1PublicKeyPublicKeyResource
+from hostinger_api.models.vpsv1_public_key_public_key_resource import VPSV1PublicKeyPublicKeyResource
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.billing_v1_order_order_resource import BillingV1OrderOrderResource
+from hostinger_api.models.billing_v1_order_order_resource import BillingV1OrderOrderResource
 
 class TestBillingV1OrderOrderResource(unittest.TestCase):
     """BillingV1OrderOrderResource unit test stubs"""
@@ -39,7 +39,7 @@ class TestBillingV1OrderOrderResource(unittest.TestCase):
                 currency = 'USD',
                 subtotal = 899,
                 total = 1088,
-                billing_address = hostinger-api.models.billing/v1/order/order_billing_address_resource.Billing.V1.Order.OrderBillingAddressResource(
+                billing_address = hostinger_api.models.billing/v1/order/order_billing_address_resource.Billing.V1.Order.OrderBillingAddressResource(
                     first_name = 'John', 
                     last_name = 'Doe', 
                     company = '', 

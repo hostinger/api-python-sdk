@@ -1,4 +1,4 @@
-# hostinger-api.VPSPublicKeysApi
+# hostinger_api.VPSPublicKeysApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -24,15 +24,15 @@ Multiple keys can be attached to a single virtual machine.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.models.vpsv1_public_key_attach_request import VPSV1PublicKeyAttachRequest
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.models.vpsv1_public_key_attach_request import VPSV1PublicKeyAttachRequest
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -42,16 +42,16 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSPublicKeysApi(api_client)
+    api_instance = hostinger_api.VPSPublicKeysApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
-    vpsv1_public_key_attach_request = hostinger-api.VPSV1PublicKeyAttachRequest() # VPSV1PublicKeyAttachRequest | 
+    vpsv1_public_key_attach_request = hostinger_api.VPSV1PublicKeyAttachRequest() # VPSV1PublicKeyAttachRequest | 
 
     try:
         # Attach public key
@@ -109,15 +109,15 @@ which can then be attached to virtual machine instances for secure access.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_public_key_public_key_resource import VPSV1PublicKeyPublicKeyResource
-from hostinger-api.models.vpsv1_public_key_store_request import VPSV1PublicKeyStoreRequest
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_public_key_public_key_resource import VPSV1PublicKeyPublicKeyResource
+from hostinger_api.models.vpsv1_public_key_store_request import VPSV1PublicKeyStoreRequest
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -127,15 +127,15 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSPublicKeysApi(api_client)
-    vpsv1_public_key_store_request = hostinger-api.VPSV1PublicKeyStoreRequest() # VPSV1PublicKeyStoreRequest | 
+    api_instance = hostinger_api.VPSPublicKeysApi(api_client)
+    vpsv1_public_key_store_request = hostinger_api.VPSV1PublicKeyStoreRequest() # VPSV1PublicKeyStoreRequest | 
 
     try:
         # Create new public key
@@ -193,14 +193,14 @@ This endpoint deletes a public key from your account.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -210,14 +210,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSPublicKeysApi(api_client)
+    api_instance = hostinger_api.VPSPublicKeysApi(api_client)
     public_key_id = 6672861 # int | Public Key ID
 
     try:
@@ -273,14 +273,14 @@ This endpoint retrieves a list of public keys associated with your account.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vps_get_public_key_list_v1200_response import VPSGetPublicKeyListV1200Response
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vps_get_public_key_list_v1200_response import VPSGetPublicKeyListV1200Response
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -290,14 +290,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSPublicKeysApi(api_client)
+    api_instance = hostinger_api.VPSPublicKeysApi(api_client)
     page = 1 # int | Page number (optional)
 
     try:

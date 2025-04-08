@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.domains_v1_domain_domain_resource import DomainsV1DomainDomainResource
+from hostinger_api.models.domains_v1_domain_domain_resource import DomainsV1DomainDomainResource
 
 class TestDomainsV1DomainDomainResource(unittest.TestCase):
     """DomainsV1DomainDomainResource unit test stubs"""

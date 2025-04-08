@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_virtual_machine_panel_password_update_request import VPSV1VirtualMachinePanelPasswordUpdateRequest
+from hostinger_api.models.vpsv1_virtual_machine_panel_password_update_request import VPSV1VirtualMachinePanelPasswordUpdateRequest
 
 class TestVPSV1VirtualMachinePanelPasswordUpdateRequest(unittest.TestCase):
     """VPSV1VirtualMachinePanelPasswordUpdateRequest unit test stubs"""

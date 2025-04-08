@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.billing_v1_order_store_request import BillingV1OrderStoreRequest
+from hostinger_api.models.billing_v1_order_store_request import BillingV1OrderStoreRequest
 
 class TestBillingV1OrderStoreRequest(unittest.TestCase):
     """BillingV1OrderStoreRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestBillingV1OrderStoreRequest(unittest.TestCase):
             return BillingV1OrderStoreRequest(
                 payment_method_id = 517244,
                 items = [
-                    hostinger-api.models.billing_v1_order_store_request_items_inner.Billing_V1_Order_StoreRequest_items_inner(
+                    hostinger_api.models.billing_v1_order_store_request_items_inner.Billing_V1_Order_StoreRequest_items_inner(
                         item_id = 'hostingercom-vps-kvm2-usd-1m', 
                         quantity = 1, )
                     ],
@@ -47,7 +47,7 @@ class TestBillingV1OrderStoreRequest(unittest.TestCase):
             return BillingV1OrderStoreRequest(
                 payment_method_id = 517244,
                 items = [
-                    hostinger-api.models.billing_v1_order_store_request_items_inner.Billing_V1_Order_StoreRequest_items_inner(
+                    hostinger_api.models.billing_v1_order_store_request_items_inner.Billing_V1_Order_StoreRequest_items_inner(
                         item_id = 'hostingercom-vps-kvm2-usd-1m', 
                         quantity = 1, )
                     ],

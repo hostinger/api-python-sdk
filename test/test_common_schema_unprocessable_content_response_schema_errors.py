@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.common_schema_unprocessable_content_response_schema_errors import CommonSchemaUnprocessableContentResponseSchemaErrors
+from hostinger_api.models.common_schema_unprocessable_content_response_schema_errors import CommonSchemaUnprocessableContentResponseSchemaErrors
 
 class TestCommonSchemaUnprocessableContentResponseSchemaErrors(unittest.TestCase):
     """CommonSchemaUnprocessableContentResponseSchemaErrors unit test stubs"""

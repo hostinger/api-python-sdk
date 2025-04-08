@@ -1,4 +1,4 @@
-# hostinger-api.VPSPTRRecordsApi
+# hostinger_api.VPSPTRRecordsApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -20,14 +20,14 @@ This endpoint creates or updates a PTR (Pointer) record for a specified virtual 
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -37,14 +37,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSPTRRecordsApi(api_client)
+    api_instance = hostinger_api.VPSPTRRecordsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:
@@ -102,14 +102,14 @@ Once deleted, reverse DNS lookups to the virtual machine's IP address will no lo
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -119,14 +119,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSPTRRecordsApi(api_client)
+    api_instance = hostinger_api.VPSPTRRecordsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:

@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.common_schema_unprocessable_content_response_schema import CommonSchemaUnprocessableContentResponseSchema
+from hostinger_api.models.common_schema_unprocessable_content_response_schema import CommonSchemaUnprocessableContentResponseSchema
 
 class TestCommonSchemaUnprocessableContentResponseSchema(unittest.TestCase):
     """CommonSchemaUnprocessableContentResponseSchema unit test stubs"""
@@ -34,7 +34,7 @@ class TestCommonSchemaUnprocessableContentResponseSchema(unittest.TestCase):
         if include_optional:
             return CommonSchemaUnprocessableContentResponseSchema(
                 message = 'The name field is required. (and 1 more error)',
-                errors = hostinger-api.models.common_schema_unprocessable_content_response_schema_errors.Common_Schema_UnprocessableContentResponseSchema_errors(
+                errors = hostinger_api.models.common_schema_unprocessable_content_response_schema_errors.Common_Schema_UnprocessableContentResponseSchema_errors(
                     field_1 = ["The field_1 field is required.","The field_1 must be a number."], 
                     field_2 = ["The field_2 field is required.","The field_2 must be a string."], ),
                 correlation_id = '26a91bd9-f8c8-4a83-9df9-83e23d696fe3'

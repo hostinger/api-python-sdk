@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vps_get_action_list_v1200_response import VPSGetActionListV1200Response
+from hostinger_api.models.vps_get_action_list_v1200_response import VPSGetActionListV1200Response
 
 class TestVPSGetActionListV1200Response(unittest.TestCase):
     """VPSGetActionListV1200Response unit test stubs"""
@@ -34,14 +34,14 @@ class TestVPSGetActionListV1200Response(unittest.TestCase):
         if include_optional:
             return VPSGetActionListV1200Response(
                 data = [
-                    hostinger-api.models.vps/v1/action/action_resource.VPS.V1.Action.ActionResource(
+                    hostinger_api.models.vps/v1/action/action_resource.VPS.V1.Action.ActionResource(
                         id = 8123712, 
                         name = 'action_name', 
                         state = 'success', 
                         created_at = '2025-02-27T11:54Z', 
                         updated_at = '2025-02-27T11:58Z', )
                     ],
-                meta = hostinger-api.models.vps_get_firewall_list_v1_200_response_meta.VPS_getFirewallListV1_200_response_meta(
+                meta = hostinger_api.models.vps_get_firewall_list_v1_200_response_meta.VPS_getFirewallListV1_200_response_meta(
                     current_page = 1, 
                     per_page = 15, 
                     total = 100, )

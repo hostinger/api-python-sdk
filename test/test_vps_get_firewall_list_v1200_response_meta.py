@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vps_get_firewall_list_v1200_response_meta import VPSGetFirewallListV1200ResponseMeta
+from hostinger_api.models.vps_get_firewall_list_v1200_response_meta import VPSGetFirewallListV1200ResponseMeta
 
 class TestVPSGetFirewallListV1200ResponseMeta(unittest.TestCase):
     """VPSGetFirewallListV1200ResponseMeta unit test stubs"""

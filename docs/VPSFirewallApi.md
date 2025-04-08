@@ -1,4 +1,4 @@
-# hostinger-api.VPSFirewallApi
+# hostinger_api.VPSFirewallApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -30,14 +30,14 @@ Only one firewall can be active for a virtual machine at a time.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -47,14 +47,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
     firewall_id = 9449049 # int | Firewall ID
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
@@ -116,15 +116,15 @@ Any virtual machine that has this firewall activated will loose sync with the fi
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_firewall_firewall_rule_resource import VPSV1FirewallFirewallRuleResource
-from hostinger-api.models.vpsv1_firewall_rules_store_request import VPSV1FirewallRulesStoreRequest
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_firewall_firewall_rule_resource import VPSV1FirewallFirewallRuleResource
+from hostinger_api.models.vpsv1_firewall_rules_store_request import VPSV1FirewallRulesStoreRequest
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -134,16 +134,16 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
     firewall_id = 9449049 # int | Firewall ID
-    vpsv1_firewall_rules_store_request = hostinger-api.VPSV1FirewallRulesStoreRequest() # VPSV1FirewallRulesStoreRequest | 
+    vpsv1_firewall_rules_store_request = hostinger_api.VPSV1FirewallRulesStoreRequest() # VPSV1FirewallRulesStoreRequest | 
 
     try:
         # Create firewall rule
@@ -200,15 +200,15 @@ This endpoint creates a new firewall.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_firewall_firewall_resource import VPSV1FirewallFirewallResource
-from hostinger-api.models.vpsv1_firewall_store_request import VPSV1FirewallStoreRequest
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_firewall_firewall_resource import VPSV1FirewallFirewallResource
+from hostinger_api.models.vpsv1_firewall_store_request import VPSV1FirewallStoreRequest
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -218,15 +218,15 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
-    vpsv1_firewall_store_request = hostinger-api.VPSV1FirewallStoreRequest() # VPSV1FirewallStoreRequest | 
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
+    vpsv1_firewall_store_request = hostinger_api.VPSV1FirewallStoreRequest() # VPSV1FirewallStoreRequest | 
 
     try:
         # Create new firewall
@@ -282,14 +282,14 @@ This endpoint deactivates a firewall for a specified virtual machine.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -299,14 +299,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
     firewall_id = 9449049 # int | Firewall ID
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
@@ -367,14 +367,14 @@ Any virtual machine that has this firewall activated will loose sync with the fi
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -384,14 +384,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
     firewall_id = 9449049 # int | Firewall ID
     rule_id = 8941182 # int | Firewall Rule ID
 
@@ -451,14 +451,14 @@ Any virtual machine that has this firewall activated will automatically have it 
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -468,14 +468,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
     firewall_id = 9449049 # int | Firewall ID
 
     try:
@@ -531,14 +531,14 @@ This endpoint retrieves a list of all firewalls available.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vps_get_firewall_list_v1200_response import VPSGetFirewallListV1200Response
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vps_get_firewall_list_v1200_response import VPSGetFirewallListV1200Response
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -548,14 +548,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
     page = 1 # int | Page number (optional)
 
     try:
@@ -611,14 +611,14 @@ This endpoint retrieves firewall by its ID and rules associated with it.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_firewall_firewall_resource import VPSV1FirewallFirewallResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_firewall_firewall_resource import VPSV1FirewallFirewallResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -628,14 +628,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
     firewall_id = 9449049 # int | Firewall ID
 
     try:
@@ -693,14 +693,14 @@ Firewall can loose sync with virtual machine if the firewall has new rules added
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -710,14 +710,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
     firewall_id = 9449049 # int | Firewall ID
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
@@ -778,15 +778,15 @@ Any virtual machine that has this firewall activated will loose sync with the fi
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_firewall_firewall_rule_resource import VPSV1FirewallFirewallRuleResource
-from hostinger-api.models.vpsv1_firewall_rules_store_request import VPSV1FirewallRulesStoreRequest
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_firewall_firewall_rule_resource import VPSV1FirewallFirewallRuleResource
+from hostinger_api.models.vpsv1_firewall_rules_store_request import VPSV1FirewallRulesStoreRequest
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -796,17 +796,17 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSFirewallApi(api_client)
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
     firewall_id = 9449049 # int | Firewall ID
     rule_id = 8941182 # int | Firewall Rule ID
-    vpsv1_firewall_rules_store_request = hostinger-api.VPSV1FirewallRulesStoreRequest() # VPSV1FirewallRulesStoreRequest | 
+    vpsv1_firewall_rules_store_request = hostinger_api.VPSV1FirewallRulesStoreRequest() # VPSV1FirewallRulesStoreRequest | 
 
     try:
         # Update firewall rule

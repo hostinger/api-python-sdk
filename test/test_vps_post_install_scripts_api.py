@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.api.vps_post_install_scripts_api import VPSPostInstallScriptsApi
+from hostinger_api.api.vps_post_install_scripts_api import VPSPostInstallScriptsApi
 
 
 class TestVPSPostInstallScriptsApi(unittest.TestCase):

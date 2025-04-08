@@ -1,4 +1,4 @@
-# PROJECKT_NAME
+# Hostinger API Python SDK
 > [!caution]
 > Currently, this API is in beta stage, meaning that breaking changes, while unlikely, might be introduced.
 > If you encounter any issues or have any feedback, please create an issue on the [Github Repository](https://github.com/hostinger/api/issues).
@@ -59,7 +59,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import hostinger-api
+import hostinger_api
 ```
 
 ### Setuptools
@@ -73,7 +73,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import hostinger-api
+import hostinger_api
 ```
 
 ### Tests
@@ -86,13 +86,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 
-import hostinger-api
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -102,15 +102,15 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.BillingCatalogApi(api_client)
+    api_instance = hostinger_api.BillingCatalogApi(api_client)
 
     try:
         # Get catalog item list

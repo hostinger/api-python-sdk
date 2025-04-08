@@ -1,4 +1,4 @@
-# hostinger-api.BillingPaymentMethodsApi
+# hostinger_api.BillingPaymentMethodsApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -21,14 +21,14 @@ This endpoint deletes a payment method from your account.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -38,14 +38,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.BillingPaymentMethodsApi(api_client)
+    api_instance = hostinger_api.BillingPaymentMethodsApi(api_client)
     payment_method_id = 9693613 # int | Payment method ID
 
     try:
@@ -103,14 +103,14 @@ If you want to add new payment method, please use [hPanel](https://hpanel.hostin
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.billing_v1_payment_method_payment_method_resource import BillingV1PaymentMethodPaymentMethodResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.billing_v1_payment_method_payment_method_resource import BillingV1PaymentMethodPaymentMethodResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -120,14 +120,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.BillingPaymentMethodsApi(api_client)
+    api_instance = hostinger_api.BillingPaymentMethodsApi(api_client)
 
     try:
         # Get payment method list
@@ -179,14 +179,14 @@ This endpoint sets default payment method for your account.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://developers.hostinger.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     host = "https://developers.hostinger.com"
 )
 
@@ -196,14 +196,14 @@ configuration = hostinger-api.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.BillingPaymentMethodsApi(api_client)
+    api_instance = hostinger_api.BillingPaymentMethodsApi(api_client)
     payment_method_id = 9693613 # int | Payment method ID
 
     try:

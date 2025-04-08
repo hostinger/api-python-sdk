@@ -243,19 +243,3 @@ Class | Method | HTTP request | Description
  - [VPSV1VirtualMachineVirtualMachineResourceTemplate](docs/VPSV1VirtualMachineVirtualMachineResourceTemplate.md)
 
 
-<a id="documentation-for-authorization"></a>
-## Documentation For Authorization
-
-
-Authentication schemes defined for the API:
-<a id="apiToken"></a>
-### apiToken
-
-- **Type**: Bearer authentication
-
-
-## Author
-
-
-
-

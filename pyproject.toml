@@ -5,7 +5,7 @@ description = "Hostinger API"
 authors = ["Hostinger <team@openapitools.org>"]
 license = "NoLicense"
 readme = "README.md"
-repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+repository = "https://github.com/hostinger/api-php-sdk"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Hostinger API"]
 include = ["hostinger_api/py.typed"]
 

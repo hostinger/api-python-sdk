@@ -37,12 +37,6 @@ If you have any questions, feedback or feature requests, please create an [issue
 
 For any support take a look at our [Github Repository](https://github.com/hostinger/api/), dedicated to the Hostinger API.
 
-- API version: 0.0.1-beta
-- Package version: 1.0.0
-- Generator version: 7.12.0
-- Build package: org.openapitools.codegen.languages.PythonClientCodegen
-For more information, please visit [https://www.hostinger.com](https://www.hostinger.com)
-
 ## Requirements.
 
 Python 3.8+
@@ -53,9 +47,9 @@ Python 3.8+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/hostinger/api-php-sdk.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/hostinger/api-php-sdk.git`)
 
 Then import the package:
 ```python

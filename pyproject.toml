@@ -2,11 +2,11 @@
 name = "hostinger_api"
 version = "1.0.0"
 description = "Hostinger API"
-authors = ["Hostinger <team@openapitools.org>"]
+authors = ["Hostinger <devs@hostinger.com>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/hostinger/api-php-sdk"
-keywords = ["OpenAPI", "OpenAPI-Generator", "Hostinger API"]
+repository = "https://github.com/hostinger/api-python-sdk"
+keywords = ["hostinger", "openapi", "python", "sdk", "rest", "api"]
 include = ["hostinger_api/py.typed"]
 
 [tool.poetry.dependencies]

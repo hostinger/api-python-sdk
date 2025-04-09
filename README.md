@@ -47,9 +47,9 @@ Python 3.8+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/hostinger/api-php-sdk.git
+pip install git+https://github.com/hostinger/api-python-sdk.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/hostinger/api-php-sdk.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/hostinger/api-python-sdk.git`)
 
 Then import the package:
 ```python

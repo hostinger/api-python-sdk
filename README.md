@@ -47,9 +47,9 @@ Python 3.8+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install hostinger_api
+pip install hostinger-api
 ```
-(you may need to run `pip` with root permission: `sudo pip install hostinger_api`)
+(you may need to run `pip` with root permission: `sudo pip install hostinger-api`)
 
 Then import the package:
 ```python

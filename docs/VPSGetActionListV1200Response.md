@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**List[VPSV1ActionActionResource]**](VPSV1ActionActionResource.md) | Array of [&#x60;VPS.V1.Action.ActionResource&#x60;](#model/vpsv1actionactionresource) | [optional] 
-**meta** | [**VPSGetFirewallListV1200ResponseMeta**](VPSGetFirewallListV1200ResponseMeta.md) |  | [optional] 
+**meta** | [**CommonSchemaPaginationMetaSchema**](CommonSchemaPaginationMetaSchema.md) |  | [optional] 
 
 ## Example
 

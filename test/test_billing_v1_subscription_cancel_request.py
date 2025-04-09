@@ -33,8 +33,8 @@ class TestBillingV1SubscriptionCancelRequest(unittest.TestCase):
         model = BillingV1SubscriptionCancelRequest()
         if include_optional:
             return BillingV1SubscriptionCancelRequest(
-                reason_code = '',
-                cancel_option = ''
+                reason_code = 'other',
+                cancel_option = 'immediately'
             )
         else:
             return BillingV1SubscriptionCancelRequest(

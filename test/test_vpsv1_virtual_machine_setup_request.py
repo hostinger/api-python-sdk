@@ -50,7 +50,6 @@ class TestVPSV1VirtualMachineSetupRequest(unittest.TestCase):
             return VPSV1VirtualMachineSetupRequest(
                 template_id = 1130,
                 data_center_id = 19,
-                password = 'oMeNRustosIO',
         )
         """
 

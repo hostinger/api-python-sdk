@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**password** | **str** | Panel password | 
+**password** | **str** | Panel password for the virtual machine | 
 
 ## Example
 

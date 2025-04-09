@@ -25,7 +25,7 @@ class VPSV1VirtualMachinePanelPasswordUpdateRequest(BaseModel):
     """
     VPSV1VirtualMachinePanelPasswordUpdateRequest
     """ # noqa: E501
-    password: Annotated[str, Field(min_length=8, strict=True)] = Field(description="Panel password")
+    password: Annotated[str, Field(min_length=8, strict=True)] = Field(description="Panel password for the virtual machine")
     __properties: ClassVar[List[str]] = ["password"]
 
     model_config = ConfigDict(

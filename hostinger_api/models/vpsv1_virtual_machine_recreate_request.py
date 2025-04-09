@@ -25,10 +25,10 @@ class VPSV1VirtualMachineRecreateRequest(BaseModel):
     """
     VPSV1VirtualMachineRecreateRequest
     """ # noqa: E501
-    password: Annotated[str, Field(min_length=8, strict=True)]
-    post_install_script_id: Optional[StrictInt] = Field(default=None, description="Post-install script ID")
     template_id: StrictInt = Field(description="Template ID")
-    __properties: ClassVar[List[str]] = ["password", "post_install_script_id", "template_id"]
+    password: Optional[Annotated[str, Field(min_length=8, strict=True)]] = Field(default=None, description="Password for the virtual machine. If not provided, random password will be generated. Password will not be shown in the response.")
+    post_install_script_id: Optional[StrictInt] = Field(default=None, description="Post-install script ID")
+    __properties: ClassVar[List[str]] = ["template_id", "password", "post_install_script_id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,9 +81,9 @@ class VPSV1VirtualMachineRecreateRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "template_id": obj.get("template_id"),
             "password": obj.get("password"),
-            "post_install_script_id": obj.get("post_install_script_id"),
-            "template_id": obj.get("template_id")
+            "post_install_script_id": obj.get("post_install_script_id")
         })
         return _obj
 

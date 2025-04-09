@@ -15,7 +15,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,6 +27,26 @@ class BillingV1SubscriptionCancelRequest(BaseModel):
     reason_code: Optional[StrictStr] = Field(default=None, description="Cancellation reason code")
     cancel_option: Optional[StrictStr] = Field(default=None, description="Cancellation option")
     __properties: ClassVar[List[str]] = ["reason_code", "cancel_option"]
+
+    @field_validator('reason_code')
+    def reason_code_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['other']):
+            raise ValueError("must be one of enum values ('other')")
+        return value
+
+    @field_validator('cancel_option')
+    def cancel_option_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['immediately']):
+            raise ValueError("must be one of enum values ('immediately')")
+        return value
 
     model_config = ConfigDict(
         populate_by_name=True,

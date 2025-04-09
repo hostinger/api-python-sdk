@@ -39,7 +39,7 @@ class TestVPSGetPublicKeyListV1200Response(unittest.TestCase):
                         name = 'My public key', 
                         key = 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD...', )
                     ],
-                meta = hostinger_api.models.vps_get_firewall_list_v1_200_response_meta.VPS_getFirewallListV1_200_response_meta(
+                meta = hostinger_api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
                     current_page = 1, 
                     per_page = 15, 
                     total = 100, )

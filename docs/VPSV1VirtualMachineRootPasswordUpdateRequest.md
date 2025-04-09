@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**password** | **str** | Root password | 
+**password** | **str** | Root password for the virtual machine | 
 
 ## Example
 

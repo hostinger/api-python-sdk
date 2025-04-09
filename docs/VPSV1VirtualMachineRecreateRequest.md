@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**password** | **str** |  | 
-**post_install_script_id** | **int** | Post-install script ID | [optional] 
 **template_id** | **int** | Template ID | 
+**password** | **str** | Password for the virtual machine. If not provided, random password will be generated. Password will not be shown in the response. | [optional] 
+**post_install_script_id** | **int** | Post-install script ID | [optional] 
 
 ## Example
 

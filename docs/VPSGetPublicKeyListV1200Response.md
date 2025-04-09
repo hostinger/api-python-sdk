@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**List[VPSV1PublicKeyPublicKeyResource]**](VPSV1PublicKeyPublicKeyResource.md) | Array of [&#x60;VPS.V1.PublicKey.PublicKeyResource&#x60;](#model/vpsv1publickeypublickeyresource) | [optional] 
-**meta** | [**VPSGetFirewallListV1200ResponseMeta**](VPSGetFirewallListV1200ResponseMeta.md) |  | [optional] 
+**meta** | [**CommonSchemaPaginationMetaSchema**](CommonSchemaPaginationMetaSchema.md) |  | [optional] 
 
 ## Example
 

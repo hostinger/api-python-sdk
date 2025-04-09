@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**List[VPSV1BackupBackupResource]**](VPSV1BackupBackupResource.md) | Array of [&#x60;VPS.V1.Backup.BackupResource&#x60;](#model/vpsv1backupbackupresource) | [optional] 
-**meta** | [**VPSGetFirewallListV1200ResponseMeta**](VPSGetFirewallListV1200ResponseMeta.md) |  | [optional] 
+**meta** | [**CommonSchemaPaginationMetaSchema**](CommonSchemaPaginationMetaSchema.md) |  | [optional] 
 
 ## Example
 

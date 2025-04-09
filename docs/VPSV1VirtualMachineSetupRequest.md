@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **template_id** | **int** | Template ID | 
 **data_center_id** | **int** | Data center ID | 
 **post_install_script_id** | **int** | Post-install script ID | [optional] 
-**password** | **str** |  | 
+**password** | **str** | Password for the virtual machine. If not provided, random password will be generated. Password will not be shown in the response. | [optional] 
 **hostname** | **str** | Override default hostname of the virtual machine | [optional] 
 **install_monarx** | **bool** | Install Monarx malware scanner (if supported) | [optional] [default to False]
 **enable_backups** | **bool** | Enable weekly backup schedule | [optional] [default to True]

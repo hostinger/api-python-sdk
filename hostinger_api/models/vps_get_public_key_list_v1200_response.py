@@ -17,7 +17,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from hostinger_api.models.vps_get_firewall_list_v1200_response_meta import VPSGetFirewallListV1200ResponseMeta
+from hostinger_api.models.common_schema_pagination_meta_schema import CommonSchemaPaginationMetaSchema
 from hostinger_api.models.vpsv1_public_key_public_key_resource import VPSV1PublicKeyPublicKeyResource
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,7 +27,7 @@ class VPSGetPublicKeyListV1200Response(BaseModel):
     VPSGetPublicKeyListV1200Response
     """ # noqa: E501
     data: Optional[List[VPSV1PublicKeyPublicKeyResource]] = Field(default=None, description="Array of [`VPS.V1.PublicKey.PublicKeyResource`](#model/vpsv1publickeypublickeyresource)")
-    meta: Optional[VPSGetFirewallListV1200ResponseMeta] = None
+    meta: Optional[CommonSchemaPaginationMetaSchema] = None
     __properties: ClassVar[List[str]] = ["data", "meta"]
 
     model_config = ConfigDict(
@@ -92,7 +92,7 @@ class VPSGetPublicKeyListV1200Response(BaseModel):
 
         _obj = cls.model_validate({
             "data": [VPSV1PublicKeyPublicKeyResource.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
-            "meta": VPSGetFirewallListV1200ResponseMeta.from_dict(obj["meta"]) if obj.get("meta") is not None else None
+            "meta": CommonSchemaPaginationMetaSchema.from_dict(obj["meta"]) if obj.get("meta") is not None else None
         })
         return _obj
 

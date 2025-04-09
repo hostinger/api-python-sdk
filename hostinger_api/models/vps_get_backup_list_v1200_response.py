@@ -17,7 +17,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from hostinger_api.models.vps_get_firewall_list_v1200_response_meta import VPSGetFirewallListV1200ResponseMeta
+from hostinger_api.models.common_schema_pagination_meta_schema import CommonSchemaPaginationMetaSchema
 from hostinger_api.models.vpsv1_backup_backup_resource import VPSV1BackupBackupResource
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,7 +27,7 @@ class VPSGetBackupListV1200Response(BaseModel):
     VPSGetBackupListV1200Response
     """ # noqa: E501
     data: Optional[List[VPSV1BackupBackupResource]] = Field(default=None, description="Array of [`VPS.V1.Backup.BackupResource`](#model/vpsv1backupbackupresource)")
-    meta: Optional[VPSGetFirewallListV1200ResponseMeta] = None
+    meta: Optional[CommonSchemaPaginationMetaSchema] = None
     __properties: ClassVar[List[str]] = ["data", "meta"]
 
     model_config = ConfigDict(
@@ -92,7 +92,7 @@ class VPSGetBackupListV1200Response(BaseModel):
 
         _obj = cls.model_validate({
             "data": [VPSV1BackupBackupResource.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None,
-            "meta": VPSGetFirewallListV1200ResponseMeta.from_dict(obj["meta"]) if obj.get("meta") is not None else None
+            "meta": CommonSchemaPaginationMetaSchema.from_dict(obj["meta"]) if obj.get("meta") is not None else None
         })
         return _obj
 

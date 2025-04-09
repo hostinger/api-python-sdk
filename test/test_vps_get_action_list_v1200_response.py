@@ -41,7 +41,7 @@ class TestVPSGetActionListV1200Response(unittest.TestCase):
                         created_at = '2025-02-27T11:54Z', 
                         updated_at = '2025-02-27T11:58Z', )
                     ],
-                meta = hostinger_api.models.vps_get_firewall_list_v1_200_response_meta.VPS_getFirewallListV1_200_response_meta(
+                meta = hostinger_api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
                     current_page = 1, 
                     per_page = 15, 
                     total = 100, )

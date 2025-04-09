@@ -29,7 +29,7 @@ class VPSV1VirtualMachineSetupRequest(BaseModel):
     template_id: StrictInt = Field(description="Template ID")
     data_center_id: StrictInt = Field(description="Data center ID")
     post_install_script_id: Optional[StrictInt] = Field(default=None, description="Post-install script ID")
-    password: Annotated[str, Field(min_length=8, strict=True)]
+    password: Optional[Annotated[str, Field(min_length=8, strict=True)]] = Field(default=None, description="Password for the virtual machine. If not provided, random password will be generated. Password will not be shown in the response.")
     hostname: Optional[StrictStr] = Field(default=None, description="Override default hostname of the virtual machine")
     install_monarx: Optional[StrictBool] = Field(default=False, description="Install Monarx malware scanner (if supported)")
     enable_backups: Optional[StrictBool] = Field(default=True, description="Enable weekly backup schedule")

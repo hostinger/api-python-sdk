@@ -25,7 +25,7 @@ class VPSV1VirtualMachineRootPasswordUpdateRequest(BaseModel):
     """
     VPSV1VirtualMachineRootPasswordUpdateRequest
     """ # noqa: E501
-    password: Annotated[str, Field(min_length=8, strict=True)] = Field(description="Root password")
+    password: Annotated[str, Field(min_length=8, strict=True)] = Field(description="Root password for the virtual machine")
     __properties: ClassVar[List[str]] = ["password"]
 
     model_config = ConfigDict(

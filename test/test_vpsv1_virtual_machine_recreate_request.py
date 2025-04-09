@@ -33,13 +33,12 @@ class TestVPSV1VirtualMachineRecreateRequest(unittest.TestCase):
         model = VPSV1VirtualMachineRecreateRequest()
         if include_optional:
             return VPSV1VirtualMachineRecreateRequest(
+                template_id = 1130,
                 password = 'oMeNRustosIO',
-                post_install_script_id = 6324,
-                template_id = 1130
+                post_install_script_id = 6324
             )
         else:
             return VPSV1VirtualMachineRecreateRequest(
-                password = 'oMeNRustosIO',
                 template_id = 1130,
         )
         """

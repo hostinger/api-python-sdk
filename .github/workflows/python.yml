@@ -3,7 +3,7 @@
 #
 # ref: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: hostinger-api Python package
+name: hostinger-api test build
 
 on: [push, pull_request]
 

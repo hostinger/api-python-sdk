@@ -24,6 +24,13 @@ class TestBillingSubscriptionsApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    def test_cancel_subscription_v1(self) -> None:
+        """Test case for cancel_subscription_v1
+
+        Cancel subscription
+        """
+        pass
+
     def test_get_subscription_list_v1(self) -> None:
         """Test case for get_subscription_list_v1
 

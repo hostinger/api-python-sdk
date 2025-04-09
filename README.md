@@ -127,6 +127,7 @@ Class | Method | HTTP request | Description
 *BillingPaymentMethodsApi* | [**delete_payment_method_v1**](docs/BillingPaymentMethodsApi.md#delete_payment_method_v1) | **DELETE** /api/billing/v1/payment-methods/{paymentMethodId} | Delete payment method
 *BillingPaymentMethodsApi* | [**get_payment_method_list_v1**](docs/BillingPaymentMethodsApi.md#get_payment_method_list_v1) | **GET** /api/billing/v1/payment-methods | Get payment method list
 *BillingPaymentMethodsApi* | [**set_default_payment_method_v1**](docs/BillingPaymentMethodsApi.md#set_default_payment_method_v1) | **POST** /api/billing/v1/payment-methods/{paymentMethodId} | Set default payment method
+*BillingSubscriptionsApi* | [**cancel_subscription_v1**](docs/BillingSubscriptionsApi.md#cancel_subscription_v1) | **DELETE** /api/billing/v1/subscriptions/{subscriptionId} | Cancel subscription
 *BillingSubscriptionsApi* | [**get_subscription_list_v1**](docs/BillingSubscriptionsApi.md#get_subscription_list_v1) | **GET** /api/billing/v1/subscriptions | Get subscription list
 *DomainsPortfolioApi* | [**get_domain_list_v1**](docs/DomainsPortfolioApi.md#get_domain_list_v1) | **GET** /api/domains/v1/portfolio | Get domain list
 *VPSActionsApi* | [**get_action_list_v1**](docs/VPSActionsApi.md#get_action_list_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions | Get action list
@@ -191,6 +192,7 @@ Class | Method | HTTP request | Description
  - [BillingV1OrderStoreRequest](docs/BillingV1OrderStoreRequest.md)
  - [BillingV1OrderStoreRequestItemsInner](docs/BillingV1OrderStoreRequestItemsInner.md)
  - [BillingV1PaymentMethodPaymentMethodResource](docs/BillingV1PaymentMethodPaymentMethodResource.md)
+ - [BillingV1SubscriptionCancelRequest](docs/BillingV1SubscriptionCancelRequest.md)
  - [BillingV1SubscriptionSubscriptionResource](docs/BillingV1SubscriptionSubscriptionResource.md)
  - [CommonSchemaErrorResponseSchema](docs/CommonSchemaErrorResponseSchema.md)
  - [CommonSchemaUnauthorizedResponseSchema](docs/CommonSchemaUnauthorizedResponseSchema.md)

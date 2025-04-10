@@ -19,7 +19,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "hostinger_api"
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 PYTHON_REQUIRES = ">= 3.8"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 3.0.0",
@@ -41,11 +41,6 @@ setup(
     include_package_data=True,
     license="MIT",
     long_description_content_type='text/markdown',
-    long_description="""\
-    This is the Hostinger API Python SDK.
-
-    Before use, read the [README](https://github.com/hostinger/api-python-sdk/README.md) file of this package
-    and check out the [Hostinger API documentation](https://developer.hostinger.com/).
-    """,  # noqa: E501
+    long_description=(read('README.md')),
     package_data={"hostinger_api": ["py.typed"]},
 )

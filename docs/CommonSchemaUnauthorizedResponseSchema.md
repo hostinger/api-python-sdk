@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_api.models.common_schema_unauthorized_response_schema import CommonSchemaUnauthorizedResponseSchema
+from @hostinger/api.models.common_schema_unauthorized_response_schema import CommonSchemaUnauthorizedResponseSchema
 
 # TODO update the JSON string below
 json = "{}"

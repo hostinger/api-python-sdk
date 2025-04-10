@@ -1,4 +1,4 @@
-# hostinger_api.BillingOrdersApi
+# @hostinger/api.BillingOrdersApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -24,23 +24,23 @@ Orders created using this endpoint will be set for automatically renewal.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger_api
-from hostinger_api.models.billing_v1_order_order_resource import BillingV1OrderOrderResource
-from hostinger_api.models.billing_v1_order_store_request import BillingV1OrderStoreRequest
-from hostinger_api.rest import ApiException
+import @hostinger/api
+from @hostinger/api.models.billing_v1_order_order_resource import BillingV1OrderOrderResource
+from @hostinger/api.models.billing_v1_order_store_request import BillingV1OrderStoreRequest
+from @hostinger/api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger_api.Configuration(
+configuration = @hostinger/api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_api.ApiClient(configuration) as api_client:
+with @hostinger/api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_api.BillingOrdersApi(api_client)
-    billing_v1_order_store_request = hostinger_api.BillingV1OrderStoreRequest() # BillingV1OrderStoreRequest | 
+    api_instance = @hostinger/api.BillingOrdersApi(api_client)
+    billing_v1_order_store_request = @hostinger/api.BillingV1OrderStoreRequest() # BillingV1OrderStoreRequest | 
 
     try:
         # Create new service order

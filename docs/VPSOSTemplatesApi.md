@@ -1,4 +1,4 @@
-# hostinger_api.VPSOSTemplatesApi
+# @hostinger/api.VPSOSTemplatesApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -20,21 +20,21 @@ This endpoint retrieves a list of available OS templates for virtual machines.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger_api
-from hostinger_api.models.vpsv1_template_template_resource import VPSV1TemplateTemplateResource
-from hostinger_api.rest import ApiException
+import @hostinger/api
+from @hostinger/api.models.vpsv1_template_template_resource import VPSV1TemplateTemplateResource
+from @hostinger/api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger_api.Configuration(
+configuration = @hostinger/api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_api.ApiClient(configuration) as api_client:
+with @hostinger/api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_api.VPSOSTemplatesApi(api_client)
+    api_instance = @hostinger/api.VPSOSTemplatesApi(api_client)
 
     try:
         # Get template list
@@ -86,21 +86,21 @@ This endpoint retrieves details of a specific OS template for virtual machines.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger_api
-from hostinger_api.models.vpsv1_template_template_resource import VPSV1TemplateTemplateResource
-from hostinger_api.rest import ApiException
+import @hostinger/api
+from @hostinger/api.models.vpsv1_template_template_resource import VPSV1TemplateTemplateResource
+from @hostinger/api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger_api.Configuration(
+configuration = @hostinger/api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger_api.ApiClient(configuration) as api_client:
+with @hostinger/api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_api.VPSOSTemplatesApi(api_client)
+    api_instance = @hostinger/api.VPSOSTemplatesApi(api_client)
     template_id = 2868928 # int | Template ID
 
     try:

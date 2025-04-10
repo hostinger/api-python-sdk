@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_api.models.vpsv1_virtual_machine_setup_request_public_key import VPSV1VirtualMachineSetupRequestPublicKey
+from @hostinger/api.models.vpsv1_virtual_machine_setup_request_public_key import VPSV1VirtualMachineSetupRequestPublicKey
 
 # TODO update the JSON string below
 json = "{}"

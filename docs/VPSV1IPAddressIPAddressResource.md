@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_api.models.vpsv1_ip_address_ip_address_resource import VPSV1IPAddressIPAddressResource
+from @hostinger/api.models.vpsv1_ip_address_ip_address_resource import VPSV1IPAddressIPAddressResource
 
 # TODO update the JSON string below
 json = "{}"

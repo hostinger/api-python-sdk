@@ -1,6 +1,6 @@
 # Hostinger API Python SDK
 
-[![PyPI version](https://badge.fury.io/py/hostinger_api.svg)](https://badge.fury.io/py/hostinger_api)
+[![PyPI version](https://badge.fury.io/py/@hostinger/api.svg)](https://badge.fury.io/py/@hostinger/api)
 
 ## About
 This is a Python SDK for the [Hostinger API](https://developers.hostinger.com).
@@ -22,12 +22,12 @@ source venv/bin/activate
 
 Install the package via [pip](https://pypi.org/project/pip/):
 ```sh
-pip install hostinger_api
+pip install @hostinger/api
 ```
 
 Then import the package:
 ```python
-import hostinger_api
+import @hostinger/api
 ```
 
 ### Setuptools
@@ -41,7 +41,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import hostinger_api
+import @hostinger/api
 ```
 
 ## Getting Started
@@ -50,21 +50,21 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 
-import hostinger_api
-from hostinger_api.rest import ApiException
+import @hostinger/api
+from @hostinger/api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger_api.Configuration(
+configuration = @hostinger/api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 
 # Enter a context with an instance of the API client
-with hostinger_api.ApiClient(configuration) as api_client:
+with @hostinger/api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_api.BillingCatalogApi(api_client)
+    api_instance = @hostinger/api.BillingCatalogApi(api_client)
 
     try:
         # Get catalog item list
@@ -192,7 +192,6 @@ Class | Method | HTTP request | Description
  - [VPSV1SnapshotSnapshotResource](docs/VPSV1SnapshotSnapshotResource.md)
  - [VPSV1TemplateTemplateResource](docs/VPSV1TemplateTemplateResource.md)
  - [VPSV1VirtualMachineHostnameUpdateRequest](docs/VPSV1VirtualMachineHostnameUpdateRequest.md)
- - [VPSV1VirtualMachineMetricGetRequest](docs/VPSV1VirtualMachineMetricGetRequest.md)
  - [VPSV1VirtualMachineNameserversUpdateRequest](docs/VPSV1VirtualMachineNameserversUpdateRequest.md)
  - [VPSV1VirtualMachinePanelPasswordUpdateRequest](docs/VPSV1VirtualMachinePanelPasswordUpdateRequest.md)
  - [VPSV1VirtualMachineRecoveryStartRequest](docs/VPSV1VirtualMachineRecoveryStartRequest.md)

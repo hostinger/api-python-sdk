@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_api.models.vpsv1_backup_backup_resource import VPSV1BackupBackupResource
+from @hostinger/api.models.vpsv1_backup_backup_resource import VPSV1BackupBackupResource
 
 # TODO update the JSON string below
 json = "{}"

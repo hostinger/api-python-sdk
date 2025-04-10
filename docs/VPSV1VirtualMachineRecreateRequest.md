@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_api.models.vpsv1_virtual_machine_recreate_request import VPSV1VirtualMachineRecreateRequest
+from @hostinger/api.models.vpsv1_virtual_machine_recreate_request import VPSV1VirtualMachineRecreateRequest
 
 # TODO update the JSON string below
 json = "{}"

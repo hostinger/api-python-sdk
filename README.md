@@ -128,6 +128,7 @@ Class | Method | HTTP request | Description
 *VPSSnapshotsApi* | [**delete_snapshot_v1**](docs/VPSSnapshotsApi.md#delete_snapshot_v1) | **DELETE** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Delete snapshot
 *VPSSnapshotsApi* | [**get_snapshot_v1**](docs/VPSSnapshotsApi.md#get_snapshot_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Get snapshot
 *VPSSnapshotsApi* | [**restore_snapshot_v1**](docs/VPSSnapshotsApi.md#restore_snapshot_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot/restore | Restore snapshot
+*VPSVirtualMachineApi* | [**get_attached_public_keys_v1**](docs/VPSVirtualMachineApi.md#get_attached_public_keys_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/public-keys | Get attached public keys
 *VPSVirtualMachineApi* | [**get_metrics_v1**](docs/VPSVirtualMachineApi.md#get_metrics_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/metrics | Get metrics
 *VPSVirtualMachineApi* | [**get_virtual_machine_list_v1**](docs/VPSVirtualMachineApi.md#get_virtual_machine_list_v1) | **GET** /api/vps/v1/virtual-machines | Get virtual machine list
 *VPSVirtualMachineApi* | [**get_virtual_machine_v1**](docs/VPSVirtualMachineApi.md#get_virtual_machine_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId} | Get virtual machine

@@ -4,6 +4,7 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**get_attached_public_keys_v1**](VPSVirtualMachineApi.md#get_attached_public_keys_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/public-keys | Get attached public keys
 [**get_metrics_v1**](VPSVirtualMachineApi.md#get_metrics_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/metrics | Get metrics
 [**get_virtual_machine_list_v1**](VPSVirtualMachineApi.md#get_virtual_machine_list_v1) | **GET** /api/vps/v1/virtual-machines | Get virtual machine list
 [**get_virtual_machine_v1**](VPSVirtualMachineApi.md#get_virtual_machine_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId} | Get virtual machine
@@ -18,6 +19,78 @@ Method | HTTP request | Description
 [**start_virtual_machine_v1**](VPSVirtualMachineApi.md#start_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/start | Start virtual machine
 [**stop_virtual_machine_v1**](VPSVirtualMachineApi.md#stop_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/stop | Stop virtual machine
 
+
+# **get_attached_public_keys_v1**
+> VPSGetPublicKeyListV1200Response get_attached_public_keys_v1(virtual_machine_id, page=page)
+
+Get attached public keys
+
+This endpoint retrieves a list of public keys attached to a specified virtual machine.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.vps_get_public_key_list_v1200_response import VPSGetPublicKeyListV1200Response
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.VPSVirtualMachineApi(api_client)
+    virtual_machine_id = 1268054 # int | Virtual Machine ID
+    page = 1 # int | Page number (optional)
+
+    try:
+        # Get attached public keys
+        api_response = api_instance.get_attached_public_keys_v1(virtual_machine_id, page=page)
+        print("The response of VPSVirtualMachineApi->get_attached_public_keys_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling VPSVirtualMachineApi->get_attached_public_keys_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **virtual_machine_id** | **int**| Virtual Machine ID | 
+ **page** | **int**| Page number | [optional] 
+
+### Return type
+
+[**VPSGetPublicKeyListV1200Response**](VPSGetPublicKeyListV1200Response.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_metrics_v1**
 > VPSV1MetricsMetricsCollection get_metrics_v1(virtual_machine_id, vpsv1_virtual_machine_metric_get_request)

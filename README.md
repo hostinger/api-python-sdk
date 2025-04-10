@@ -1,41 +1,9 @@
 # Hostinger API Python SDK
-> [!caution]
-> Currently, this API is in beta stage, meaning that breaking changes, while unlikely, might be introduced.
-> If you encounter any issues or have any feedback, please create an issue on the [Github Repository](https://github.com/hostinger/api/issues).
-# Overview
-The Hostinger API provides a comprehensive set of endpoints that allow developers to interact with Hostinger's services programmatically.
-This API enables you to manage various aspects of your Hostinger account.
 
-The Hostinger API is a (mostly) RESTful API that uses standard HTTP methods and status codes.
-# Authentication
-The Hostinger API uses tokens for authentication. To authenticate your requests, you need to include a valid bearer token in the Authorization header of your HTTP requests:
-```yaml
-Authorization: Bearer YOUR_API_TOKEN
-```
-API tokens for individual users can be created and managed from the [VPS page](https://hpanel.hostinger.com/vps) of the Hostinger Panel.
-Tokens will have same permissions as the owning user. Optionally, tokens can be set to expire after a certain period of time.
-# Rate Limiting
-To ensure fair usage and prevent abuse, the API enforces rate limits on the number of requests that can be made within a certain time period.
-If you exceed the rate limit, you will receive a 429 Too Many Requests response. Rate limit headers are included in the response to help you manage your requests.
-Your IP address might get temporarily blocked if you exceed the rate limit multiple times.
-# Parameters
-All requests sent to API must have the content type `application/json`. `POST`, `PUT`, `PATCH` methods may include a JSON object in the request body. Documentation provides required structure and examples of the object.
-Some endpoints require path parameters. These parameters are included in the URL path and are marked with curly braces.
-# Pagination
-Some endpoints return a large number of items. To make these responses more manageable, the API uses pagination.
-By default, the API returns50 items per page.
+[![PyPI version](https://badge.fury.io/py/hostinger_api.svg)](https://badge.fury.io/py/hostinger_api)
 
- The page number can be specified using the `page` query parameter, for example: `/api/vps/v1/public-keys?page=2`
-# Errors
-The Hostinger API uses standard HTTP status codes to indicate the success or failure of a request.
-In case of an error, the API will return a JSON response with an `error` field, containing a human-readable error message.
-Error responses also contain a `correlation_id` field which can be used to identify the request in case you need to contact support.
-# Change log
-For information on the latest changes to the API, please refer to the [change log](https://github.com/hostinger/api/blob/main/CHANGELOG.md).
-# Support
-If you have any questions, feedback or feature requests, please create an [issue](https://github.com/hostinger/api/issues) or [discussion](https://github.com/hostinger/api/discussions) on the repository.
-
-For any support take a look at our [Github Repository](https://github.com/hostinger/api/), dedicated to the Hostinger API.
+## About
+This is a Python SDK for the [Hostinger API](https://developer.hostinger.com).
 
 ## Requirements.
 
@@ -44,12 +12,16 @@ Python 3.8+
 ## Installation & Usage
 ### pip install
 
-If the python package is hosted on a repository, you can install directly using:
-
+Setup new virtual environment (optional but recommended):
 ```sh
-pip install hostinger-api
+python3 -m venv venv
+source venv/bin/activate
 ```
-(you may need to run `pip` with root permission: `sudo pip install hostinger-api`)
+
+Install the package via [pip](https://pypi.org/project/pip/):
+```sh
+pip install hostinger_api
+```
 
 Then import the package:
 ```python
@@ -70,10 +42,6 @@ Then import the package:
 import hostinger_api
 ```
 
-### Tests
-
-Execute `pytest` to run the tests.
-
 ## Getting Started
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
@@ -84,16 +52,6 @@ import hostinger_api
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://developers.hostinger.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = hostinger_api.Configuration(
-    host = "https://developers.hostinger.com"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
 # Configure Bearer authorization: apiToken
 configuration = hostinger_api.Configuration(

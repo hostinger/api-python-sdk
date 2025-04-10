@@ -3,7 +3,9 @@
 [![PyPI version](https://badge.fury.io/py/hostinger_api.svg)](https://badge.fury.io/py/hostinger_api)
 
 ## About
-This is a Python SDK for the [Hostinger API](https://developer.hostinger.com).
+This is a Python SDK for the [Hostinger API](https://developers.hostinger.com).
+
+For more information, please visit [https://developers.hostinger.com](https://developers.hostinger.com).
 
 ## Requirements.
 

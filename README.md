@@ -89,6 +89,11 @@ Class | Method | HTTP request | Description
 *BillingPaymentMethodsApi* | [**set_default_payment_method_v1**](docs/BillingPaymentMethodsApi.md#set_default_payment_method_v1) | **POST** /api/billing/v1/payment-methods/{paymentMethodId} | Set default payment method
 *BillingSubscriptionsApi* | [**cancel_subscription_v1**](docs/BillingSubscriptionsApi.md#cancel_subscription_v1) | **DELETE** /api/billing/v1/subscriptions/{subscriptionId} | Cancel subscription
 *BillingSubscriptionsApi* | [**get_subscription_list_v1**](docs/BillingSubscriptionsApi.md#get_subscription_list_v1) | **GET** /api/billing/v1/subscriptions | Get subscription list
+*DNSSnapshotApi* | [**get_snapshot_list_v1**](docs/DNSSnapshotApi.md#get_snapshot_list_v1) | **GET** /api/dns/v1/snapshots/{domain} | Get snapshot list
+*DNSSnapshotApi* | [**get_snapshot_v1**](docs/DNSSnapshotApi.md#get_snapshot_v1) | **GET** /api/dns/v1/snapshots/{domain}/{snapshotId} | Get snapshot
+*DNSSnapshotApi* | [**restore_snapshot_v1**](docs/DNSSnapshotApi.md#restore_snapshot_v1) | **POST** /api/dns/v1/snapshots/{domain}/{snapshotId} | Restore snapshot
+*DNSZoneApi* | [**get_records_v1**](docs/DNSZoneApi.md#get_records_v1) | **GET** /api/dns/v1/zones/{domain} | Get records
+*DNSZoneApi* | [**reset_zone_records_v1**](docs/DNSZoneApi.md#reset_zone_records_v1) | **POST** /api/dns/v1/zones/{domain}/reset | Reset zone records
 *DomainsPortfolioApi* | [**get_domain_list_v1**](docs/DomainsPortfolioApi.md#get_domain_list_v1) | **GET** /api/domains/v1/portfolio | Get domain list
 *VPSActionsApi* | [**get_action_list_v1**](docs/VPSActionsApi.md#get_action_list_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions | Get action list
 *VPSActionsApi* | [**get_action_v1**](docs/VPSActionsApi.md#get_action_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions/{actionId} | Get action
@@ -161,6 +166,11 @@ Class | Method | HTTP request | Description
  - [CommonSchemaUnprocessableContentResponseSchema](docs/CommonSchemaUnprocessableContentResponseSchema.md)
  - [CommonSchemaUnprocessableContentResponseSchemaErrors](docs/CommonSchemaUnprocessableContentResponseSchemaErrors.md)
  - [CommonSuccessEmptyResource](docs/CommonSuccessEmptyResource.md)
+ - [DNSV1SnapshotSnapshotResource](docs/DNSV1SnapshotSnapshotResource.md)
+ - [DNSV1SnapshotSnapshotWithContentResource](docs/DNSV1SnapshotSnapshotWithContentResource.md)
+ - [DNSV1ZoneNameRecordResource](docs/DNSV1ZoneNameRecordResource.md)
+ - [DNSV1ZoneNameResource](docs/DNSV1ZoneNameResource.md)
+ - [DNSV1ZoneResetRequest](docs/DNSV1ZoneResetRequest.md)
  - [DomainsV1DomainDomainResource](docs/DomainsV1DomainDomainResource.md)
  - [VPSGetActionListV1200Response](docs/VPSGetActionListV1200Response.md)
  - [VPSGetBackupListV1200Response](docs/VPSGetBackupListV1200Response.md)

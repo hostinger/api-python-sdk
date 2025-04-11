@@ -5,6 +5,8 @@ from @hostinger/api.api.billing_catalog_api import BillingCatalogApi
 from @hostinger/api.api.billing_orders_api import BillingOrdersApi
 from @hostinger/api.api.billing_payment_methods_api import BillingPaymentMethodsApi
 from @hostinger/api.api.billing_subscriptions_api import BillingSubscriptionsApi
+from @hostinger/api.api.dns_snapshot_api import DNSSnapshotApi
+from @hostinger/api.api.dns_zone_api import DNSZoneApi
 from @hostinger/api.api.domains_portfolio_api import DomainsPortfolioApi
 from @hostinger/api.api.vps_actions_api import VPSActionsApi
 from @hostinger/api.api.vps_backups_api import VPSBackupsApi

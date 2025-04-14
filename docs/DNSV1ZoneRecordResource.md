@@ -1,4 +1,4 @@
-# DNSV1ZoneNameResource
+# DNSV1ZoneRecordResource
 
 
 ## Properties
@@ -13,19 +13,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_api.models.dnsv1_zone_name_resource import DNSV1ZoneNameResource
+from hostinger_api.models.dnsv1_zone_record_resource import DNSV1ZoneRecordResource
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of DNSV1ZoneNameResource from a JSON string
-dnsv1_zone_name_resource_instance = DNSV1ZoneNameResource.from_json(json)
+# create an instance of DNSV1ZoneRecordResource from a JSON string
+dnsv1_zone_record_resource_instance = DNSV1ZoneRecordResource.from_json(json)
 # print the JSON string representation of the object
-print(DNSV1ZoneNameResource.to_json())
+print(DNSV1ZoneRecordResource.to_json())
 
 # convert the object into a dict
-dnsv1_zone_name_resource_dict = dnsv1_zone_name_resource_instance.to_dict()
-# create an instance of DNSV1ZoneNameResource from a dict
-dnsv1_zone_name_resource_from_dict = DNSV1ZoneNameResource.from_dict(dnsv1_zone_name_resource_dict)
+dnsv1_zone_record_resource_dict = dnsv1_zone_record_resource_instance.to_dict()
+# create an instance of DNSV1ZoneRecordResource from a dict
+dnsv1_zone_record_resource_from_dict = DNSV1ZoneRecordResource.from_dict(dnsv1_zone_record_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

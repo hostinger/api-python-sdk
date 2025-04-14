@@ -2,7 +2,7 @@ name: publish-release
 
 on:
   release:
-    types: [released]
+    types: [published]
 
 jobs:
   pypi:

@@ -41,7 +41,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           release_branches: main
 
-      - uses: ncipollo/release-action@v1
+      - name: Release tag
+        uses: ncipollo/release-action@v1
         with:
           tag: ${{ steps.bump.outputs.new_tag }}
           generateReleaseNotes: true

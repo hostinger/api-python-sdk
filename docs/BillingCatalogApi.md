@@ -1,4 +1,4 @@
-# hostinger-api.BillingCatalogApi
+# hostinger_api.BillingCatalogApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -21,21 +21,21 @@ Prices in catalog items is displayed as cents (without floating point), e.g: flo
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.billing_v1_catalog_catalog_item_resource import BillingV1CatalogCatalogItemResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.billing_v1_catalog_catalog_item_resource import BillingV1CatalogCatalogItemResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.BillingCatalogApi(api_client)
+    api_instance = hostinger_api.BillingCatalogApi(api_client)
 
     try:
         # Get catalog item list

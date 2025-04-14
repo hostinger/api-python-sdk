@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vps_get_backup_list_v1200_response import VPSGetBackupListV1200Response
+from hostinger_api.models.vps_get_backup_list_v1200_response import VPSGetBackupListV1200Response
 
 class TestVPSGetBackupListV1200Response(unittest.TestCase):
     """VPSGetBackupListV1200Response unit test stubs"""
@@ -34,12 +34,12 @@ class TestVPSGetBackupListV1200Response(unittest.TestCase):
         if include_optional:
             return VPSGetBackupListV1200Response(
                 data = [
-                    hostinger-api.models.vps/v1/backup/backup_resource.VPS.V1.Backup.BackupResource(
+                    hostinger_api.models.vps/v1/backup/backup_resource.VPS.V1.Backup.BackupResource(
                         id = 325, 
                         location = 'nl-srv-openvzbackups', 
                         created_at = '2025-02-27T11:54:22Z', )
                     ],
-                meta = hostinger-api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
+                meta = hostinger_api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
                     current_page = 1, 
                     per_page = 15, 
                     total = 100, )

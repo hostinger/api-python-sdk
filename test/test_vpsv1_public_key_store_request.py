@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_public_key_store_request import VPSV1PublicKeyStoreRequest
+from hostinger_api.models.vpsv1_public_key_store_request import VPSV1PublicKeyStoreRequest
 
 class TestVPSV1PublicKeyStoreRequest(unittest.TestCase):
     """VPSV1PublicKeyStoreRequest unit test stubs"""

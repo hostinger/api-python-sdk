@@ -21,7 +21,7 @@ def read(filename):
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "hostinger-api"
+NAME = "hostinger_api"
 VERSION = "0.0.1"
 PYTHON_REQUIRES = ">= 3.8"
 REQUIRES = [
@@ -45,5 +45,5 @@ setup(
     license="MIT",
     long_description_content_type='text/markdown',
     long_description=(read('README.md')),
-    package_data={"hostinger-api": ["py.typed"]},
+    package_data={"hostinger_api": ["py.typed"]},
 )

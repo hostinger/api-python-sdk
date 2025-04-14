@@ -1,4 +1,4 @@
-# hostinger-api.DNSZoneApi
+# hostinger_api.DNSZoneApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -20,21 +20,21 @@ This endpoint retrieves DNS zone records for a specific domain.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.dnsv1_zone_name_resource import DNSV1ZoneNameResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.dnsv1_zone_name_resource import DNSV1ZoneNameResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.DNSZoneApi(api_client)
+    api_instance = hostinger_api.DNSZoneApi(api_client)
     domain = 'mydomain.tld' # str | Domain name
 
     try:
@@ -90,24 +90,24 @@ This endpoint resets DNS zone to the default records.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from hostinger-api.models.dnsv1_zone_reset_request import DNSV1ZoneResetRequest
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.dnsv1_zone_reset_request import DNSV1ZoneResetRequest
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.DNSZoneApi(api_client)
+    api_instance = hostinger_api.DNSZoneApi(api_client)
     domain = 'mydomain.tld' # str | Domain name
-    dnsv1_zone_reset_request = hostinger-api.DNSV1ZoneResetRequest() # DNSV1ZoneResetRequest | 
+    dnsv1_zone_reset_request = hostinger_api.DNSV1ZoneResetRequest() # DNSV1ZoneResetRequest | 
 
     try:
         # Reset zone records

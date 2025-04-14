@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.api.vps_virtual_machine_api import VPSVirtualMachineApi
+from hostinger_api.api.vps_virtual_machine_api import VPSVirtualMachineApi
 
 
 class TestVPSVirtualMachineApi(unittest.TestCase):

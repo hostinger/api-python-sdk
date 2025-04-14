@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.api.vps_snapshots_api import VPSSnapshotsApi
+from hostinger_api.api.vps_snapshots_api import VPSSnapshotsApi
 
 
 class TestVPSSnapshotsApi(unittest.TestCase):

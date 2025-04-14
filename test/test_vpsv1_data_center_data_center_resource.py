@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_data_center_data_center_resource import VPSV1DataCenterDataCenterResource
+from hostinger_api.models.vpsv1_data_center_data_center_resource import VPSV1DataCenterDataCenterResource
 
 class TestVPSV1DataCenterDataCenterResource(unittest.TestCase):
     """VPSV1DataCenterDataCenterResource unit test stubs"""

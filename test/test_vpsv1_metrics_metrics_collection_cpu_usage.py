@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_metrics_metrics_collection_cpu_usage import VPSV1MetricsMetricsCollectionCpuUsage
+from hostinger_api.models.vpsv1_metrics_metrics_collection_cpu_usage import VPSV1MetricsMetricsCollectionCpuUsage
 
 class TestVPSV1MetricsMetricsCollectionCpuUsage(unittest.TestCase):
     """VPSV1MetricsMetricsCollectionCpuUsage unit test stubs"""

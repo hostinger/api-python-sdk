@@ -1,4 +1,4 @@
-# hostinger-api.VPSActionsApi
+# hostinger_api.VPSActionsApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -24,21 +24,21 @@ such as the action name, timestamp, and status.
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vps_get_action_list_v1200_response import VPSGetActionListV1200Response
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vps_get_action_list_v1200_response import VPSGetActionListV1200Response
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSActionsApi(api_client)
+    api_instance = hostinger_api.VPSActionsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
     page = 1 # int | Page number (optional)
 
@@ -98,21 +98,21 @@ This endpoint allows you to view detailed information about a particular action,
 * Bearer Authentication (apiToken):
 
 ```python
-import hostinger-api
-from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from hostinger-api.rest import ApiException
+import hostinger_api
+from hostinger_api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger_api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = hostinger-api.Configuration(
+configuration = hostinger_api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with hostinger-api.ApiClient(configuration) as api_client:
+with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger-api.VPSActionsApi(api_client)
+    api_instance = hostinger_api.VPSActionsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
     action_id = 8123712 # int | Action ID
 

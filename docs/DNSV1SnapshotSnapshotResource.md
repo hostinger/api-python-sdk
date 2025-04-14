@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger-api.models.dnsv1_snapshot_snapshot_resource import DNSV1SnapshotSnapshotResource
+from hostinger_api.models.dnsv1_snapshot_snapshot_resource import DNSV1SnapshotSnapshotResource
 
 # TODO update the JSON string below
 json = "{}"

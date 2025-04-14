@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_post_install_script_post_install_script_resource import VPSV1PostInstallScriptPostInstallScriptResource
+from hostinger_api.models.vpsv1_post_install_script_post_install_script_resource import VPSV1PostInstallScriptPostInstallScriptResource
 
 class TestVPSV1PostInstallScriptPostInstallScriptResource(unittest.TestCase):
     """VPSV1PostInstallScriptPostInstallScriptResource unit test stubs"""

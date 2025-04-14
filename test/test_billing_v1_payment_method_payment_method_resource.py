@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.billing_v1_payment_method_payment_method_resource import BillingV1PaymentMethodPaymentMethodResource
+from hostinger_api.models.billing_v1_payment_method_payment_method_resource import BillingV1PaymentMethodPaymentMethodResource
 
 class TestBillingV1PaymentMethodPaymentMethodResource(unittest.TestCase):
     """BillingV1PaymentMethodPaymentMethodResource unit test stubs"""

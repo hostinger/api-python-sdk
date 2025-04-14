@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger-api.models.vpsv1_virtual_machine_panel_password_update_request import VPSV1VirtualMachinePanelPasswordUpdateRequest
+from hostinger_api.models.vpsv1_virtual_machine_panel_password_update_request import VPSV1VirtualMachinePanelPasswordUpdateRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_snapshot_list_v1**](DNSSnapshotApi.md#get_snapshot_list_v1) | **GET** /api/dns/v1/snapshots/{domain} | Get snapshot list
 [**get_snapshot_v1**](DNSSnapshotApi.md#get_snapshot_v1) | **GET** /api/dns/v1/snapshots/{domain}/{snapshotId} | Get snapshot
-[**restore_snapshot_v1**](DNSSnapshotApi.md#restore_snapshot_v1) | **POST** /api/dns/v1/snapshots/{domain}/{snapshotId} | Restore snapshot
+[**restore_snapshot_v1**](DNSSnapshotApi.md#restore_snapshot_v1) | **POST** /api/dns/v1/snapshots/{domain}/{snapshotId}/restore | Restore snapshot
 
 
 # **get_snapshot_list_v1**

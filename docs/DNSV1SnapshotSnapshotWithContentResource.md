@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Snapshot ID | [optional] 
 **reason** | **str** | Reason of the update | [optional] 
-**snapshot** | **str** | Contents of the DNS zone | [optional] 
+**snapshot** | [**List[DNSV1ZoneRecordResource]**](DNSV1ZoneRecordResource.md) | Array of [&#x60;DNS.V1.Zone.RecordResource&#x60;](#model/dnsv1zonerecordresource) | [optional] 
 **created_at** | **datetime** |  | [optional] 
 
 ## Example

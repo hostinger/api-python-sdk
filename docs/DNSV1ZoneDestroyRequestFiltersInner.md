@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Name of the record | [optional] 
-**type** | **str** | Type of the record | [optional] 
+**name** | **str** | Name of the record | 
+**type** | **str** | Type of the record | 
 
 ## Example
 

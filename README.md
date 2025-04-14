@@ -91,7 +91,7 @@ Class | Method | HTTP request | Description
 *BillingSubscriptionsApi* | [**get_subscription_list_v1**](docs/BillingSubscriptionsApi.md#get_subscription_list_v1) | **GET** /api/billing/v1/subscriptions | Get subscription list
 *DNSSnapshotApi* | [**get_snapshot_list_v1**](docs/DNSSnapshotApi.md#get_snapshot_list_v1) | **GET** /api/dns/v1/snapshots/{domain} | Get snapshot list
 *DNSSnapshotApi* | [**get_snapshot_v1**](docs/DNSSnapshotApi.md#get_snapshot_v1) | **GET** /api/dns/v1/snapshots/{domain}/{snapshotId} | Get snapshot
-*DNSSnapshotApi* | [**restore_snapshot_v1**](docs/DNSSnapshotApi.md#restore_snapshot_v1) | **POST** /api/dns/v1/snapshots/{domain}/{snapshotId} | Restore snapshot
+*DNSSnapshotApi* | [**restore_snapshot_v1**](docs/DNSSnapshotApi.md#restore_snapshot_v1) | **POST** /api/dns/v1/snapshots/{domain}/{snapshotId}/restore | Restore snapshot
 *DNSZoneApi* | [**delete_zone_records_v1**](docs/DNSZoneApi.md#delete_zone_records_v1) | **DELETE** /api/dns/v1/zones/{domain} | Delete zone records
 *DNSZoneApi* | [**get_records_v1**](docs/DNSZoneApi.md#get_records_v1) | **GET** /api/dns/v1/zones/{domain} | Get records
 *DNSZoneApi* | [**reset_zone_records_v1**](docs/DNSZoneApi.md#reset_zone_records_v1) | **POST** /api/dns/v1/zones/{domain}/reset | Reset zone records

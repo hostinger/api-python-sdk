@@ -17,7 +17,10 @@ This endpoint creates a new service order.
 To place order, you need to provide payment method ID and list of price items from the catalog endpoint together with quantity.
 Coupons also can be provided during order creation.
 
-Orders created using this endpoint will be set for automatically renewal.
+Orders created using this endpoint will be set for automatic renewal.
+
+Some `credit_card` payments might need additional verification, rendering purchase unprocessed.
+We recommend use other payment methods than `credit_card` if you encounter this issue.
 
 ### Example
 

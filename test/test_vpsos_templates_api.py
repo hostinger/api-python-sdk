@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.api.vpsos_templates_api import VPSOSTemplatesApi
+from hostinger_api.api.vpsos_templates_api import VPSOSTemplatesApi
 
 
 class TestVPSOSTemplatesApi(unittest.TestCase):

@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.billing_v1_order_store_request_items_inner import BillingV1OrderStoreRequestItemsInner
+from hostinger_api.models.billing_v1_order_store_request_items_inner import BillingV1OrderStoreRequestItemsInner
 
 class TestBillingV1OrderStoreRequestItemsInner(unittest.TestCase):
     """BillingV1OrderStoreRequestItemsInner unit test stubs"""

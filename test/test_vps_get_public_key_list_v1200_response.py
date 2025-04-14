@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vps_get_public_key_list_v1200_response import VPSGetPublicKeyListV1200Response
+from hostinger_api.models.vps_get_public_key_list_v1200_response import VPSGetPublicKeyListV1200Response
 
 class TestVPSGetPublicKeyListV1200Response(unittest.TestCase):
     """VPSGetPublicKeyListV1200Response unit test stubs"""
@@ -34,12 +34,12 @@ class TestVPSGetPublicKeyListV1200Response(unittest.TestCase):
         if include_optional:
             return VPSGetPublicKeyListV1200Response(
                 data = [
-                    hostinger-api.models.vps/v1/public_key/public_key_resource.VPS.V1.PublicKey.PublicKeyResource(
+                    hostinger_api.models.vps/v1/public_key/public_key_resource.VPS.V1.PublicKey.PublicKeyResource(
                         id = 325, 
                         name = 'My public key', 
                         key = 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD...', )
                     ],
-                meta = hostinger-api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
+                meta = hostinger_api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
                     current_page = 1, 
                     per_page = 15, 
                     total = 100, )

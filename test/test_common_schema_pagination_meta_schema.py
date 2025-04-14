@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.common_schema_pagination_meta_schema import CommonSchemaPaginationMetaSchema
+from hostinger_api.models.common_schema_pagination_meta_schema import CommonSchemaPaginationMetaSchema
 
 class TestCommonSchemaPaginationMetaSchema(unittest.TestCase):
     """CommonSchemaPaginationMetaSchema unit test stubs"""

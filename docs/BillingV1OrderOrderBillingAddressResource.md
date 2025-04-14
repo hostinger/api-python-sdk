@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger-api.models.billing_v1_order_order_billing_address_resource import BillingV1OrderOrderBillingAddressResource
+from hostinger_api.models.billing_v1_order_order_billing_address_resource import BillingV1OrderOrderBillingAddressResource
 
 # TODO update the JSON string below
 json = "{}"

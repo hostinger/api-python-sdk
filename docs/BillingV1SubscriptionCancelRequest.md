@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger-api.models.billing_v1_subscription_cancel_request import BillingV1SubscriptionCancelRequest
+from hostinger_api.models.billing_v1_subscription_cancel_request import BillingV1SubscriptionCancelRequest
 
 # TODO update the JSON string below
 json = "{}"

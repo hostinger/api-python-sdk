@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger-api.models.vps_get_post_install_script_list_v1200_response import VPSGetPostInstallScriptListV1200Response
+from hostinger_api.models.vps_get_post_install_script_list_v1200_response import VPSGetPostInstallScriptListV1200Response
 
 # TODO update the JSON string below
 json = "{}"

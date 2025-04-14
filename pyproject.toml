@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hostinger-api"
+name = "hostinger_api"
 version = "0.0.1"
 description = "Hostinger API"
 authors = ["Hostinger <devs@hostinger.com>"]
@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/hostinger/api-python-sdk"
 keywords = ["hostinger", "openapi", "python", "sdk", "rest", "api"]
-include = ["hostinger-api/py.typed"]
+include = ["hostinger_api/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -35,7 +35,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "hostinger-api",
+  "hostinger_api",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -73,7 +73,7 @@ disallow_any_generics = true
 
 [[tool.mypy.overrides]]
 module = [
-  "hostinger-api.configuration",
+  "hostinger_api.configuration",
 ]
 warn_unused_ignores = true
 strict_equality = true

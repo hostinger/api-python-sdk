@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.api.billing_payment_methods_api import BillingPaymentMethodsApi
+from hostinger_api.api.billing_payment_methods_api import BillingPaymentMethodsApi
 
 
 class TestBillingPaymentMethodsApi(unittest.TestCase):

@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_backup_backup_resource import VPSV1BackupBackupResource
+from hostinger_api.models.vpsv1_backup_backup_resource import VPSV1BackupBackupResource
 
 class TestVPSV1BackupBackupResource(unittest.TestCase):
     """VPSV1BackupBackupResource unit test stubs"""

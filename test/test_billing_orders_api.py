@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.api.billing_orders_api import BillingOrdersApi
+from hostinger_api.api.billing_orders_api import BillingOrdersApi
 
 
 class TestBillingOrdersApi(unittest.TestCase):

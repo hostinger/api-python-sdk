@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger-api.models.common_schema_pagination_meta_schema import CommonSchemaPaginationMetaSchema
+from hostinger_api.models.common_schema_pagination_meta_schema import CommonSchemaPaginationMetaSchema
 
 # TODO update the JSON string below
 json = "{}"

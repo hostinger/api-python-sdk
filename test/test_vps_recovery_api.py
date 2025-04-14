@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.api.vps_recovery_api import VPSRecoveryApi
+from hostinger_api.api.vps_recovery_api import VPSRecoveryApi
 
 
 class TestVPSRecoveryApi(unittest.TestCase):

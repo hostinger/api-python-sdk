@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
 
 class TestCommonSuccessEmptyResource(unittest.TestCase):
     """CommonSuccessEmptyResource unit test stubs"""

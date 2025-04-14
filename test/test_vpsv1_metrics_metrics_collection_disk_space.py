@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.vpsv1_metrics_metrics_collection_disk_space import VPSV1MetricsMetricsCollectionDiskSpace
+from hostinger_api.models.vpsv1_metrics_metrics_collection_disk_space import VPSV1MetricsMetricsCollectionDiskSpace
 
 class TestVPSV1MetricsMetricsCollectionDiskSpace(unittest.TestCase):
     """VPSV1MetricsMetricsCollectionDiskSpace unit test stubs"""

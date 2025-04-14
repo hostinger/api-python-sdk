@@ -12,7 +12,7 @@
 
 import unittest
 
-from hostinger-api.models.billing_v1_catalog_catalog_item_resource import BillingV1CatalogCatalogItemResource
+from hostinger_api.models.billing_v1_catalog_catalog_item_resource import BillingV1CatalogCatalogItemResource
 
 class TestBillingV1CatalogCatalogItemResource(unittest.TestCase):
     """BillingV1CatalogCatalogItemResource unit test stubs"""
@@ -37,7 +37,7 @@ class TestBillingV1CatalogCatalogItemResource(unittest.TestCase):
                 name = 'KVM 2',
                 category = 'VPS',
                 prices = [
-                    hostinger-api.models.billing/v1/catalog/catalog_item_price_resource.Billing.V1.Catalog.CatalogItemPriceResource(
+                    hostinger_api.models.billing/v1/catalog/catalog_item_price_resource.Billing.V1.Catalog.CatalogItemPriceResource(
                         id = 'hostingercom-vps-kvm2-usd-1m', 
                         name = 'KVM 2 (billed every month)', 
                         currency = 'USD', 

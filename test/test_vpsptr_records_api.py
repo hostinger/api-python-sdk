@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.api.vpsptr_records_api import VPSPTRRecordsApi
+from hostinger-api.api.vpsptr_records_api import VPSPTRRecordsApi
 
 
 class TestVPSPTRRecordsApi(unittest.TestCase):

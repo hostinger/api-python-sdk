@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.vpsv1_public_key_attach_request import VPSV1PublicKeyAttachRequest
+from hostinger-api.models.vpsv1_public_key_attach_request import VPSV1PublicKeyAttachRequest
 
 # TODO update the JSON string below
 json = "{}"

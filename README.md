@@ -1,6 +1,6 @@
 # Hostinger API Python SDK
 
-[![PyPI version](https://badge.fury.io/py/@hostinger/api.svg)](https://badge.fury.io/py/@hostinger/api)
+[![PyPI version](https://badge.fury.io/py/hostinger-api.svg)](https://badge.fury.io/py/hostinger-api)
 
 ## About
 This is a Python SDK for the [Hostinger API](https://developers.hostinger.com).
@@ -22,12 +22,12 @@ source venv/bin/activate
 
 Install the package via [pip](https://pypi.org/project/pip/):
 ```sh
-pip install @hostinger/api
+pip install hostinger-api
 ```
 
 Then import the package:
 ```python
-import @hostinger/api
+import hostinger-api
 ```
 
 ### Setuptools
@@ -41,7 +41,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import @hostinger/api
+import hostinger-api
 ```
 
 ## Getting Started
@@ -50,21 +50,21 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 
-import @hostinger/api
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.BillingCatalogApi(api_client)
+    api_instance = hostinger-api.BillingCatalogApi(api_client)
 
     try:
         # Get catalog item list

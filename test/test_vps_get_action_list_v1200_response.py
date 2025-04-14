@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vps_get_action_list_v1200_response import VPSGetActionListV1200Response
+from hostinger-api.models.vps_get_action_list_v1200_response import VPSGetActionListV1200Response
 
 class TestVPSGetActionListV1200Response(unittest.TestCase):
     """VPSGetActionListV1200Response unit test stubs"""
@@ -34,14 +34,14 @@ class TestVPSGetActionListV1200Response(unittest.TestCase):
         if include_optional:
             return VPSGetActionListV1200Response(
                 data = [
-                    @hostinger/api.models.vps/v1/action/action_resource.VPS.V1.Action.ActionResource(
+                    hostinger-api.models.vps/v1/action/action_resource.VPS.V1.Action.ActionResource(
                         id = 8123712, 
                         name = 'action_name', 
                         state = 'success', 
                         created_at = '2025-02-27T11:54Z', 
                         updated_at = '2025-02-27T11:58Z', )
                     ],
-                meta = @hostinger/api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
+                meta = hostinger-api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
                     current_page = 1, 
                     per_page = 15, 
                     total = 100, )

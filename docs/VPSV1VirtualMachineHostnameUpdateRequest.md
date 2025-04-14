@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.vpsv1_virtual_machine_hostname_update_request import VPSV1VirtualMachineHostnameUpdateRequest
+from hostinger-api.models.vpsv1_virtual_machine_hostname_update_request import VPSV1VirtualMachineHostnameUpdateRequest
 
 # TODO update the JSON string below
 json = "{}"

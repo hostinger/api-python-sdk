@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_firewall_firewall_rule_resource import VPSV1FirewallFirewallRuleResource
+from hostinger-api.models.vpsv1_firewall_firewall_rule_resource import VPSV1FirewallFirewallRuleResource
 
 class TestVPSV1FirewallFirewallRuleResource(unittest.TestCase):
     """VPSV1FirewallFirewallRuleResource unit test stubs"""

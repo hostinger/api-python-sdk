@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.api.billing_catalog_api import BillingCatalogApi
+from hostinger-api.api.billing_catalog_api import BillingCatalogApi
 
 
 class TestBillingCatalogApi(unittest.TestCase):

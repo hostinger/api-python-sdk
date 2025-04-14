@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.common_schema_unprocessable_content_response_schema_errors import CommonSchemaUnprocessableContentResponseSchemaErrors
+from hostinger-api.models.common_schema_unprocessable_content_response_schema_errors import CommonSchemaUnprocessableContentResponseSchemaErrors
 
 # TODO update the JSON string below
 json = "{}"

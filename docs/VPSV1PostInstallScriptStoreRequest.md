@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.vpsv1_post_install_script_store_request import VPSV1PostInstallScriptStoreRequest
+from hostinger-api.models.vpsv1_post_install_script_store_request import VPSV1PostInstallScriptStoreRequest
 
 # TODO update the JSON string below
 json = "{}"

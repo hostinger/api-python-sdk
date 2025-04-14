@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_virtual_machine_setup_request import VPSV1VirtualMachineSetupRequest
+from hostinger-api.models.vpsv1_virtual_machine_setup_request import VPSV1VirtualMachineSetupRequest
 
 class TestVPSV1VirtualMachineSetupRequest(unittest.TestCase):
     """VPSV1VirtualMachineSetupRequest unit test stubs"""
@@ -42,7 +42,7 @@ class TestVPSV1VirtualMachineSetupRequest(unittest.TestCase):
                 enable_backups = True,
                 ns1 = '4.3.2.1',
                 ns2 = '1.2.3.4',
-                public_key = @hostinger/api.models.vps_v1_virtual_machine_setup_request_public_key.VPS_V1_VirtualMachine_SetupRequest_public_key(
+                public_key = hostinger-api.models.vps_v1_virtual_machine_setup_request_public_key.VPS_V1_VirtualMachine_SetupRequest_public_key(
                     name = 'my-key', 
                     key = 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC2X...', )
             )

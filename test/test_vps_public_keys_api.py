@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.api.vps_public_keys_api import VPSPublicKeysApi
+from hostinger-api.api.vps_public_keys_api import VPSPublicKeysApi
 
 
 class TestVPSPublicKeysApi(unittest.TestCase):

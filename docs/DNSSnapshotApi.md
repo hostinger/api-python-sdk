@@ -1,4 +1,4 @@
-# @hostinger/api.DNSSnapshotApi
+# hostinger-api.DNSSnapshotApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -21,21 +21,21 @@ This endpoint retrieves list of DNS snapshots.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.dnsv1_snapshot_snapshot_resource import DNSV1SnapshotSnapshotResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.dnsv1_snapshot_snapshot_resource import DNSV1SnapshotSnapshotResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.DNSSnapshotApi(api_client)
+    api_instance = hostinger-api.DNSSnapshotApi(api_client)
     domain = 'mydomain.tld' # str | Domain name
 
     try:
@@ -91,21 +91,21 @@ This endpoint retrieves particular DNS snapshot with the contents of DNS zone re
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.dnsv1_snapshot_snapshot_with_content_resource import DNSV1SnapshotSnapshotWithContentResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.dnsv1_snapshot_snapshot_with_content_resource import DNSV1SnapshotSnapshotWithContentResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.DNSSnapshotApi(api_client)
+    api_instance = hostinger-api.DNSSnapshotApi(api_client)
     domain = 'mydomain.tld' # str | Domain name
     snapshot_id = 53513053 # int | Snapshot ID
 
@@ -163,21 +163,21 @@ This endpoint restores DNS zone to the selected snapshot.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.DNSSnapshotApi(api_client)
+    api_instance = hostinger-api.DNSSnapshotApi(api_client)
     domain = 'mydomain.tld' # str | Domain name
     snapshot_id = 53513053 # int | Snapshot ID
 

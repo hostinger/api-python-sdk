@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_virtual_machine_root_password_update_request import VPSV1VirtualMachineRootPasswordUpdateRequest
+from hostinger-api.models.vpsv1_virtual_machine_root_password_update_request import VPSV1VirtualMachineRootPasswordUpdateRequest
 
 class TestVPSV1VirtualMachineRootPasswordUpdateRequest(unittest.TestCase):
     """VPSV1VirtualMachineRootPasswordUpdateRequest unit test stubs"""

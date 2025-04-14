@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
 
 # TODO update the JSON string below
 json = "{}"

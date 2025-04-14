@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_virtual_machine_nameservers_update_request import VPSV1VirtualMachineNameserversUpdateRequest
+from hostinger-api.models.vpsv1_virtual_machine_nameservers_update_request import VPSV1VirtualMachineNameserversUpdateRequest
 
 class TestVPSV1VirtualMachineNameserversUpdateRequest(unittest.TestCase):
     """VPSV1VirtualMachineNameserversUpdateRequest unit test stubs"""

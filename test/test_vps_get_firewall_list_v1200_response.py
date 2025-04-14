@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vps_get_firewall_list_v1200_response import VPSGetFirewallListV1200Response
+from hostinger-api.models.vps_get_firewall_list_v1200_response import VPSGetFirewallListV1200Response
 
 class TestVPSGetFirewallListV1200Response(unittest.TestCase):
     """VPSGetFirewallListV1200Response unit test stubs"""
@@ -34,12 +34,12 @@ class TestVPSGetFirewallListV1200Response(unittest.TestCase):
         if include_optional:
             return VPSGetFirewallListV1200Response(
                 data = [
-                    @hostinger/api.models.vps/v1/firewall/firewall_resource.VPS.V1.Firewall.FirewallResource(
+                    hostinger-api.models.vps/v1/firewall/firewall_resource.VPS.V1.Firewall.FirewallResource(
                         id = 65224, 
                         name = 'HTTP and SSH only', 
                         synced = False, 
                         rules = [
-                            @hostinger/api.models.vps/v1/firewall/firewall_rule_resource.VPS.V1.Firewall.FirewallRuleResource(
+                            hostinger-api.models.vps/v1/firewall/firewall_rule_resource.VPS.V1.Firewall.FirewallRuleResource(
                                 id = 24541, 
                                 action = 'accept', 
                                 protocol = 'TCP', 
@@ -50,7 +50,7 @@ class TestVPSGetFirewallListV1200Response(unittest.TestCase):
                         created_at = '2021-09-01T12:00Z', 
                         updated_at = '2021-09-01T12:00Z', )
                     ],
-                meta = @hostinger/api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
+                meta = hostinger-api.models.common/schema/pagination_meta_schema.Common.Schema.PaginationMetaSchema(
                     current_page = 1, 
                     per_page = 15, 
                     total = 100, )

@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.dnsv1_zone_name_resource import DNSV1ZoneNameResource
+from hostinger-api.models.dnsv1_zone_name_resource import DNSV1ZoneNameResource
 
 class TestDNSV1ZoneNameResource(unittest.TestCase):
     """DNSV1ZoneNameResource unit test stubs"""
@@ -35,7 +35,7 @@ class TestDNSV1ZoneNameResource(unittest.TestCase):
             return DNSV1ZoneNameResource(
                 name = 'www',
                 records = [
-                    @hostinger/api.models.dns/v1/zone/name_record_resource.DNS.V1.Zone.NameRecordResource(
+                    hostinger-api.models.dns/v1/zone/name_record_resource.DNS.V1.Zone.NameRecordResource(
                         content = 'mydomain.tld.', 
                         disabled = False, )
                     ],

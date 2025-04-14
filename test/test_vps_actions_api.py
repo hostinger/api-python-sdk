@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.api.vps_actions_api import VPSActionsApi
+from hostinger-api.api.vps_actions_api import VPSActionsApi
 
 
 class TestVPSActionsApi(unittest.TestCase):

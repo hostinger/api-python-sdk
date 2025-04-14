@@ -1,4 +1,4 @@
-# @hostinger/api.VPSPostInstallScriptsApi
+# hostinger-api.VPSPostInstallScriptsApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -27,23 +27,23 @@ The output of the script will be redirected to `/post_install.log`. Maximum scri
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_post_install_script_post_install_script_resource import VPSV1PostInstallScriptPostInstallScriptResource
-from @hostinger/api.models.vpsv1_post_install_script_store_request import VPSV1PostInstallScriptStoreRequest
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_post_install_script_post_install_script_resource import VPSV1PostInstallScriptPostInstallScriptResource
+from hostinger-api.models.vpsv1_post_install_script_store_request import VPSV1PostInstallScriptStoreRequest
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSPostInstallScriptsApi(api_client)
-    vpsv1_post_install_script_store_request = @hostinger/api.VPSV1PostInstallScriptStoreRequest() # VPSV1PostInstallScriptStoreRequest | 
+    api_instance = hostinger-api.VPSPostInstallScriptsApi(api_client)
+    vpsv1_post_install_script_store_request = hostinger-api.VPSV1PostInstallScriptStoreRequest() # VPSV1PostInstallScriptStoreRequest | 
 
     try:
         # Create post-install script
@@ -99,21 +99,21 @@ This endpoint deletes a post-install script from your account.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSPostInstallScriptsApi(api_client)
+    api_instance = hostinger-api.VPSPostInstallScriptsApi(api_client)
     post_install_script_id = 9568314 # int | Post-install script ID
 
     try:
@@ -169,21 +169,21 @@ This endpoint retrieves a list of post-install scripts associated with your acco
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vps_get_post_install_script_list_v1200_response import VPSGetPostInstallScriptListV1200Response
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vps_get_post_install_script_list_v1200_response import VPSGetPostInstallScriptListV1200Response
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSPostInstallScriptsApi(api_client)
+    api_instance = hostinger-api.VPSPostInstallScriptsApi(api_client)
     page = 1 # int | Page number (optional)
 
     try:
@@ -239,21 +239,21 @@ This endpoint retrieves post-install script by its ID.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_post_install_script_post_install_script_resource import VPSV1PostInstallScriptPostInstallScriptResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_post_install_script_post_install_script_resource import VPSV1PostInstallScriptPostInstallScriptResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSPostInstallScriptsApi(api_client)
+    api_instance = hostinger-api.VPSPostInstallScriptsApi(api_client)
     post_install_script_id = 9568314 # int | Post-install script ID
 
     try:
@@ -309,24 +309,24 @@ This endpoint updates a specific post-install script.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_post_install_script_post_install_script_resource import VPSV1PostInstallScriptPostInstallScriptResource
-from @hostinger/api.models.vpsv1_post_install_script_store_request import VPSV1PostInstallScriptStoreRequest
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_post_install_script_post_install_script_resource import VPSV1PostInstallScriptPostInstallScriptResource
+from hostinger-api.models.vpsv1_post_install_script_store_request import VPSV1PostInstallScriptStoreRequest
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSPostInstallScriptsApi(api_client)
+    api_instance = hostinger-api.VPSPostInstallScriptsApi(api_client)
     post_install_script_id = 9568314 # int | Post-install script ID
-    vpsv1_post_install_script_store_request = @hostinger/api.VPSV1PostInstallScriptStoreRequest() # VPSV1PostInstallScriptStoreRequest | 
+    vpsv1_post_install_script_store_request = hostinger-api.VPSV1PostInstallScriptStoreRequest() # VPSV1PostInstallScriptStoreRequest | 
 
     try:
         # Update post-install script

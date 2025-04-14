@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.dnsv1_zone_reset_request import DNSV1ZoneResetRequest
+from hostinger-api.models.dnsv1_zone_reset_request import DNSV1ZoneResetRequest
 
 class TestDNSV1ZoneResetRequest(unittest.TestCase):
     """DNSV1ZoneResetRequest unit test stubs"""

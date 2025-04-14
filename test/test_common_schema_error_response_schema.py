@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.common_schema_error_response_schema import CommonSchemaErrorResponseSchema
+from hostinger-api.models.common_schema_error_response_schema import CommonSchemaErrorResponseSchema
 
 class TestCommonSchemaErrorResponseSchema(unittest.TestCase):
     """CommonSchemaErrorResponseSchema unit test stubs"""

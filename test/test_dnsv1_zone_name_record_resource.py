@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.dnsv1_zone_name_record_resource import DNSV1ZoneNameRecordResource
+from hostinger-api.models.dnsv1_zone_name_record_resource import DNSV1ZoneNameRecordResource
 
 class TestDNSV1ZoneNameRecordResource(unittest.TestCase):
     """DNSV1ZoneNameRecordResource unit test stubs"""

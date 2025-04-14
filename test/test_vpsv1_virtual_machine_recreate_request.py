@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_virtual_machine_recreate_request import VPSV1VirtualMachineRecreateRequest
+from hostinger-api.models.vpsv1_virtual_machine_recreate_request import VPSV1VirtualMachineRecreateRequest
 
 class TestVPSV1VirtualMachineRecreateRequest(unittest.TestCase):
     """VPSV1VirtualMachineRecreateRequest unit test stubs"""

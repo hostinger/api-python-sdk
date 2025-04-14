@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
 
 class TestVPSV1ActionActionResource(unittest.TestCase):
     """VPSV1ActionActionResource unit test stubs"""

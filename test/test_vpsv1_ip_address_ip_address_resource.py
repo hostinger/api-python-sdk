@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_ip_address_ip_address_resource import VPSV1IPAddressIPAddressResource
+from hostinger-api.models.vpsv1_ip_address_ip_address_resource import VPSV1IPAddressIPAddressResource
 
 class TestVPSV1IPAddressIPAddressResource(unittest.TestCase):
     """VPSV1IPAddressIPAddressResource unit test stubs"""

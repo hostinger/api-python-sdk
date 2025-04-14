@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.api.dns_zone_api import DNSZoneApi
+from hostinger-api.api.dns_zone_api import DNSZoneApi
 
 
 class TestDNSZoneApi(unittest.TestCase):

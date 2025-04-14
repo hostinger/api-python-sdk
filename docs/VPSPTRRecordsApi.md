@@ -1,4 +1,4 @@
-# @hostinger/api.VPSPTRRecordsApi
+# hostinger-api.VPSPTRRecordsApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -20,21 +20,21 @@ This endpoint creates or updates a PTR (Pointer) record for a specified virtual 
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSPTRRecordsApi(api_client)
+    api_instance = hostinger-api.VPSPTRRecordsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:
@@ -92,21 +92,21 @@ Once deleted, reverse DNS lookups to the virtual machine's IP address will no lo
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSPTRRecordsApi(api_client)
+    api_instance = hostinger-api.VPSPTRRecordsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:

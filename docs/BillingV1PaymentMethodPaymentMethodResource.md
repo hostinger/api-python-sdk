@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.billing_v1_payment_method_payment_method_resource import BillingV1PaymentMethodPaymentMethodResource
+from hostinger-api.models.billing_v1_payment_method_payment_method_resource import BillingV1PaymentMethodPaymentMethodResource
 
 # TODO update the JSON string below
 json = "{}"

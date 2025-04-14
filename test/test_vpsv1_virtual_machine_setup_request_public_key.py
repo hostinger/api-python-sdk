@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_virtual_machine_setup_request_public_key import VPSV1VirtualMachineSetupRequestPublicKey
+from hostinger-api.models.vpsv1_virtual_machine_setup_request_public_key import VPSV1VirtualMachineSetupRequestPublicKey
 
 class TestVPSV1VirtualMachineSetupRequestPublicKey(unittest.TestCase):
     """VPSV1VirtualMachineSetupRequestPublicKey unit test stubs"""

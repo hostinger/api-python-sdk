@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.dnsv1_zone_reset_request import DNSV1ZoneResetRequest
+from hostinger-api.models.dnsv1_zone_reset_request import DNSV1ZoneResetRequest
 
 # TODO update the JSON string below
 json = "{}"

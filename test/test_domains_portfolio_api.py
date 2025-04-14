@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.api.domains_portfolio_api import DomainsPortfolioApi
+from hostinger-api.api.domains_portfolio_api import DomainsPortfolioApi
 
 
 class TestDomainsPortfolioApi(unittest.TestCase):

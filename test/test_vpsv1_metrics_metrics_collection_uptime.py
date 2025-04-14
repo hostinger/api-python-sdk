@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_metrics_metrics_collection_uptime import VPSV1MetricsMetricsCollectionUptime
+from hostinger-api.models.vpsv1_metrics_metrics_collection_uptime import VPSV1MetricsMetricsCollectionUptime
 
 class TestVPSV1MetricsMetricsCollectionUptime(unittest.TestCase):
     """VPSV1MetricsMetricsCollectionUptime unit test stubs"""

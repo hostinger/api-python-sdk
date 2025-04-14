@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.common_schema_unauthorized_response_schema import CommonSchemaUnauthorizedResponseSchema
+from hostinger-api.models.common_schema_unauthorized_response_schema import CommonSchemaUnauthorizedResponseSchema
 
 class TestCommonSchemaUnauthorizedResponseSchema(unittest.TestCase):
     """CommonSchemaUnauthorizedResponseSchema unit test stubs"""

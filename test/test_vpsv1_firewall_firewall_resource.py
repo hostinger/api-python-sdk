@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_firewall_firewall_resource import VPSV1FirewallFirewallResource
+from hostinger-api.models.vpsv1_firewall_firewall_resource import VPSV1FirewallFirewallResource
 
 class TestVPSV1FirewallFirewallResource(unittest.TestCase):
     """VPSV1FirewallFirewallResource unit test stubs"""
@@ -37,7 +37,7 @@ class TestVPSV1FirewallFirewallResource(unittest.TestCase):
                 name = 'HTTP and SSH only',
                 synced = False,
                 rules = [
-                    @hostinger/api.models.vps/v1/firewall/firewall_rule_resource.VPS.V1.Firewall.FirewallRuleResource(
+                    hostinger-api.models.vps/v1/firewall/firewall_rule_resource.VPS.V1.Firewall.FirewallRuleResource(
                         id = 24541, 
                         action = 'accept', 
                         protocol = 'TCP', 

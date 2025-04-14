@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.api.vps_firewall_api import VPSFirewallApi
+from hostinger-api.api.vps_firewall_api import VPSFirewallApi
 
 
 class TestVPSFirewallApi(unittest.TestCase):

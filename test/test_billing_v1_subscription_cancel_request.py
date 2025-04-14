@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.billing_v1_subscription_cancel_request import BillingV1SubscriptionCancelRequest
+from hostinger-api.models.billing_v1_subscription_cancel_request import BillingV1SubscriptionCancelRequest
 
 class TestBillingV1SubscriptionCancelRequest(unittest.TestCase):
     """BillingV1SubscriptionCancelRequest unit test stubs"""

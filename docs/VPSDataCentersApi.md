@@ -1,4 +1,4 @@
-# @hostinger/api.VPSDataCentersApi
+# hostinger-api.VPSDataCentersApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -19,21 +19,21 @@ This endpoint retrieves a list of all data centers available.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_data_center_data_center_resource import VPSV1DataCenterDataCenterResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_data_center_data_center_resource import VPSV1DataCenterDataCenterResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSDataCentersApi(api_client)
+    api_instance = hostinger-api.VPSDataCentersApi(api_client)
 
     try:
         # Get data centers list

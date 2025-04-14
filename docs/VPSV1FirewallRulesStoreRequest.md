@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.vpsv1_firewall_rules_store_request import VPSV1FirewallRulesStoreRequest
+from hostinger-api.models.vpsv1_firewall_rules_store_request import VPSV1FirewallRulesStoreRequest
 
 # TODO update the JSON string below
 json = "{}"

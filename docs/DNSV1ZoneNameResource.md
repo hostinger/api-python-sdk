@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.dnsv1_zone_name_resource import DNSV1ZoneNameResource
+from hostinger-api.models.dnsv1_zone_name_resource import DNSV1ZoneNameResource
 
 # TODO update the JSON string below
 json = "{}"

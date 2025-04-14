@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_template_template_resource import VPSV1TemplateTemplateResource
+from hostinger-api.models.vpsv1_template_template_resource import VPSV1TemplateTemplateResource
 
 class TestVPSV1TemplateTemplateResource(unittest.TestCase):
     """VPSV1TemplateTemplateResource unit test stubs"""

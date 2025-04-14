@@ -1,4 +1,4 @@
-# @hostinger/api.VPSBackupsApi
+# hostinger-api.VPSBackupsApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -21,21 +21,21 @@ This endpoint deletes a specified backup for a virtual machine.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSBackupsApi(api_client)
+    api_instance = hostinger-api.VPSBackupsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
     backup_id = 8676502 # int | Backup ID
 
@@ -93,21 +93,21 @@ This endpoint retrieves a list of backups for a specified virtual machine.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vps_get_backup_list_v1200_response import VPSGetBackupListV1200Response
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vps_get_backup_list_v1200_response import VPSGetBackupListV1200Response
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSBackupsApi(api_client)
+    api_instance = hostinger-api.VPSBackupsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
     page = 1 # int | Page number (optional)
 
@@ -169,21 +169,21 @@ The system will then initiate the restore process, which may take some time depe
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSBackupsApi(api_client)
+    api_instance = hostinger-api.VPSBackupsApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
     backup_id = 8676502 # int | Backup ID
 

@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_metrics_metrics_collection import VPSV1MetricsMetricsCollection
+from hostinger-api.models.vpsv1_metrics_metrics_collection import VPSV1MetricsMetricsCollection
 
 class TestVPSV1MetricsMetricsCollection(unittest.TestCase):
     """VPSV1MetricsMetricsCollection unit test stubs"""

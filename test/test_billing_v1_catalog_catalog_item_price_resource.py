@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.billing_v1_catalog_catalog_item_price_resource import BillingV1CatalogCatalogItemPriceResource
+from hostinger-api.models.billing_v1_catalog_catalog_item_price_resource import BillingV1CatalogCatalogItemPriceResource
 
 class TestBillingV1CatalogCatalogItemPriceResource(unittest.TestCase):
     """BillingV1CatalogCatalogItemPriceResource unit test stubs"""

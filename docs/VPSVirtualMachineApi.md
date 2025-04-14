@@ -1,4 +1,4 @@
-# @hostinger/api.VPSVirtualMachineApi
+# hostinger-api.VPSVirtualMachineApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -32,21 +32,21 @@ This endpoint retrieves a list of public keys attached to a specified virtual ma
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vps_get_public_key_list_v1200_response import VPSGetPublicKeyListV1200Response
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vps_get_public_key_list_v1200_response import VPSGetPublicKeyListV1200Response
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
     page = 1 # int | Page number (optional)
 
@@ -110,21 +110,21 @@ It includes the following metrics:
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_metrics_metrics_collection import VPSV1MetricsMetricsCollection
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_metrics_metrics_collection import VPSV1MetricsMetricsCollection
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
     date_from = '2025-05-01T00:00:00Z' # str | the date-time notation as defined by RFC 3339, section 5.6
     date_to = '2025-06-01T00:00:00Z' # str | the date-time notation as defined by RFC 3339, section 5.6
@@ -185,21 +185,21 @@ This endpoint retrieves a list of all available virtual machines.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_virtual_machine_virtual_machine_resource import VPSV1VirtualMachineVirtualMachineResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_virtual_machine_virtual_machine_resource import VPSV1VirtualMachineVirtualMachineResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
 
     try:
         # Get virtual machine list
@@ -251,21 +251,21 @@ This endpoint retrieves detailed information about a specified virtual machine.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_virtual_machine_virtual_machine_resource import VPSV1VirtualMachineVirtualMachineResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_virtual_machine_virtual_machine_resource import VPSV1VirtualMachineVirtualMachineResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:
@@ -334,24 +334,24 @@ Requirements for the password are:
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.models.vpsv1_virtual_machine_recreate_request import VPSV1VirtualMachineRecreateRequest
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.models.vpsv1_virtual_machine_recreate_request import VPSV1VirtualMachineRecreateRequest
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
-    vpsv1_virtual_machine_recreate_request = @hostinger/api.VPSV1VirtualMachineRecreateRequest() # VPSV1VirtualMachineRecreateRequest | 
+    vpsv1_virtual_machine_recreate_request = hostinger-api.VPSV1VirtualMachineRecreateRequest() # VPSV1VirtualMachineRecreateRequest | 
 
     try:
         # Recreate virtual machine
@@ -408,21 +408,21 @@ This endpoint resets the hostname and PTR record of a specified virtual machine 
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:
@@ -479,21 +479,21 @@ If the virtual machine was stopped, it will be started.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:
@@ -552,24 +552,24 @@ you need to point your domain A/AAAA records to virtual machine IP as well.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.models.vpsv1_virtual_machine_hostname_update_request import VPSV1VirtualMachineHostnameUpdateRequest
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.models.vpsv1_virtual_machine_hostname_update_request import VPSV1VirtualMachineHostnameUpdateRequest
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
-    vpsv1_virtual_machine_hostname_update_request = @hostinger/api.VPSV1VirtualMachineHostnameUpdateRequest() # VPSV1VirtualMachineHostnameUpdateRequest | 
+    vpsv1_virtual_machine_hostname_update_request = hostinger-api.VPSV1VirtualMachineHostnameUpdateRequest() # VPSV1VirtualMachineHostnameUpdateRequest | 
 
     try:
         # Set hostname
@@ -627,24 +627,24 @@ Be aware, that improper nameserver configuration can lead to the virtual machine
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.models.vpsv1_virtual_machine_nameservers_update_request import VPSV1VirtualMachineNameserversUpdateRequest
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.models.vpsv1_virtual_machine_nameservers_update_request import VPSV1VirtualMachineNameserversUpdateRequest
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
-    vpsv1_virtual_machine_nameservers_update_request = @hostinger/api.VPSV1VirtualMachineNameserversUpdateRequest() # VPSV1VirtualMachineNameserversUpdateRequest | 
+    vpsv1_virtual_machine_nameservers_update_request = hostinger-api.VPSV1VirtualMachineNameserversUpdateRequest() # VPSV1VirtualMachineNameserversUpdateRequest | 
 
     try:
         # Set nameservers
@@ -703,24 +703,24 @@ Requirements for the password is the same as in the [recreate virtual machine en
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.models.vpsv1_virtual_machine_panel_password_update_request import VPSV1VirtualMachinePanelPasswordUpdateRequest
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.models.vpsv1_virtual_machine_panel_password_update_request import VPSV1VirtualMachinePanelPasswordUpdateRequest
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
-    vpsv1_virtual_machine_panel_password_update_request = @hostinger/api.VPSV1VirtualMachinePanelPasswordUpdateRequest() # VPSV1VirtualMachinePanelPasswordUpdateRequest | 
+    vpsv1_virtual_machine_panel_password_update_request = hostinger-api.VPSV1VirtualMachinePanelPasswordUpdateRequest() # VPSV1VirtualMachinePanelPasswordUpdateRequest | 
 
     try:
         # Set panel password
@@ -778,24 +778,24 @@ Requirements for the password is the same as in the [recreate virtual machine en
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.models.vpsv1_virtual_machine_root_password_update_request import VPSV1VirtualMachineRootPasswordUpdateRequest
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.models.vpsv1_virtual_machine_root_password_update_request import VPSV1VirtualMachineRootPasswordUpdateRequest
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
-    vpsv1_virtual_machine_root_password_update_request = @hostinger/api.VPSV1VirtualMachineRootPasswordUpdateRequest() # VPSV1VirtualMachineRootPasswordUpdateRequest | 
+    vpsv1_virtual_machine_root_password_update_request = hostinger-api.VPSV1VirtualMachineRootPasswordUpdateRequest() # VPSV1VirtualMachineRootPasswordUpdateRequest | 
 
     try:
         # Set root password
@@ -853,24 +853,24 @@ New virtual machine can be purchased using [`/api/billing/v1/orders`](/#tag/bill
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_virtual_machine_setup_request import VPSV1VirtualMachineSetupRequest
-from @hostinger/api.models.vpsv1_virtual_machine_virtual_machine_resource import VPSV1VirtualMachineVirtualMachineResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_virtual_machine_setup_request import VPSV1VirtualMachineSetupRequest
+from hostinger-api.models.vpsv1_virtual_machine_virtual_machine_resource import VPSV1VirtualMachineVirtualMachineResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
-    vpsv1_virtual_machine_setup_request = @hostinger/api.VPSV1VirtualMachineSetupRequest() # VPSV1VirtualMachineSetupRequest | 
+    vpsv1_virtual_machine_setup_request = hostinger-api.VPSV1VirtualMachineSetupRequest() # VPSV1VirtualMachineSetupRequest | 
 
     try:
         # Setup new virtual machine
@@ -928,21 +928,21 @@ If the virtual machine is already running, the request will still be processed w
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:
@@ -999,21 +999,21 @@ If the virtual machine is already stopped, the request will still be processed w
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.vpsv1_action_action_resource import VPSV1ActionActionResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.VPSVirtualMachineApi(api_client)
+    api_instance = hostinger-api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
 
     try:

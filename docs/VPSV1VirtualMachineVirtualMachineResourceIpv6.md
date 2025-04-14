@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.vpsv1_virtual_machine_virtual_machine_resource_ipv6 import VPSV1VirtualMachineVirtualMachineResourceIpv6
+from hostinger-api.models.vpsv1_virtual_machine_virtual_machine_resource_ipv6 import VPSV1VirtualMachineVirtualMachineResourceIpv6
 
 # TODO update the JSON string below
 json = "{}"

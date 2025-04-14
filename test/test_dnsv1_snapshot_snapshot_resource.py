@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.dnsv1_snapshot_snapshot_resource import DNSV1SnapshotSnapshotResource
+from hostinger-api.models.dnsv1_snapshot_snapshot_resource import DNSV1SnapshotSnapshotResource
 
 class TestDNSV1SnapshotSnapshotResource(unittest.TestCase):
     """DNSV1SnapshotSnapshotResource unit test stubs"""

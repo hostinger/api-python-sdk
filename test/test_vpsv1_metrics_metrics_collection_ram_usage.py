@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_metrics_metrics_collection_ram_usage import VPSV1MetricsMetricsCollectionRamUsage
+from hostinger-api.models.vpsv1_metrics_metrics_collection_ram_usage import VPSV1MetricsMetricsCollectionRamUsage
 
 class TestVPSV1MetricsMetricsCollectionRamUsage(unittest.TestCase):
     """VPSV1MetricsMetricsCollectionRamUsage unit test stubs"""

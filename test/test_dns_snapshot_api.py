@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.api.dns_snapshot_api import DNSSnapshotApi
+from hostinger-api.api.dns_snapshot_api import DNSSnapshotApi
 
 
 class TestDNSSnapshotApi(unittest.TestCase):

@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_virtual_machine_virtual_machine_resource_template import VPSV1VirtualMachineVirtualMachineResourceTemplate
+from hostinger-api.models.vpsv1_virtual_machine_virtual_machine_resource_template import VPSV1VirtualMachineVirtualMachineResourceTemplate
 
 class TestVPSV1VirtualMachineVirtualMachineResourceTemplate(unittest.TestCase):
     """VPSV1VirtualMachineVirtualMachineResourceTemplate unit test stubs"""

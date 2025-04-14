@@ -1,4 +1,4 @@
-# @hostinger/api.BillingSubscriptionsApi
+# hostinger-api.BillingSubscriptionsApi
 
 All URIs are relative to *https://developers.hostinger.com*
 
@@ -20,24 +20,24 @@ This endpoint cancels a subscription and stops any further billing.
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.billing_v1_subscription_cancel_request import BillingV1SubscriptionCancelRequest
-from @hostinger/api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.billing_v1_subscription_cancel_request import BillingV1SubscriptionCancelRequest
+from hostinger-api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.BillingSubscriptionsApi(api_client)
+    api_instance = hostinger-api.BillingSubscriptionsApi(api_client)
     subscription_id = 'Cxy353Uhl1xC54pG6' # str | Subscription ID
-    billing_v1_subscription_cancel_request = @hostinger/api.BillingV1SubscriptionCancelRequest() # BillingV1SubscriptionCancelRequest | 
+    billing_v1_subscription_cancel_request = hostinger-api.BillingV1SubscriptionCancelRequest() # BillingV1SubscriptionCancelRequest | 
 
     try:
         # Cancel subscription
@@ -94,21 +94,21 @@ This endpoint retrieves a list of all subscriptions associated with your account
 * Bearer Authentication (apiToken):
 
 ```python
-import @hostinger/api
-from @hostinger/api.models.billing_v1_subscription_subscription_resource import BillingV1SubscriptionSubscriptionResource
-from @hostinger/api.rest import ApiException
+import hostinger-api
+from hostinger-api.models.billing_v1_subscription_subscription_resource import BillingV1SubscriptionSubscriptionResource
+from hostinger-api.rest import ApiException
 from pprint import pprint
 
 
 # Configure Bearer authorization: apiToken
-configuration = @hostinger/api.Configuration(
+configuration = hostinger-api.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with @hostinger/api.ApiClient(configuration) as api_client:
+with hostinger-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = @hostinger/api.BillingSubscriptionsApi(api_client)
+    api_instance = hostinger-api.BillingSubscriptionsApi(api_client)
 
     try:
         # Get subscription list

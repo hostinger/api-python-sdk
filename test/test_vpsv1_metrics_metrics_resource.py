@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.vpsv1_metrics_metrics_resource import VPSV1MetricsMetricsResource
+from hostinger-api.models.vpsv1_metrics_metrics_resource import VPSV1MetricsMetricsResource
 
 class TestVPSV1MetricsMetricsResource(unittest.TestCase):
     """VPSV1MetricsMetricsResource unit test stubs"""

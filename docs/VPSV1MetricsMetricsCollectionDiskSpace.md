@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from @hostinger/api.models.vpsv1_metrics_metrics_collection_disk_space import VPSV1MetricsMetricsCollectionDiskSpace
+from hostinger-api.models.vpsv1_metrics_metrics_collection_disk_space import VPSV1MetricsMetricsCollectionDiskSpace
 
 # TODO update the JSON string below
 json = "{}"

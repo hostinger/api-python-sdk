@@ -12,7 +12,7 @@
 
 import unittest
 
-from @hostinger/api.models.billing_v1_subscription_subscription_resource import BillingV1SubscriptionSubscriptionResource
+from hostinger-api.models.billing_v1_subscription_subscription_resource import BillingV1SubscriptionSubscriptionResource
 
 class TestBillingV1SubscriptionSubscriptionResource(unittest.TestCase):
     """BillingV1SubscriptionSubscriptionResource unit test stubs"""

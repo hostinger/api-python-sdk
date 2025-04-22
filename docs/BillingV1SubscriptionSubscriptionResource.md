@@ -13,11 +13,10 @@ Name | Type | Description | Notes
 **currency_code** | **str** |  | [optional] 
 **total_price** | **int** | Total price in cents | [optional] 
 **renewal_price** | **int** | Renewal price in cents | [optional] 
-**auto_renew** | **bool** |  | [optional] 
+**is_auto_renewed** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **expires_at** | **datetime** |  | [optional] 
 **next_billing_at** | **datetime** |  | [optional] 
-**canceled_at** | **datetime** |  | [optional] 
 
 ## Example
 

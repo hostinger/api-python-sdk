@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **content** | **str** | Content of the name record | [optional] 
-**disabled** | **bool** | Flag to mark name record as disabled | [optional] 
+**is_disabled** | **bool** | Flag to mark name record as disabled | [optional] 
 
 ## Example
 

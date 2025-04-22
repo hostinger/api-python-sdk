@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Firewall ID | [optional] 
 **name** | **str** | Firewall name | [optional] 
-**synced** | **bool** | Is current firewall synced with VPS | [optional] 
+**is_synced** | **bool** | Is current firewall synced with VPS | [optional] 
 **rules** | [**List[VPSV1FirewallFirewallRuleResource]**](VPSV1FirewallFirewallRuleResource.md) | Array of [&#x60;VPS.V1.Firewall.FirewallRuleResource&#x60;](#model/vpsv1firewallfirewallruleresource) | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

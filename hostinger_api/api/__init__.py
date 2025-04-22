@@ -7,6 +7,7 @@ from hostinger_api.api.billing_payment_methods_api import BillingPaymentMethodsA
 from hostinger_api.api.billing_subscriptions_api import BillingSubscriptionsApi
 from hostinger_api.api.dns_snapshot_api import DNSSnapshotApi
 from hostinger_api.api.dns_zone_api import DNSZoneApi
+from hostinger_api.api.domains_availability_api import DomainsAvailabilityApi
 from hostinger_api.api.domains_portfolio_api import DomainsPortfolioApi
 from hostinger_api.api.vps_actions_api import VPSActionsApi
 from hostinger_api.api.vps_backups_api import VPSBackupsApi

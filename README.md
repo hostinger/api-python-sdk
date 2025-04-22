@@ -97,6 +97,7 @@ Class | Method | HTTP request | Description
 *DNSZoneApi* | [**reset_zone_records_v1**](docs/DNSZoneApi.md#reset_zone_records_v1) | **POST** /api/dns/v1/zones/{domain}/reset | Reset zone records
 *DNSZoneApi* | [**update_zone_records_v1**](docs/DNSZoneApi.md#update_zone_records_v1) | **PUT** /api/dns/v1/zones/{domain} | Update zone records
 *DNSZoneApi* | [**validate_zone_records_v1**](docs/DNSZoneApi.md#validate_zone_records_v1) | **POST** /api/dns/v1/zones/{domain}/validate | Validate zone records
+*DomainsAvailabilityApi* | [**check_domain_availability_v1**](docs/DomainsAvailabilityApi.md#check_domain_availability_v1) | **POST** /api/domains/v1/availability | Check domain availability
 *DomainsPortfolioApi* | [**get_domain_list_v1**](docs/DomainsPortfolioApi.md#get_domain_list_v1) | **GET** /api/domains/v1/portfolio | Get domain list
 *VPSActionsApi* | [**get_action_list_v1**](docs/VPSActionsApi.md#get_action_list_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions | Get action list
 *VPSActionsApi* | [**get_action_v1**](docs/VPSActionsApi.md#get_action_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions/{actionId} | Get action
@@ -179,6 +180,8 @@ Class | Method | HTTP request | Description
  - [DNSV1ZoneUpdateRequest](docs/DNSV1ZoneUpdateRequest.md)
  - [DNSV1ZoneUpdateRequestZoneInner](docs/DNSV1ZoneUpdateRequestZoneInner.md)
  - [DNSV1ZoneUpdateRequestZoneInnerRecordsInner](docs/DNSV1ZoneUpdateRequestZoneInnerRecordsInner.md)
+ - [DomainsV1AvailabilityAvailabilityRequest](docs/DomainsV1AvailabilityAvailabilityRequest.md)
+ - [DomainsV1AvailabilityAvailabilityResource](docs/DomainsV1AvailabilityAvailabilityResource.md)
  - [DomainsV1DomainDomainResource](docs/DomainsV1DomainDomainResource.md)
  - [VPSGetActionListV1200Response](docs/VPSGetActionListV1200Response.md)
  - [VPSGetBackupListV1200Response](docs/VPSGetBackupListV1200Response.md)

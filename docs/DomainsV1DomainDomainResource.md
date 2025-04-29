@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Domain ID | [optional] 
-**name** | **str** | Domain name, &#x60;null&#x60; when not claimed free domain | [optional] 
+**domain** | **str** | Domain name, &#x60;null&#x60; when not claimed free domain | [optional] 
 **type** | **str** |  | [optional] 
 **status** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

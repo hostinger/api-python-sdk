@@ -18,9 +18,9 @@ Name | Type | Description | Notes
 **bandwidth** | **int** | Monthly internet traffic available to virtual machine (in megabytes) | [optional] 
 **ns1** | **str** | Primary DNS resolver | [optional] 
 **ns2** | **str** | Secondary DNS resolver | [optional] 
-**ipv4** | [**VPSV1VirtualMachineVirtualMachineResourceIpv4**](VPSV1VirtualMachineVirtualMachineResourceIpv4.md) |  | [optional] 
-**ipv6** | [**VPSV1VirtualMachineVirtualMachineResourceIpv6**](VPSV1VirtualMachineVirtualMachineResourceIpv6.md) |  | [optional] 
-**template** | [**VPSV1VirtualMachineVirtualMachineResourceTemplate**](VPSV1VirtualMachineVirtualMachineResourceTemplate.md) |  | [optional] 
+**ipv4** | [**List[VPSV1IPAddressIPAddressResource]**](VPSV1IPAddressIPAddressResource.md) | Array of [&#x60;VPS.V1.IPAddress.IPAddressResource&#x60;](#model/vpsv1ipaddressipaddressresource) | [optional] 
+**ipv6** | [**List[VPSV1IPAddressIPAddressResource]**](VPSV1IPAddressIPAddressResource.md) | Array of [&#x60;VPS.V1.IPAddress.IPAddressResource&#x60;](#model/vpsv1ipaddressipaddressresource) | [optional] 
+**template** | [**VPSV1TemplateTemplateResource**](VPSV1TemplateTemplateResource.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 
 ## Example

@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | **str** | Domain name, &#x60;null&#x60; when not claimed free domain | [optional] 
-**is_available** | **bool** |  | [optional] 
-**is_alternative** | **bool** |  | [optional] 
-**restriction** | **str** |  | [optional] 
+**is_available** | **bool** | &#x60;true&#x60; if domain is available for registration | [optional] 
+**is_alternative** | **bool** | &#x60;true&#x60; if domain is provided as an alternative | [optional] 
+**restriction** | **str** | Special rules and/or restrictions applied for registering TLD | [optional] 
 
 ## Example
 

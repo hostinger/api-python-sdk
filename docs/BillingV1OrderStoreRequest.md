@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **payment_method_id** | **int** | Payment method ID | 
 **items** | [**List[BillingV1OrderStoreRequestItemsInner]**](BillingV1OrderStoreRequestItemsInner.md) |  | 
-**coupons** | **List[object]** |  | [optional] 
+**coupons** | **List[object]** | Discount coupon codes | [optional] 
 
 ## Example
 

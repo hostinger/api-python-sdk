@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_id** | **str** | Price Item ID | [optional] 
-**quantity** | **int** |  | [optional] 
+**item_id** | **str** | Price Item ID | 
+**quantity** | **int** |  | 
 
 ## Example
 

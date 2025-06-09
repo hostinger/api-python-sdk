@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -180,7 +180,7 @@ configuration = hostinger_api.Configuration(
 with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.DomainsWHOISApi(api_client)
-    tld = 'com' # str | Filter by TLD (without trailing dot) (optional)
+    tld = 'com' # str | Filter by TLD (without leading dot) (optional)
 
     try:
         # Get WHOIS profile list
@@ -198,7 +198,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tld** | **str**| Filter by TLD (without trailing dot) | [optional] 
+ **tld** | **str**| Filter by TLD (without leading dot) | [optional] 
 
 ### Return type
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

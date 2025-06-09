@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **hostname** | **str** | Override default hostname of the virtual machine | [optional] 
 **install_monarx** | **bool** | Install Monarx malware scanner (if supported) | [optional] [default to False]
 **enable_backups** | **bool** | Enable weekly backup schedule | [optional] [default to True]
-**ns1** | **str** |  | [optional] 
-**ns2** | **str** |  | [optional] 
+**ns1** | **str** | Name server 1 | [optional] 
+**ns2** | **str** | Name server 2 | [optional] 
 **public_key** | [**VPSV1VirtualMachineSetupRequestPublicKey**](VPSV1VirtualMachineSetupRequestPublicKey.md) |  | [optional] 
 
 ## Example

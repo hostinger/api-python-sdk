@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**get_metrics_v1**](VPSVirtualMachineApi.md#get_metrics_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/metrics | Get metrics
 [**get_virtual_machine_list_v1**](VPSVirtualMachineApi.md#get_virtual_machine_list_v1) | **GET** /api/vps/v1/virtual-machines | Get virtual machine list
 [**get_virtual_machine_v1**](VPSVirtualMachineApi.md#get_virtual_machine_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId} | Get virtual machine
+[**purchase_new_virtual_machine_v1**](VPSVirtualMachineApi.md#purchase_new_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines | Purchase new virtual machine
 [**recreate_virtual_machine_v1**](VPSVirtualMachineApi.md#recreate_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/recreate | Recreate virtual machine
 [**reset_hostname_v1**](VPSVirtualMachineApi.md#reset_hostname_v1) | **DELETE** /api/vps/v1/virtual-machines/{virtualMachineId}/hostname | Reset hostname
 [**restart_virtual_machine_v1**](VPSVirtualMachineApi.md#restart_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/restart | Restart virtual machine
@@ -87,7 +88,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -126,8 +127,8 @@ with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.VPSVirtualMachineApi(api_client)
     virtual_machine_id = 1268054 # int | Virtual Machine ID
-    date_from = '2025-05-01T00:00:00Z' # str | the date-time notation as defined by RFC 3339, section 5.6
-    date_to = '2025-06-01T00:00:00Z' # str | the date-time notation as defined by RFC 3339, section 5.6
+    date_from = '2025-05-01T00:00Z' # datetime | 
+    date_to = '2025-06-01T00:00Z' # datetime | 
 
     try:
         # Get metrics
@@ -146,8 +147,8 @@ with hostinger_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **virtual_machine_id** | **int**| Virtual Machine ID | 
- **date_from** | **str**| the date-time notation as defined by RFC 3339, section 5.6 | 
- **date_to** | **str**| the date-time notation as defined by RFC 3339, section 5.6 | 
+ **date_from** | **datetime**|  | 
+ **date_to** | **datetime**|  | 
 
 ### Return type
 
@@ -168,7 +169,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -234,7 +235,7 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -304,7 +305,83 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **purchase_new_virtual_machine_v1**
+> BillingV1OrderOrderResource purchase_new_virtual_machine_v1(vpsv1_virtual_machine_purchase_request)
+
+Purchase new virtual machine
+
+This endpoint allows you to buy (purchase) and setup a new virtual machine.
+
+If virtual machine setup fails for any reason, login to [hPanel](https://hpanel.hostinger.com/) and complete the setup manually.
+
+If no payment method is provided, your default payment method will be used automatically.                        
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.billing_v1_order_order_resource import BillingV1OrderOrderResource
+from hostinger_api.models.vpsv1_virtual_machine_purchase_request import VPSV1VirtualMachinePurchaseRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.VPSVirtualMachineApi(api_client)
+    vpsv1_virtual_machine_purchase_request = hostinger_api.VPSV1VirtualMachinePurchaseRequest() # VPSV1VirtualMachinePurchaseRequest | 
+
+    try:
+        # Purchase new virtual machine
+        api_response = api_instance.purchase_new_virtual_machine_v1(vpsv1_virtual_machine_purchase_request)
+        print("The response of VPSVirtualMachineApi->purchase_new_virtual_machine_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling VPSVirtualMachineApi->purchase_new_virtual_machine_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **vpsv1_virtual_machine_purchase_request** | [**VPSV1VirtualMachinePurchaseRequest**](VPSV1VirtualMachinePurchaseRequest.md)|  | 
+
+### Return type
+
+[**BillingV1OrderOrderResource**](BillingV1OrderOrderResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -391,7 +468,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -461,7 +538,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -532,7 +609,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -609,7 +686,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -684,7 +761,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -760,7 +837,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -835,7 +912,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -845,8 +922,7 @@ Name | Type | Description  | Notes
 
 Setup new virtual machine
 
-This endpoint will setup newly purchased virtual machine. Such virtual machines has `initial` state. 
-New virtual machine can be purchased using [`/api/billing/v1/orders`](/#tag/billing-orders/POST/api/billing/v1/orders) endpoint.                        
+This endpoint will setup newly purchased virtual machine with `initial` state. 
 
 ### Example
 
@@ -910,7 +986,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -981,7 +1057,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1052,7 +1128,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

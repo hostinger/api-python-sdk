@@ -14,6 +14,13 @@ Create new service order
 
 This endpoint creates a new service order. 
 
+**DEPRECATED**
+
+To purchase a domain, use [`POST /api/domains/v1/portfolio`](/#tag/domains-portfolio/POST/api/domains/v1/portfolio) instead.
+
+To purchase a VPS, use [`POST /api/vps/v1/virtual-machines`](/#tag/vps-virtual-machine/POST/api/vps/v1/virtual-machines) instead.
+
+
 To place order, you need to provide payment method ID and list of price items from the catalog endpoint together with quantity.
 Coupons also can be provided during order creation.
 
@@ -82,7 +89,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

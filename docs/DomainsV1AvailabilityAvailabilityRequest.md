@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domain** | **str** | Domain name without TLD | 
-**tlds** | **List[str]** | TLDs to check (without trailing dot) | 
+**domain** | **str** | Domain name (without TLD) | 
+**tlds** | **List[str]** | TLDs list | 
 **with_alternatives** | **bool** | Should response include alternatives | [optional] [default to False]
 
 ## Example

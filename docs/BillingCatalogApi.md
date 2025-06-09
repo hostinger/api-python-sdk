@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_catalog_item_list_v1**
-> List[BillingV1CatalogCatalogItemResource] get_catalog_item_list_v1()
+> List[BillingV1CatalogCatalogItemResource] get_catalog_item_list_v1(category=category, name=name)
 
 Get catalog item list
 
@@ -36,10 +36,12 @@ configuration = hostinger_api.Configuration(
 with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.BillingCatalogApi(api_client)
+    category = 'VPS' # str | Filter catalog items by category (optional)
+    name = '.COM*' # str | Filter catalog items by name. Use `*` for wildcard search, e.g. `.COM*` to find .com domain (optional)
 
     try:
         # Get catalog item list
-        api_response = api_instance.get_catalog_item_list_v1()
+        api_response = api_instance.get_catalog_item_list_v1(category=category, name=name)
         print("The response of BillingCatalogApi->get_catalog_item_list_v1:\n")
         pprint(api_response)
     except Exception as e:
@@ -50,7 +52,11 @@ with hostinger_api.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category** | **str**| Filter catalog items by category | [optional] 
+ **name** | **str**| Filter catalog items by name. Use &#x60;*&#x60; for wildcard search, e.g. &#x60;.COM*&#x60; to find .com domain | [optional] 
 
 ### Return type
 
@@ -70,7 +76,7 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

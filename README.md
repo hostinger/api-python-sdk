@@ -9,7 +9,7 @@ For more information, please visit [https://developers.hostinger.com](https://de
 
 ## Requirements.
 
-Python 3.9+
+Python 3.8+
 
 ## Installation & Usage
 ### pip install
@@ -65,10 +65,12 @@ configuration = hostinger_api.Configuration(
 with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.BillingCatalogApi(api_client)
+    category = 'VPS' # str | Filter catalog items by category (optional)
+    name = '.COM*' # str | Filter catalog items by name. Use `*` for wildcard search, e.g. `.COM*` to find .com domain (optional)
 
     try:
         # Get catalog item list
-        api_response = api_instance.get_catalog_item_list_v1()
+        api_response = api_instance.get_catalog_item_list_v1(category=category, name=name)
         print("The response of BillingCatalogApi->get_catalog_item_list_v1:\n")
         pprint(api_response)
     except ApiException as e:
@@ -156,6 +158,7 @@ Class | Method | HTTP request | Description
 *VPSVirtualMachineApi* | [**get_metrics_v1**](docs/VPSVirtualMachineApi.md#get_metrics_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/metrics | Get metrics
 *VPSVirtualMachineApi* | [**get_virtual_machine_list_v1**](docs/VPSVirtualMachineApi.md#get_virtual_machine_list_v1) | **GET** /api/vps/v1/virtual-machines | Get virtual machine list
 *VPSVirtualMachineApi* | [**get_virtual_machine_v1**](docs/VPSVirtualMachineApi.md#get_virtual_machine_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId} | Get virtual machine
+*VPSVirtualMachineApi* | [**purchase_new_virtual_machine_v1**](docs/VPSVirtualMachineApi.md#purchase_new_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines | Purchase new virtual machine
 *VPSVirtualMachineApi* | [**recreate_virtual_machine_v1**](docs/VPSVirtualMachineApi.md#recreate_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/recreate | Recreate virtual machine
 *VPSVirtualMachineApi* | [**reset_hostname_v1**](docs/VPSVirtualMachineApi.md#reset_hostname_v1) | **DELETE** /api/vps/v1/virtual-machines/{virtualMachineId}/hostname | Reset hostname
 *VPSVirtualMachineApi* | [**restart_virtual_machine_v1**](docs/VPSVirtualMachineApi.md#restart_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/restart | Restart virtual machine
@@ -170,20 +173,21 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [BillingCreateNewServiceOrderV1422Response](docs/BillingCreateNewServiceOrderV1422Response.md)
+ - [BillingCreateNewServiceOrderV1422ResponseErrors](docs/BillingCreateNewServiceOrderV1422ResponseErrors.md)
+ - [BillingGetCatalogItemListV1401Response](docs/BillingGetCatalogItemListV1401Response.md)
+ - [BillingGetCatalogItemListV1500Response](docs/BillingGetCatalogItemListV1500Response.md)
  - [BillingV1CatalogCatalogItemPriceResource](docs/BillingV1CatalogCatalogItemPriceResource.md)
  - [BillingV1CatalogCatalogItemResource](docs/BillingV1CatalogCatalogItemResource.md)
  - [BillingV1OrderOrderBillingAddressResource](docs/BillingV1OrderOrderBillingAddressResource.md)
  - [BillingV1OrderOrderResource](docs/BillingV1OrderOrderResource.md)
  - [BillingV1OrderStoreRequest](docs/BillingV1OrderStoreRequest.md)
  - [BillingV1OrderStoreRequestItemsInner](docs/BillingV1OrderStoreRequestItemsInner.md)
+ - [BillingV1OrderVirtualMachineOrderResource](docs/BillingV1OrderVirtualMachineOrderResource.md)
  - [BillingV1PaymentMethodPaymentMethodResource](docs/BillingV1PaymentMethodPaymentMethodResource.md)
  - [BillingV1SubscriptionCancelRequest](docs/BillingV1SubscriptionCancelRequest.md)
  - [BillingV1SubscriptionSubscriptionResource](docs/BillingV1SubscriptionSubscriptionResource.md)
- - [CommonSchemaErrorResponseSchema](docs/CommonSchemaErrorResponseSchema.md)
  - [CommonSchemaPaginationMetaSchema](docs/CommonSchemaPaginationMetaSchema.md)
- - [CommonSchemaUnauthorizedResponseSchema](docs/CommonSchemaUnauthorizedResponseSchema.md)
- - [CommonSchemaUnprocessableContentResponseSchema](docs/CommonSchemaUnprocessableContentResponseSchema.md)
- - [CommonSchemaUnprocessableContentResponseSchemaErrors](docs/CommonSchemaUnprocessableContentResponseSchemaErrors.md)
  - [CommonSuccessEmptyResource](docs/CommonSuccessEmptyResource.md)
  - [DNSV1SnapshotSnapshotResource](docs/DNSV1SnapshotSnapshotResource.md)
  - [DNSV1SnapshotSnapshotWithContentResource](docs/DNSV1SnapshotSnapshotWithContentResource.md)
@@ -223,6 +227,12 @@ Class | Method | HTTP request | Description
  - [VPSV1IPAddressIPAddressResource](docs/VPSV1IPAddressIPAddressResource.md)
  - [VPSV1MalwareMetricsResource](docs/VPSV1MalwareMetricsResource.md)
  - [VPSV1MetricsMetricsCollection](docs/VPSV1MetricsMetricsCollection.md)
+ - [VPSV1MetricsMetricsCollectionCpuUsage](docs/VPSV1MetricsMetricsCollectionCpuUsage.md)
+ - [VPSV1MetricsMetricsCollectionDiskSpace](docs/VPSV1MetricsMetricsCollectionDiskSpace.md)
+ - [VPSV1MetricsMetricsCollectionIncomingTraffic](docs/VPSV1MetricsMetricsCollectionIncomingTraffic.md)
+ - [VPSV1MetricsMetricsCollectionOutgoingTraffic](docs/VPSV1MetricsMetricsCollectionOutgoingTraffic.md)
+ - [VPSV1MetricsMetricsCollectionRamUsage](docs/VPSV1MetricsMetricsCollectionRamUsage.md)
+ - [VPSV1MetricsMetricsCollectionUptime](docs/VPSV1MetricsMetricsCollectionUptime.md)
  - [VPSV1MetricsMetricsResource](docs/VPSV1MetricsMetricsResource.md)
  - [VPSV1PostInstallScriptPostInstallScriptResource](docs/VPSV1PostInstallScriptPostInstallScriptResource.md)
  - [VPSV1PostInstallScriptStoreRequest](docs/VPSV1PostInstallScriptStoreRequest.md)
@@ -232,13 +242,18 @@ Class | Method | HTTP request | Description
  - [VPSV1SnapshotSnapshotResource](docs/VPSV1SnapshotSnapshotResource.md)
  - [VPSV1TemplateTemplateResource](docs/VPSV1TemplateTemplateResource.md)
  - [VPSV1VirtualMachineHostnameUpdateRequest](docs/VPSV1VirtualMachineHostnameUpdateRequest.md)
+ - [VPSV1VirtualMachineMetricGetRequest](docs/VPSV1VirtualMachineMetricGetRequest.md)
  - [VPSV1VirtualMachineNameserversUpdateRequest](docs/VPSV1VirtualMachineNameserversUpdateRequest.md)
  - [VPSV1VirtualMachinePanelPasswordUpdateRequest](docs/VPSV1VirtualMachinePanelPasswordUpdateRequest.md)
+ - [VPSV1VirtualMachinePurchaseRequest](docs/VPSV1VirtualMachinePurchaseRequest.md)
  - [VPSV1VirtualMachineRecoveryStartRequest](docs/VPSV1VirtualMachineRecoveryStartRequest.md)
  - [VPSV1VirtualMachineRecreateRequest](docs/VPSV1VirtualMachineRecreateRequest.md)
  - [VPSV1VirtualMachineRootPasswordUpdateRequest](docs/VPSV1VirtualMachineRootPasswordUpdateRequest.md)
  - [VPSV1VirtualMachineSetupRequest](docs/VPSV1VirtualMachineSetupRequest.md)
  - [VPSV1VirtualMachineSetupRequestPublicKey](docs/VPSV1VirtualMachineSetupRequestPublicKey.md)
  - [VPSV1VirtualMachineVirtualMachineResource](docs/VPSV1VirtualMachineVirtualMachineResource.md)
+ - [VPSV1VirtualMachineVirtualMachineResourceIpv4](docs/VPSV1VirtualMachineVirtualMachineResourceIpv4.md)
+ - [VPSV1VirtualMachineVirtualMachineResourceIpv6](docs/VPSV1VirtualMachineVirtualMachineResourceIpv6.md)
+ - [VPSV1VirtualMachineVirtualMachineResourceTemplate](docs/VPSV1VirtualMachineVirtualMachineResourceTemplate.md)
 
 

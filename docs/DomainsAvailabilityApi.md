@@ -13,6 +13,8 @@ Method | HTTP request | Description
 Check domain availability
 
 This endpoint checks the availability of a domain name. Multiple TLDs can be checked at once.
+If you want to get alternative domains with response, provide only one TLD in the request and set `with_alternatives` to `true`.
+TLDs should be provided without the leading dot (e.g. `com`, `net`, `org`).
 
 Endpoint has rate limit of 10 requests per minute.
 
@@ -76,7 +78,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
-**401** | Unauthenticated |  -  |
+**401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Name of the record (use &#x60;@&#x60; for wildcard name) | 
-**records** | [**List[DNSV1ZoneUpdateRequestZoneInnerRecordsInner]**](DNSV1ZoneUpdateRequestZoneInnerRecordsInner.md) | Records assigned to the name | [optional] 
+**records** | [**List[DNSV1ZoneUpdateRequestZoneInnerRecordsInner]**](DNSV1ZoneUpdateRequestZoneInnerRecordsInner.md) | Records assigned to the name | 
 **ttl** | **int** | TTL (Time-To-Live) of the record | [optional] 
 **type** | **str** | Type of the record | 
 

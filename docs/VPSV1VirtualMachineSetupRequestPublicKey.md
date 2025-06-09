@@ -1,12 +1,13 @@
 # VPSV1VirtualMachineSetupRequestPublicKey
 
+Use SSH key
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Name of the SSH key | [optional] 
-**key** | **str** | SSH public key | [optional] 
+**key** | **str** | Contents of the SSH key | [optional] 
 
 ## Example
 

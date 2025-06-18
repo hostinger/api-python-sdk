@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **purchase_new_virtual_machine_v1**
-> BillingV1OrderOrderResource purchase_new_virtual_machine_v1(vpsv1_virtual_machine_purchase_request)
+> BillingV1OrderVirtualMachineOrderResource purchase_new_virtual_machine_v1(vpsv1_virtual_machine_purchase_request)
 
 Purchase new virtual machine
 
@@ -327,7 +327,7 @@ If no payment method is provided, your default payment method will be used autom
 
 ```python
 import hostinger_api
-from hostinger_api.models.billing_v1_order_order_resource import BillingV1OrderOrderResource
+from hostinger_api.models.billing_v1_order_virtual_machine_order_resource import BillingV1OrderVirtualMachineOrderResource
 from hostinger_api.models.vpsv1_virtual_machine_purchase_request import VPSV1VirtualMachinePurchaseRequest
 from hostinger_api.rest import ApiException
 from pprint import pprint
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BillingV1OrderOrderResource**](BillingV1OrderOrderResource.md)
+[**BillingV1OrderVirtualMachineOrderResource**](BillingV1OrderVirtualMachineOrderResource.md)
 
 ### Authorization
 

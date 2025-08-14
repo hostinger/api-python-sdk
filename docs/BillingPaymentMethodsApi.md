@@ -14,7 +14,9 @@ Method | HTTP request | Description
 
 Delete payment method
 
-This endpoint deletes a payment method from your account.
+Delete a payment method from your account.
+
+Use this endpoint to remove unused payment methods from user accounts.
 
 ### Example
 
@@ -84,9 +86,11 @@ Name | Type | Description  | Notes
 
 Get payment method list
 
-This endpoint retrieves a list of available payment methods that can be used for placing new orders.
+Retrieve available payment methods that can be used for placing new orders.
 
 If you want to add new payment method, please use [hPanel](https://hpanel.hostinger.com/billing/payment-methods).
+
+Use this endpoint to view available payment options before creating orders.
 
 ### Example
 
@@ -152,7 +156,9 @@ This endpoint does not need any parameter.
 
 Set default payment method
 
-This endpoint sets default payment method for your account.
+Set the default payment method for your account.
+
+Use this endpoint to configure the primary payment method for future orders.
 
 ### Example
 

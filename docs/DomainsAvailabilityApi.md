@@ -12,11 +12,15 @@ Method | HTTP request | Description
 
 Check domain availability
 
-This endpoint checks the availability of a domain name. Multiple TLDs can be checked at once.
-If you want to get alternative domains with response, provide only one TLD in the request and set `with_alternatives` to `true`.
-TLDs should be provided without the leading dot (e.g. `com`, `net`, `org`).
+Check availability of domain names across multiple TLDs.
+
+Multiple TLDs can be checked at once.
+If you want alternative domains with response, provide only one TLD and set `with_alternatives` to `true`.
+TLDs should be provided without leading dot (e.g. `com`, `net`, `org`).
 
 Endpoint has rate limit of 10 requests per minute.
+
+Use this endpoint to verify domain availability before purchase.
 
 ### Example
 

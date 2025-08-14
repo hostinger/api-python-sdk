@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ns1** | **str** |  | 
 **ns2** | **str** |  | [optional] 
+**ns3** | **str** |  | [optional] 
 
 ## Example
 

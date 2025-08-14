@@ -13,12 +13,15 @@ Method | HTTP request | Description
 
 Start recovery mode
 
-This endpoint initiates the recovery mode for a specified virtual machine. 
+Initiate recovery mode for a specified virtual machine.
+
 Recovery mode is a special state that allows users to perform system rescue operations, 
 such as repairing file systems, recovering data, or troubleshooting issues that prevent the virtual machine 
 from booting normally. 
 
 Virtual machine will boot recovery disk image and original disk image will be mounted in `/mnt` directory.
+
+Use this endpoint to enable system rescue operations on VPS instances.
 
 ### Example
 
@@ -92,8 +95,11 @@ Name | Type | Description  | Notes
 
 Stop recovery mode
 
-This endpoint stops the recovery mode for a specified virtual machine. 
+Stop recovery mode for a specified virtual machine.
+
 If virtual machine is not in recovery mode, this operation will fail.
+
+Use this endpoint to exit system rescue mode and return VPS to normal operation.
 
 ### Example
 

@@ -6,8 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **template_id** | **int** | Template ID | 
-**password** | **str** | Password for the virtual machine. If not provided, random password will be generated. Password will not be shown in the response. | [optional] 
-**post_install_script_id** | **int** | Post-install script ID | [optional] 
+**password** | **str** | Root password for the virtual machine. If not provided, random password will be generated. Password will not be shown in the response. | [optional] 
+**panel_password** | **str** | Panel password for the panel-based OS template. If not provided, random password will be generated. If OS does not support panel_password this field will be ignored. Password will not be shown in the response. | [optional] 
+**post_install_script_id** | **int** | Post-install script to execute after virtual machine was recreated | [optional] 
 
 ## Example
 

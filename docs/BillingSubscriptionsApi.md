@@ -13,7 +13,9 @@ Method | HTTP request | Description
 
 Cancel subscription
 
-This endpoint cancels a subscription and stops any further billing.
+Cancel a subscription and stop any further billing.
+
+Use this endpoint when users want to terminate active services.
 
 ### Example
 
@@ -87,7 +89,9 @@ Name | Type | Description  | Notes
 
 Get subscription list
 
-This endpoint retrieves a list of all subscriptions associated with your account.
+Retrieve a list of all subscriptions associated with your account.
+
+Use this endpoint to monitor active services and billing status.
 
 ### Example
 

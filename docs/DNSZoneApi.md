@@ -4,24 +4,27 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_zone_records_v1**](DNSZoneApi.md#delete_zone_records_v1) | **DELETE** /api/dns/v1/zones/{domain} | Delete zone records
-[**get_records_v1**](DNSZoneApi.md#get_records_v1) | **GET** /api/dns/v1/zones/{domain} | Get records
-[**reset_zone_records_v1**](DNSZoneApi.md#reset_zone_records_v1) | **POST** /api/dns/v1/zones/{domain}/reset | Reset zone records
-[**update_zone_records_v1**](DNSZoneApi.md#update_zone_records_v1) | **PUT** /api/dns/v1/zones/{domain} | Update zone records
-[**validate_zone_records_v1**](DNSZoneApi.md#validate_zone_records_v1) | **POST** /api/dns/v1/zones/{domain}/validate | Validate zone records
+[**delete_dns_records_v1**](DNSZoneApi.md#delete_dns_records_v1) | **DELETE** /api/dns/v1/zones/{domain} | Delete DNS records
+[**get_dns_records_v1**](DNSZoneApi.md#get_dns_records_v1) | **GET** /api/dns/v1/zones/{domain} | Get DNS records
+[**reset_dns_records_v1**](DNSZoneApi.md#reset_dns_records_v1) | **POST** /api/dns/v1/zones/{domain}/reset | Reset DNS records
+[**update_dns_records_v1**](DNSZoneApi.md#update_dns_records_v1) | **PUT** /api/dns/v1/zones/{domain} | Update DNS records
+[**validate_dns_records_v1**](DNSZoneApi.md#validate_dns_records_v1) | **POST** /api/dns/v1/zones/{domain}/validate | Validate DNS records
 
 
-# **delete_zone_records_v1**
-> CommonSuccessEmptyResource delete_zone_records_v1(domain, dnsv1_zone_destroy_request)
+# **delete_dns_records_v1**
+> CommonSuccessEmptyResource delete_dns_records_v1(domain, dnsv1_zone_destroy_request)
 
-Delete zone records
+Delete DNS records
 
-This endpoint deletes DNS records for the selected domain. 
+Delete DNS records for the selected domain.
+
 To filter which records to delete, add the `name` of the record and `type` to the filter. 
 Multiple filters can be provided with single request.
 
 If you have multiple records with the same name and type, and you want to delete only part of them,
 refer to the `Update zone records` endpoint.
+
+Use this endpoint to remove specific DNS records from domains.
 
 ### Example
 
@@ -48,12 +51,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     dnsv1_zone_destroy_request = hostinger_api.DNSV1ZoneDestroyRequest() # DNSV1ZoneDestroyRequest | 
 
     try:
-        # Delete zone records
-        api_response = api_instance.delete_zone_records_v1(domain, dnsv1_zone_destroy_request)
-        print("The response of DNSZoneApi->delete_zone_records_v1:\n")
+        # Delete DNS records
+        api_response = api_instance.delete_dns_records_v1(domain, dnsv1_zone_destroy_request)
+        print("The response of DNSZoneApi->delete_dns_records_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DNSZoneApi->delete_zone_records_v1: %s\n" % e)
+        print("Exception when calling DNSZoneApi->delete_dns_records_v1: %s\n" % e)
 ```
 
 
@@ -90,12 +93,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_records_v1**
-> List[DNSV1ZoneRecordResource] get_records_v1(domain)
+# **get_dns_records_v1**
+> List[DNSV1ZoneRecordResource] get_dns_records_v1(domain)
 
-Get records
+Get DNS records
 
-This endpoint retrieves DNS zone records for a specific domain.
+Retrieve DNS zone records for a specific domain.
+
+Use this endpoint to view current DNS configuration for domain management.
 
 ### Example
 
@@ -120,12 +125,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     domain = 'mydomain.tld' # str | Domain name
 
     try:
-        # Get records
-        api_response = api_instance.get_records_v1(domain)
-        print("The response of DNSZoneApi->get_records_v1:\n")
+        # Get DNS records
+        api_response = api_instance.get_dns_records_v1(domain)
+        print("The response of DNSZoneApi->get_dns_records_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DNSZoneApi->get_records_v1: %s\n" % e)
+        print("Exception when calling DNSZoneApi->get_dns_records_v1: %s\n" % e)
 ```
 
 
@@ -160,12 +165,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **reset_zone_records_v1**
-> CommonSuccessEmptyResource reset_zone_records_v1(domain, dnsv1_zone_reset_request)
+# **reset_dns_records_v1**
+> CommonSuccessEmptyResource reset_dns_records_v1(domain, dnsv1_zone_reset_request)
 
-Reset zone records
+Reset DNS records
 
-This endpoint resets DNS zone to the default records.
+Reset DNS zone to the default records.
+
+Use this endpoint to restore domain DNS to original configuration.
 
 ### Example
 
@@ -192,12 +199,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     dnsv1_zone_reset_request = hostinger_api.DNSV1ZoneResetRequest() # DNSV1ZoneResetRequest | 
 
     try:
-        # Reset zone records
-        api_response = api_instance.reset_zone_records_v1(domain, dnsv1_zone_reset_request)
-        print("The response of DNSZoneApi->reset_zone_records_v1:\n")
+        # Reset DNS records
+        api_response = api_instance.reset_dns_records_v1(domain, dnsv1_zone_reset_request)
+        print("The response of DNSZoneApi->reset_dns_records_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DNSZoneApi->reset_zone_records_v1: %s\n" % e)
+        print("Exception when calling DNSZoneApi->reset_dns_records_v1: %s\n" % e)
 ```
 
 
@@ -234,15 +241,17 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_zone_records_v1**
-> CommonSuccessEmptyResource update_zone_records_v1(domain, dnsv1_zone_update_request)
+# **update_dns_records_v1**
+> CommonSuccessEmptyResource update_dns_records_v1(domain, dnsv1_zone_update_request)
 
-Update zone records
+Update DNS records
 
-This endpoint updates DNS records for the selected domain. 
+Update DNS records for the selected domain.
 
 Using `overwrite = true` will replace existing records with the provided ones. 
 Otherwise existing records will be updated and new records will be added.
+
+Use this endpoint to modify domain DNS configuration.
 
 ### Example
 
@@ -269,12 +278,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     dnsv1_zone_update_request = hostinger_api.DNSV1ZoneUpdateRequest() # DNSV1ZoneUpdateRequest | 
 
     try:
-        # Update zone records
-        api_response = api_instance.update_zone_records_v1(domain, dnsv1_zone_update_request)
-        print("The response of DNSZoneApi->update_zone_records_v1:\n")
+        # Update DNS records
+        api_response = api_instance.update_dns_records_v1(domain, dnsv1_zone_update_request)
+        print("The response of DNSZoneApi->update_dns_records_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DNSZoneApi->update_zone_records_v1: %s\n" % e)
+        print("Exception when calling DNSZoneApi->update_dns_records_v1: %s\n" % e)
 ```
 
 
@@ -311,15 +320,17 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **validate_zone_records_v1**
-> CommonSuccessEmptyResource validate_zone_records_v1(domain, dnsv1_zone_update_request)
+# **validate_dns_records_v1**
+> CommonSuccessEmptyResource validate_dns_records_v1(domain, dnsv1_zone_update_request)
 
-Validate zone records
+Validate DNS records
 
-This endpoint used to validate DNS records prior update for the selected domain. 
+Validate DNS records prior to update for the selected domain.
 
 If the validation is successful, the response will contain `200 Success` code.
 If there is validation error, the response will fail with `422 Validation error` code.
+
+Use this endpoint to verify DNS record validity before applying changes.
 
 ### Example
 
@@ -346,12 +357,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     dnsv1_zone_update_request = hostinger_api.DNSV1ZoneUpdateRequest() # DNSV1ZoneUpdateRequest | 
 
     try:
-        # Validate zone records
-        api_response = api_instance.validate_zone_records_v1(domain, dnsv1_zone_update_request)
-        print("The response of DNSZoneApi->validate_zone_records_v1:\n")
+        # Validate DNS records
+        api_response = api_instance.validate_dns_records_v1(domain, dnsv1_zone_update_request)
+        print("The response of DNSZoneApi->validate_dns_records_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DNSZoneApi->validate_zone_records_v1: %s\n" % e)
+        print("Exception when calling DNSZoneApi->validate_dns_records_v1: %s\n" % e)
 ```
 
 

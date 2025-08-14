@@ -4,17 +4,19 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_snapshot_list_v1**](DNSSnapshotApi.md#get_snapshot_list_v1) | **GET** /api/dns/v1/snapshots/{domain} | Get snapshot list
-[**get_snapshot_v1**](DNSSnapshotApi.md#get_snapshot_v1) | **GET** /api/dns/v1/snapshots/{domain}/{snapshotId} | Get snapshot
-[**restore_snapshot_v1**](DNSSnapshotApi.md#restore_snapshot_v1) | **POST** /api/dns/v1/snapshots/{domain}/{snapshotId}/restore | Restore snapshot
+[**get_dns_snapshot_list_v1**](DNSSnapshotApi.md#get_dns_snapshot_list_v1) | **GET** /api/dns/v1/snapshots/{domain} | Get DNS snapshot list
+[**get_dns_snapshot_v1**](DNSSnapshotApi.md#get_dns_snapshot_v1) | **GET** /api/dns/v1/snapshots/{domain}/{snapshotId} | Get DNS snapshot
+[**restore_dns_snapshot_v1**](DNSSnapshotApi.md#restore_dns_snapshot_v1) | **POST** /api/dns/v1/snapshots/{domain}/{snapshotId}/restore | Restore DNS snapshot
 
 
-# **get_snapshot_list_v1**
-> List[DNSV1SnapshotSnapshotResource] get_snapshot_list_v1(domain)
+# **get_dns_snapshot_list_v1**
+> List[DNSV1SnapshotSnapshotResource] get_dns_snapshot_list_v1(domain)
 
-Get snapshot list
+Get DNS snapshot list
 
-This endpoint retrieves list of DNS snapshots.
+Retrieve DNS snapshots for a domain.
+
+Use this endpoint to view available DNS backup points for restoration.
 
 ### Example
 
@@ -39,12 +41,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     domain = 'mydomain.tld' # str | Domain name
 
     try:
-        # Get snapshot list
-        api_response = api_instance.get_snapshot_list_v1(domain)
-        print("The response of DNSSnapshotApi->get_snapshot_list_v1:\n")
+        # Get DNS snapshot list
+        api_response = api_instance.get_dns_snapshot_list_v1(domain)
+        print("The response of DNSSnapshotApi->get_dns_snapshot_list_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DNSSnapshotApi->get_snapshot_list_v1: %s\n" % e)
+        print("Exception when calling DNSSnapshotApi->get_dns_snapshot_list_v1: %s\n" % e)
 ```
 
 
@@ -79,12 +81,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_snapshot_v1**
-> DNSV1SnapshotSnapshotWithContentResource get_snapshot_v1(domain, snapshot_id)
+# **get_dns_snapshot_v1**
+> DNSV1SnapshotSnapshotWithContentResource get_dns_snapshot_v1(domain, snapshot_id)
 
-Get snapshot
+Get DNS snapshot
 
-This endpoint retrieves particular DNS snapshot with the contents of DNS zone records.
+Retrieve particular DNS snapshot with contents of DNS zone records.
+
+Use this endpoint to view historical DNS configurations for domains.
 
 ### Example
 
@@ -110,12 +114,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     snapshot_id = 53513053 # int | Snapshot ID
 
     try:
-        # Get snapshot
-        api_response = api_instance.get_snapshot_v1(domain, snapshot_id)
-        print("The response of DNSSnapshotApi->get_snapshot_v1:\n")
+        # Get DNS snapshot
+        api_response = api_instance.get_dns_snapshot_v1(domain, snapshot_id)
+        print("The response of DNSSnapshotApi->get_dns_snapshot_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DNSSnapshotApi->get_snapshot_v1: %s\n" % e)
+        print("Exception when calling DNSSnapshotApi->get_dns_snapshot_v1: %s\n" % e)
 ```
 
 
@@ -151,12 +155,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **restore_snapshot_v1**
-> CommonSuccessEmptyResource restore_snapshot_v1(domain, snapshot_id)
+# **restore_dns_snapshot_v1**
+> CommonSuccessEmptyResource restore_dns_snapshot_v1(domain, snapshot_id)
 
-Restore snapshot
+Restore DNS snapshot
 
-This endpoint restores DNS zone to the selected snapshot.
+Restore DNS zone to the selected snapshot.
+
+Use this endpoint to revert domain DNS to a previous configuration.
 
 ### Example
 
@@ -182,12 +188,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     snapshot_id = 53513053 # int | Snapshot ID
 
     try:
-        # Restore snapshot
-        api_response = api_instance.restore_snapshot_v1(domain, snapshot_id)
-        print("The response of DNSSnapshotApi->restore_snapshot_v1:\n")
+        # Restore DNS snapshot
+        api_response = api_instance.restore_dns_snapshot_v1(domain, snapshot_id)
+        print("The response of DNSSnapshotApi->restore_dns_snapshot_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DNSSnapshotApi->restore_snapshot_v1: %s\n" % e)
+        print("Exception when calling DNSSnapshotApi->restore_dns_snapshot_v1: %s\n" % e)
 ```
 
 

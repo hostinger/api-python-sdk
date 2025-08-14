@@ -5,12 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cpu_usage** | [**VPSV1MetricsMetricsCollectionCpuUsage**](VPSV1MetricsMetricsCollectionCpuUsage.md) |  | [optional] 
-**ram_usage** | [**VPSV1MetricsMetricsCollectionRamUsage**](VPSV1MetricsMetricsCollectionRamUsage.md) |  | [optional] 
-**disk_space** | [**VPSV1MetricsMetricsCollectionDiskSpace**](VPSV1MetricsMetricsCollectionDiskSpace.md) |  | [optional] 
-**outgoing_traffic** | [**VPSV1MetricsMetricsCollectionOutgoingTraffic**](VPSV1MetricsMetricsCollectionOutgoingTraffic.md) |  | [optional] 
-**incoming_traffic** | [**VPSV1MetricsMetricsCollectionIncomingTraffic**](VPSV1MetricsMetricsCollectionIncomingTraffic.md) |  | [optional] 
-**uptime** | [**VPSV1MetricsMetricsCollectionUptime**](VPSV1MetricsMetricsCollectionUptime.md) |  | [optional] 
+**cpu_usage** | [**VPSV1MetricsMetricsResource**](VPSV1MetricsMetricsResource.md) |  | [optional] 
+**ram_usage** | [**VPSV1MetricsMetricsResource**](VPSV1MetricsMetricsResource.md) |  | [optional] 
+**disk_space** | [**VPSV1MetricsMetricsResource**](VPSV1MetricsMetricsResource.md) |  | [optional] 
+**outgoing_traffic** | [**VPSV1MetricsMetricsResource**](VPSV1MetricsMetricsResource.md) |  | [optional] 
+**incoming_traffic** | [**VPSV1MetricsMetricsResource**](VPSV1MetricsMetricsResource.md) |  | [optional] 
+**uptime** | [**VPSV1MetricsMetricsResource**](VPSV1MetricsMetricsResource.md) |  | [optional] 
 
 ## Example
 

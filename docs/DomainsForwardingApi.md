@@ -4,17 +4,19 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_forwarding_data_v1**](DomainsForwardingApi.md#create_forwarding_data_v1) | **POST** /api/domains/v1/forwarding | Create forwarding data
-[**delete_forwarding_data_v1**](DomainsForwardingApi.md#delete_forwarding_data_v1) | **DELETE** /api/domains/v1/forwarding/{domain} | Delete forwarding data
-[**get_forwarding_data_v1**](DomainsForwardingApi.md#get_forwarding_data_v1) | **GET** /api/domains/v1/forwarding/{domain} | Get forwarding data
+[**create_domain_forwarding_v1**](DomainsForwardingApi.md#create_domain_forwarding_v1) | **POST** /api/domains/v1/forwarding | Create domain forwarding
+[**delete_domain_forwarding_v1**](DomainsForwardingApi.md#delete_domain_forwarding_v1) | **DELETE** /api/domains/v1/forwarding/{domain} | Delete domain forwarding
+[**get_domain_forwarding_v1**](DomainsForwardingApi.md#get_domain_forwarding_v1) | **GET** /api/domains/v1/forwarding/{domain} | Get domain forwarding
 
 
-# **create_forwarding_data_v1**
-> DomainsV1ForwardingForwardingResource create_forwarding_data_v1(domains_v1_forwarding_store_request)
+# **create_domain_forwarding_v1**
+> DomainsV1ForwardingForwardingResource create_domain_forwarding_v1(domains_v1_forwarding_store_request)
 
-Create forwarding data
+Create domain forwarding
 
-This endpoint creates domain forwarding data.
+Create domain forwarding configuration.
+
+Use this endpoint to set up domain redirects to other URLs.
 
 ### Example
 
@@ -40,12 +42,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     domains_v1_forwarding_store_request = hostinger_api.DomainsV1ForwardingStoreRequest() # DomainsV1ForwardingStoreRequest | 
 
     try:
-        # Create forwarding data
-        api_response = api_instance.create_forwarding_data_v1(domains_v1_forwarding_store_request)
-        print("The response of DomainsForwardingApi->create_forwarding_data_v1:\n")
+        # Create domain forwarding
+        api_response = api_instance.create_domain_forwarding_v1(domains_v1_forwarding_store_request)
+        print("The response of DomainsForwardingApi->create_domain_forwarding_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DomainsForwardingApi->create_forwarding_data_v1: %s\n" % e)
+        print("Exception when calling DomainsForwardingApi->create_domain_forwarding_v1: %s\n" % e)
 ```
 
 
@@ -81,12 +83,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_forwarding_data_v1**
-> CommonSuccessEmptyResource delete_forwarding_data_v1(domain)
+# **delete_domain_forwarding_v1**
+> CommonSuccessEmptyResource delete_domain_forwarding_v1(domain)
 
-Delete forwarding data
+Delete domain forwarding
 
-This endpoint deletes domain forwarding data.
+Delete domain forwarding data.
+
+Use this endpoint to remove redirect configuration from domains.
 
 ### Example
 
@@ -111,12 +115,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     domain = 'mydomain.tld' # str | Domain name
 
     try:
-        # Delete forwarding data
-        api_response = api_instance.delete_forwarding_data_v1(domain)
-        print("The response of DomainsForwardingApi->delete_forwarding_data_v1:\n")
+        # Delete domain forwarding
+        api_response = api_instance.delete_domain_forwarding_v1(domain)
+        print("The response of DomainsForwardingApi->delete_domain_forwarding_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DomainsForwardingApi->delete_forwarding_data_v1: %s\n" % e)
+        print("Exception when calling DomainsForwardingApi->delete_domain_forwarding_v1: %s\n" % e)
 ```
 
 
@@ -151,12 +155,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_forwarding_data_v1**
-> DomainsV1ForwardingForwardingResource get_forwarding_data_v1(domain)
+# **get_domain_forwarding_v1**
+> DomainsV1ForwardingForwardingResource get_domain_forwarding_v1(domain)
 
-Get forwarding data
+Get domain forwarding
 
-This endpoint retrieves domain forwarding data.
+Retrieve domain forwarding data.
+
+Use this endpoint to view current redirect configuration for domains.
 
 ### Example
 
@@ -181,12 +187,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     domain = 'mydomain.tld' # str | Domain name
 
     try:
-        # Get forwarding data
-        api_response = api_instance.get_forwarding_data_v1(domain)
-        print("The response of DomainsForwardingApi->get_forwarding_data_v1:\n")
+        # Get domain forwarding
+        api_response = api_instance.get_domain_forwarding_v1(domain)
+        print("The response of DomainsForwardingApi->get_domain_forwarding_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling DomainsForwardingApi->get_forwarding_data_v1: %s\n" % e)
+        print("Exception when calling DomainsForwardingApi->get_domain_forwarding_v1: %s\n" % e)
 ```
 
 

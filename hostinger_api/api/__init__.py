@@ -14,6 +14,7 @@ from hostinger_api.api.domains_whois_api import DomainsWHOISApi
 from hostinger_api.api.vps_actions_api import VPSActionsApi
 from hostinger_api.api.vps_backups_api import VPSBackupsApi
 from hostinger_api.api.vps_data_centers_api import VPSDataCentersApi
+from hostinger_api.api.vps_docker_manager_api import VPSDockerManagerApi
 from hostinger_api.api.vps_firewall_api import VPSFirewallApi
 from hostinger_api.api.vps_malware_scanner_api import VPSMalwareScannerApi
 from hostinger_api.api.vpsos_templates_api import VPSOSTemplatesApi

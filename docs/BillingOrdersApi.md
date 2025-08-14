@@ -4,15 +4,15 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_new_service_order_v1**](BillingOrdersApi.md#create_new_service_order_v1) | **POST** /api/billing/v1/orders | Create new service order
+[**create_service_order_v1**](BillingOrdersApi.md#create_service_order_v1) | **POST** /api/billing/v1/orders | Create service order
 
 
-# **create_new_service_order_v1**
-> BillingV1OrderOrderResource create_new_service_order_v1(billing_v1_order_store_request)
+# **create_service_order_v1**
+> BillingV1OrderOrderResource create_service_order_v1(billing_v1_order_store_request)
 
-Create new service order
+Create service order
 
-This endpoint creates a new service order. 
+Create a new service order. 
 
 **DEPRECATED**
 
@@ -53,12 +53,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     billing_v1_order_store_request = hostinger_api.BillingV1OrderStoreRequest() # BillingV1OrderStoreRequest | 
 
     try:
-        # Create new service order
-        api_response = api_instance.create_new_service_order_v1(billing_v1_order_store_request)
-        print("The response of BillingOrdersApi->create_new_service_order_v1:\n")
+        # Create service order
+        api_response = api_instance.create_service_order_v1(billing_v1_order_store_request)
+        print("The response of BillingOrdersApi->create_service_order_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling BillingOrdersApi->create_new_service_order_v1: %s\n" % e)
+        print("Exception when calling BillingOrdersApi->create_service_order_v1: %s\n" % e)
 ```
 
 

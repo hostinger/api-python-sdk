@@ -16,7 +16,9 @@ Method | HTTP request | Description
 
 Create WHOIS profile
 
-This endpoint creates WHOIS contact profile.
+Create WHOIS contact profile.
+
+Use this endpoint to add new contact information for domain registration.
 
 ### Example
 
@@ -88,7 +90,9 @@ Name | Type | Description  | Notes
 
 Delete WHOIS profile
 
-This endpoint deletes WHOIS contact profile.
+Delete WHOIS contact profile.
+
+Use this endpoint to remove unused contact profiles from account.
 
 ### Example
 
@@ -158,7 +162,9 @@ Name | Type | Description  | Notes
 
 Get WHOIS profile list
 
-This endpoint retrieves a list of WHOIS contact profiles.
+Retrieve WHOIS contact profiles.
+
+Use this endpoint to view available contact profiles for domain registration.
 
 ### Example
 
@@ -228,7 +234,9 @@ Name | Type | Description  | Notes
 
 Get WHOIS profile usage
 
-This endpoint retrieves a domain list where provided WHOIS contact profile is used.
+Retrieve domain list where provided WHOIS contact profile is used.
+
+Use this endpoint to view which domains use specific contact profiles.
 
 ### Example
 
@@ -297,7 +305,9 @@ Name | Type | Description  | Notes
 
 Get WHOIS profile
 
-This endpoint retrieves a WHOIS contact profile.
+Retrieve a WHOIS contact profile.
+
+Use this endpoint to view domain registration contact information.
 
 ### Example
 

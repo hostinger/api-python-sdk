@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**deactivate_firewall_v1**](VPSFirewallApi.md#deactivate_firewall_v1) | **POST** /api/vps/v1/firewall/{firewallId}/deactivate/{virtualMachineId} | Deactivate firewall
 [**delete_firewall_rule_v1**](VPSFirewallApi.md#delete_firewall_rule_v1) | **DELETE** /api/vps/v1/firewall/{firewallId}/rules/{ruleId} | Delete firewall rule
 [**delete_firewall_v1**](VPSFirewallApi.md#delete_firewall_v1) | **DELETE** /api/vps/v1/firewall/{firewallId} | Delete firewall
+[**get_firewall_details_v1**](VPSFirewallApi.md#get_firewall_details_v1) | **GET** /api/vps/v1/firewall/{firewallId} | Get firewall details
 [**get_firewall_list_v1**](VPSFirewallApi.md#get_firewall_list_v1) | **GET** /api/vps/v1/firewall | Get firewall list
-[**get_firewall_v1**](VPSFirewallApi.md#get_firewall_v1) | **GET** /api/vps/v1/firewall/{firewallId} | Get firewall
 [**sync_firewall_v1**](VPSFirewallApi.md#sync_firewall_v1) | **POST** /api/vps/v1/firewall/{firewallId}/sync/{virtualMachineId} | Sync firewall
 [**update_firewall_rule_v1**](VPSFirewallApi.md#update_firewall_rule_v1) | **PUT** /api/vps/v1/firewall/{firewallId}/rules/{ruleId} | Update firewall rule
 
@@ -21,9 +21,11 @@ Method | HTTP request | Description
 
 Activate firewall
 
-This endpoint activates a firewall for a specified virtual machine. 
+Activate a firewall for a specified virtual machine.
 
 Only one firewall can be active for a virtual machine at a time.
+
+Use this endpoint to apply firewall rules to VPS instances.
 
 ### Example
 
@@ -96,10 +98,13 @@ Name | Type | Description  | Notes
 
 Create firewall rule
 
-This endpoint creates new firewall rule from a specified firewall. 
+Create new firewall rule for a specified firewall.
+
 By default, the firewall drops all incoming traffic, which means you must add accept rules for all ports you want to use.
 
-Any virtual machine that has this firewall activated will loose sync with the firewall and will have to be synced again manually.
+Any virtual machine that has this firewall activated will lose sync with the firewall and will have to be synced again manually.
+
+Use this endpoint to add new security rules to firewalls.
 
 ### Example
 
@@ -173,7 +178,9 @@ Name | Type | Description  | Notes
 
 Create new firewall
 
-This endpoint creates a new firewall.
+Create a new firewall.
+
+Use this endpoint to set up new firewall configurations for VPS security.
 
 ### Example
 
@@ -245,7 +252,9 @@ Name | Type | Description  | Notes
 
 Deactivate firewall
 
-This endpoint deactivates a firewall for a specified virtual machine.
+Deactivate a firewall for a specified virtual machine.
+
+Use this endpoint to remove firewall protection from VPS instances.
 
 ### Example
 
@@ -318,9 +327,11 @@ Name | Type | Description  | Notes
 
 Delete firewall rule
 
-This endpoint deletes a specific firewall rule from a specified firewall.
+Delete a specific firewall rule from a specified firewall.
 
-Any virtual machine that has this firewall activated will loose sync with the firewall and will have to be synced again manually.
+Any virtual machine that has this firewall activated will lose sync with the firewall and will have to be synced again manually.
+       
+Use this endpoint to remove specific firewall rules.
 
 ### Example
 
@@ -392,9 +403,11 @@ Name | Type | Description  | Notes
 
 Delete firewall
 
-This endpoint deletes a specified firewall. 
+Delete a specified firewall.
 
 Any virtual machine that has this firewall activated will automatically have it deactivated.
+
+Use this endpoint to remove unused firewall configurations.
 
 ### Example
 
@@ -459,12 +472,86 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_firewall_details_v1**
+> VPSV1FirewallFirewallResource get_firewall_details_v1(firewall_id)
+
+Get firewall details
+
+Retrieve firewall by its ID and rules associated with it.
+
+Use this endpoint to view specific firewall configuration and rules.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.vpsv1_firewall_firewall_resource import VPSV1FirewallFirewallResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
+    firewall_id = 9449049 # int | Firewall ID
+
+    try:
+        # Get firewall details
+        api_response = api_instance.get_firewall_details_v1(firewall_id)
+        print("The response of VPSFirewallApi->get_firewall_details_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling VPSFirewallApi->get_firewall_details_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **firewall_id** | **int**| Firewall ID | 
+
+### Return type
+
+[**VPSV1FirewallFirewallResource**](VPSV1FirewallFirewallResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_firewall_list_v1**
 > VPSGetFirewallListV1200Response get_firewall_list_v1(page=page)
 
 Get firewall list
 
-This endpoint retrieves a list of all firewalls available.
+Retrieve all available firewalls.
+
+Use this endpoint to view existing firewall configurations.
 
 ### Example
 
@@ -529,84 +616,16 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_firewall_v1**
-> VPSV1FirewallFirewallResource get_firewall_v1(firewall_id)
-
-Get firewall
-
-This endpoint retrieves firewall by its ID and rules associated with it.
-
-### Example
-
-* Bearer Authentication (apiToken):
-
-```python
-import hostinger_api
-from hostinger_api.models.vpsv1_firewall_firewall_resource import VPSV1FirewallFirewallResource
-from hostinger_api.rest import ApiException
-from pprint import pprint
-
-
-# Configure Bearer authorization: apiToken
-configuration = hostinger_api.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
-
-# Enter a context with an instance of the API client
-with hostinger_api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = hostinger_api.VPSFirewallApi(api_client)
-    firewall_id = 9449049 # int | Firewall ID
-
-    try:
-        # Get firewall
-        api_response = api_instance.get_firewall_v1(firewall_id)
-        print("The response of VPSFirewallApi->get_firewall_v1:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling VPSFirewallApi->get_firewall_v1: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **firewall_id** | **int**| Firewall ID | 
-
-### Return type
-
-[**VPSV1FirewallFirewallResource**](VPSV1FirewallFirewallResource.md)
-
-### Authorization
-
-[apiToken](../README.md#apiToken)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success response |  -  |
-**401** | Unauthenticated response |  -  |
-**500** | Error response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sync_firewall_v1**
 > VPSV1ActionActionResource sync_firewall_v1(firewall_id, virtual_machine_id)
 
 Sync firewall
 
-This endpoint syncs a firewall for a specified virtual machine.
+Sync a firewall for a specified virtual machine.
 
-Firewall can loose sync with virtual machine if the firewall has new rules added, removed or updated.
+Firewall can lose sync with virtual machine if the firewall has new rules added, removed or updated.
+
+Use this endpoint to apply updated firewall rules to VPS instances.
 
 ### Example
 
@@ -679,9 +698,11 @@ Name | Type | Description  | Notes
 
 Update firewall rule
 
-This endpoint updates a specific firewall rule from a specified firewall.
+Update a specific firewall rule from a specified firewall.
 
-Any virtual machine that has this firewall activated will loose sync with the firewall and will have to be synced again manually.
+Any virtual machine that has this firewall activated will lose sync with the firewall and will have to be synced again manually.
+
+Use this endpoint to modify existing firewall rules.
 
 ### Example
 

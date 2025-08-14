@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **id** | **str** | Catalog item ID | [optional] 
 **name** | **str** |  | [optional] 
 **category** | **str** |  | [optional] 
+**metadata** | **object** | Flexible key-value storage containing category-specific metadata for the catalog item. The structure and available fields vary depending on the item category. | [optional] 
 **prices** | [**List[BillingV1CatalogCatalogItemPriceResource]**](BillingV1CatalogCatalogItemPriceResource.md) | Array of [&#x60;Billing.V1.Catalog.CatalogItemPriceResource&#x60;](#model/billingv1catalogcatalogitempriceresource) | [optional] 
 
 ## Example

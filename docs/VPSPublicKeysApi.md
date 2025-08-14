@@ -5,9 +5,9 @@ All URIs are relative to *https://developers.hostinger.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**attach_public_key_v1**](VPSPublicKeysApi.md#attach_public_key_v1) | **POST** /api/vps/v1/public-keys/attach/{virtualMachineId} | Attach public key
-[**create_new_public_key_v1**](VPSPublicKeysApi.md#create_new_public_key_v1) | **POST** /api/vps/v1/public-keys | Create new public key
-[**delete_a_public_key_v1**](VPSPublicKeysApi.md#delete_a_public_key_v1) | **DELETE** /api/vps/v1/public-keys/{publicKeyId} | Delete a public key
-[**get_public_key_list_v1**](VPSPublicKeysApi.md#get_public_key_list_v1) | **GET** /api/vps/v1/public-keys | Get public key list
+[**create_public_key_v1**](VPSPublicKeysApi.md#create_public_key_v1) | **POST** /api/vps/v1/public-keys | Create public key
+[**delete_public_key_v1**](VPSPublicKeysApi.md#delete_public_key_v1) | **DELETE** /api/vps/v1/public-keys/{publicKeyId} | Delete public key
+[**get_public_keys_v1**](VPSPublicKeysApi.md#get_public_keys_v1) | **GET** /api/vps/v1/public-keys | Get public keys
 
 
 # **attach_public_key_v1**
@@ -15,9 +15,11 @@ Method | HTTP request | Description
 
 Attach public key
 
-This endpoint attaches an existing public keys from your account to a specified virtual machine.
+Attach existing public keys from your account to a specified virtual machine.
 
 Multiple keys can be attached to a single virtual machine.
+
+Use this endpoint to enable SSH key authentication for VPS instances.
 
 ### Example
 
@@ -86,13 +88,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_new_public_key_v1**
-> VPSV1PublicKeyPublicKeyResource create_new_public_key_v1(vpsv1_public_key_store_request)
+# **create_public_key_v1**
+> VPSV1PublicKeyPublicKeyResource create_public_key_v1(vpsv1_public_key_store_request)
 
-Create new public key
+Create public key
 
-This endpoint allows you to add a new public key to your account, 
-which can then be attached to virtual machine instances for secure access.
+Add a new public key to your account.
+
+Use this endpoint to register SSH keys for VPS authentication.
 
 ### Example
 
@@ -118,12 +121,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     vpsv1_public_key_store_request = hostinger_api.VPSV1PublicKeyStoreRequest() # VPSV1PublicKeyStoreRequest | 
 
     try:
-        # Create new public key
-        api_response = api_instance.create_new_public_key_v1(vpsv1_public_key_store_request)
-        print("The response of VPSPublicKeysApi->create_new_public_key_v1:\n")
+        # Create public key
+        api_response = api_instance.create_public_key_v1(vpsv1_public_key_store_request)
+        print("The response of VPSPublicKeysApi->create_public_key_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling VPSPublicKeysApi->create_new_public_key_v1: %s\n" % e)
+        print("Exception when calling VPSPublicKeysApi->create_public_key_v1: %s\n" % e)
 ```
 
 
@@ -159,14 +162,16 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_a_public_key_v1**
-> CommonSuccessEmptyResource delete_a_public_key_v1(public_key_id)
+# **delete_public_key_v1**
+> CommonSuccessEmptyResource delete_public_key_v1(public_key_id)
 
-Delete a public key
+Delete public key
 
-This endpoint deletes a public key from your account. 
+Delete a public key from your account. 
 
 **Deleting public key from account does not remove it from virtual machine** 
+       
+Use this endpoint to remove unused SSH keys from account.
 
 ### Example
 
@@ -191,12 +196,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     public_key_id = 6672861 # int | Public Key ID
 
     try:
-        # Delete a public key
-        api_response = api_instance.delete_a_public_key_v1(public_key_id)
-        print("The response of VPSPublicKeysApi->delete_a_public_key_v1:\n")
+        # Delete public key
+        api_response = api_instance.delete_public_key_v1(public_key_id)
+        print("The response of VPSPublicKeysApi->delete_public_key_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling VPSPublicKeysApi->delete_a_public_key_v1: %s\n" % e)
+        print("Exception when calling VPSPublicKeysApi->delete_public_key_v1: %s\n" % e)
 ```
 
 
@@ -231,12 +236,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_public_key_list_v1**
-> VPSGetPublicKeyListV1200Response get_public_key_list_v1(page=page)
+# **get_public_keys_v1**
+> VPSGetPublicKeysV1200Response get_public_keys_v1(page=page)
 
-Get public key list
+Get public keys
 
-This endpoint retrieves a list of public keys associated with your account.
+Retrieve public keys associated with your account.
+
+Use this endpoint to view available SSH keys for VPS authentication.
 
 ### Example
 
@@ -244,7 +251,7 @@ This endpoint retrieves a list of public keys associated with your account.
 
 ```python
 import hostinger_api
-from hostinger_api.models.vps_get_public_key_list_v1200_response import VPSGetPublicKeyListV1200Response
+from hostinger_api.models.vps_get_public_keys_v1200_response import VPSGetPublicKeysV1200Response
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -261,12 +268,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     page = 1 # int | Page number (optional)
 
     try:
-        # Get public key list
-        api_response = api_instance.get_public_key_list_v1(page=page)
-        print("The response of VPSPublicKeysApi->get_public_key_list_v1:\n")
+        # Get public keys
+        api_response = api_instance.get_public_keys_v1(page=page)
+        print("The response of VPSPublicKeysApi->get_public_keys_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling VPSPublicKeysApi->get_public_key_list_v1: %s\n" % e)
+        print("Exception when calling VPSPublicKeysApi->get_public_keys_v1: %s\n" % e)
 ```
 
 
@@ -280,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VPSGetPublicKeyListV1200Response**](VPSGetPublicKeyListV1200Response.md)
+[**VPSGetPublicKeysV1200Response**](VPSGetPublicKeysV1200Response.md)
 
 ### Authorization
 

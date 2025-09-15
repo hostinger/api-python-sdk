@@ -6,6 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Backup ID | [optional] 
+**size** | **int** | Backup size in kilobytes | [optional] 
+**restore_time** | **int** | Estimated backup restore time in seconds | [optional] 
 **location** | **str** | Location of the backup | [optional] 
 **created_at** | **datetime** |  | [optional] 
 

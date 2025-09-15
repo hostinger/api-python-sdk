@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **content** | **str** | Contents of docker-compose file | [optional] 
+**environment** | **str** | Project environment variables | [optional] 
 
 ## Example
 

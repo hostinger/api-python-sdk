@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **command** | **str** | Command being executed inside the container (may be truncated with ...) | [optional] 
 **status** | **str** | Human-readable container status including uptime, exit codes, or error information | [optional] 
 **state** | **str** | Programmatic container lifecycle state for automated processing | [optional] 
+**health** | **str** | Container health status | [optional] 
 **ports** | [**List[VPSV1DockerManagerContainerPortResource]**](VPSV1DockerManagerContainerPortResource.md) | Array of [&#x60;VPS.V1.DockerManager.ContainerPortResource&#x60;](#model/vpsv1dockermanagercontainerportresource) | [optional] 
 **stats** | [**VPSV1DockerManagerContainerStatsResource**](VPSV1DockerManagerContainerStatsResource.md) |  | [optional] 
 

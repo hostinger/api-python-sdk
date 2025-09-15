@@ -116,6 +116,10 @@ Class | Method | HTTP request | Description
 *DomainsWHOISApi* | [**get_whois_profile_list_v1**](docs/DomainsWHOISApi.md#get_whois_profile_list_v1) | **GET** /api/domains/v1/whois | Get WHOIS profile list
 *DomainsWHOISApi* | [**get_whois_profile_usage_v1**](docs/DomainsWHOISApi.md#get_whois_profile_usage_v1) | **GET** /api/domains/v1/whois/{whoisId}/usage | Get WHOIS profile usage
 *DomainsWHOISApi* | [**get_whois_profile_v1**](docs/DomainsWHOISApi.md#get_whois_profile_v1) | **GET** /api/domains/v1/whois/{whoisId} | Get WHOIS profile
+*ReachContactsApi* | [**create_a_new_contact_v1**](docs/ReachContactsApi.md#create_a_new_contact_v1) | **POST** /api/reach/v1/contacts | Create a new contact
+*ReachContactsApi* | [**delete_a_contact_v1**](docs/ReachContactsApi.md#delete_a_contact_v1) | **DELETE** /api/reach/v1/contacts/{uuid} | Delete a contact
+*ReachContactsApi* | [**list_contact_groups_v1**](docs/ReachContactsApi.md#list_contact_groups_v1) | **GET** /api/reach/v1/contacts/groups | List contact groups
+*ReachContactsApi* | [**list_contacts_v1**](docs/ReachContactsApi.md#list_contacts_v1) | **GET** /api/reach/v1/contacts | List contacts
 *VPSActionsApi* | [**get_action_details_v1**](docs/VPSActionsApi.md#get_action_details_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions/{actionId} | Get action details
 *VPSActionsApi* | [**get_actions_v1**](docs/VPSActionsApi.md#get_actions_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions | Get actions
 *VPSBackupsApi* | [**get_backups_v1**](docs/VPSBackupsApi.md#get_backups_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/backups | Get backups
@@ -221,6 +225,10 @@ Class | Method | HTTP request | Description
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineObject2](docs/InlineObject2.md)
  - [InlineObject2Errors](docs/InlineObject2Errors.md)
+ - [ReachListContactsV1200Response](docs/ReachListContactsV1200Response.md)
+ - [ReachV1ContactsContactResource](docs/ReachV1ContactsContactResource.md)
+ - [ReachV1ContactsGroupsContactGroupResource](docs/ReachV1ContactsGroupsContactGroupResource.md)
+ - [ReachV1ContactsStoreRequest](docs/ReachV1ContactsStoreRequest.md)
  - [VPSGetActionsV1200Response](docs/VPSGetActionsV1200Response.md)
  - [VPSGetBackupsV1200Response](docs/VPSGetBackupsV1200Response.md)
  - [VPSGetFirewallListV1200Response](docs/VPSGetFirewallListV1200Response.md)

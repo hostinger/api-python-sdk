@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **project_name** | **str** | Docker Compose project name using alphanumeric characters, dashes, and underscores only | 
 **content** | **str** | URL pointing to docker-compose.yaml file, Github repository or raw YAML content of the compose file | 
+**environment** | **str** | Project environment variables | [optional] 
 
 ## Example
 

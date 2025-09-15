@@ -26,7 +26,7 @@ Deploy new project from docker-compose.yaml contents or download contents from U
 URL can be Github repository url in format https://github.com/[user]/[repo] and it will be automatically resolved to 
 docker-compose.yaml file in master branch. Any other URL provided must return docker-compose.yaml file contents.
 
-If project already exists, it will be replaced.
+If project with the same name already exists, existing project will be replaced.
 
 ### Example
 
@@ -334,7 +334,9 @@ Get project list
 
 Retrieves a list of all Docker Compose projects currently deployed on the virtual machine. 
 
-This endpoint returns basic information about each project including name, status, and file path. 
+This endpoint returns basic information about each project including name, status, file path and list of containers with 
+details about their names, image, status, health and ports. Container stats are omitted in this endpoint.
+If you need to get detailed information about container with stats included, use the `Get project containers` endpoint. 
 
 Use this to get an overview of all Docker projects on your VPS instance.
 

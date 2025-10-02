@@ -90,6 +90,8 @@ Class | Method | HTTP request | Description
 *BillingPaymentMethodsApi* | [**get_payment_method_list_v1**](docs/BillingPaymentMethodsApi.md#get_payment_method_list_v1) | **GET** /api/billing/v1/payment-methods | Get payment method list
 *BillingPaymentMethodsApi* | [**set_default_payment_method_v1**](docs/BillingPaymentMethodsApi.md#set_default_payment_method_v1) | **POST** /api/billing/v1/payment-methods/{paymentMethodId} | Set default payment method
 *BillingSubscriptionsApi* | [**cancel_subscription_v1**](docs/BillingSubscriptionsApi.md#cancel_subscription_v1) | **DELETE** /api/billing/v1/subscriptions/{subscriptionId} | Cancel subscription
+*BillingSubscriptionsApi* | [**disable_auto_renewal_v1**](docs/BillingSubscriptionsApi.md#disable_auto_renewal_v1) | **DELETE** /api/billing/v1/subscriptions/{subscriptionId}/auto-renewal/disable | Disable auto-renewal
+*BillingSubscriptionsApi* | [**enable_auto_renewal_v1**](docs/BillingSubscriptionsApi.md#enable_auto_renewal_v1) | **PATCH** /api/billing/v1/subscriptions/{subscriptionId}/auto-renewal/enable | Enable auto-renewal
 *BillingSubscriptionsApi* | [**get_subscription_list_v1**](docs/BillingSubscriptionsApi.md#get_subscription_list_v1) | **GET** /api/billing/v1/subscriptions | Get subscription list
 *DNSSnapshotApi* | [**get_dns_snapshot_list_v1**](docs/DNSSnapshotApi.md#get_dns_snapshot_list_v1) | **GET** /api/dns/v1/snapshots/{domain} | Get DNS snapshot list
 *DNSSnapshotApi* | [**get_dns_snapshot_v1**](docs/DNSSnapshotApi.md#get_dns_snapshot_v1) | **GET** /api/dns/v1/snapshots/{domain}/{snapshotId} | Get DNS snapshot

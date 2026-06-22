@@ -100,9 +100,11 @@ Create firewall rule
 
 Create new firewall rule for a specified firewall.
 
-By default, the firewall drops all incoming traffic, which means you must add accept rules for all ports you want to use.
+By default, the firewall drops all incoming traffic,
+which means you must add accept rules for all ports you want to use.
 
-Any virtual machine that has this firewall activated will lose sync with the firewall and will have to be synced again manually.
+Any virtual machine that has this firewall activated will lose sync with the firewall
+and will have to be synced again manually.
 
 Use this endpoint to add new security rules to firewalls.
 
@@ -329,8 +331,9 @@ Delete firewall rule
 
 Delete a specific firewall rule from a specified firewall.
 
-Any virtual machine that has this firewall activated will lose sync with the firewall and will have to be synced again manually.
-       
+Any virtual machine that has this firewall activated will lose sync with the firewall
+and will have to be synced again manually.
+
 Use this endpoint to remove specific firewall rules.
 
 ### Example
@@ -700,7 +703,8 @@ Update firewall rule
 
 Update a specific firewall rule from a specified firewall.
 
-Any virtual machine that has this firewall activated will lose sync with the firewall and will have to be synced again manually.
+Any virtual machine that has this firewall activated will lose sync with the firewall
+and will have to be synced again manually.
 
 Use this endpoint to modify existing firewall rules.
 

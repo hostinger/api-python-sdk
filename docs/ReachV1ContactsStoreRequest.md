@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **email** | **str** |  | 
 **name** | **str** |  | [optional] 
 **surname** | **str** |  | [optional] 
-**group_uuids** | **List[str]** |  | [optional] 
+**phone** | **str** | Phone number in E.164 format (leading \&quot;+\&quot; then 7-15 digits) | [optional] 
 **note** | **str** |  | [optional] 
 
 ## Example

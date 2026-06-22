@@ -88,7 +88,8 @@ Get payment method list
 
 Retrieve available payment methods that can be used for placing new orders.
 
-If you want to add new payment method, please use [hPanel](https://hpanel.hostinger.com/billing/payment-methods).
+If you want to add new payment method,
+please use [hPanel](https://hpanel.hostinger.com/billing/payment-methods).
 
 Use this endpoint to view available payment options before creating orders.
 

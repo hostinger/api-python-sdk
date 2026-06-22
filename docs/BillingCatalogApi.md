@@ -14,7 +14,8 @@ Get catalog item list
 
 Retrieve catalog items available for order.
 
-Prices in catalog items is displayed as cents (without floating point), e.g: float `17.99` is displayed as integer `1799`.
+Prices in catalog items is displayed as cents (without floating point),
+e.g: float `17.99` is displayed as integer `1799`.
 
 Use this endpoint to view available services and pricing before placing orders.
 

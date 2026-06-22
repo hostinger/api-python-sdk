@@ -5,22 +5,23 @@ All URIs are relative to *https://developers.hostinger.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_a_new_contact_v1**](ReachContactsApi.md#create_a_new_contact_v1) | **POST** /api/reach/v1/contacts | Create a new contact
+[**create_new_contacts_v1**](ReachContactsApi.md#create_new_contacts_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/contacts | Create new contacts
 [**delete_a_contact_v1**](ReachContactsApi.md#delete_a_contact_v1) | **DELETE** /api/reach/v1/contacts/{uuid} | Delete a contact
 [**list_contact_groups_v1**](ReachContactsApi.md#list_contact_groups_v1) | **GET** /api/reach/v1/contacts/groups | List contact groups
 [**list_contacts_v1**](ReachContactsApi.md#list_contacts_v1) | **GET** /api/reach/v1/contacts | List contacts
 
 
 # **create_a_new_contact_v1**
-> ReachV1ContactsContactResource create_a_new_contact_v1(reach_v1_contacts_store_request)
+> CommonSuccessEmptyResource create_a_new_contact_v1(reach_v1_contacts_store_request)
 
 Create a new contact
 
 Create a new contact in the email marketing system.
 
 This endpoint allows you to create a new contact with basic information like name, email, and surname.
-You can optionally assign the contact to specific groups and add notes.
 
-The contact will be automatically subscribed to email communications.
+If double opt-in is enabled,
+the contact will be created with a pending status and a confirmation email will be sent.
 
 ### Example
 
@@ -28,7 +29,7 @@ The contact will be automatically subscribed to email communications.
 
 ```python
 import hostinger_api
-from hostinger_api.models.reach_v1_contacts_contact_resource import ReachV1ContactsContactResource
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
 from hostinger_api.models.reach_v1_contacts_store_request import ReachV1ContactsStoreRequest
 from hostinger_api.rest import ApiException
 from pprint import pprint
@@ -65,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ReachV1ContactsContactResource**](ReachV1ContactsContactResource.md)
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
 
 ### Authorization
 
@@ -80,7 +81,86 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success response |  -  |
+**200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_new_contacts_v1**
+> CommonSuccessEmptyResource create_new_contacts_v1(profile_uuid, reach_v1_contacts_store_request)
+
+Create new contacts
+
+Create a new contact in the email marketing system.
+
+This endpoint allows you to create a new contact with basic information like name, email, and surname.
+
+If double opt-in is enabled, the contact will be created with a pending status
+and a confirmation email will be sent.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.reach_v1_contacts_store_request import ReachV1ContactsStoreRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.ReachContactsApi(api_client)
+    profile_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Profile uuid parameter
+    reach_v1_contacts_store_request = hostinger_api.ReachV1ContactsStoreRequest() # ReachV1ContactsStoreRequest | 
+
+    try:
+        # Create new contacts
+        api_response = api_instance.create_new_contacts_v1(profile_uuid, reach_v1_contacts_store_request)
+        print("The response of ReachContactsApi->create_new_contacts_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ReachContactsApi->create_new_contacts_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_uuid** | **str**| Profile uuid parameter | 
+ **reach_v1_contacts_store_request** | [**ReachV1ContactsStoreRequest**](ReachV1ContactsStoreRequest.md)|  | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
 **422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |

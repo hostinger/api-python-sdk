@@ -23,8 +23,10 @@ Create new project
 
 Deploy new project from docker-compose.yaml contents or download contents from URL. 
 
-URL can be Github repository url in format https://github.com/[user]/[repo] and it will be automatically resolved to 
-docker-compose.yaml file in master branch. Any other URL provided must return docker-compose.yaml file contents.
+URL can be Github repository url in format https://github.com/[user]/[repo]
+and it will be automatically resolved to docker-compose.yaml file in
+master branch. Any other URL provided must return docker-compose.yaml
+file contents.
 
 If project with the same name already exists, existing project will be replaced.
 
@@ -180,7 +182,8 @@ Get project containers
 
 Retrieves a list of all containers belonging to a specific Docker Compose project on the virtual machine. 
 
-This endpoint returns detailed information about each container including their current status, port mappings, and runtime configuration. 
+This endpoint returns detailed information about each container including
+their current status, port mappings, and runtime configuration.
 
 Use this to monitor the health and state of all services within your Docker Compose project.
 
@@ -255,7 +258,8 @@ Name | Type | Description  | Notes
 
 Get project contents
 
-Retrieves the complete project information including the docker-compose.yml file contents, project metadata, and current deployment status. 
+Retrieves the complete project information including the docker-compose.yml
+file contents, project metadata, and current deployment status.
 
 This endpoint provides the full configuration and state details of a specific Docker Compose project. 
 
@@ -334,9 +338,11 @@ Get project list
 
 Retrieves a list of all Docker Compose projects currently deployed on the virtual machine. 
 
-This endpoint returns basic information about each project including name, status, file path and list of containers with 
-details about their names, image, status, health and ports. Container stats are omitted in this endpoint.
-If you need to get detailed information about container with stats included, use the `Get project containers` endpoint. 
+This endpoint returns basic information about each project including name,
+status, file path and list of containers with details about their names,
+image, status, health and ports. Container stats are omitted in this
+endpoint. If you need to get detailed information about container with
+stats included, use the `Get project containers` endpoint.
 
 Use this to get an overview of all Docker projects on your VPS instance.
 
@@ -414,7 +420,8 @@ Retrieves aggregated log entries from all services within a Docker Compose proje
 This endpoint returns recent log output from each container, organized by service name with timestamps. 
 The response contains the last 300 log entries across all services. 
 
-Use this for debugging, monitoring application behavior, and troubleshooting issues across your entire project stack.
+Use this for debugging, monitoring application behavior, and
+troubleshooting issues across your entire project stack.
 
 ### Example
 
@@ -487,7 +494,8 @@ Name | Type | Description  | Notes
 
 Restart project
 
-Restarts all services in a Docker Compose project by stopping and starting containers in the correct dependency order. 
+Restarts all services in a Docker Compose project by stopping and starting
+containers in the correct dependency order.
 
 This operation preserves data volumes and network configurations while refreshing the running containers. 
 
@@ -641,7 +649,8 @@ Name | Type | Description  | Notes
 
 Stop project
 
-Stops all running services in a Docker Compose project while preserving container configurations and data volumes. 
+Stops all running services in a Docker Compose project while preserving
+container configurations and data volumes.
 
 This operation gracefully shuts down containers in reverse dependency order. 
 
@@ -718,11 +727,13 @@ Name | Type | Description  | Notes
 
 Update project
 
-Updates a Docker Compose project by pulling the latest image versions and recreating containers with new configurations. 
+Updates a Docker Compose project by pulling the latest image versions and
+recreating containers with new configurations.
 
 This operation preserves data volumes while applying changes from the compose file. 
 
-Use this to deploy application updates, apply configuration changes, or refresh container images to their latest versions.
+Use this to deploy application updates, apply configuration changes, or
+refresh container images to their latest versions.
 
 ### Example
 

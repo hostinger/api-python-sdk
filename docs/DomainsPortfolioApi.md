@@ -169,7 +169,8 @@ Enable domain lock
 
 Enable domain lock for the domain.
 
-When domain lock is enabled, the domain cannot be transferred to another registrar without first disabling the lock.
+When domain lock is enabled,
+the domain cannot be transferred to another registrar without first disabling the lock.
 
 Use this endpoint to secure domains against unauthorized transfers.
 
@@ -461,7 +462,7 @@ If registration fails, login to [hPanel](https://hpanel.hostinger.com/) and chec
 
 If no payment method is provided, your default payment method will be used automatically.
 
-If no WHOIS information is provided, default contact information for that TLD will be used. 
+If no WHOIS information is provided, default contact information for that TLD will be used.
 Before making request, ensure WHOIS information for desired TLD exists in your account.
 
 Some TLDs require `additional_details` to be provided and these will be validated before completing purchase.

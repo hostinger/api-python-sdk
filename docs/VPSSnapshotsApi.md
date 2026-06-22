@@ -240,7 +240,8 @@ Restore snapshot
 
 Restore a specified virtual machine to a previous state using a snapshot.
 
-Restoring from a snapshot allows users to revert the virtual machine to that state, which is useful for system recovery, undoing changes, or testing.
+Restoring from a snapshot allows users to revert the virtual machine to that state,
+which is useful for system recovery, undoing changes, or testing.
 
 Use this endpoint to revert VPS instances to previous saved states.
 

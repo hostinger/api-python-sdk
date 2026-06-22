@@ -93,7 +93,8 @@ Delete PTR record
 
 Delete a PTR (Pointer) record for a specified virtual machine.
 
-Once deleted, reverse DNS lookups to the virtual machine's IP address will no longer return the previously configured hostname.
+Once deleted, reverse DNS lookups to the virtual machine's IP address will
+no longer return the previously configured hostname.
 
 Use this endpoint to remove reverse DNS configuration from VPS instances.
 

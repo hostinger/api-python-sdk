@@ -18,7 +18,8 @@ Create post-install script
 
 Add a new post-install script to your account, which can then be used after virtual machine installation.
 
-The script contents will be saved to the file `/post_install` with executable attribute set and will be executed once virtual machine is installed.
+The script contents will be saved to the file `/post_install` with executable attribute set
+and will be executed once virtual machine is installed.
 The output of the script will be redirected to `/post_install.log`. Maximum script size is 48KB.
 
 Use this endpoint to create automation scripts for VPS setup tasks.

@@ -326,11 +326,12 @@ Purchase new virtual machine
 
 Purchase and setup a new virtual machine.
 
-If virtual machine setup fails for any reason, login to [hPanel](https://hpanel.hostinger.com/) and complete the setup manually.
+If virtual machine setup fails for any reason, login to
+[hPanel](https://hpanel.hostinger.com/) and complete the setup manually.
 
 If no payment method is provided, your default payment method will be used automatically.
 
-Use this endpoint to create new VPS instances.                        
+Use this endpoint to create new VPS instances.
 
 ### Example
 
@@ -404,13 +405,14 @@ Recreate virtual machine
 
 Recreate a virtual machine from scratch.
 
-The recreation process involves reinstalling the operating system and resetting the virtual machine to its initial state.
+The recreation process involves reinstalling the operating system and
+resetting the virtual machine to its initial state.
 Snapshots, if there are any, will be deleted.
 
 ## Password Requirements
 Password will be checked against leaked password databases. 
 Requirements for the password are:
-- At least 8 characters long
+- At least 12 characters long
 - At least one uppercase letter
 - At least one lowercase letter
 - At least one number
@@ -720,7 +722,8 @@ Set nameservers
 
 Set nameservers for a specified virtual machine.
 
-Be aware, that improper nameserver configuration can lead to the virtual machine being unable to resolve domain names.
+Be aware, that improper nameserver configuration can lead to the virtual
+machine being unable to resolve domain names.
 
 Use this endpoint to configure custom DNS resolvers for VPS instances.
 
@@ -799,7 +802,8 @@ Set panel password
 Set panel password for a specified virtual machine.
 
 If virtual machine does not use panel OS, the request will still be processed without any effect.
-Requirements for password are same as in the [recreate virtual machine endpoint](/#tag/vps-virtual-machine/POST/api/vps/v1/virtual-machines/{virtualMachineId}/recreate).
+Requirements for password are same as in the [recreate virtual machine
+endpoint](/#tag/vps-virtual-machine/POST/api/vps/v1/virtual-machines/{virtualMachineId}/recreate).
 
 Use this endpoint to configure control panel access credentials for VPS instances.
 
@@ -877,7 +881,8 @@ Set root password
 
 Set root password for a specified virtual machine.
 
-Requirements for password are same as in the [recreate virtual machine endpoint](/#tag/vps-virtual-machine/POST/api/vps/v1/virtual-machines/{virtualMachineId}/recreate).
+Requirements for password are same as in the [recreate virtual machine
+endpoint](/#tag/vps-virtual-machine/POST/api/vps/v1/virtual-machines/{virtualMachineId}/recreate).
 
 Use this endpoint to update administrator credentials for VPS instances.
 

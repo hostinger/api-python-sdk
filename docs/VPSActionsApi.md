@@ -89,9 +89,10 @@ Get actions
 
 Retrieve actions performed on a specified virtual machine.
 
-Actions are operations or events that have been executed on the virtual machine, such as starting, stopping, or modifying 
-the machine. This endpoint allows you to view the history of these actions, providing details about each action, 
-such as the action name, timestamp, and status.
+Actions are operations or events that have been executed on the virtual
+machine, such as starting, stopping, or modifying the machine. This endpoint
+allows you to view the history of these actions, providing details about
+each action, such as the action name, timestamp, and status.
 
 Use this endpoint to view VPS operation history and troubleshoot issues.
 

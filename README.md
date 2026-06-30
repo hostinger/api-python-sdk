@@ -9,7 +9,7 @@ For more information, please visit [https://developers.hostinger.com](https://de
 
 ## Requirements.
 
-Python 3.10+
+Python 3.9+
 
 ## Installation & Usage
 ### pip install
@@ -127,9 +127,12 @@ Class | Method | HTTP request | Description
 *HorizonsWebsitesApi* | [**create_website_v1**](docs/HorizonsWebsitesApi.md#create_website_v1) | **POST** /api/horizons/v1/websites | Create website
 *HorizonsWebsitesApi* | [**get_website_v1**](docs/HorizonsWebsitesApi.md#get_website_v1) | **GET** /api/horizons/v1/websites/{websiteId} | Get website
 *HostingDatabasesApi* | [**change_database_password_v1**](docs/HostingDatabasesApi.md#change_database_password_v1) | **PATCH** /api/hosting/v1/accounts/{username}/databases/{name}/change-password | Change database password
+*HostingDatabasesApi* | [**create_account_database_remote_connection_v1**](docs/HostingDatabasesApi.md#create_account_database_remote_connection_v1) | **POST** /api/hosting/v1/accounts/{username}/databases/{name}/remote-connections | Create account database remote connection
 *HostingDatabasesApi* | [**create_account_database_v1**](docs/HostingDatabasesApi.md#create_account_database_v1) | **POST** /api/hosting/v1/accounts/{username}/databases | Create account database
+*HostingDatabasesApi* | [**delete_account_database_remote_connection_v1**](docs/HostingDatabasesApi.md#delete_account_database_remote_connection_v1) | **DELETE** /api/hosting/v1/accounts/{username}/databases/{name}/remote-connections | Delete account database remote connection
 *HostingDatabasesApi* | [**delete_account_database_v1**](docs/HostingDatabasesApi.md#delete_account_database_v1) | **DELETE** /api/hosting/v1/accounts/{username}/databases/{name} | Delete account database
 *HostingDatabasesApi* | [**get_php_my_admin_link_v1**](docs/HostingDatabasesApi.md#get_php_my_admin_link_v1) | **GET** /api/hosting/v1/accounts/{username}/databases/{name}/phpmyadmin-link | Get phpMyAdmin link
+*HostingDatabasesApi* | [**list_account_database_remote_connections_v1**](docs/HostingDatabasesApi.md#list_account_database_remote_connections_v1) | **GET** /api/hosting/v1/accounts/{username}/databases/remote-connections | List account database remote connections
 *HostingDatabasesApi* | [**list_account_databases_v1**](docs/HostingDatabasesApi.md#list_account_databases_v1) | **GET** /api/hosting/v1/accounts/{username}/databases | List account databases
 *HostingDatabasesApi* | [**repair_database_v1**](docs/HostingDatabasesApi.md#repair_database_v1) | **PATCH** /api/hosting/v1/accounts/{username}/databases/{name}/repair | Repair database
 *HostingDatacentersApi* | [**list_available_datacenters_v1**](docs/HostingDatacentersApi.md#list_available_datacenters_v1) | **GET** /api/hosting/v1/datacenters | List available datacenters
@@ -299,6 +302,8 @@ Class | Method | HTTP request | Description
  - [HostingV1DatabasesCreateDatabaseRequest](docs/HostingV1DatabasesCreateDatabaseRequest.md)
  - [HostingV1DatabasesDatabaseResource](docs/HostingV1DatabasesDatabaseResource.md)
  - [HostingV1DatabasesPhpMyAdminLinkResource](docs/HostingV1DatabasesPhpMyAdminLinkResource.md)
+ - [HostingV1DatabasesRemoteConnectionsCreateRemoteConnectionRequest](docs/HostingV1DatabasesRemoteConnectionsCreateRemoteConnectionRequest.md)
+ - [HostingV1DatabasesRemoteConnectionsRemoteConnectionResource](docs/HostingV1DatabasesRemoteConnectionsRemoteConnectionResource.md)
  - [HostingV1DatacenterCoordinatesResource](docs/HostingV1DatacenterCoordinatesResource.md)
  - [HostingV1DatacenterDatacenterResource](docs/HostingV1DatacenterDatacenterResource.md)
  - [HostingV1DatacentersListRequest](docs/HostingV1DatacentersListRequest.md)

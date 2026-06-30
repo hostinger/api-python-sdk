@@ -23,9 +23,9 @@ def read(filename):
 # http://pypi.python.org/pypi/setuptools
 NAME = "hostinger_api"
 VERSION = "0.0.22"
-PYTHON_REQUIRES = ">= 3.8"
+PYTHON_REQUIRES = ">= 3.10"
 REQUIRES = [
-    "urllib3 >= 1.25.3, < 3.0.0",
+    "urllib3 >= 2.7.0, < 3.0.0",
     "python-dateutil >= 2.8.2",
     "pydantic >= 2",
     "typing-extensions >= 4.7.1",

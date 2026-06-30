@@ -9,7 +9,7 @@ For more information, please visit [https://developers.hostinger.com](https://de
 
 ## Requirements.
 
-Python 3.9+
+Python 3.10+
 
 ## Installation & Usage
 ### pip install

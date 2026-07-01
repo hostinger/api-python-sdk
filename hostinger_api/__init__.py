@@ -12,7 +12,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.1"
+__version__ = "2.0.0"
 
 # import apis into sdk package
 from hostinger_api.api.billing_catalog_api import BillingCatalogApi

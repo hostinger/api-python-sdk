@@ -117,9 +117,12 @@ Class | Method | HTTP request | Description
 *DomainsWHOISApi* | [**get_whois_profile_list_v1**](docs/DomainsWHOISApi.md#get_whois_profile_list_v1) | **GET** /api/domains/v1/whois | Get WHOIS profile list
 *DomainsWHOISApi* | [**get_whois_profile_usage_v1**](docs/DomainsWHOISApi.md#get_whois_profile_usage_v1) | **GET** /api/domains/v1/whois/{whoisId}/usage | Get WHOIS profile usage
 *DomainsWHOISApi* | [**get_whois_profile_v1**](docs/DomainsWHOISApi.md#get_whois_profile_v1) | **GET** /api/domains/v1/whois/{whoisId} | Get WHOIS profile
+*EcommerceMiscellaneousApi* | [**get_custom_storefront_setup_instructions_v1**](docs/EcommerceMiscellaneousApi.md#get_custom_storefront_setup_instructions_v1) | **GET** /api/ecommerce/v1/miscellaneous/custom-storefront-instructions | Get custom storefront setup instructions
 *EcommercePaymentsApi* | [**enable_manual_payment_method_v1**](docs/EcommercePaymentsApi.md#enable_manual_payment_method_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/payment-methods/manual | Enable manual payment method
 *EcommerceProductsApi* | [**create_digital_product_v1**](docs/EcommerceProductsApi.md#create_digital_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/digital | Create digital product
 *EcommerceProductsApi* | [**create_physical_product_v1**](docs/EcommerceProductsApi.md#create_physical_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/physical | Create physical product
+*EcommerceSalesChannelsApi* | [**create_a_custom_sales_channel_v1**](docs/EcommerceSalesChannelsApi.md#create_a_custom_sales_channel_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/sales-channels | Create a custom sales channel
+*EcommerceSalesChannelsApi* | [**list_sales_channels_v1**](docs/EcommerceSalesChannelsApi.md#list_sales_channels_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/sales-channels | List sales channels
 *EcommerceShippingApi* | [**set_store_shipping_v1**](docs/EcommerceShippingApi.md#set_store_shipping_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/shipping | Set store shipping
 *EcommerceStoresApi* | [**create_store_v1**](docs/EcommerceStoresApi.md#create_store_v1) | **POST** /api/ecommerce/v1/stores | Create store
 *EcommerceStoresApi* | [**delete_store_v1**](docs/EcommerceStoresApi.md#delete_store_v1) | **DELETE** /api/ecommerce/v1/stores/{store_id} | Delete store
@@ -294,6 +297,7 @@ Class | Method | HTTP request | Description
  - [DomainsV1WHOISProfileResource](docs/DomainsV1WHOISProfileResource.md)
  - [DomainsV1WHOISStoreRequest](docs/DomainsV1WHOISStoreRequest.md)
  - [EcommerceGetStoresV1200Response](docs/EcommerceGetStoresV1200Response.md)
+ - [EcommerceV1MiscellaneousCustomStorefrontInstructionsResource](docs/EcommerceV1MiscellaneousCustomStorefrontInstructionsResource.md)
  - [EcommerceV1PaymentEnableManualPaymentRequest](docs/EcommerceV1PaymentEnableManualPaymentRequest.md)
  - [EcommerceV1PaymentManualPaymentResource](docs/EcommerceV1PaymentManualPaymentResource.md)
  - [EcommerceV1PaymentManualPaymentResourcePaymentMethod](docs/EcommerceV1PaymentManualPaymentResourcePaymentMethod.md)
@@ -301,6 +305,11 @@ Class | Method | HTTP request | Description
  - [EcommerceV1ProductCreatePhysicalProductRequest](docs/EcommerceV1ProductCreatePhysicalProductRequest.md)
  - [EcommerceV1ProductProductCreationResource](docs/EcommerceV1ProductProductCreationResource.md)
  - [EcommerceV1ProductProductCreationResourceProduct](docs/EcommerceV1ProductProductCreationResourceProduct.md)
+ - [EcommerceV1SalesChannelSalesChannelCreationResource](docs/EcommerceV1SalesChannelSalesChannelCreationResource.md)
+ - [EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel](docs/EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel.md)
+ - [EcommerceV1SalesChannelSalesChannelListResource](docs/EcommerceV1SalesChannelSalesChannelListResource.md)
+ - [EcommerceV1SalesChannelSalesChannelListResourceSalesChannelsInner](docs/EcommerceV1SalesChannelSalesChannelListResourceSalesChannelsInner.md)
+ - [EcommerceV1SalesChannelStoreRequest](docs/EcommerceV1SalesChannelStoreRequest.md)
  - [EcommerceV1ShippingSetShippingRequest](docs/EcommerceV1ShippingSetShippingRequest.md)
  - [EcommerceV1ShippingShippingResource](docs/EcommerceV1ShippingShippingResource.md)
  - [EcommerceV1ShippingShippingResourceShippingOption](docs/EcommerceV1ShippingShippingResourceShippingOption.md)

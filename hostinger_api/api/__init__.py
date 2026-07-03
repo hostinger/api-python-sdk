@@ -11,8 +11,10 @@ from hostinger_api.api.domains_availability_api import DomainsAvailabilityApi
 from hostinger_api.api.domains_forwarding_api import DomainsForwardingApi
 from hostinger_api.api.domains_portfolio_api import DomainsPortfolioApi
 from hostinger_api.api.domains_whois_api import DomainsWHOISApi
+from hostinger_api.api.ecommerce_miscellaneous_api import EcommerceMiscellaneousApi
 from hostinger_api.api.ecommerce_payments_api import EcommercePaymentsApi
 from hostinger_api.api.ecommerce_products_api import EcommerceProductsApi
+from hostinger_api.api.ecommerce_sales_channels_api import EcommerceSalesChannelsApi
 from hostinger_api.api.ecommerce_shipping_api import EcommerceShippingApi
 from hostinger_api.api.ecommerce_stores_api import EcommerceStoresApi
 from hostinger_api.api.horizons_websites_api import HorizonsWebsitesApi

@@ -24,6 +24,7 @@ from hostinger_api.api.hosting_datacenters_api import HostingDatacentersApi
 from hostinger_api.api.hosting_domains_api import HostingDomainsApi
 from hostinger_api.api.hosting_node_js_api import HostingNodeJSApi
 from hostinger_api.api.hosting_orders_api import HostingOrdersApi
+from hostinger_api.api.hosting_php_api import HostingPHPApi
 from hostinger_api.api.hosting_websites_api import HostingWebsitesApi
 from hostinger_api.api.reach_contacts_api import ReachContactsApi
 from hostinger_api.api.reach_profiles_api import ReachProfilesApi

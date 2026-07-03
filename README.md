@@ -121,11 +121,13 @@ Class | Method | HTTP request | Description
 *EcommercePaymentsApi* | [**enable_manual_payment_method_v1**](docs/EcommercePaymentsApi.md#enable_manual_payment_method_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/payment-methods/manual | Enable manual payment method
 *EcommerceProductsApi* | [**create_digital_product_v1**](docs/EcommerceProductsApi.md#create_digital_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/digital | Create digital product
 *EcommerceProductsApi* | [**create_physical_product_v1**](docs/EcommerceProductsApi.md#create_physical_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/physical | Create physical product
-*EcommerceSalesChannelsApi* | [**create_a_custom_sales_channel_v1**](docs/EcommerceSalesChannelsApi.md#create_a_custom_sales_channel_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/sales-channels | Create a custom sales channel
+*EcommerceSalesChannelsApi* | [**create_custom_sales_channel_v1**](docs/EcommerceSalesChannelsApi.md#create_custom_sales_channel_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/sales-channels | Create custom sales channel
 *EcommerceSalesChannelsApi* | [**list_sales_channels_v1**](docs/EcommerceSalesChannelsApi.md#list_sales_channels_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/sales-channels | List sales channels
+*EcommerceSalesChannelsApi* | [**update_sales_channel_v1**](docs/EcommerceSalesChannelsApi.md#update_sales_channel_v1) | **PATCH** /api/ecommerce/v1/stores/{store_id}/sales-channels/{sales_channel_id} | Update sales channel
 *EcommerceShippingApi* | [**set_store_shipping_v1**](docs/EcommerceShippingApi.md#set_store_shipping_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/shipping | Set store shipping
 *EcommerceStoresApi* | [**create_store_v1**](docs/EcommerceStoresApi.md#create_store_v1) | **POST** /api/ecommerce/v1/stores | Create store
 *EcommerceStoresApi* | [**delete_store_v1**](docs/EcommerceStoresApi.md#delete_store_v1) | **DELETE** /api/ecommerce/v1/stores/{store_id} | Delete store
+*EcommerceStoresApi* | [**get_store_metadata_v1**](docs/EcommerceStoresApi.md#get_store_metadata_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/metadata | Get store metadata
 *EcommerceStoresApi* | [**get_stores_v1**](docs/EcommerceStoresApi.md#get_stores_v1) | **GET** /api/ecommerce/v1/stores | Get stores
 *HorizonsWebsitesApi* | [**create_website_v1**](docs/HorizonsWebsitesApi.md#create_website_v1) | **POST** /api/horizons/v1/websites | Create website
 *HorizonsWebsitesApi* | [**get_website_v1**](docs/HorizonsWebsitesApi.md#get_website_v1) | **GET** /api/horizons/v1/websites/{websiteId} | Get website
@@ -315,7 +317,9 @@ Class | Method | HTTP request | Description
  - [EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel](docs/EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel.md)
  - [EcommerceV1SalesChannelSalesChannelListResource](docs/EcommerceV1SalesChannelSalesChannelListResource.md)
  - [EcommerceV1SalesChannelSalesChannelListResourceSalesChannelsInner](docs/EcommerceV1SalesChannelSalesChannelListResourceSalesChannelsInner.md)
+ - [EcommerceV1SalesChannelSalesChannelUpdateResource](docs/EcommerceV1SalesChannelSalesChannelUpdateResource.md)
  - [EcommerceV1SalesChannelStoreRequest](docs/EcommerceV1SalesChannelStoreRequest.md)
+ - [EcommerceV1SalesChannelUpdateRequest](docs/EcommerceV1SalesChannelUpdateRequest.md)
  - [EcommerceV1ShippingSetShippingRequest](docs/EcommerceV1ShippingSetShippingRequest.md)
  - [EcommerceV1ShippingShippingResource](docs/EcommerceV1ShippingShippingResource.md)
  - [EcommerceV1ShippingShippingResourceShippingOption](docs/EcommerceV1ShippingShippingResourceShippingOption.md)
@@ -323,6 +327,9 @@ Class | Method | HTTP request | Description
  - [EcommerceV1StoreStoreCreationResourceSalesChannel](docs/EcommerceV1StoreStoreCreationResourceSalesChannel.md)
  - [EcommerceV1StoreStoreCreationResourceStore](docs/EcommerceV1StoreStoreCreationResourceStore.md)
  - [EcommerceV1StoreStoreDeleteResource](docs/EcommerceV1StoreStoreDeleteResource.md)
+ - [EcommerceV1StoreStoreMetadataResource](docs/EcommerceV1StoreStoreMetadataResource.md)
+ - [EcommerceV1StoreStoreMetadataResourceMetadata](docs/EcommerceV1StoreStoreMetadataResourceMetadata.md)
+ - [EcommerceV1StoreStoreMetadataResourceMetadataDefaultCurrency](docs/EcommerceV1StoreStoreMetadataResourceMetadataDefaultCurrency.md)
  - [EcommerceV1StoreStoreRequest](docs/EcommerceV1StoreStoreRequest.md)
  - [EcommerceV1StoreStoreRequestSalesChannel](docs/EcommerceV1StoreStoreRequestSalesChannel.md)
  - [EcommerceV1StoreStoreResource](docs/EcommerceV1StoreStoreResource.md)

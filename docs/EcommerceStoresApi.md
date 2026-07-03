@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_store_v1**](EcommerceStoresApi.md#create_store_v1) | **POST** /api/ecommerce/v1/stores | Create store
 [**delete_store_v1**](EcommerceStoresApi.md#delete_store_v1) | **DELETE** /api/ecommerce/v1/stores/{store_id} | Delete store
+[**get_store_metadata_v1**](EcommerceStoresApi.md#get_store_metadata_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/metadata | Get store metadata
 [**get_stores_v1**](EcommerceStoresApi.md#get_stores_v1) | **GET** /api/ecommerce/v1/stores | Get stores
 
 
@@ -135,6 +136,77 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EcommerceV1StoreStoreDeleteResource**](EcommerceV1StoreStoreDeleteResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_store_metadata_v1**
+> EcommerceV1StoreStoreMetadataResource get_store_metadata_v1(store_id)
+
+Get store metadata
+
+Get a store's readiness metadata: whether payment methods and shipping are configured,
+plus its default currency. Useful to verify prerequisites before building a storefront.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.ecommerce_v1_store_store_metadata_resource import EcommerceV1StoreStoreMetadataResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.EcommerceStoresApi(api_client)
+    store_id = 'store_01J8Z5F8W9K8M4A7B3C2D1E0FG' # str | The ID of the store to read metadata for.
+
+    try:
+        # Get store metadata
+        api_response = api_instance.get_store_metadata_v1(store_id)
+        print("The response of EcommerceStoresApi->get_store_metadata_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling EcommerceStoresApi->get_store_metadata_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **str**| The ID of the store to read metadata for. | 
+
+### Return type
+
+[**EcommerceV1StoreStoreMetadataResource**](EcommerceV1StoreStoreMetadataResource.md)
 
 ### Authorization
 

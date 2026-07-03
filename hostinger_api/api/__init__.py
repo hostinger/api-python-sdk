@@ -23,7 +23,6 @@ from hostinger_api.api.hosting_domains_api import HostingDomainsApi
 from hostinger_api.api.hosting_node_js_api import HostingNodeJSApi
 from hostinger_api.api.hosting_orders_api import HostingOrdersApi
 from hostinger_api.api.hosting_websites_api import HostingWebsitesApi
-from hostinger_api.api.hosting_wordpress_api import HostingWordpressApi
 from hostinger_api.api.reach_contacts_api import ReachContactsApi
 from hostinger_api.api.reach_profiles_api import ReachProfilesApi
 from hostinger_api.api.reach_segments_api import ReachSegmentsApi
@@ -40,4 +39,7 @@ from hostinger_api.api.vps_public_keys_api import VPSPublicKeysApi
 from hostinger_api.api.vps_recovery_api import VPSRecoveryApi
 from hostinger_api.api.vps_snapshots_api import VPSSnapshotsApi
 from hostinger_api.api.vps_virtual_machine_api import VPSVirtualMachineApi
+from hostinger_api.api.word_press_installations_api import WordPressInstallationsApi
+from hostinger_api.api.word_press_plugins_api import WordPressPluginsApi
+from hostinger_api.api.word_press_themes_api import WordPressThemesApi
 

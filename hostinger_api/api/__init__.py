@@ -42,7 +42,12 @@ from hostinger_api.api.vps_public_keys_api import VPSPublicKeysApi
 from hostinger_api.api.vps_recovery_api import VPSRecoveryApi
 from hostinger_api.api.vps_snapshots_api import VPSSnapshotsApi
 from hostinger_api.api.vps_virtual_machine_api import VPSVirtualMachineApi
+from hostinger_api.api.word_press_ai_tools_api import WordPressAIToolsApi
 from hostinger_api.api.word_press_installations_api import WordPressInstallationsApi
+from hostinger_api.api.word_press_lite_speed_cache_api import WordPressLiteSpeedCacheApi
+from hostinger_api.api.word_press_login_api import WordPressLoginApi
+from hostinger_api.api.word_press_maintenance_api import WordPressMaintenanceApi
+from hostinger_api.api.word_press_object_cache_api import WordPressObjectCacheApi
 from hostinger_api.api.word_press_plugins_api import WordPressPluginsApi
 from hostinger_api.api.word_press_themes_api import WordPressThemesApi
 

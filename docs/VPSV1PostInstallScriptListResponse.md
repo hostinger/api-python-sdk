@@ -1,4 +1,4 @@
-# VPSGetPostInstallScriptsV1200Response
+# VPSV1PostInstallScriptListResponse
 
 
 ## Properties
@@ -11,19 +11,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_api.models.vps_get_post_install_scripts_v1200_response import VPSGetPostInstallScriptsV1200Response
+from hostinger_api.models.vpsv1_post_install_script_list_response import VPSV1PostInstallScriptListResponse
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of VPSGetPostInstallScriptsV1200Response from a JSON string
-vps_get_post_install_scripts_v1200_response_instance = VPSGetPostInstallScriptsV1200Response.from_json(json)
+# create an instance of VPSV1PostInstallScriptListResponse from a JSON string
+vpsv1_post_install_script_list_response_instance = VPSV1PostInstallScriptListResponse.from_json(json)
 # print the JSON string representation of the object
-print(VPSGetPostInstallScriptsV1200Response.to_json())
+print(VPSV1PostInstallScriptListResponse.to_json())
 
 # convert the object into a dict
-vps_get_post_install_scripts_v1200_response_dict = vps_get_post_install_scripts_v1200_response_instance.to_dict()
-# create an instance of VPSGetPostInstallScriptsV1200Response from a dict
-vps_get_post_install_scripts_v1200_response_from_dict = VPSGetPostInstallScriptsV1200Response.from_dict(vps_get_post_install_scripts_v1200_response_dict)
+vpsv1_post_install_script_list_response_dict = vpsv1_post_install_script_list_response_instance.to_dict()
+# create an instance of VPSV1PostInstallScriptListResponse from a dict
+vpsv1_post_install_script_list_response_from_dict = VPSV1PostInstallScriptListResponse.from_dict(vpsv1_post_install_script_list_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

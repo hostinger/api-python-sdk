@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 
 # **get_attached_public_keys_v1**
-> VPSGetPublicKeysV1200Response get_attached_public_keys_v1(virtual_machine_id, page=page)
+> VPSV1PublicKeyListResponse get_attached_public_keys_v1(virtual_machine_id, page=page)
 
 Get attached public keys
 
@@ -36,7 +36,7 @@ Use this endpoint to view SSH keys configured for specific VPS instances.
 
 ```python
 import hostinger_api
-from hostinger_api.models.vps_get_public_keys_v1200_response import VPSGetPublicKeysV1200Response
+from hostinger_api.models.vpsv1_public_key_list_response import VPSV1PublicKeyListResponse
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VPSGetPublicKeysV1200Response**](VPSGetPublicKeysV1200Response.md)
+[**VPSV1PublicKeyListResponse**](VPSV1PublicKeyListResponse.md)
 
 ### Authorization
 

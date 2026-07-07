@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_backups_v1**
-> VPSGetBackupsV1200Response get_backups_v1(virtual_machine_id, page=page)
+> VPSV1BackupListResponse get_backups_v1(virtual_machine_id, page=page)
 
 Get backups
 
@@ -23,7 +23,7 @@ Use this endpoint to view available backup points for VPS data recovery.
 
 ```python
 import hostinger_api
-from hostinger_api.models.vps_get_backups_v1200_response import VPSGetBackupsV1200Response
+from hostinger_api.models.vpsv1_backup_list_response import VPSV1BackupListResponse
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VPSGetBackupsV1200Response**](VPSGetBackupsV1200Response.md)
+[**VPSV1BackupListResponse**](VPSV1BackupListResponse.md)
 
 ### Authorization
 

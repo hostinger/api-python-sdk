@@ -131,6 +131,11 @@ Class | Method | HTTP request | Description
 *EcommerceStoresApi* | [**get_stores_v1**](docs/EcommerceStoresApi.md#get_stores_v1) | **GET** /api/ecommerce/v1/stores | Get stores
 *HorizonsWebsitesApi* | [**create_website_v1**](docs/HorizonsWebsitesApi.md#create_website_v1) | **POST** /api/horizons/v1/websites | Create website
 *HorizonsWebsitesApi* | [**get_website_v1**](docs/HorizonsWebsitesApi.md#get_website_v1) | **GET** /api/horizons/v1/websites/{websiteId} | Get website
+*HostingCacheApi* | [**clear_website_cache_v1**](docs/HostingCacheApi.md#clear_website_cache_v1) | **DELETE** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/clear | Clear website cache
+*HostingCacheApi* | [**disable_cacheless_mode_v1**](docs/HostingCacheApi.md#disable_cacheless_mode_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cacheless-mode/disable | Disable cacheless mode
+*HostingCacheApi* | [**disable_website_cache_v1**](docs/HostingCacheApi.md#disable_website_cache_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/disable | Disable website cache
+*HostingCacheApi* | [**enable_cacheless_mode_v1**](docs/HostingCacheApi.md#enable_cacheless_mode_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cacheless-mode/enable | Enable cacheless mode
+*HostingCacheApi* | [**enable_website_cache_v1**](docs/HostingCacheApi.md#enable_website_cache_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/enable | Enable website cache
 *HostingCronJobsApi* | [**create_account_cron_job_v1**](docs/HostingCronJobsApi.md#create_account_cron_job_v1) | **POST** /api/hosting/v1/accounts/{username}/cron-jobs | Create account cron job
 *HostingCronJobsApi* | [**delete_account_cron_job_v1**](docs/HostingCronJobsApi.md#delete_account_cron_job_v1) | **DELETE** /api/hosting/v1/accounts/{username}/cron-jobs/{uid} | Delete account cron job
 *HostingCronJobsApi* | [**get_cron_job_output_v1**](docs/HostingCronJobsApi.md#get_cron_job_output_v1) | **GET** /api/hosting/v1/accounts/{username}/cron-jobs/{uid}/output | Get cron job output
@@ -156,6 +161,7 @@ Class | Method | HTTP request | Description
 *HostingNodeJSApi* | [**create_node_js_build_from_archive_v1**](docs/HostingNodeJSApi.md#create_node_js_build_from_archive_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/from-archive | Create NodeJS build from archive
 *HostingNodeJSApi* | [**get_node_js_build_logs_v1**](docs/HostingNodeJSApi.md#get_node_js_build_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid}/logs | Get NodeJS build logs
 *HostingNodeJSApi* | [**list_node_js_builds_v1**](docs/HostingNodeJSApi.md#list_node_js_builds_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | List NodeJS builds
+*HostingNodeJSApi* | [**restart_node_js_application_v1**](docs/HostingNodeJSApi.md#restart_node_js_application_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/server/restart | Restart Node.js application
 *HostingOrdersApi* | [**list_orders_v1**](docs/HostingOrdersApi.md#list_orders_v1) | **GET** /api/hosting/v1/orders | List orders
 *HostingPHPApi* | [**get_php_details_v1**](docs/HostingPHPApi.md#get_php_details_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/php/details | Get PHP details
 *HostingPHPApi* | [**get_php_info_v1**](docs/HostingPHPApi.md#get_php_info_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/php/php-info | Get PHP info
@@ -415,13 +421,10 @@ Class | Method | HTTP request | Description
  - [ReachV1ProfilesProfileResource](docs/ReachV1ProfilesProfileResource.md)
  - [ReachV1ProfilesProfileResourceLimits](docs/ReachV1ProfilesProfileResourceLimits.md)
  - [ReachV1ProfilesProfileResourceProfilesInner](docs/ReachV1ProfilesProfileResourceProfilesInner.md)
- - [VPSGetActionsV1200Response](docs/VPSGetActionsV1200Response.md)
- - [VPSGetBackupsV1200Response](docs/VPSGetBackupsV1200Response.md)
- - [VPSGetFirewallListV1200Response](docs/VPSGetFirewallListV1200Response.md)
- - [VPSGetPostInstallScriptsV1200Response](docs/VPSGetPostInstallScriptsV1200Response.md)
- - [VPSGetPublicKeysV1200Response](docs/VPSGetPublicKeysV1200Response.md)
  - [VPSV1ActionActionResource](docs/VPSV1ActionActionResource.md)
+ - [VPSV1ActionListResponse](docs/VPSV1ActionListResponse.md)
  - [VPSV1BackupBackupResource](docs/VPSV1BackupBackupResource.md)
+ - [VPSV1BackupListResponse](docs/VPSV1BackupListResponse.md)
  - [VPSV1DataCenterDataCenterResource](docs/VPSV1DataCenterDataCenterResource.md)
  - [VPSV1DockerManagerContainerPortResource](docs/VPSV1DockerManagerContainerPortResource.md)
  - [VPSV1DockerManagerContainerResource](docs/VPSV1DockerManagerContainerResource.md)
@@ -432,15 +435,18 @@ Class | Method | HTTP request | Description
  - [VPSV1DockerManagerProjectResource](docs/VPSV1DockerManagerProjectResource.md)
  - [VPSV1FirewallFirewallResource](docs/VPSV1FirewallFirewallResource.md)
  - [VPSV1FirewallFirewallRuleResource](docs/VPSV1FirewallFirewallRuleResource.md)
+ - [VPSV1FirewallListResponse](docs/VPSV1FirewallListResponse.md)
  - [VPSV1FirewallRulesStoreRequest](docs/VPSV1FirewallRulesStoreRequest.md)
  - [VPSV1FirewallStoreRequest](docs/VPSV1FirewallStoreRequest.md)
  - [VPSV1IPAddressIPAddressResource](docs/VPSV1IPAddressIPAddressResource.md)
  - [VPSV1MalwareMetricsResource](docs/VPSV1MalwareMetricsResource.md)
  - [VPSV1MetricsMetricsCollection](docs/VPSV1MetricsMetricsCollection.md)
  - [VPSV1MetricsMetricsResource](docs/VPSV1MetricsMetricsResource.md)
+ - [VPSV1PostInstallScriptListResponse](docs/VPSV1PostInstallScriptListResponse.md)
  - [VPSV1PostInstallScriptPostInstallScriptResource](docs/VPSV1PostInstallScriptPostInstallScriptResource.md)
  - [VPSV1PostInstallScriptStoreRequest](docs/VPSV1PostInstallScriptStoreRequest.md)
  - [VPSV1PublicKeyAttachRequest](docs/VPSV1PublicKeyAttachRequest.md)
+ - [VPSV1PublicKeyListResponse](docs/VPSV1PublicKeyListResponse.md)
  - [VPSV1PublicKeyPublicKeyResource](docs/VPSV1PublicKeyPublicKeyResource.md)
  - [VPSV1PublicKeyStoreRequest](docs/VPSV1PublicKeyStoreRequest.md)
  - [VPSV1SnapshotSnapshotResource](docs/VPSV1SnapshotSnapshotResource.md)

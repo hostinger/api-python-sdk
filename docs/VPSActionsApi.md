@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_actions_v1**
-> VPSGetActionsV1200Response get_actions_v1(virtual_machine_id, page=page)
+> VPSV1ActionListResponse get_actions_v1(virtual_machine_id, page=page)
 
 Get actions
 
@@ -102,7 +102,7 @@ Use this endpoint to view VPS operation history and troubleshoot issues.
 
 ```python
 import hostinger_api
-from hostinger_api.models.vps_get_actions_v1200_response import VPSGetActionsV1200Response
+from hostinger_api.models.vpsv1_action_list_response import VPSV1ActionListResponse
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VPSGetActionsV1200Response**](VPSGetActionsV1200Response.md)
+[**VPSV1ActionListResponse**](VPSV1ActionListResponse.md)
 
 ### Authorization
 

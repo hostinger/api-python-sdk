@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_public_keys_v1**
-> VPSGetPublicKeysV1200Response get_public_keys_v1(page=page)
+> VPSV1PublicKeyListResponse get_public_keys_v1(page=page)
 
 Get public keys
 
@@ -251,7 +251,7 @@ Use this endpoint to view available SSH keys for VPS authentication.
 
 ```python
 import hostinger_api
-from hostinger_api.models.vps_get_public_keys_v1200_response import VPSGetPublicKeysV1200Response
+from hostinger_api.models.vpsv1_public_key_list_response import VPSV1PublicKeyListResponse
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VPSGetPublicKeysV1200Response**](VPSGetPublicKeysV1200Response.md)
+[**VPSV1PublicKeyListResponse**](VPSV1PublicKeyListResponse.md)
 
 ### Authorization
 

@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_firewall_list_v1**
-> VPSGetFirewallListV1200Response get_firewall_list_v1(page=page)
+> VPSV1FirewallListResponse get_firewall_list_v1(page=page)
 
 Get firewall list
 
@@ -562,7 +562,7 @@ Use this endpoint to view existing firewall configurations.
 
 ```python
 import hostinger_api
-from hostinger_api.models.vps_get_firewall_list_v1200_response import VPSGetFirewallListV1200Response
+from hostinger_api.models.vpsv1_firewall_list_response import VPSV1FirewallListResponse
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VPSGetFirewallListV1200Response**](VPSGetFirewallListV1200Response.md)
+[**VPSV1FirewallListResponse**](VPSV1FirewallListResponse.md)
 
 ### Authorization
 

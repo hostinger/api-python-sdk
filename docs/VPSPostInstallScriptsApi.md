@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_post_install_scripts_v1**
-> VPSGetPostInstallScriptsV1200Response get_post_install_scripts_v1(page=page)
+> VPSV1PostInstallScriptListResponse get_post_install_scripts_v1(page=page)
 
 Get post-install scripts
 
@@ -248,7 +248,7 @@ Use this endpoint to view available automation scripts for VPS deployment.
 
 ```python
 import hostinger_api
-from hostinger_api.models.vps_get_post_install_scripts_v1200_response import VPSGetPostInstallScriptsV1200Response
+from hostinger_api.models.vpsv1_post_install_script_list_response import VPSV1PostInstallScriptListResponse
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VPSGetPostInstallScriptsV1200Response**](VPSGetPostInstallScriptsV1200Response.md)
+[**VPSV1PostInstallScriptListResponse**](VPSV1PostInstallScriptListResponse.md)
 
 ### Authorization
 

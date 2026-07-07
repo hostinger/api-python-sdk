@@ -18,6 +18,7 @@ from hostinger_api.api.ecommerce_sales_channels_api import EcommerceSalesChannel
 from hostinger_api.api.ecommerce_shipping_api import EcommerceShippingApi
 from hostinger_api.api.ecommerce_stores_api import EcommerceStoresApi
 from hostinger_api.api.horizons_websites_api import HorizonsWebsitesApi
+from hostinger_api.api.hosting_cache_api import HostingCacheApi
 from hostinger_api.api.hosting_cron_jobs_api import HostingCronJobsApi
 from hostinger_api.api.hosting_databases_api import HostingDatabasesApi
 from hostinger_api.api.hosting_datacenters_api import HostingDatacentersApi

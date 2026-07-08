@@ -5,10 +5,8 @@ All URIs are relative to *https://developers.hostinger.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**clear_website_cache_v1**](HostingCacheApi.md#clear_website_cache_v1) | **DELETE** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/clear | Clear website cache
-[**disable_cacheless_mode_v1**](HostingCacheApi.md#disable_cacheless_mode_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cacheless-mode/disable | Disable cacheless mode
-[**disable_website_cache_v1**](HostingCacheApi.md#disable_website_cache_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/disable | Disable website cache
-[**enable_cacheless_mode_v1**](HostingCacheApi.md#enable_cacheless_mode_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cacheless-mode/enable | Enable cacheless mode
-[**enable_website_cache_v1**](HostingCacheApi.md#enable_website_cache_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/enable | Enable website cache
+[**toggle_cacheless_mode_v1**](HostingCacheApi.md#toggle_cacheless_mode_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cacheless-mode/toggle | Toggle cacheless mode
+[**toggle_website_cache_v1**](HostingCacheApi.md#toggle_website_cache_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/toggle | Toggle website cache
 
 
 # **clear_website_cache_v1**
@@ -89,12 +87,14 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **disable_cacheless_mode_v1**
-> CommonSuccessEmptyResource disable_cacheless_mode_v1(username, domain)
+# **toggle_cacheless_mode_v1**
+> CommonSuccessEmptyResource toggle_cacheless_mode_v1(username, domain, hosting_v1_cache_toggle_cacheless_mode_request)
 
-Disable cacheless mode
+Toggle cacheless mode
 
-Turns off development (cacheless) mode and returns the website to normal caching. Use it after
+Turns development (cacheless) mode on or off, based on the enabled flag. When enabled, nothing
+is cached, effectively turning off all caching for the website; use it while actively developing,
+testing changes, debugging issues, or when real-time updates must be visible. Disable it after
 finishing development work to restore the performance benefits of caching.
 
 ### Example
@@ -104,6 +104,7 @@ finishing development work to restore the performance benefits of caching.
 ```python
 import hostinger_api
 from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.hosting_v1_cache_toggle_cacheless_mode_request import HostingV1CacheToggleCachelessModeRequest
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -119,14 +120,15 @@ with hostinger_api.ApiClient(configuration) as api_client:
     api_instance = hostinger_api.HostingCacheApi(api_client)
     username = 'u123456789' # str | 
     domain = 'mydomain.tld' # str | Domain name
+    hosting_v1_cache_toggle_cacheless_mode_request = hostinger_api.HostingV1CacheToggleCachelessModeRequest() # HostingV1CacheToggleCachelessModeRequest | 
 
     try:
-        # Disable cacheless mode
-        api_response = api_instance.disable_cacheless_mode_v1(username, domain)
-        print("The response of HostingCacheApi->disable_cacheless_mode_v1:\n")
+        # Toggle cacheless mode
+        api_response = api_instance.toggle_cacheless_mode_v1(username, domain, hosting_v1_cache_toggle_cacheless_mode_request)
+        print("The response of HostingCacheApi->toggle_cacheless_mode_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling HostingCacheApi->disable_cacheless_mode_v1: %s\n" % e)
+        print("Exception when calling HostingCacheApi->toggle_cacheless_mode_v1: %s\n" % e)
 ```
 
 
@@ -138,6 +140,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**|  | 
  **domain** | **str**| Domain name | 
+ **hosting_v1_cache_toggle_cacheless_mode_request** | [**HostingV1CacheToggleCachelessModeRequest**](HostingV1CacheToggleCachelessModeRequest.md)|  | 
 
 ### Return type
 
@@ -149,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -157,21 +160,23 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **disable_website_cache_v1**
-> CommonSuccessEmptyResource disable_website_cache_v1(username, domain)
+# **toggle_website_cache_v1**
+> CommonSuccessEmptyResource toggle_website_cache_v1(username, domain, hosting_v1_cache_toggle_cache_request)
 
-Disable website cache
+Toggle website cache
 
-Turns off server-side caching for the website until it is enabled again. May impact performance.
-Use it when experiencing cache-related issues; to temporarily bypass caching while developing
-or debugging, prefer enabling cacheless mode instead.
+Turns server-side caching for the website on or off, based on the enabled flag. Enable it for
+faster page loads, reduced server load, and improved user experience; recommended for production
+websites. Disabling may impact performance; to temporarily bypass caching while developing or
+debugging, prefer toggling cacheless mode instead.
 
-Does nothing if caching is already disabled.
+Does nothing if caching is already in the requested state.
 
 ### Example
 
@@ -180,6 +185,7 @@ Does nothing if caching is already disabled.
 ```python
 import hostinger_api
 from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.hosting_v1_cache_toggle_cache_request import HostingV1CacheToggleCacheRequest
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -195,14 +201,15 @@ with hostinger_api.ApiClient(configuration) as api_client:
     api_instance = hostinger_api.HostingCacheApi(api_client)
     username = 'u123456789' # str | 
     domain = 'mydomain.tld' # str | Domain name
+    hosting_v1_cache_toggle_cache_request = hostinger_api.HostingV1CacheToggleCacheRequest() # HostingV1CacheToggleCacheRequest | 
 
     try:
-        # Disable website cache
-        api_response = api_instance.disable_website_cache_v1(username, domain)
-        print("The response of HostingCacheApi->disable_website_cache_v1:\n")
+        # Toggle website cache
+        api_response = api_instance.toggle_website_cache_v1(username, domain, hosting_v1_cache_toggle_cache_request)
+        print("The response of HostingCacheApi->toggle_website_cache_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling HostingCacheApi->disable_website_cache_v1: %s\n" % e)
+        print("Exception when calling HostingCacheApi->toggle_website_cache_v1: %s\n" % e)
 ```
 
 
@@ -214,6 +221,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**|  | 
  **domain** | **str**| Domain name | 
+ **hosting_v1_cache_toggle_cache_request** | [**HostingV1CacheToggleCacheRequest**](HostingV1CacheToggleCacheRequest.md)|  | 
 
 ### Return type
 
@@ -225,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -233,156 +241,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success empty response |  -  |
-**401** | Unauthenticated response |  -  |
-**500** | Error response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **enable_cacheless_mode_v1**
-> CommonSuccessEmptyResource enable_cacheless_mode_v1(username, domain)
-
-Enable cacheless mode
-
-Enables development (cacheless) mode where nothing is cached, effectively turning off all
-caching for the website. Use it while actively developing, testing changes, debugging issues,
-or when real-time updates must be visible. Disable cacheless mode afterwards to restore
-normal caching.
-
-### Example
-
-* Bearer Authentication (apiToken):
-
-```python
-import hostinger_api
-from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from hostinger_api.rest import ApiException
-from pprint import pprint
-
-
-# Configure Bearer authorization: apiToken
-configuration = hostinger_api.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
-
-# Enter a context with an instance of the API client
-with hostinger_api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = hostinger_api.HostingCacheApi(api_client)
-    username = 'u123456789' # str | 
-    domain = 'mydomain.tld' # str | Domain name
-
-    try:
-        # Enable cacheless mode
-        api_response = api_instance.enable_cacheless_mode_v1(username, domain)
-        print("The response of HostingCacheApi->enable_cacheless_mode_v1:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling HostingCacheApi->enable_cacheless_mode_v1: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **username** | **str**|  | 
- **domain** | **str**| Domain name | 
-
-### Return type
-
-[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
-
-### Authorization
-
-[apiToken](../README.md#apiToken)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success empty response |  -  |
-**401** | Unauthenticated response |  -  |
-**500** | Error response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **enable_website_cache_v1**
-> CommonSuccessEmptyResource enable_website_cache_v1(username, domain)
-
-Enable website cache
-
-Turns on server-side caching for the website for better performance. Use it for faster page
-loads, reduced server load, or improved user experience. Recommended for production websites.
-
-Does nothing if caching is already enabled.
-
-### Example
-
-* Bearer Authentication (apiToken):
-
-```python
-import hostinger_api
-from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from hostinger_api.rest import ApiException
-from pprint import pprint
-
-
-# Configure Bearer authorization: apiToken
-configuration = hostinger_api.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
-
-# Enter a context with an instance of the API client
-with hostinger_api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = hostinger_api.HostingCacheApi(api_client)
-    username = 'u123456789' # str | 
-    domain = 'mydomain.tld' # str | Domain name
-
-    try:
-        # Enable website cache
-        api_response = api_instance.enable_website_cache_v1(username, domain)
-        print("The response of HostingCacheApi->enable_website_cache_v1:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling HostingCacheApi->enable_website_cache_v1: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **username** | **str**|  | 
- **domain** | **str**| Domain name | 
-
-### Return type
-
-[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
-
-### Authorization
-
-[apiToken](../README.md#apiToken)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

@@ -64,17 +64,16 @@ configuration = hostinger_api.Configuration(
 # Enter a context with an instance of the API client
 with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_api.BillingCatalogApi(api_client)
-    category = 'VPS' # str | Filter catalog items by category (optional)
-    name = '.COM*' # str | Filter catalog items by name. Use `*` for wildcard search, e.g. `.COM*` to find .com domain (optional)
+    api_instance = hostinger_api.AgencyHostingDatacentersApi(api_client)
+    order_id = 123456 # int | Agency Plan order ID
 
     try:
-        # Get catalog item list
-        api_response = api_instance.get_catalog_item_list_v1(category=category, name=name)
-        print("The response of BillingCatalogApi->get_catalog_item_list_v1:\n")
+        # List available datacenters for an Agency Plan order
+        api_response = api_instance.list_available_datacenters_for_an_agency_plan_order_v1(order_id)
+        print("The response of AgencyHostingDatacentersApi->list_available_datacenters_for_an_agency_plan_order_v1:\n")
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling BillingCatalogApi->get_catalog_item_list_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDatacentersApi->list_available_datacenters_for_an_agency_plan_order_v1: %s\n" % e)
 
 ```
 
@@ -84,6 +83,17 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AgencyHostingDatacentersApi* | [**list_available_datacenters_for_an_agency_plan_order_v1**](docs/AgencyHostingDatacentersApi.md#list_available_datacenters_for_an_agency_plan_order_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/datacenters | List available datacenters for an Agency Plan order
+*AgencyHostingDomainsApi* | [**change_agency_plan_website_domain_v1**](docs/AgencyHostingDomainsApi.md#change_agency_plan_website_domain_v1) | **PUT** /api/agency-hosting/v1/websites/{website_uid}/domains/{from_domain} | Change Agency Plan website domain
+*AgencyHostingDomainsApi* | [**link_domain_to_agency_plan_website_v1**](docs/AgencyHostingDomainsApi.md#link_domain_to_agency_plan_website_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/domains | Link domain to Agency Plan website
+*AgencyHostingDomainsApi* | [**list_agency_plan_domains_v1**](docs/AgencyHostingDomainsApi.md#list_agency_plan_domains_v1) | **GET** /api/agency-hosting/v1/domains | List Agency Plan domains
+*AgencyHostingDomainsApi* | [**unlink_domain_from_agency_plan_website_v1**](docs/AgencyHostingDomainsApi.md#unlink_domain_from_agency_plan_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/domains/{domain} | Unlink domain from Agency Plan website
+*AgencyHostingWebsiteSetupsApi* | [**get_agency_plan_website_setup_status_v1**](docs/AgencyHostingWebsiteSetupsApi.md#get_agency_plan_website_setup_status_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/websites/setups/{setup_uuid} | Get Agency Plan website setup status
+*AgencyHostingWebsiteSetupsApi* | [**provision_a_new_agency_plan_website_v1**](docs/AgencyHostingWebsiteSetupsApi.md#provision_a_new_agency_plan_website_v1) | **POST** /api/agency-hosting/v1/orders/{order_id}/websites/setups | Provision a new Agency Plan website
+*AgencyHostingWebsitesApi* | [**build_agency_plan_website_node_js_assets_v1**](docs/AgencyHostingWebsitesApi.md#build_agency_plan_website_node_js_assets_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/build-assets | Build Agency Plan website NodeJS assets
+*AgencyHostingWebsitesApi* | [**delete_agency_plan_website_v1**](docs/AgencyHostingWebsitesApi.md#delete_agency_plan_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid} | Delete Agency Plan website
+*AgencyHostingWebsitesApi* | [**get_agency_plan_website_details_v1**](docs/AgencyHostingWebsitesApi.md#get_agency_plan_website_details_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid} | Get Agency Plan website details
+*AgencyHostingWebsitesApi* | [**list_running_agency_plan_website_processes_v1**](docs/AgencyHostingWebsitesApi.md#list_running_agency_plan_website_processes_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/processes | List running Agency Plan website processes
 *BillingCatalogApi* | [**get_catalog_item_list_v1**](docs/BillingCatalogApi.md#get_catalog_item_list_v1) | **GET** /api/billing/v1/catalog | Get catalog item list
 *BillingPaymentMethodsApi* | [**delete_payment_method_v1**](docs/BillingPaymentMethodsApi.md#delete_payment_method_v1) | **DELETE** /api/billing/v1/payment-methods/{paymentMethodId} | Delete payment method
 *BillingPaymentMethodsApi* | [**get_payment_method_list_v1**](docs/BillingPaymentMethodsApi.md#get_payment_method_list_v1) | **GET** /api/billing/v1/payment-methods | Get payment method list
@@ -282,6 +292,42 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AgencyHostingListAgencyPlanDomainsV1200Response](docs/AgencyHostingListAgencyPlanDomainsV1200Response.md)
+ - [AgencyHostingV1DatacentersCoordinatesResource](docs/AgencyHostingV1DatacentersCoordinatesResource.md)
+ - [AgencyHostingV1DatacentersDatacenterResource](docs/AgencyHostingV1DatacentersDatacenterResource.md)
+ - [AgencyHostingV1DomainsChangeDomainRequest](docs/AgencyHostingV1DomainsChangeDomainRequest.md)
+ - [AgencyHostingV1DomainsDomainResource](docs/AgencyHostingV1DomainsDomainResource.md)
+ - [AgencyHostingV1DomainsLinkDomainRequest](docs/AgencyHostingV1DomainsLinkDomainRequest.md)
+ - [AgencyHostingV1SetupsCreateSetupRequest](docs/AgencyHostingV1SetupsCreateSetupRequest.md)
+ - [AgencyHostingV1SetupsCreateSetupRequestClone](docs/AgencyHostingV1SetupsCreateSetupRequestClone.md)
+ - [AgencyHostingV1SetupsCreateSetupRequestDeriveDomain](docs/AgencyHostingV1SetupsCreateSetupRequestDeriveDomain.md)
+ - [AgencyHostingV1SetupsCreateSetupRequestDeriveDomainFromVhost](docs/AgencyHostingV1SetupsCreateSetupRequestDeriveDomainFromVhost.md)
+ - [AgencyHostingV1SetupsCreateSetupRequestSettings](docs/AgencyHostingV1SetupsCreateSetupRequestSettings.md)
+ - [AgencyHostingV1SetupsCreateSetupRequestSettingsPhp](docs/AgencyHostingV1SetupsCreateSetupRequestSettingsPhp.md)
+ - [AgencyHostingV1SetupsCreateSetupRequestWordpress](docs/AgencyHostingV1SetupsCreateSetupRequestWordpress.md)
+ - [AgencyHostingV1SetupsCreateSetupRequestWordpressAdmin](docs/AgencyHostingV1SetupsCreateSetupRequestWordpressAdmin.md)
+ - [AgencyHostingV1SetupsWebsiteSetupResource](docs/AgencyHostingV1SetupsWebsiteSetupResource.md)
+ - [AgencyHostingV1SetupsWebsiteSetupStatusResource](docs/AgencyHostingV1SetupsWebsiteSetupStatusResource.md)
+ - [AgencyHostingV1WebsitesBuildAssetsRequest](docs/AgencyHostingV1WebsitesBuildAssetsRequest.md)
+ - [AgencyHostingV1WebsitesCustomSslCertResource](docs/AgencyHostingV1WebsitesCustomSslCertResource.md)
+ - [AgencyHostingV1WebsitesSslCertResource](docs/AgencyHostingV1WebsitesSslCertResource.md)
+ - [AgencyHostingV1WebsitesWebsiteDeletionResource](docs/AgencyHostingV1WebsitesWebsiteDeletionResource.md)
+ - [AgencyHostingV1WebsitesWebsiteDomainDetailsResource](docs/AgencyHostingV1WebsitesWebsiteDomainDetailsResource.md)
+ - [AgencyHostingV1WebsitesWebsiteOrderPlanResource](docs/AgencyHostingV1WebsitesWebsiteOrderPlanResource.md)
+ - [AgencyHostingV1WebsitesWebsiteOrderPlanResourceParameters](docs/AgencyHostingV1WebsitesWebsiteOrderPlanResourceParameters.md)
+ - [AgencyHostingV1WebsitesWebsiteOrderResource](docs/AgencyHostingV1WebsitesWebsiteOrderResource.md)
+ - [AgencyHostingV1WebsitesWebsitePhpSettingsResource](docs/AgencyHostingV1WebsitesWebsitePhpSettingsResource.md)
+ - [AgencyHostingV1WebsitesWebsitePreviewDomainResource](docs/AgencyHostingV1WebsitesWebsitePreviewDomainResource.md)
+ - [AgencyHostingV1WebsitesWebsiteProcessResource](docs/AgencyHostingV1WebsitesWebsiteProcessResource.md)
+ - [AgencyHostingV1WebsitesWebsiteRemoteAccessResource](docs/AgencyHostingV1WebsitesWebsiteRemoteAccessResource.md)
+ - [AgencyHostingV1WebsitesWebsiteResource](docs/AgencyHostingV1WebsitesWebsiteResource.md)
+ - [AgencyHostingV1WebsitesWebsiteServerResource](docs/AgencyHostingV1WebsitesWebsiteServerResource.md)
+ - [AgencyHostingV1WebsitesWebsiteSettingsResource](docs/AgencyHostingV1WebsitesWebsiteSettingsResource.md)
+ - [AgencyHostingV1WebsitesWebsiteSftpDetailsResource](docs/AgencyHostingV1WebsitesWebsiteSftpDetailsResource.md)
+ - [AgencyHostingV1WebsitesWebsiteSshDetailsResource](docs/AgencyHostingV1WebsitesWebsiteSshDetailsResource.md)
+ - [AgencyHostingV1WebsitesWebsiteStagingRootResource](docs/AgencyHostingV1WebsitesWebsiteStagingRootResource.md)
+ - [AgencyHostingV1WebsitesWebsiteUserResource](docs/AgencyHostingV1WebsitesWebsiteUserResource.md)
+ - [AgencyHostingV1WebsitesWordPressInstallResource](docs/AgencyHostingV1WebsitesWordPressInstallResource.md)
  - [BillingV1CatalogCatalogItemPriceResource](docs/BillingV1CatalogCatalogItemPriceResource.md)
  - [BillingV1CatalogCatalogItemResource](docs/BillingV1CatalogCatalogItemResource.md)
  - [BillingV1OrderOrderBillingAddressResource](docs/BillingV1OrderOrderBillingAddressResource.md)

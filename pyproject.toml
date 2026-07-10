@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hostinger_api"
-version = "3.4.1"
+version = "3.4.2"
 description = "Hostinger API"
 authors = ["Hostinger <devs@hostinger.com>"]
 license = "MIT"
@@ -11,8 +11,6 @@ include = ["hostinger_api/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-
-# urllib3 floor pinned to the first release without known security advisories (dependabot)
 urllib3 = ">= 2.7.0, < 3.0.0"
 python-dateutil = ">= 2.8.2"
 pydantic = ">= 2"

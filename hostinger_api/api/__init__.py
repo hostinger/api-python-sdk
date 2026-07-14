@@ -3,6 +3,7 @@
 # import apis into api package
 from hostinger_api.api.agency_hosting_datacenters_api import AgencyHostingDatacentersApi
 from hostinger_api.api.agency_hosting_domains_api import AgencyHostingDomainsApi
+from hostinger_api.api.agency_hosting_files_api import AgencyHostingFilesApi
 from hostinger_api.api.agency_hosting_website_setups_api import AgencyHostingWebsiteSetupsApi
 from hostinger_api.api.agency_hosting_websites_api import AgencyHostingWebsitesApi
 from hostinger_api.api.billing_catalog_api import BillingCatalogApi

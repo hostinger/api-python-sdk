@@ -179,6 +179,7 @@ Class | Method | HTTP request | Description
 *HostingPHPApi* | [**update_php_options_v1**](docs/HostingPHPApi.md#update_php_options_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/php/options | Update PHP options
 *HostingPHPApi* | [**update_php_version_v1**](docs/HostingPHPApi.md#update_php_version_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/php/version | Update PHP version
 *HostingWebsitesApi* | [**create_website_v1**](docs/HostingWebsitesApi.md#create_website_v1) | **POST** /api/hosting/v1/websites | Create website
+*HostingWebsitesApi* | [**delete_website_v1**](docs/HostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/hosting/v1/websites/{domain} | Delete website
 *HostingWebsitesApi* | [**list_websites_v1**](docs/HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
 *ReachContactsApi* | [**create_a_new_contact_v1**](docs/ReachContactsApi.md#create_a_new_contact_v1) | **POST** /api/reach/v1/contacts | Create a new contact
 *ReachContactsApi* | [**create_new_contacts_v1**](docs/ReachContactsApi.md#create_new_contacts_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/contacts | Create new contacts
@@ -447,6 +448,7 @@ Class | Method | HTTP request | Description
  - [HostingV1PhpUpdatePhpOptionsRequestOptionsValue](docs/HostingV1PhpUpdatePhpOptionsRequestOptionsValue.md)
  - [HostingV1PhpUpdatePhpVersionRequest](docs/HostingV1PhpUpdatePhpVersionRequest.md)
  - [HostingV1WebsitesCreateWebsiteRequest](docs/HostingV1WebsitesCreateWebsiteRequest.md)
+ - [HostingV1WebsitesDeleteWebsiteRequest](docs/HostingV1WebsitesDeleteWebsiteRequest.md)
  - [HostingV1WebsitesWebsiteResource](docs/HostingV1WebsitesWebsiteResource.md)
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)

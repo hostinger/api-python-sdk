@@ -5,6 +5,7 @@ All URIs are relative to *https://developers.hostinger.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_website_v1**](HostingWebsitesApi.md#create_website_v1) | **POST** /api/hosting/v1/websites | Create website
+[**delete_website_v1**](HostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/hosting/v1/websites/{domain} | Delete website
 [**list_websites_v1**](HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
 
 
@@ -65,6 +66,98 @@ with hostinger_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hosting_v1_websites_create_website_request** | [**HostingV1WebsitesCreateWebsiteRequest**](HostingV1WebsitesCreateWebsiteRequest.md)|  | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_website_v1**
+> CommonSuccessEmptyResource delete_website_v1(domain, hosting_v1_websites_delete_website_request)
+
+Delete website
+
+Permanently deletes a website and all of its data. This action is destructive
+and cannot be undone. Always ask the user for explicit confirmation before
+calling this endpoint.
+
+All website files, databases and related configuration will be removed.
+The hosting plan itself is kept, so a new website can be created on it afterwards.
+
+The confirm field must be boolean true, otherwise the request is rejected.
+
+Supported websites: main and addon domain websites on web hosting plans, and
+Website Builder websites. Parked domains and subdomains cannot be deleted with
+this endpoint. The domain must be the exact website domain, not a preview
+domain or an alias.
+
+Returns 404 when the domain does not exist or does not belong to the
+authenticated client.
+
+Website removal is processed asynchronously and can take a few minutes to
+complete. The response returns before the removal finishes.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.hosting_v1_websites_delete_website_request import HostingV1WebsitesDeleteWebsiteRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingWebsitesApi(api_client)
+    domain = 'mydomain.tld' # str | Domain name
+    hosting_v1_websites_delete_website_request = hostinger_api.HostingV1WebsitesDeleteWebsiteRequest() # HostingV1WebsitesDeleteWebsiteRequest | 
+
+    try:
+        # Delete website
+        api_response = api_instance.delete_website_v1(domain, hosting_v1_websites_delete_website_request)
+        print("The response of HostingWebsitesApi->delete_website_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingWebsitesApi->delete_website_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| Domain name | 
+ **hosting_v1_websites_delete_website_request** | [**HostingV1WebsitesDeleteWebsiteRequest**](HostingV1WebsitesDeleteWebsiteRequest.md)|  | 
 
 ### Return type
 

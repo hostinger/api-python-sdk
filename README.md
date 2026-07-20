@@ -64,16 +64,17 @@ configuration = hostinger_api.Configuration(
 # Enter a context with an instance of the API client
 with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_api.AgencyHostingDatacentersApi(api_client)
-    order_id = 123456 # int | Agency Plan order ID
+    api_instance = hostinger_api.AgencyHostingCronJobsApi(api_client)
+    website_uid = 'zpwlGlp19' # str | Agency Plan website UID
+    agency_hosting_v1_websites_cron_jobs_create_cron_job_request = hostinger_api.AgencyHostingV1WebsitesCronJobsCreateCronJobRequest() # AgencyHostingV1WebsitesCronJobsCreateCronJobRequest | 
 
     try:
-        # List available datacenters for an Agency Plan order
-        api_response = api_instance.list_available_datacenters_for_an_agency_plan_order_v1(order_id)
-        print("The response of AgencyHostingDatacentersApi->list_available_datacenters_for_an_agency_plan_order_v1:\n")
+        # Create Agency Plan website cron job
+        api_response = api_instance.create_agency_plan_website_cron_job_v1(website_uid, agency_hosting_v1_websites_cron_jobs_create_cron_job_request)
+        print("The response of AgencyHostingCronJobsApi->create_agency_plan_website_cron_job_v1:\n")
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling AgencyHostingDatacentersApi->list_available_datacenters_for_an_agency_plan_order_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingCronJobsApi->create_agency_plan_website_cron_job_v1: %s\n" % e)
 
 ```
 
@@ -83,6 +84,9 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AgencyHostingCronJobsApi* | [**create_agency_plan_website_cron_job_v1**](docs/AgencyHostingCronJobsApi.md#create_agency_plan_website_cron_job_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs | Create Agency Plan website cron job
+*AgencyHostingCronJobsApi* | [**delete_agency_plan_website_cron_job_v1**](docs/AgencyHostingCronJobsApi.md#delete_agency_plan_website_cron_job_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs/{uuid} | Delete Agency Plan website cron job
+*AgencyHostingCronJobsApi* | [**list_agency_plan_website_cron_jobs_v1**](docs/AgencyHostingCronJobsApi.md#list_agency_plan_website_cron_jobs_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs | List Agency Plan website cron jobs
 *AgencyHostingDatacentersApi* | [**list_available_datacenters_for_an_agency_plan_order_v1**](docs/AgencyHostingDatacentersApi.md#list_available_datacenters_for_an_agency_plan_order_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/datacenters | List available datacenters for an Agency Plan order
 *AgencyHostingDomainsApi* | [**change_agency_plan_website_domain_v1**](docs/AgencyHostingDomainsApi.md#change_agency_plan_website_domain_v1) | **PUT** /api/agency-hosting/v1/websites/{website_uid}/domains/{from_domain} | Change Agency Plan website domain
 *AgencyHostingDomainsApi* | [**link_domain_to_agency_plan_website_v1**](docs/AgencyHostingDomainsApi.md#link_domain_to_agency_plan_website_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/domains | Link domain to Agency Plan website
@@ -298,6 +302,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AgencyHostingListAgencyPlanDomainsV1200Response](docs/AgencyHostingListAgencyPlanDomainsV1200Response.md)
+ - [AgencyHostingListAgencyPlanWebsiteCronJobsV1200Response](docs/AgencyHostingListAgencyPlanWebsiteCronJobsV1200Response.md)
  - [AgencyHostingV1DatacentersCoordinatesResource](docs/AgencyHostingV1DatacentersCoordinatesResource.md)
  - [AgencyHostingV1DatacentersDatacenterResource](docs/AgencyHostingV1DatacentersDatacenterResource.md)
  - [AgencyHostingV1DomainsChangeDomainRequest](docs/AgencyHostingV1DomainsChangeDomainRequest.md)
@@ -316,6 +321,8 @@ Class | Method | HTTP request | Description
  - [AgencyHostingV1SetupsWebsiteSetupResource](docs/AgencyHostingV1SetupsWebsiteSetupResource.md)
  - [AgencyHostingV1SetupsWebsiteSetupStatusResource](docs/AgencyHostingV1SetupsWebsiteSetupStatusResource.md)
  - [AgencyHostingV1WebsitesBuildAssetsRequest](docs/AgencyHostingV1WebsitesBuildAssetsRequest.md)
+ - [AgencyHostingV1WebsitesCronJobsCreateCronJobRequest](docs/AgencyHostingV1WebsitesCronJobsCreateCronJobRequest.md)
+ - [AgencyHostingV1WebsitesCronJobsCronJobResource](docs/AgencyHostingV1WebsitesCronJobsCronJobResource.md)
  - [AgencyHostingV1WebsitesCustomSslCertResource](docs/AgencyHostingV1WebsitesCustomSslCertResource.md)
  - [AgencyHostingV1WebsitesSslCertResource](docs/AgencyHostingV1WebsitesSslCertResource.md)
  - [AgencyHostingV1WebsitesWebsiteDeletionResource](docs/AgencyHostingV1WebsitesWebsiteDeletionResource.md)

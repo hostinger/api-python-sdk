@@ -64,17 +64,16 @@ configuration = hostinger_api.Configuration(
 # Enter a context with an instance of the API client
 with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = hostinger_api.AgencyHostingCronJobsApi(api_client)
+    api_instance = hostinger_api.AgencyHostingCacheApi(api_client)
     website_uid = 'zpwlGlp19' # str | Agency Plan website UID
-    agency_hosting_v1_websites_cron_jobs_create_cron_job_request = hostinger_api.AgencyHostingV1WebsitesCronJobsCreateCronJobRequest() # AgencyHostingV1WebsitesCronJobsCreateCronJobRequest | 
 
     try:
-        # Create Agency Plan website cron job
-        api_response = api_instance.create_agency_plan_website_cron_job_v1(website_uid, agency_hosting_v1_websites_cron_jobs_create_cron_job_request)
-        print("The response of AgencyHostingCronJobsApi->create_agency_plan_website_cron_job_v1:\n")
+        # Clear Agency Plan website cache
+        api_response = api_instance.clear_agency_plan_website_cache_v1(website_uid)
+        print("The response of AgencyHostingCacheApi->clear_agency_plan_website_cache_v1:\n")
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling AgencyHostingCronJobsApi->create_agency_plan_website_cron_job_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingCacheApi->clear_agency_plan_website_cache_v1: %s\n" % e)
 
 ```
 
@@ -84,6 +83,7 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AgencyHostingCacheApi* | [**clear_agency_plan_website_cache_v1**](docs/AgencyHostingCacheApi.md#clear_agency_plan_website_cache_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/cache | Clear Agency Plan website cache
 *AgencyHostingCronJobsApi* | [**create_agency_plan_website_cron_job_v1**](docs/AgencyHostingCronJobsApi.md#create_agency_plan_website_cron_job_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs | Create Agency Plan website cron job
 *AgencyHostingCronJobsApi* | [**delete_agency_plan_website_cron_job_v1**](docs/AgencyHostingCronJobsApi.md#delete_agency_plan_website_cron_job_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs/{uuid} | Delete Agency Plan website cron job
 *AgencyHostingCronJobsApi* | [**list_agency_plan_website_cron_jobs_v1**](docs/AgencyHostingCronJobsApi.md#list_agency_plan_website_cron_jobs_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs | List Agency Plan website cron jobs

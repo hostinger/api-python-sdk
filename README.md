@@ -197,6 +197,7 @@ Class | Method | HTTP request | Description
 *HostingWebsitesApi* | [**create_website_v1**](docs/HostingWebsitesApi.md#create_website_v1) | **POST** /api/hosting/v1/websites | Create website
 *HostingWebsitesApi* | [**delete_website_v1**](docs/HostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/hosting/v1/websites/{domain} | Delete website
 *HostingWebsitesApi* | [**list_websites_v1**](docs/HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
+*MailMailboxesApi* | [**get_mailbox_list_v1**](docs/MailMailboxesApi.md#get_mailbox_list_v1) | **GET** /api/mail/v1/orders/{orderId}/mailboxes | Get mailbox list
 *MailOrdersApi* | [**get_mail_order_list_v1**](docs/MailOrdersApi.md#get_mail_order_list_v1) | **GET** /api/mail/v1/orders | Get mail order list
 *ReachContactsApi* | [**create_a_new_contact_v1**](docs/ReachContactsApi.md#create_a_new_contact_v1) | **POST** /api/reach/v1/contacts | Create a new contact
 *ReachContactsApi* | [**create_new_contacts_v1**](docs/ReachContactsApi.md#create_new_contacts_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/contacts | Create new contacts
@@ -487,6 +488,11 @@ Class | Method | HTTP request | Description
  - [InlineObject2](docs/InlineObject2.md)
  - [InlineObject2Errors](docs/InlineObject2Errors.md)
  - [MailGetMailOrderListV1200Response](docs/MailGetMailOrderListV1200Response.md)
+ - [MailGetMailboxListV1200Response](docs/MailGetMailboxListV1200Response.md)
+ - [MailV1MailboxesMailboxCountsResource](docs/MailV1MailboxesMailboxCountsResource.md)
+ - [MailV1MailboxesMailboxProtocolsResource](docs/MailV1MailboxesMailboxProtocolsResource.md)
+ - [MailV1MailboxesMailboxResource](docs/MailV1MailboxesMailboxResource.md)
+ - [MailV1MailboxesMailboxUsageResource](docs/MailV1MailboxesMailboxUsageResource.md)
  - [MailV1OrdersOrderDomainResource](docs/MailV1OrdersOrderDomainResource.md)
  - [MailV1OrdersOrderPlanResource](docs/MailV1OrdersOrderPlanResource.md)
  - [MailV1OrdersOrderResource](docs/MailV1OrdersOrderResource.md)

@@ -124,11 +124,14 @@ Class | Method | HTTP request | Description
 *DomainsPortfolioApi* | [**disable_privacy_protection_v1**](docs/DomainsPortfolioApi.md#disable_privacy_protection_v1) | **DELETE** /api/domains/v1/portfolio/{domain}/privacy-protection | Disable privacy protection
 *DomainsPortfolioApi* | [**enable_domain_lock_v1**](docs/DomainsPortfolioApi.md#enable_domain_lock_v1) | **PUT** /api/domains/v1/portfolio/{domain}/domain-lock | Enable domain lock
 *DomainsPortfolioApi* | [**enable_privacy_protection_v1**](docs/DomainsPortfolioApi.md#enable_privacy_protection_v1) | **PUT** /api/domains/v1/portfolio/{domain}/privacy-protection | Enable privacy protection
+*DomainsPortfolioApi* | [**get_domain_authorization_code_v1**](docs/DomainsPortfolioApi.md#get_domain_authorization_code_v1) | **GET** /api/domains/v1/portfolio/{domain}/auth-code | Get domain authorization code
 *DomainsPortfolioApi* | [**get_domain_details_v1**](docs/DomainsPortfolioApi.md#get_domain_details_v1) | **GET** /api/domains/v1/portfolio/{domain} | Get domain details
 *DomainsPortfolioApi* | [**get_domain_list_v1**](docs/DomainsPortfolioApi.md#get_domain_list_v1) | **GET** /api/domains/v1/portfolio | Get domain list
 *DomainsPortfolioApi* | [**get_domain_renewal_information_v1**](docs/DomainsPortfolioApi.md#get_domain_renewal_information_v1) | **GET** /api/domains/v1/portfolio/{domain}/renewal | Get domain renewal information
 *DomainsPortfolioApi* | [**purchase_new_domain_v1**](docs/DomainsPortfolioApi.md#purchase_new_domain_v1) | **POST** /api/domains/v1/portfolio | Purchase new domain
 *DomainsPortfolioApi* | [**update_domain_nameservers_v1**](docs/DomainsPortfolioApi.md#update_domain_nameservers_v1) | **PUT** /api/domains/v1/portfolio/{domain}/nameservers | Update domain nameservers
+*DomainsTransferApi* | [**get_transfer_list_v1**](docs/DomainsTransferApi.md#get_transfer_list_v1) | **GET** /api/domains/v1/transfers | Get transfer list
+*DomainsTransferApi* | [**get_transfer_v1**](docs/DomainsTransferApi.md#get_transfer_v1) | **GET** /api/domains/v1/transfers/{domain} | Get transfer
 *DomainsWHOISApi* | [**create_whois_profile_v1**](docs/DomainsWHOISApi.md#create_whois_profile_v1) | **POST** /api/domains/v1/whois | Create WHOIS profile
 *DomainsWHOISApi* | [**delete_whois_profile_v1**](docs/DomainsWHOISApi.md#delete_whois_profile_v1) | **DELETE** /api/domains/v1/whois/{whoisId} | Delete WHOIS profile
 *DomainsWHOISApi* | [**get_whois_profile_list_v1**](docs/DomainsWHOISApi.md#get_whois_profile_list_v1) | **GET** /api/domains/v1/whois | Get WHOIS profile list
@@ -382,10 +385,12 @@ Class | Method | HTTP request | Description
  - [DomainsV1ForwardingForwardingResource](docs/DomainsV1ForwardingForwardingResource.md)
  - [DomainsV1ForwardingStoreRequest](docs/DomainsV1ForwardingStoreRequest.md)
  - [DomainsV1ForwardingUpdateRequest](docs/DomainsV1ForwardingUpdateRequest.md)
+ - [DomainsV1PortfolioAuthCodeAuthCodeResource](docs/DomainsV1PortfolioAuthCodeAuthCodeResource.md)
  - [DomainsV1PortfolioPurchaseRequest](docs/DomainsV1PortfolioPurchaseRequest.md)
  - [DomainsV1PortfolioPurchaseRequestDomainContacts](docs/DomainsV1PortfolioPurchaseRequestDomainContacts.md)
  - [DomainsV1PortfolioRenewalRenewalInformationResource](docs/DomainsV1PortfolioRenewalRenewalInformationResource.md)
  - [DomainsV1PortfolioUpdateNameserversRequest](docs/DomainsV1PortfolioUpdateNameserversRequest.md)
+ - [DomainsV1TransferTransferResource](docs/DomainsV1TransferTransferResource.md)
  - [DomainsV1WHOISProfileResource](docs/DomainsV1WHOISProfileResource.md)
  - [DomainsV1WHOISStoreRequest](docs/DomainsV1WHOISStoreRequest.md)
  - [EcommerceGetStoresV1200Response](docs/EcommerceGetStoresV1200Response.md)

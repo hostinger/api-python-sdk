@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**disable_privacy_protection_v1**](DomainsPortfolioApi.md#disable_privacy_protection_v1) | **DELETE** /api/domains/v1/portfolio/{domain}/privacy-protection | Disable privacy protection
 [**enable_domain_lock_v1**](DomainsPortfolioApi.md#enable_domain_lock_v1) | **PUT** /api/domains/v1/portfolio/{domain}/domain-lock | Enable domain lock
 [**enable_privacy_protection_v1**](DomainsPortfolioApi.md#enable_privacy_protection_v1) | **PUT** /api/domains/v1/portfolio/{domain}/privacy-protection | Enable privacy protection
+[**get_domain_authorization_code_v1**](DomainsPortfolioApi.md#get_domain_authorization_code_v1) | **GET** /api/domains/v1/portfolio/{domain}/auth-code | Get domain authorization code
 [**get_domain_details_v1**](DomainsPortfolioApi.md#get_domain_details_v1) | **GET** /api/domains/v1/portfolio/{domain} | Get domain details
 [**get_domain_list_v1**](DomainsPortfolioApi.md#get_domain_list_v1) | **GET** /api/domains/v1/portfolio | Get domain list
 [**get_domain_renewal_information_v1**](DomainsPortfolioApi.md#get_domain_renewal_information_v1) | **GET** /api/domains/v1/portfolio/{domain}/renewal | Get domain renewal information
@@ -307,6 +308,81 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success empty response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_domain_authorization_code_v1**
+> DomainsV1PortfolioAuthCodeAuthCodeResource get_domain_authorization_code_v1(domain)
+
+Get domain authorization code
+
+Retrieve the authorization (EPP) code for a specified domain so it can be transferred
+away from Hostinger to another registrar.
+
+Requesting a new code invalidates any code retrieved previously.
+
+Use this endpoint to obtain the code required to transfer a domain to another registrar.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.domains_v1_portfolio_auth_code_auth_code_resource import DomainsV1PortfolioAuthCodeAuthCodeResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.DomainsPortfolioApi(api_client)
+    domain = 'mydomain.tld' # str | Domain name
+
+    try:
+        # Get domain authorization code
+        api_response = api_instance.get_domain_authorization_code_v1(domain)
+        print("The response of DomainsPortfolioApi->get_domain_authorization_code_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DomainsPortfolioApi->get_domain_authorization_code_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| Domain name | 
+
+### Return type
+
+[**DomainsV1PortfolioAuthCodeAuthCodeResource**](DomainsV1PortfolioAuthCodeAuthCodeResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

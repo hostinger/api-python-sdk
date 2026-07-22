@@ -571,6 +571,7 @@ Class | Method | HTTP request | Description
  - [WordPressV1InstallationsUpdateResource](docs/WordPressV1InstallationsUpdateResource.md)
  - [WordPressV1InstallationsVersionResource](docs/WordPressV1InstallationsVersionResource.md)
  - [WordPressV1InstallationsWordPressInstallationResource](docs/WordPressV1InstallationsWordPressInstallationResource.md)
+ - [WordPressV1InstallationsWordPressMcpInstallationResource](docs/WordPressV1InstallationsWordPressMcpInstallationResource.md)
  - [WordPressV1LitespeedLitespeedCacheStatusResource](docs/WordPressV1LitespeedLitespeedCacheStatusResource.md)
  - [WordPressV1LoginLoginLinksResource](docs/WordPressV1LoginLoginLinksResource.md)
  - [WordPressV1MaintenanceMaintenanceStatusResource](docs/WordPressV1MaintenanceMaintenanceStatusResource.md)

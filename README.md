@@ -188,6 +188,7 @@ Class | Method | HTTP request | Description
 *HostingWebsitesApi* | [**create_website_v1**](docs/HostingWebsitesApi.md#create_website_v1) | **POST** /api/hosting/v1/websites | Create website
 *HostingWebsitesApi* | [**delete_website_v1**](docs/HostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/hosting/v1/websites/{domain} | Delete website
 *HostingWebsitesApi* | [**list_websites_v1**](docs/HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
+*MailOrdersApi* | [**get_mail_order_list_v1**](docs/MailOrdersApi.md#get_mail_order_list_v1) | **GET** /api/mail/v1/orders | Get mail order list
 *ReachContactsApi* | [**create_a_new_contact_v1**](docs/ReachContactsApi.md#create_a_new_contact_v1) | **POST** /api/reach/v1/contacts | Create a new contact
 *ReachContactsApi* | [**create_new_contacts_v1**](docs/ReachContactsApi.md#create_new_contacts_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/contacts | Create new contacts
 *ReachContactsApi* | [**delete_a_contact_v1**](docs/ReachContactsApi.md#delete_a_contact_v1) | **DELETE** /api/reach/v1/contacts/{uuid} | Delete a contact
@@ -468,6 +469,10 @@ Class | Method | HTTP request | Description
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineObject2](docs/InlineObject2.md)
  - [InlineObject2Errors](docs/InlineObject2Errors.md)
+ - [MailGetMailOrderListV1200Response](docs/MailGetMailOrderListV1200Response.md)
+ - [MailV1OrdersOrderDomainResource](docs/MailV1OrdersOrderDomainResource.md)
+ - [MailV1OrdersOrderPlanResource](docs/MailV1OrdersOrderPlanResource.md)
+ - [MailV1OrdersOrderResource](docs/MailV1OrdersOrderResource.md)
  - [ReachListContactsV1200Response](docs/ReachListContactsV1200Response.md)
  - [ReachListProfileSegmentContactsV1200Response](docs/ReachListProfileSegmentContactsV1200Response.md)
  - [ReachV1ContactsContactResource](docs/ReachV1ContactsContactResource.md)

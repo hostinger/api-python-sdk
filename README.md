@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 *DomainsForwardingApi* | [**create_domain_forwarding_v1**](docs/DomainsForwardingApi.md#create_domain_forwarding_v1) | **POST** /api/domains/v1/forwarding | Create domain forwarding
 *DomainsForwardingApi* | [**delete_domain_forwarding_v1**](docs/DomainsForwardingApi.md#delete_domain_forwarding_v1) | **DELETE** /api/domains/v1/forwarding/{domain} | Delete domain forwarding
 *DomainsForwardingApi* | [**get_domain_forwarding_v1**](docs/DomainsForwardingApi.md#get_domain_forwarding_v1) | **GET** /api/domains/v1/forwarding/{domain} | Get domain forwarding
+*DomainsForwardingApi* | [**update_domain_forwarding_v1**](docs/DomainsForwardingApi.md#update_domain_forwarding_v1) | **PUT** /api/domains/v1/forwarding/{domain} | Update domain forwarding
 *DomainsPortfolioApi* | [**disable_domain_lock_v1**](docs/DomainsPortfolioApi.md#disable_domain_lock_v1) | **DELETE** /api/domains/v1/portfolio/{domain}/domain-lock | Disable domain lock
 *DomainsPortfolioApi* | [**disable_privacy_protection_v1**](docs/DomainsPortfolioApi.md#disable_privacy_protection_v1) | **DELETE** /api/domains/v1/portfolio/{domain}/privacy-protection | Disable privacy protection
 *DomainsPortfolioApi* | [**enable_domain_lock_v1**](docs/DomainsPortfolioApi.md#enable_domain_lock_v1) | **PUT** /api/domains/v1/portfolio/{domain}/domain-lock | Enable domain lock
@@ -380,6 +381,7 @@ Class | Method | HTTP request | Description
  - [DomainsV1DomainDomainResource](docs/DomainsV1DomainDomainResource.md)
  - [DomainsV1ForwardingForwardingResource](docs/DomainsV1ForwardingForwardingResource.md)
  - [DomainsV1ForwardingStoreRequest](docs/DomainsV1ForwardingStoreRequest.md)
+ - [DomainsV1ForwardingUpdateRequest](docs/DomainsV1ForwardingUpdateRequest.md)
  - [DomainsV1PortfolioPurchaseRequest](docs/DomainsV1PortfolioPurchaseRequest.md)
  - [DomainsV1PortfolioPurchaseRequestDomainContacts](docs/DomainsV1PortfolioPurchaseRequestDomainContacts.md)
  - [DomainsV1PortfolioRenewalRenewalInformationResource](docs/DomainsV1PortfolioRenewalRenewalInformationResource.md)

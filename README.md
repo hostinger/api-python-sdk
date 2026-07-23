@@ -213,6 +213,13 @@ Class | Method | HTTP request | Description
 *MailOrdersApi* | [**get_order_plan_v1**](docs/MailOrdersApi.md#get_order_plan_v1) | **GET** /api/mail/v1/orders/{orderId}/plan | Get order plan
 *MailOrdersApi* | [**list_orders_v1**](docs/MailOrdersApi.md#list_orders_v1) | **GET** /api/mail/v1/orders | List orders
 *MailWebhooksApi* | [**create_webhook_v1**](docs/MailWebhooksApi.md#create_webhook_v1) | **POST** /api/mail/v1/mailboxes/{mailboxId}/webhooks | Create webhook
+*MailWebhooksApi* | [**delete_webhook_v1**](docs/MailWebhooksApi.md#delete_webhook_v1) | **DELETE** /api/mail/v1/webhooks/{webhookId} | Delete webhook
+*MailWebhooksApi* | [**get_webhook_v1**](docs/MailWebhooksApi.md#get_webhook_v1) | **GET** /api/mail/v1/webhooks/{webhookId} | Get webhook
+*MailWebhooksApi* | [**list_webhook_delivery_logs_v1**](docs/MailWebhooksApi.md#list_webhook_delivery_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/webhooks/delivery-logs | List webhook delivery logs
+*MailWebhooksApi* | [**list_webhooks_v1**](docs/MailWebhooksApi.md#list_webhooks_v1) | **GET** /api/mail/v1/orders/{orderId}/webhooks | List webhooks
+*MailWebhooksApi* | [**regenerate_webhook_secret_v1**](docs/MailWebhooksApi.md#regenerate_webhook_secret_v1) | **POST** /api/mail/v1/webhooks/{webhookId}/regenerate-secret | Regenerate webhook secret
+*MailWebhooksApi* | [**test_webhook_v1**](docs/MailWebhooksApi.md#test_webhook_v1) | **POST** /api/mail/v1/webhooks/{webhookId}/test | Test webhook
+*MailWebhooksApi* | [**update_webhook_v1**](docs/MailWebhooksApi.md#update_webhook_v1) | **PATCH** /api/mail/v1/webhooks/{webhookId} | Update webhook
 *ReachContactsApi* | [**create_a_new_contact_v1**](docs/ReachContactsApi.md#create_a_new_contact_v1) | **POST** /api/reach/v1/contacts | Create a new contact
 *ReachContactsApi* | [**create_new_contacts_v1**](docs/ReachContactsApi.md#create_new_contacts_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/contacts | Create new contacts
 *ReachContactsApi* | [**delete_a_contact_v1**](docs/ReachContactsApi.md#delete_a_contact_v1) | **DELETE** /api/reach/v1/contacts/{uuid} | Delete a contact
@@ -512,6 +519,8 @@ Class | Method | HTTP request | Description
  - [MailListMailboxActionLogsV1200Response](docs/MailListMailboxActionLogsV1200Response.md)
  - [MailListMailboxesV1200Response](docs/MailListMailboxesV1200Response.md)
  - [MailListOrdersV1200Response](docs/MailListOrdersV1200Response.md)
+ - [MailListWebhookDeliveryLogsV1200Response](docs/MailListWebhookDeliveryLogsV1200Response.md)
+ - [MailListWebhooksV1200Response](docs/MailListWebhooksV1200Response.md)
  - [MailV1LogsAccessAccessLogResource](docs/MailV1LogsAccessAccessLogResource.md)
  - [MailV1LogsActionActionLogResource](docs/MailV1LogsActionActionLogResource.md)
  - [MailV1LogsCommonDeliveryLogRelayEventResource](docs/MailV1LogsCommonDeliveryLogRelayEventResource.md)
@@ -530,8 +539,13 @@ Class | Method | HTTP request | Description
  - [MailV1SchemaChangeMailboxPasswordRequestSchema](docs/MailV1SchemaChangeMailboxPasswordRequestSchema.md)
  - [MailV1SchemaCreateMailboxRequestSchema](docs/MailV1SchemaCreateMailboxRequestSchema.md)
  - [MailV1SchemaCreateWebhookRequestSchema](docs/MailV1SchemaCreateWebhookRequestSchema.md)
+ - [MailV1SchemaUpdateWebhookRequestSchema](docs/MailV1SchemaUpdateWebhookRequestSchema.md)
+ - [MailV1WebhooksWebhookCreatedResource](docs/MailV1WebhooksWebhookCreatedResource.md)
+ - [MailV1WebhooksWebhookDeliveryLogResource](docs/MailV1WebhooksWebhookDeliveryLogResource.md)
  - [MailV1WebhooksWebhookMailboxResource](docs/MailV1WebhooksWebhookMailboxResource.md)
  - [MailV1WebhooksWebhookResource](docs/MailV1WebhooksWebhookResource.md)
+ - [MailV1WebhooksWebhookSecretResource](docs/MailV1WebhooksWebhookSecretResource.md)
+ - [MailV1WebhooksWebhookTestResultResource](docs/MailV1WebhooksWebhookTestResultResource.md)
  - [ReachListContactsV1200Response](docs/ReachListContactsV1200Response.md)
  - [ReachListProfileSegmentContactsV1200Response](docs/ReachListProfileSegmentContactsV1200Response.md)
  - [ReachV1ContactsContactResource](docs/ReachV1ContactsContactResource.md)

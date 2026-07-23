@@ -10,6 +10,7 @@ from hostinger_api.api.agency_hosting_files_api import AgencyHostingFilesApi
 from hostinger_api.api.agency_hosting_website_setups_api import AgencyHostingWebsiteSetupsApi
 from hostinger_api.api.agency_hosting_websites_api import AgencyHostingWebsitesApi
 from hostinger_api.api.billing_catalog_api import BillingCatalogApi
+from hostinger_api.api.billing_orders_api import BillingOrdersApi
 from hostinger_api.api.billing_payment_methods_api import BillingPaymentMethodsApi
 from hostinger_api.api.billing_subscriptions_api import BillingSubscriptionsApi
 from hostinger_api.api.dns_snapshot_api import DNSSnapshotApi

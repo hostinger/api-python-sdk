@@ -9,6 +9,7 @@ from hostinger_api.api.agency_hosting_domains_api import AgencyHostingDomainsApi
 from hostinger_api.api.agency_hosting_files_api import AgencyHostingFilesApi
 from hostinger_api.api.agency_hosting_website_setups_api import AgencyHostingWebsiteSetupsApi
 from hostinger_api.api.agency_hosting_websites_api import AgencyHostingWebsitesApi
+from hostinger_api.api.agency_hosting_word_press_api import AgencyHostingWordPressApi
 from hostinger_api.api.billing_catalog_api import BillingCatalogApi
 from hostinger_api.api.billing_orders_api import BillingOrdersApi
 from hostinger_api.api.billing_payment_methods_api import BillingPaymentMethodsApi

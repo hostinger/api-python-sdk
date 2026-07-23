@@ -198,7 +198,9 @@ Class | Method | HTTP request | Description
 *HostingWebsitesApi* | [**create_website_v1**](docs/HostingWebsitesApi.md#create_website_v1) | **POST** /api/hosting/v1/websites | Create website
 *HostingWebsitesApi* | [**delete_website_v1**](docs/HostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/hosting/v1/websites/{domain} | Delete website
 *HostingWebsitesApi* | [**list_websites_v1**](docs/HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
+*MailMailboxesApi* | [**change_mailbox_password_v1**](docs/MailMailboxesApi.md#change_mailbox_password_v1) | **PATCH** /api/mail/v1/mailboxes/{mailboxId}/password | Change mailbox password
 *MailMailboxesApi* | [**create_mailbox_v1**](docs/MailMailboxesApi.md#create_mailbox_v1) | **POST** /api/mail/v1/orders/{orderId}/mailboxes | Create mailbox
+*MailMailboxesApi* | [**delete_mailbox_v1**](docs/MailMailboxesApi.md#delete_mailbox_v1) | **DELETE** /api/mail/v1/mailboxes/{mailboxId} | Delete mailbox
 *MailMailboxesApi* | [**get_mailbox_list_v1**](docs/MailMailboxesApi.md#get_mailbox_list_v1) | **GET** /api/mail/v1/orders/{orderId}/mailboxes | Get mailbox list
 *MailOrdersApi* | [**get_mail_order_list_v1**](docs/MailOrdersApi.md#get_mail_order_list_v1) | **GET** /api/mail/v1/orders | Get mail order list
 *ReachContactsApi* | [**create_a_new_contact_v1**](docs/ReachContactsApi.md#create_a_new_contact_v1) | **POST** /api/reach/v1/contacts | Create a new contact
@@ -500,6 +502,7 @@ Class | Method | HTTP request | Description
  - [MailV1OrdersOrderDomainResource](docs/MailV1OrdersOrderDomainResource.md)
  - [MailV1OrdersOrderPlanResource](docs/MailV1OrdersOrderPlanResource.md)
  - [MailV1OrdersOrderResource](docs/MailV1OrdersOrderResource.md)
+ - [MailV1SchemaChangeMailboxPasswordRequestSchema](docs/MailV1SchemaChangeMailboxPasswordRequestSchema.md)
  - [MailV1SchemaCreateMailboxRequestSchema](docs/MailV1SchemaCreateMailboxRequestSchema.md)
  - [ReachListContactsV1200Response](docs/ReachListContactsV1200Response.md)
  - [ReachListProfileSegmentContactsV1200Response](docs/ReachListProfileSegmentContactsV1200Response.md)

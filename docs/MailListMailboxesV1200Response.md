@@ -1,4 +1,4 @@
-# MailGetMailboxListV1200Response
+# MailListMailboxesV1200Response
 
 
 ## Properties
@@ -11,19 +11,19 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from hostinger_api.models.mail_get_mailbox_list_v1200_response import MailGetMailboxListV1200Response
+from hostinger_api.models.mail_list_mailboxes_v1200_response import MailListMailboxesV1200Response
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of MailGetMailboxListV1200Response from a JSON string
-mail_get_mailbox_list_v1200_response_instance = MailGetMailboxListV1200Response.from_json(json)
+# create an instance of MailListMailboxesV1200Response from a JSON string
+mail_list_mailboxes_v1200_response_instance = MailListMailboxesV1200Response.from_json(json)
 # print the JSON string representation of the object
-print(MailGetMailboxListV1200Response.to_json())
+print(MailListMailboxesV1200Response.to_json())
 
 # convert the object into a dict
-mail_get_mailbox_list_v1200_response_dict = mail_get_mailbox_list_v1200_response_instance.to_dict()
-# create an instance of MailGetMailboxListV1200Response from a dict
-mail_get_mailbox_list_v1200_response_from_dict = MailGetMailboxListV1200Response.from_dict(mail_get_mailbox_list_v1200_response_dict)
+mail_list_mailboxes_v1200_response_dict = mail_list_mailboxes_v1200_response_instance.to_dict()
+# create an instance of MailListMailboxesV1200Response from a dict
+mail_list_mailboxes_v1200_response_from_dict = MailListMailboxesV1200Response.from_dict(mail_list_mailboxes_v1200_response_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

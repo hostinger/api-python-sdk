@@ -201,11 +201,16 @@ Class | Method | HTTP request | Description
 *HostingWebsitesApi* | [**create_website_v1**](docs/HostingWebsitesApi.md#create_website_v1) | **POST** /api/hosting/v1/websites | Create website
 *HostingWebsitesApi* | [**delete_website_v1**](docs/HostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/hosting/v1/websites/{domain} | Delete website
 *HostingWebsitesApi* | [**list_websites_v1**](docs/HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
+*MailLogsApi* | [**list_access_logs_v1**](docs/MailLogsApi.md#list_access_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/access | List access logs
+*MailLogsApi* | [**list_action_logs_v1**](docs/MailLogsApi.md#list_action_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/action | List action logs
+*MailLogsApi* | [**list_inbound_logs_v1**](docs/MailLogsApi.md#list_inbound_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/inbound | List inbound logs
+*MailLogsApi* | [**list_mailbox_action_logs_v1**](docs/MailLogsApi.md#list_mailbox_action_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/mailbox-actions | List mailbox action logs
+*MailLogsApi* | [**list_outbound_logs_v1**](docs/MailLogsApi.md#list_outbound_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/outbound | List outbound logs
 *MailMailboxesApi* | [**change_mailbox_password_v1**](docs/MailMailboxesApi.md#change_mailbox_password_v1) | **PATCH** /api/mail/v1/mailboxes/{mailboxId}/password | Change mailbox password
 *MailMailboxesApi* | [**create_mailbox_v1**](docs/MailMailboxesApi.md#create_mailbox_v1) | **POST** /api/mail/v1/orders/{orderId}/mailboxes | Create mailbox
 *MailMailboxesApi* | [**delete_mailbox_v1**](docs/MailMailboxesApi.md#delete_mailbox_v1) | **DELETE** /api/mail/v1/mailboxes/{mailboxId} | Delete mailbox
-*MailMailboxesApi* | [**get_mailbox_list_v1**](docs/MailMailboxesApi.md#get_mailbox_list_v1) | **GET** /api/mail/v1/orders/{orderId}/mailboxes | Get mailbox list
-*MailOrdersApi* | [**get_mail_order_list_v1**](docs/MailOrdersApi.md#get_mail_order_list_v1) | **GET** /api/mail/v1/orders | Get mail order list
+*MailMailboxesApi* | [**list_mailboxes_v1**](docs/MailMailboxesApi.md#list_mailboxes_v1) | **GET** /api/mail/v1/orders/{orderId}/mailboxes | List mailboxes
+*MailOrdersApi* | [**list_orders_v1**](docs/MailOrdersApi.md#list_orders_v1) | **GET** /api/mail/v1/orders | List orders
 *ReachContactsApi* | [**create_a_new_contact_v1**](docs/ReachContactsApi.md#create_a_new_contact_v1) | **POST** /api/reach/v1/contacts | Create a new contact
 *ReachContactsApi* | [**create_new_contacts_v1**](docs/ReachContactsApi.md#create_new_contacts_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/contacts | Create new contacts
 *ReachContactsApi* | [**delete_a_contact_v1**](docs/ReachContactsApi.md#delete_a_contact_v1) | **DELETE** /api/reach/v1/contacts/{uuid} | Delete a contact
@@ -499,8 +504,17 @@ Class | Method | HTTP request | Description
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineObject2](docs/InlineObject2.md)
  - [InlineObject2Errors](docs/InlineObject2Errors.md)
- - [MailGetMailOrderListV1200Response](docs/MailGetMailOrderListV1200Response.md)
- - [MailGetMailboxListV1200Response](docs/MailGetMailboxListV1200Response.md)
+ - [MailListAccessLogsV1200Response](docs/MailListAccessLogsV1200Response.md)
+ - [MailListActionLogsV1200Response](docs/MailListActionLogsV1200Response.md)
+ - [MailListInboundLogsV1200Response](docs/MailListInboundLogsV1200Response.md)
+ - [MailListMailboxActionLogsV1200Response](docs/MailListMailboxActionLogsV1200Response.md)
+ - [MailListMailboxesV1200Response](docs/MailListMailboxesV1200Response.md)
+ - [MailListOrdersV1200Response](docs/MailListOrdersV1200Response.md)
+ - [MailV1LogsAccessAccessLogResource](docs/MailV1LogsAccessAccessLogResource.md)
+ - [MailV1LogsActionActionLogResource](docs/MailV1LogsActionActionLogResource.md)
+ - [MailV1LogsCommonDeliveryLogRelayEventResource](docs/MailV1LogsCommonDeliveryLogRelayEventResource.md)
+ - [MailV1LogsCommonDeliveryLogResource](docs/MailV1LogsCommonDeliveryLogResource.md)
+ - [MailV1LogsMailboxActionsMailboxActionLogResource](docs/MailV1LogsMailboxActionsMailboxActionLogResource.md)
  - [MailV1MailboxesMailboxCountsResource](docs/MailV1MailboxesMailboxCountsResource.md)
  - [MailV1MailboxesMailboxProtocolsResource](docs/MailV1MailboxesMailboxProtocolsResource.md)
  - [MailV1MailboxesMailboxResource](docs/MailV1MailboxesMailboxResource.md)

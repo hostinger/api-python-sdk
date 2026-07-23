@@ -4,13 +4,13 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_mail_order_list_v1**](MailOrdersApi.md#get_mail_order_list_v1) | **GET** /api/mail/v1/orders | Get mail order list
+[**list_orders_v1**](MailOrdersApi.md#list_orders_v1) | **GET** /api/mail/v1/orders | List orders
 
 
-# **get_mail_order_list_v1**
-> MailGetMailOrderListV1200Response get_mail_order_list_v1(domain=domain, status=status, is_trial=is_trial, sort=sort, page=page, per_page=per_page)
+# **list_orders_v1**
+> MailListOrdersV1200Response list_orders_v1(domain=domain, status=status, is_trial=is_trial, sort=sort, page=page, per_page=per_page)
 
-Get mail order list
+List orders
 
 Retrieve a paginated list of mail orders associated with your account.
 
@@ -23,7 +23,7 @@ plan, attached domain, and expiration details.
 
 ```python
 import hostinger_api
-from hostinger_api.models.mail_get_mail_order_list_v1200_response import MailGetMailOrderListV1200Response
+from hostinger_api.models.mail_list_orders_v1200_response import MailListOrdersV1200Response
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -45,12 +45,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Number of items per page (optional) (default to 25)
 
     try:
-        # Get mail order list
-        api_response = api_instance.get_mail_order_list_v1(domain=domain, status=status, is_trial=is_trial, sort=sort, page=page, per_page=per_page)
-        print("The response of MailOrdersApi->get_mail_order_list_v1:\n")
+        # List orders
+        api_response = api_instance.list_orders_v1(domain=domain, status=status, is_trial=is_trial, sort=sort, page=page, per_page=per_page)
+        print("The response of MailOrdersApi->list_orders_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling MailOrdersApi->get_mail_order_list_v1: %s\n" % e)
+        print("Exception when calling MailOrdersApi->list_orders_v1: %s\n" % e)
 ```
 
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MailGetMailOrderListV1200Response**](MailGetMailOrderListV1200Response.md)
+[**MailListOrdersV1200Response**](MailListOrdersV1200Response.md)
 
 ### Authorization
 

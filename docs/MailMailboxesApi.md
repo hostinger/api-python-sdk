@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**change_mailbox_password_v1**](MailMailboxesApi.md#change_mailbox_password_v1) | **PATCH** /api/mail/v1/mailboxes/{mailboxId}/password | Change mailbox password
 [**create_mailbox_v1**](MailMailboxesApi.md#create_mailbox_v1) | **POST** /api/mail/v1/orders/{orderId}/mailboxes | Create mailbox
 [**delete_mailbox_v1**](MailMailboxesApi.md#delete_mailbox_v1) | **DELETE** /api/mail/v1/mailboxes/{mailboxId} | Delete mailbox
-[**get_mailbox_list_v1**](MailMailboxesApi.md#get_mailbox_list_v1) | **GET** /api/mail/v1/orders/{orderId}/mailboxes | Get mailbox list
+[**list_mailboxes_v1**](MailMailboxesApi.md#list_mailboxes_v1) | **GET** /api/mail/v1/orders/{orderId}/mailboxes | List mailboxes
 
 
 # **change_mailbox_password_v1**
@@ -236,10 +236,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_mailbox_list_v1**
-> MailGetMailboxListV1200Response get_mailbox_list_v1(order_id, search=search, sort=sort, page=page, per_page=per_page)
+# **list_mailboxes_v1**
+> MailListMailboxesV1200Response list_mailboxes_v1(order_id, search=search, sort=sort, page=page, per_page=per_page)
 
-Get mailbox list
+List mailboxes
 
 Retrieve a paginated list of mailboxes belonging to a mail order.
 
@@ -253,7 +253,7 @@ periodically synced usage numbers (usage may lag behind live values).
 
 ```python
 import hostinger_api
-from hostinger_api.models.mail_get_mailbox_list_v1200_response import MailGetMailboxListV1200Response
+from hostinger_api.models.mail_list_mailboxes_v1200_response import MailListMailboxesV1200Response
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -274,12 +274,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Number of items per page (optional) (default to 25)
 
     try:
-        # Get mailbox list
-        api_response = api_instance.get_mailbox_list_v1(order_id, search=search, sort=sort, page=page, per_page=per_page)
-        print("The response of MailMailboxesApi->get_mailbox_list_v1:\n")
+        # List mailboxes
+        api_response = api_instance.list_mailboxes_v1(order_id, search=search, sort=sort, page=page, per_page=per_page)
+        print("The response of MailMailboxesApi->list_mailboxes_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling MailMailboxesApi->get_mailbox_list_v1: %s\n" % e)
+        print("Exception when calling MailMailboxesApi->list_mailboxes_v1: %s\n" % e)
 ```
 
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MailGetMailboxListV1200Response**](MailGetMailboxListV1200Response.md)
+[**MailListMailboxesV1200Response**](MailListMailboxesV1200Response.md)
 
 ### Authorization
 

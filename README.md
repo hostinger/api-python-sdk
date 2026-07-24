@@ -205,6 +205,10 @@ Class | Method | HTTP request | Description
 *MailAPITokensApi* | [**create_api_token_v1**](docs/MailAPITokensApi.md#create_api_token_v1) | **POST** /api/mail/v1/orders/{orderId}/api-tokens | Create API token
 *MailAPITokensApi* | [**list_api_tokens_v1**](docs/MailAPITokensApi.md#list_api_tokens_v1) | **GET** /api/mail/v1/api-tokens | List API tokens
 *MailAPITokensApi* | [**revoke_api_token_v1**](docs/MailAPITokensApi.md#revoke_api_token_v1) | **DELETE** /api/mail/v1/api-tokens/{tokenId} | Revoke API token
+*MailAutorepliesApi* | [**create_autoreply_v1**](docs/MailAutorepliesApi.md#create_autoreply_v1) | **POST** /api/mail/v1/mailboxes/{mailboxId}/autoreplies | Create autoreply
+*MailAutorepliesApi* | [**delete_autoreply_v1**](docs/MailAutorepliesApi.md#delete_autoreply_v1) | **DELETE** /api/mail/v1/autoreplies/{autoreplyId} | Delete autoreply
+*MailAutorepliesApi* | [**list_autoreplies_v1**](docs/MailAutorepliesApi.md#list_autoreplies_v1) | **GET** /api/mail/v1/orders/{orderId}/autoreplies | List autoreplies
+*MailAutorepliesApi* | [**update_autoreply_v1**](docs/MailAutorepliesApi.md#update_autoreply_v1) | **PUT** /api/mail/v1/autoreplies/{autoreplyId} | Update autoreply
 *MailLogsApi* | [**list_access_logs_v1**](docs/MailLogsApi.md#list_access_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/access | List access logs
 *MailLogsApi* | [**list_action_logs_v1**](docs/MailLogsApi.md#list_action_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/action | List action logs
 *MailLogsApi* | [**list_inbound_logs_v1**](docs/MailLogsApi.md#list_inbound_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/inbound | List inbound logs
@@ -524,6 +528,7 @@ Class | Method | HTTP request | Description
  - [MailListAPITokensV1200Response](docs/MailListAPITokensV1200Response.md)
  - [MailListAccessLogsV1200Response](docs/MailListAccessLogsV1200Response.md)
  - [MailListActionLogsV1200Response](docs/MailListActionLogsV1200Response.md)
+ - [MailListAutorepliesV1200Response](docs/MailListAutorepliesV1200Response.md)
  - [MailListInboundLogsV1200Response](docs/MailListInboundLogsV1200Response.md)
  - [MailListMailboxActionLogsV1200Response](docs/MailListMailboxActionLogsV1200Response.md)
  - [MailListMailboxesV1200Response](docs/MailListMailboxesV1200Response.md)
@@ -534,6 +539,8 @@ Class | Method | HTTP request | Description
  - [MailV1ApiTokensApiTokenMailboxResource](docs/MailV1ApiTokensApiTokenMailboxResource.md)
  - [MailV1ApiTokensApiTokenResource](docs/MailV1ApiTokensApiTokenResource.md)
  - [MailV1ApiTokensApiTokenScopeResource](docs/MailV1ApiTokensApiTokenScopeResource.md)
+ - [MailV1AutorepliesAutoreplyMailboxResource](docs/MailV1AutorepliesAutoreplyMailboxResource.md)
+ - [MailV1AutorepliesAutoreplyResource](docs/MailV1AutorepliesAutoreplyResource.md)
  - [MailV1LogsAccessAccessLogResource](docs/MailV1LogsAccessAccessLogResource.md)
  - [MailV1LogsActionActionLogResource](docs/MailV1LogsActionActionLogResource.md)
  - [MailV1LogsCommonDeliveryLogRelayEventResource](docs/MailV1LogsCommonDeliveryLogRelayEventResource.md)
@@ -555,6 +562,7 @@ Class | Method | HTTP request | Description
  - [MailV1SchemaCreateMailboxRequestSchema](docs/MailV1SchemaCreateMailboxRequestSchema.md)
  - [MailV1SchemaCreateWebhookRequestSchema](docs/MailV1SchemaCreateWebhookRequestSchema.md)
  - [MailV1SchemaUpdateWebhookRequestSchema](docs/MailV1SchemaUpdateWebhookRequestSchema.md)
+ - [MailV1SchemaUpsertAutoreplyRequestSchema](docs/MailV1SchemaUpsertAutoreplyRequestSchema.md)
  - [MailV1WebhooksWebhookCreatedResource](docs/MailV1WebhooksWebhookCreatedResource.md)
  - [MailV1WebhooksWebhookDeliveryLogResource](docs/MailV1WebhooksWebhookDeliveryLogResource.md)
  - [MailV1WebhooksWebhookMailboxResource](docs/MailV1WebhooksWebhookMailboxResource.md)

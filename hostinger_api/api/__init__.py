@@ -40,6 +40,7 @@ from hostinger_api.api.hosting_orders_api import HostingOrdersApi
 from hostinger_api.api.hosting_php_api import HostingPHPApi
 from hostinger_api.api.hosting_websites_api import HostingWebsitesApi
 from hostinger_api.api.mail_api_tokens_api import MailAPITokensApi
+from hostinger_api.api.mail_autoreplies_api import MailAutorepliesApi
 from hostinger_api.api.mail_logs_api import MailLogsApi
 from hostinger_api.api.mail_mailboxes_api import MailMailboxesApi
 from hostinger_api.api.mail_orders_api import MailOrdersApi

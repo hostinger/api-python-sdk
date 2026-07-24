@@ -209,6 +209,11 @@ Class | Method | HTTP request | Description
 *MailAutorepliesApi* | [**delete_autoreply_v1**](docs/MailAutorepliesApi.md#delete_autoreply_v1) | **DELETE** /api/mail/v1/autoreplies/{autoreplyId} | Delete autoreply
 *MailAutorepliesApi* | [**list_autoreplies_v1**](docs/MailAutorepliesApi.md#list_autoreplies_v1) | **GET** /api/mail/v1/orders/{orderId}/autoreplies | List autoreplies
 *MailAutorepliesApi* | [**update_autoreply_v1**](docs/MailAutorepliesApi.md#update_autoreply_v1) | **PUT** /api/mail/v1/autoreplies/{autoreplyId} | Update autoreply
+*MailForwardersApi* | [**create_forwarder_v1**](docs/MailForwardersApi.md#create_forwarder_v1) | **POST** /api/mail/v1/mailboxes/{mailboxId}/forwarders | Create forwarder
+*MailForwardersApi* | [**delete_forwarder_v1**](docs/MailForwardersApi.md#delete_forwarder_v1) | **DELETE** /api/mail/v1/forwarders/{forwarderId} | Delete forwarder
+*MailForwardersApi* | [**list_forwarders_v1**](docs/MailForwardersApi.md#list_forwarders_v1) | **GET** /api/mail/v1/orders/{orderId}/forwarders | List forwarders
+*MailForwardersApi* | [**resend_forwarder_confirmation_v1**](docs/MailForwardersApi.md#resend_forwarder_confirmation_v1) | **POST** /api/mail/v1/forwarders/{forwarderId}/confirmation/resend | Resend forwarder confirmation
+*MailForwardersApi* | [**update_forwarder_keep_copy_setting_v1**](docs/MailForwardersApi.md#update_forwarder_keep_copy_setting_v1) | **PATCH** /api/mail/v1/forwarders/{forwarderId}/keep-copy | Update forwarder keep-copy setting
 *MailLogsApi* | [**list_access_logs_v1**](docs/MailLogsApi.md#list_access_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/access | List access logs
 *MailLogsApi* | [**list_action_logs_v1**](docs/MailLogsApi.md#list_action_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/action | List action logs
 *MailLogsApi* | [**list_inbound_logs_v1**](docs/MailLogsApi.md#list_inbound_logs_v1) | **GET** /api/mail/v1/orders/{orderId}/logs/inbound | List inbound logs
@@ -529,6 +534,7 @@ Class | Method | HTTP request | Description
  - [MailListAccessLogsV1200Response](docs/MailListAccessLogsV1200Response.md)
  - [MailListActionLogsV1200Response](docs/MailListActionLogsV1200Response.md)
  - [MailListAutorepliesV1200Response](docs/MailListAutorepliesV1200Response.md)
+ - [MailListForwardersV1200Response](docs/MailListForwardersV1200Response.md)
  - [MailListInboundLogsV1200Response](docs/MailListInboundLogsV1200Response.md)
  - [MailListMailboxActionLogsV1200Response](docs/MailListMailboxActionLogsV1200Response.md)
  - [MailListMailboxesV1200Response](docs/MailListMailboxesV1200Response.md)
@@ -541,6 +547,8 @@ Class | Method | HTTP request | Description
  - [MailV1ApiTokensApiTokenScopeResource](docs/MailV1ApiTokensApiTokenScopeResource.md)
  - [MailV1AutorepliesAutoreplyMailboxResource](docs/MailV1AutorepliesAutoreplyMailboxResource.md)
  - [MailV1AutorepliesAutoreplyResource](docs/MailV1AutorepliesAutoreplyResource.md)
+ - [MailV1ForwardersForwarderMailboxResource](docs/MailV1ForwardersForwarderMailboxResource.md)
+ - [MailV1ForwardersForwarderResource](docs/MailV1ForwardersForwarderResource.md)
  - [MailV1LogsAccessAccessLogResource](docs/MailV1LogsAccessAccessLogResource.md)
  - [MailV1LogsActionActionLogResource](docs/MailV1LogsActionActionLogResource.md)
  - [MailV1LogsCommonDeliveryLogRelayEventResource](docs/MailV1LogsCommonDeliveryLogRelayEventResource.md)
@@ -559,8 +567,10 @@ Class | Method | HTTP request | Description
  - [MailV1SchemaChangeMailboxPasswordRequestSchema](docs/MailV1SchemaChangeMailboxPasswordRequestSchema.md)
  - [MailV1SchemaCreateApiTokenRequestSchema](docs/MailV1SchemaCreateApiTokenRequestSchema.md)
  - [MailV1SchemaCreateApiTokenRequestSchemaScope](docs/MailV1SchemaCreateApiTokenRequestSchemaScope.md)
+ - [MailV1SchemaCreateForwarderRequestSchema](docs/MailV1SchemaCreateForwarderRequestSchema.md)
  - [MailV1SchemaCreateMailboxRequestSchema](docs/MailV1SchemaCreateMailboxRequestSchema.md)
  - [MailV1SchemaCreateWebhookRequestSchema](docs/MailV1SchemaCreateWebhookRequestSchema.md)
+ - [MailV1SchemaUpdateForwarderKeepCopyRequestSchema](docs/MailV1SchemaUpdateForwarderKeepCopyRequestSchema.md)
  - [MailV1SchemaUpdateWebhookRequestSchema](docs/MailV1SchemaUpdateWebhookRequestSchema.md)
  - [MailV1SchemaUpsertAutoreplyRequestSchema](docs/MailV1SchemaUpsertAutoreplyRequestSchema.md)
  - [MailV1WebhooksWebhookCreatedResource](docs/MailV1WebhooksWebhookCreatedResource.md)

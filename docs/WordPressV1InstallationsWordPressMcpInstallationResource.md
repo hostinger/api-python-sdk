@@ -9,10 +9,7 @@ Name | Type | Description | Notes
 **username** | **str** | Hosting account username | [optional] 
 **domain** | **str** | Domain the installation belongs to | [optional] 
 **directory** | **str** | Installation directory on the server | [optional] 
-**token** | **str** | JWT used to authenticate against the installation MCP server | [optional] 
-**mcp_url** | **str** | MCP (Model Context Protocol) endpoint URL for the WordPress installation | [optional] 
-**expires_in** | **int** | Token lifetime in seconds from the moment it was issued | [optional] 
-**expires_at** | **datetime** | Date-time at which the token expires | [optional] 
+**mcp_details** | [**WordPressV1InstallationsWordPressMcpDetailsResource**](WordPressV1InstallationsWordPressMcpDetailsResource.md) |  | [optional] 
 
 ## Example
 

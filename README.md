@@ -205,10 +205,17 @@ Class | Method | HTTP request | Description
 *MailAPITokensApi* | [**create_api_token_v1**](docs/MailAPITokensApi.md#create_api_token_v1) | **POST** /api/mail/v1/orders/{orderId}/api-tokens | Create API token
 *MailAPITokensApi* | [**list_api_tokens_v1**](docs/MailAPITokensApi.md#list_api_tokens_v1) | **GET** /api/mail/v1/api-tokens | List API tokens
 *MailAPITokensApi* | [**revoke_api_token_v1**](docs/MailAPITokensApi.md#revoke_api_token_v1) | **DELETE** /api/mail/v1/api-tokens/{tokenId} | Revoke API token
+*MailAliasesApi* | [**create_alias_v1**](docs/MailAliasesApi.md#create_alias_v1) | **POST** /api/mail/v1/mailboxes/{mailboxId}/aliases | Create alias
+*MailAliasesApi* | [**delete_alias_v1**](docs/MailAliasesApi.md#delete_alias_v1) | **DELETE** /api/mail/v1/aliases/{aliasId} | Delete alias
+*MailAliasesApi* | [**list_aliases_v1**](docs/MailAliasesApi.md#list_aliases_v1) | **GET** /api/mail/v1/orders/{orderId}/aliases | List aliases
 *MailAutorepliesApi* | [**create_autoreply_v1**](docs/MailAutorepliesApi.md#create_autoreply_v1) | **POST** /api/mail/v1/mailboxes/{mailboxId}/autoreplies | Create autoreply
 *MailAutorepliesApi* | [**delete_autoreply_v1**](docs/MailAutorepliesApi.md#delete_autoreply_v1) | **DELETE** /api/mail/v1/autoreplies/{autoreplyId} | Delete autoreply
 *MailAutorepliesApi* | [**list_autoreplies_v1**](docs/MailAutorepliesApi.md#list_autoreplies_v1) | **GET** /api/mail/v1/orders/{orderId}/autoreplies | List autoreplies
 *MailAutorepliesApi* | [**update_autoreply_v1**](docs/MailAutorepliesApi.md#update_autoreply_v1) | **PUT** /api/mail/v1/autoreplies/{autoreplyId} | Update autoreply
+*MailCatchallsApi* | [**create_catch_all_v1**](docs/MailCatchallsApi.md#create_catch_all_v1) | **POST** /api/mail/v1/mailboxes/{mailboxId}/catchalls | Create catch-all
+*MailCatchallsApi* | [**delete_catch_all_v1**](docs/MailCatchallsApi.md#delete_catch_all_v1) | **DELETE** /api/mail/v1/catchalls/{catchallId} | Delete catch-all
+*MailCatchallsApi* | [**list_catch_alls_v1**](docs/MailCatchallsApi.md#list_catch_alls_v1) | **GET** /api/mail/v1/orders/{orderId}/catchalls | List catch-alls
+*MailCatchallsApi* | [**resend_catch_all_confirmation_v1**](docs/MailCatchallsApi.md#resend_catch_all_confirmation_v1) | **POST** /api/mail/v1/catchalls/{catchallId}/confirmation/resend | Resend catch-all confirmation
 *MailForwardersApi* | [**create_forwarder_v1**](docs/MailForwardersApi.md#create_forwarder_v1) | **POST** /api/mail/v1/mailboxes/{mailboxId}/forwarders | Create forwarder
 *MailForwardersApi* | [**delete_forwarder_v1**](docs/MailForwardersApi.md#delete_forwarder_v1) | **DELETE** /api/mail/v1/forwarders/{forwarderId} | Delete forwarder
 *MailForwardersApi* | [**list_forwarders_v1**](docs/MailForwardersApi.md#list_forwarders_v1) | **GET** /api/mail/v1/orders/{orderId}/forwarders | List forwarders
@@ -533,7 +540,9 @@ Class | Method | HTTP request | Description
  - [MailListAPITokensV1200Response](docs/MailListAPITokensV1200Response.md)
  - [MailListAccessLogsV1200Response](docs/MailListAccessLogsV1200Response.md)
  - [MailListActionLogsV1200Response](docs/MailListActionLogsV1200Response.md)
+ - [MailListAliasesV1200Response](docs/MailListAliasesV1200Response.md)
  - [MailListAutorepliesV1200Response](docs/MailListAutorepliesV1200Response.md)
+ - [MailListCatchAllsV1200Response](docs/MailListCatchAllsV1200Response.md)
  - [MailListForwardersV1200Response](docs/MailListForwardersV1200Response.md)
  - [MailListInboundLogsV1200Response](docs/MailListInboundLogsV1200Response.md)
  - [MailListMailboxActionLogsV1200Response](docs/MailListMailboxActionLogsV1200Response.md)
@@ -541,12 +550,16 @@ Class | Method | HTTP request | Description
  - [MailListOrdersV1200Response](docs/MailListOrdersV1200Response.md)
  - [MailListWebhookDeliveryLogsV1200Response](docs/MailListWebhookDeliveryLogsV1200Response.md)
  - [MailListWebhooksV1200Response](docs/MailListWebhooksV1200Response.md)
+ - [MailV1AliasesAliasMailboxResource](docs/MailV1AliasesAliasMailboxResource.md)
+ - [MailV1AliasesAliasResource](docs/MailV1AliasesAliasResource.md)
  - [MailV1ApiTokensApiTokenCreatedResource](docs/MailV1ApiTokensApiTokenCreatedResource.md)
  - [MailV1ApiTokensApiTokenMailboxResource](docs/MailV1ApiTokensApiTokenMailboxResource.md)
  - [MailV1ApiTokensApiTokenResource](docs/MailV1ApiTokensApiTokenResource.md)
  - [MailV1ApiTokensApiTokenScopeResource](docs/MailV1ApiTokensApiTokenScopeResource.md)
  - [MailV1AutorepliesAutoreplyMailboxResource](docs/MailV1AutorepliesAutoreplyMailboxResource.md)
  - [MailV1AutorepliesAutoreplyResource](docs/MailV1AutorepliesAutoreplyResource.md)
+ - [MailV1CatchallsCatchallMailboxResource](docs/MailV1CatchallsCatchallMailboxResource.md)
+ - [MailV1CatchallsCatchallResource](docs/MailV1CatchallsCatchallResource.md)
  - [MailV1ForwardersForwarderMailboxResource](docs/MailV1ForwardersForwarderMailboxResource.md)
  - [MailV1ForwardersForwarderResource](docs/MailV1ForwardersForwarderResource.md)
  - [MailV1LogsAccessAccessLogResource](docs/MailV1LogsAccessAccessLogResource.md)
@@ -565,6 +578,7 @@ Class | Method | HTTP request | Description
  - [MailV1OrdersPlanMailboxResource](docs/MailV1OrdersPlanMailboxResource.md)
  - [MailV1OrdersPlanResource](docs/MailV1OrdersPlanResource.md)
  - [MailV1SchemaChangeMailboxPasswordRequestSchema](docs/MailV1SchemaChangeMailboxPasswordRequestSchema.md)
+ - [MailV1SchemaCreateAliasRequestSchema](docs/MailV1SchemaCreateAliasRequestSchema.md)
  - [MailV1SchemaCreateApiTokenRequestSchema](docs/MailV1SchemaCreateApiTokenRequestSchema.md)
  - [MailV1SchemaCreateApiTokenRequestSchemaScope](docs/MailV1SchemaCreateApiTokenRequestSchemaScope.md)
  - [MailV1SchemaCreateForwarderRequestSchema](docs/MailV1SchemaCreateForwarderRequestSchema.md)

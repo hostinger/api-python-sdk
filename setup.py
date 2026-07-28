@@ -22,7 +22,7 @@ def read(filename):
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "hostinger_api"
-VERSION = "3.20.1"
+VERSION = "3.20.2"
 PYTHON_REQUIRES = ">= 3.10"
 REQUIRES = [
     "urllib3 >= 2.7.0, < 3.0.0",
@@ -39,6 +39,7 @@ setup(
     author_email="devs@hostinger.com",
     url="https://github.com/hostinger/api-python-sdk",
     keywords=["hostinger", "openapi", "python", "sdk", "rest", "api"],
+    python_requires=PYTHON_REQUIRES,
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,

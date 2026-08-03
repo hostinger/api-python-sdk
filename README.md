@@ -148,6 +148,8 @@ Class | Method | HTTP request | Description
 *DomainsWHOISApi* | [**get_whois_profile_list_v1**](docs/DomainsWHOISApi.md#get_whois_profile_list_v1) | **GET** /api/domains/v1/whois | Get WHOIS profile list
 *DomainsWHOISApi* | [**get_whois_profile_usage_v1**](docs/DomainsWHOISApi.md#get_whois_profile_usage_v1) | **GET** /api/domains/v1/whois/{whoisId}/usage | Get WHOIS profile usage
 *DomainsWHOISApi* | [**get_whois_profile_v1**](docs/DomainsWHOISApi.md#get_whois_profile_v1) | **GET** /api/domains/v1/whois/{whoisId} | Get WHOIS profile
+*DomainsWHOISApi* | [**set_whois_profile_as_default_v1**](docs/DomainsWHOISApi.md#set_whois_profile_as_default_v1) | **PATCH** /api/domains/v1/whois/default/{whoisId} | Set WHOIS profile as default
+*DomainsWHOISApi* | [**unset_default_whois_profile_v1**](docs/DomainsWHOISApi.md#unset_default_whois_profile_v1) | **DELETE** /api/domains/v1/whois/default/{whoisId} | Unset default WHOIS profile
 *EcommerceMiscellaneousApi* | [**get_custom_storefront_setup_instructions_v1**](docs/EcommerceMiscellaneousApi.md#get_custom_storefront_setup_instructions_v1) | **GET** /api/ecommerce/v1/miscellaneous/custom-storefront-instructions | Get custom storefront setup instructions
 *EcommercePaymentsApi* | [**enable_manual_payment_method_v1**](docs/EcommercePaymentsApi.md#enable_manual_payment_method_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/payment-methods/manual | Enable manual payment method
 *EcommerceProductsApi* | [**create_digital_product_v1**](docs/EcommerceProductsApi.md#create_digital_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/digital | Create digital product

@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**get_whois_profile_list_v1**](DomainsWHOISApi.md#get_whois_profile_list_v1) | **GET** /api/domains/v1/whois | Get WHOIS profile list
 [**get_whois_profile_usage_v1**](DomainsWHOISApi.md#get_whois_profile_usage_v1) | **GET** /api/domains/v1/whois/{whoisId}/usage | Get WHOIS profile usage
 [**get_whois_profile_v1**](DomainsWHOISApi.md#get_whois_profile_v1) | **GET** /api/domains/v1/whois/{whoisId} | Get WHOIS profile
+[**set_whois_profile_as_default_v1**](DomainsWHOISApi.md#set_whois_profile_as_default_v1) | **PATCH** /api/domains/v1/whois/default/{whoisId} | Set WHOIS profile as default
+[**unset_default_whois_profile_v1**](DomainsWHOISApi.md#unset_default_whois_profile_v1) | **DELETE** /api/domains/v1/whois/default/{whoisId} | Unset default WHOIS profile
 
 
 # **create_whois_profile_v1**
@@ -367,6 +369,154 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_whois_profile_as_default_v1**
+> CommonSuccessEmptyResource set_whois_profile_as_default_v1(whois_id)
+
+Set WHOIS profile as default
+
+Set WHOIS contact profile as default.
+
+The default profile is pre-selected for the TLD it belongs to when registering new domains.
+
+Use this endpoint to avoid picking contact information for every registration.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.DomainsWHOISApi(api_client)
+    whois_id = 564651 # int | WHOIS ID
+
+    try:
+        # Set WHOIS profile as default
+        api_response = api_instance.set_whois_profile_as_default_v1(whois_id)
+        print("The response of DomainsWHOISApi->set_whois_profile_as_default_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DomainsWHOISApi->set_whois_profile_as_default_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **whois_id** | **int**| WHOIS ID | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **unset_default_whois_profile_v1**
+> CommonSuccessEmptyResource unset_default_whois_profile_v1(whois_id)
+
+Unset default WHOIS profile
+
+Unset WHOIS contact profile as default.
+
+The profile itself is kept, it is only no longer pre-selected for its TLD.
+
+Use this endpoint to stop reusing contact information for new registrations.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.DomainsWHOISApi(api_client)
+    whois_id = 564651 # int | WHOIS ID
+
+    try:
+        # Unset default WHOIS profile
+        api_response = api_instance.unset_default_whois_profile_v1(whois_id)
+        print("The response of DomainsWHOISApi->unset_default_whois_profile_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DomainsWHOISApi->unset_default_whois_profile_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **whois_id** | **int**| WHOIS ID | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

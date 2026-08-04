@@ -143,12 +143,15 @@ Class | Method | HTTP request | Description
 *DomainsPortfolioApi* | [**update_domain_nameservers_v1**](docs/DomainsPortfolioApi.md#update_domain_nameservers_v1) | **PUT** /api/domains/v1/portfolio/{domain}/nameservers | Update domain nameservers
 *DomainsTransferApi* | [**get_transfer_list_v1**](docs/DomainsTransferApi.md#get_transfer_list_v1) | **GET** /api/domains/v1/transfers | Get transfer list
 *DomainsTransferApi* | [**get_transfer_v1**](docs/DomainsTransferApi.md#get_transfer_v1) | **GET** /api/domains/v1/transfers/{domain} | Get transfer
+*DomainsWHOISApi* | [**cancel_pending_irtp_verification_v1**](docs/DomainsWHOISApi.md#cancel_pending_irtp_verification_v1) | **DELETE** /api/domains/v1/irtp/{domain} | Cancel pending IRTP verification
+*DomainsWHOISApi* | [**change_whois_profile_for_domain_v1**](docs/DomainsWHOISApi.md#change_whois_profile_for_domain_v1) | **PUT** /api/domains/v1/whois/change | Change WHOIS profile for domain
 *DomainsWHOISApi* | [**create_whois_profile_v1**](docs/DomainsWHOISApi.md#create_whois_profile_v1) | **POST** /api/domains/v1/whois | Create WHOIS profile
 *DomainsWHOISApi* | [**delete_whois_profile_v1**](docs/DomainsWHOISApi.md#delete_whois_profile_v1) | **DELETE** /api/domains/v1/whois/{whoisId} | Delete WHOIS profile
+*DomainsWHOISApi* | [**get_pending_irtp_verification_v1**](docs/DomainsWHOISApi.md#get_pending_irtp_verification_v1) | **GET** /api/domains/v1/irtp/{domain} | Get pending IRTP verification
 *DomainsWHOISApi* | [**get_whois_profile_list_v1**](docs/DomainsWHOISApi.md#get_whois_profile_list_v1) | **GET** /api/domains/v1/whois | Get WHOIS profile list
 *DomainsWHOISApi* | [**get_whois_profile_usage_v1**](docs/DomainsWHOISApi.md#get_whois_profile_usage_v1) | **GET** /api/domains/v1/whois/{whoisId}/usage | Get WHOIS profile usage
 *DomainsWHOISApi* | [**get_whois_profile_v1**](docs/DomainsWHOISApi.md#get_whois_profile_v1) | **GET** /api/domains/v1/whois/{whoisId} | Get WHOIS profile
-*DomainsWHOISApi* | [**set_whois_profile_as_default_v1**](docs/DomainsWHOISApi.md#set_whois_profile_as_default_v1) | **PATCH** /api/domains/v1/whois/default/{whoisId} | Set WHOIS profile as default
+*DomainsWHOISApi* | [**set_whois_profile_as_default_v1**](docs/DomainsWHOISApi.md#set_whois_profile_as_default_v1) | **PUT** /api/domains/v1/whois/default/{whoisId} | Set WHOIS profile as default
 *DomainsWHOISApi* | [**unset_default_whois_profile_v1**](docs/DomainsWHOISApi.md#unset_default_whois_profile_v1) | **DELETE** /api/domains/v1/whois/default/{whoisId} | Unset default WHOIS profile
 *EcommerceMiscellaneousApi* | [**get_custom_storefront_setup_instructions_v1**](docs/EcommerceMiscellaneousApi.md#get_custom_storefront_setup_instructions_v1) | **GET** /api/ecommerce/v1/miscellaneous/custom-storefront-instructions | Get custom storefront setup instructions
 *EcommercePaymentsApi* | [**enable_manual_payment_method_v1**](docs/EcommercePaymentsApi.md#enable_manual_payment_method_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/payment-methods/manual | Enable manual payment method
@@ -450,12 +453,14 @@ Class | Method | HTTP request | Description
  - [DomainsV1ForwardingForwardingResource](docs/DomainsV1ForwardingForwardingResource.md)
  - [DomainsV1ForwardingStoreRequest](docs/DomainsV1ForwardingStoreRequest.md)
  - [DomainsV1ForwardingUpdateRequest](docs/DomainsV1ForwardingUpdateRequest.md)
+ - [DomainsV1IRTPVerificationResource](docs/DomainsV1IRTPVerificationResource.md)
  - [DomainsV1PortfolioAuthCodeAuthCodeResource](docs/DomainsV1PortfolioAuthCodeAuthCodeResource.md)
  - [DomainsV1PortfolioPurchaseRequest](docs/DomainsV1PortfolioPurchaseRequest.md)
  - [DomainsV1PortfolioPurchaseRequestDomainContacts](docs/DomainsV1PortfolioPurchaseRequestDomainContacts.md)
  - [DomainsV1PortfolioRenewalRenewalInformationResource](docs/DomainsV1PortfolioRenewalRenewalInformationResource.md)
  - [DomainsV1PortfolioUpdateNameserversRequest](docs/DomainsV1PortfolioUpdateNameserversRequest.md)
  - [DomainsV1TransferTransferResource](docs/DomainsV1TransferTransferResource.md)
+ - [DomainsV1WHOISChangeUpdateRequest](docs/DomainsV1WHOISChangeUpdateRequest.md)
  - [DomainsV1WHOISProfileResource](docs/DomainsV1WHOISProfileResource.md)
  - [DomainsV1WHOISStoreRequest](docs/DomainsV1WHOISStoreRequest.md)
  - [EcommerceGetStoresV1200Response](docs/EcommerceGetStoresV1200Response.md)

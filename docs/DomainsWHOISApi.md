@@ -4,14 +4,172 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cancel_pending_irtp_verification_v1**](DomainsWHOISApi.md#cancel_pending_irtp_verification_v1) | **DELETE** /api/domains/v1/irtp/{domain} | Cancel pending IRTP verification
+[**change_whois_profile_for_domain_v1**](DomainsWHOISApi.md#change_whois_profile_for_domain_v1) | **PUT** /api/domains/v1/whois/change | Change WHOIS profile for domain
 [**create_whois_profile_v1**](DomainsWHOISApi.md#create_whois_profile_v1) | **POST** /api/domains/v1/whois | Create WHOIS profile
 [**delete_whois_profile_v1**](DomainsWHOISApi.md#delete_whois_profile_v1) | **DELETE** /api/domains/v1/whois/{whoisId} | Delete WHOIS profile
+[**get_pending_irtp_verification_v1**](DomainsWHOISApi.md#get_pending_irtp_verification_v1) | **GET** /api/domains/v1/irtp/{domain} | Get pending IRTP verification
 [**get_whois_profile_list_v1**](DomainsWHOISApi.md#get_whois_profile_list_v1) | **GET** /api/domains/v1/whois | Get WHOIS profile list
 [**get_whois_profile_usage_v1**](DomainsWHOISApi.md#get_whois_profile_usage_v1) | **GET** /api/domains/v1/whois/{whoisId}/usage | Get WHOIS profile usage
 [**get_whois_profile_v1**](DomainsWHOISApi.md#get_whois_profile_v1) | **GET** /api/domains/v1/whois/{whoisId} | Get WHOIS profile
-[**set_whois_profile_as_default_v1**](DomainsWHOISApi.md#set_whois_profile_as_default_v1) | **PATCH** /api/domains/v1/whois/default/{whoisId} | Set WHOIS profile as default
+[**set_whois_profile_as_default_v1**](DomainsWHOISApi.md#set_whois_profile_as_default_v1) | **PUT** /api/domains/v1/whois/default/{whoisId} | Set WHOIS profile as default
 [**unset_default_whois_profile_v1**](DomainsWHOISApi.md#unset_default_whois_profile_v1) | **DELETE** /api/domains/v1/whois/default/{whoisId} | Unset default WHOIS profile
 
+
+# **cancel_pending_irtp_verification_v1**
+> CommonSuccessEmptyResource cancel_pending_irtp_verification_v1(domain)
+
+Cancel pending IRTP verification
+
+Cancel a pending IRTP verification.
+
+Use this endpoint to back out of a WHOIS change that is stuck waiting on registrant confirmation,
+for example when the confirmation email cannot be received, without waiting out the 5-day expiry.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.DomainsWHOISApi(api_client)
+    domain = 'mydomain.tld' # str | Domain name
+
+    try:
+        # Cancel pending IRTP verification
+        api_response = api_instance.cancel_pending_irtp_verification_v1(domain)
+        print("The response of DomainsWHOISApi->cancel_pending_irtp_verification_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DomainsWHOISApi->cancel_pending_irtp_verification_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| Domain name | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **change_whois_profile_for_domain_v1**
+> CommonSuccessEmptyResource change_whois_profile_for_domain_v1(domains_v1_whois_change_update_request)
+
+Change WHOIS profile for domain
+
+Change WHOIS contact profile for a domain.
+
+Repoints the given contact roles to a new WHOIS profile and submits the change to the registry.
+The profile currently assigned to those roles is resolved automatically;
+the request fails if the given roles are not all on the same profile today.
+
+Changing transfer sensitive fields on the owner contact starts an IRTP verification.
+
+The change is processed asynchronously.
+
+Use this endpoint to move a registered domain onto different contact information.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.domains_v1_whois_change_update_request import DomainsV1WHOISChangeUpdateRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.DomainsWHOISApi(api_client)
+    domains_v1_whois_change_update_request = hostinger_api.DomainsV1WHOISChangeUpdateRequest() # DomainsV1WHOISChangeUpdateRequest | 
+
+    try:
+        # Change WHOIS profile for domain
+        api_response = api_instance.change_whois_profile_for_domain_v1(domains_v1_whois_change_update_request)
+        print("The response of DomainsWHOISApi->change_whois_profile_for_domain_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DomainsWHOISApi->change_whois_profile_for_domain_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domains_v1_whois_change_update_request** | [**DomainsV1WHOISChangeUpdateRequest**](DomainsV1WHOISChangeUpdateRequest.md)|  | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_whois_profile_v1**
 > DomainsV1WHOISProfileResource create_whois_profile_v1(domains_v1_whois_store_request)
@@ -139,6 +297,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_pending_irtp_verification_v1**
+> DomainsV1IRTPVerificationResource get_pending_irtp_verification_v1(domain)
+
+Get pending IRTP verification
+
+Retrieve a pending IRTP verification for a domain.
+
+Both the old and new registrant must confirm it before the WHOIS change takes effect.
+
+Use this endpoint to check the status of a WHOIS change awaiting registrant confirmation.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.domains_v1_irtp_verification_resource import DomainsV1IRTPVerificationResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.DomainsWHOISApi(api_client)
+    domain = 'mydomain.tld' # str | Domain name
+
+    try:
+        # Get pending IRTP verification
+        api_response = api_instance.get_pending_irtp_verification_v1(domain)
+        print("The response of DomainsWHOISApi->get_pending_irtp_verification_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DomainsWHOISApi->get_pending_irtp_verification_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| Domain name | 
+
+### Return type
+
+[**DomainsV1IRTPVerificationResource**](DomainsV1IRTPVerificationResource.md)
 
 ### Authorization
 

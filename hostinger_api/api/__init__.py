@@ -20,6 +20,7 @@ from hostinger_api.api.dns_zone_api import DNSZoneApi
 from hostinger_api.api.domain_access_verifier_verifications_api import DomainAccessVerifierVerificationsApi
 from hostinger_api.api.domains_availability_api import DomainsAvailabilityApi
 from hostinger_api.api.domains_forwarding_api import DomainsForwardingApi
+from hostinger_api.api.domains_move_api import DomainsMoveApi
 from hostinger_api.api.domains_portfolio_api import DomainsPortfolioApi
 from hostinger_api.api.domains_transfer_api import DomainsTransferApi
 from hostinger_api.api.domains_whois_api import DomainsWHOISApi

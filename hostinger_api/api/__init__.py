@@ -49,6 +49,7 @@ from hostinger_api.api.mail_logs_api import MailLogsApi
 from hostinger_api.api.mail_mailboxes_api import MailMailboxesApi
 from hostinger_api.api.mail_orders_api import MailOrdersApi
 from hostinger_api.api.mail_webhooks_api import MailWebhooksApi
+from hostinger_api.api.reach_contact_fields_api import ReachContactFieldsApi
 from hostinger_api.api.reach_contacts_api import ReachContactsApi
 from hostinger_api.api.reach_profiles_api import ReachProfilesApi
 from hostinger_api.api.reach_segments_api import ReachSegmentsApi

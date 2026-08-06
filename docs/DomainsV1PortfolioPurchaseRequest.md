@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **domain** | **str** | Domain name | 
 **item_id** | **str** | Catalog price item ID | 
 **payment_method_id** | **int** | Payment method ID, default will be used if not provided | [optional] 
-**domain_contacts** | [**DomainsV1PortfolioPurchaseRequestDomainContacts**](DomainsV1PortfolioPurchaseRequestDomainContacts.md) |  | [optional] 
+**domain_contacts** | [**DomainsV1PortfolioClaimRequestDomainContacts**](DomainsV1PortfolioClaimRequestDomainContacts.md) |  | [optional] 
 **additional_details** | **object** | Additional registration data, possible values depends on TLD | [optional] 
 **coupons** | **List[object]** | Discount coupon codes | [optional] 
 

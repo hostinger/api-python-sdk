@@ -4,6 +4,7 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**claim_free_domain_v1**](DomainsPortfolioApi.md#claim_free_domain_v1) | **POST** /api/domains/v1/portfolio/claim | Claim free domain
 [**disable_domain_lock_v1**](DomainsPortfolioApi.md#disable_domain_lock_v1) | **DELETE** /api/domains/v1/portfolio/{domain}/domain-lock | Disable domain lock
 [**disable_privacy_protection_v1**](DomainsPortfolioApi.md#disable_privacy_protection_v1) | **DELETE** /api/domains/v1/portfolio/{domain}/privacy-protection | Disable privacy protection
 [**enable_domain_lock_v1**](DomainsPortfolioApi.md#enable_domain_lock_v1) | **PUT** /api/domains/v1/portfolio/{domain}/domain-lock | Enable domain lock
@@ -15,6 +16,94 @@ Method | HTTP request | Description
 [**purchase_new_domain_v1**](DomainsPortfolioApi.md#purchase_new_domain_v1) | **POST** /api/domains/v1/portfolio | Purchase new domain
 [**update_domain_nameservers_v1**](DomainsPortfolioApi.md#update_domain_nameservers_v1) | **PUT** /api/domains/v1/portfolio/{domain}/nameservers | Update domain nameservers
 
+
+# **claim_free_domain_v1**
+> DomainsV1PortfolioClaimResource claim_free_domain_v1(domains_v1_portfolio_claim_request)
+
+Claim free domain
+
+Claim a free domain available on your account and register it.
+
+Unlike purchasing a domain, this consumes a free domain you already have,
+so no payment method is required.
+
+A successful response means the domain is registered. If registration fails, login to
+[hPanel](https://hpanel.hostinger.com/) and check domain registration status.
+
+If no WHOIS information is provided, default contact information for that TLD will be used.
+Before making request, ensure WHOIS information for desired TLD exists in your account.
+
+Some TLDs require `additional_details` to be provided and these will be validated before claiming.
+
+Requests which cannot be fulfilled are rejected with an error code in the response body,
+for example `2037` when no free domain is available.
+
+Use this endpoint to register a domain using a free domain from your account.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.domains_v1_portfolio_claim_request import DomainsV1PortfolioClaimRequest
+from hostinger_api.models.domains_v1_portfolio_claim_resource import DomainsV1PortfolioClaimResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.DomainsPortfolioApi(api_client)
+    domains_v1_portfolio_claim_request = hostinger_api.DomainsV1PortfolioClaimRequest() # DomainsV1PortfolioClaimRequest | 
+
+    try:
+        # Claim free domain
+        api_response = api_instance.claim_free_domain_v1(domains_v1_portfolio_claim_request)
+        print("The response of DomainsPortfolioApi->claim_free_domain_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling DomainsPortfolioApi->claim_free_domain_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domains_v1_portfolio_claim_request** | [**DomainsV1PortfolioClaimRequest**](DomainsV1PortfolioClaimRequest.md)|  | 
+
+### Return type
+
+[**DomainsV1PortfolioClaimResource**](DomainsV1PortfolioClaimResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **disable_domain_lock_v1**
 > CommonSuccessEmptyResource disable_domain_lock_v1(domain)

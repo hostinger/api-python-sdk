@@ -277,6 +277,14 @@ Class | Method | HTTP request | Description
 *ReachSegmentsApi* | [**list_profile_segment_contacts_v1**](docs/ReachSegmentsApi.md#list_profile_segment_contacts_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/segmentation/segments/{segmentUuid}/contacts | List profile segment contacts
 *ReachSegmentsApi* | [**list_segment_contacts_v1**](docs/ReachSegmentsApi.md#list_segment_contacts_v1) | **GET** /api/reach/v1/segmentation/segments/{segmentUuid}/contacts | List segment contacts
 *ReachSegmentsApi* | [**list_segments_v1**](docs/ReachSegmentsApi.md#list_segments_v1) | **GET** /api/reach/v1/segmentation/segments | List segments
+*ReachTagsApi* | [**assign_a_contact_to_a_tag_v1**](docs/ReachTagsApi.md#assign_a_contact_to_a_tag_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid}/contacts/{contactUuid} | Assign a contact to a tag
+*ReachTagsApi* | [**assign_contacts_to_a_tag_v1**](docs/ReachTagsApi.md#assign_contacts_to_a_tag_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid}/contacts | Assign contacts to a tag
+*ReachTagsApi* | [**create_or_find_tags_v1**](docs/ReachTagsApi.md#create_or_find_tags_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/tags | Create or find tags
+*ReachTagsApi* | [**delete_a_tag_v1**](docs/ReachTagsApi.md#delete_a_tag_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid} | Delete a tag
+*ReachTagsApi* | [**list_profile_tags_v1**](docs/ReachTagsApi.md#list_profile_tags_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/tags | List profile tags
+*ReachTagsApi* | [**remove_a_contact_from_a_tag_v1**](docs/ReachTagsApi.md#remove_a_contact_from_a_tag_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid}/contacts/{contactUuid} | Remove a contact from a tag
+*ReachTagsApi* | [**remove_contacts_from_a_tag_v1**](docs/ReachTagsApi.md#remove_contacts_from_a_tag_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid}/contacts | Remove contacts from a tag
+*ReachTagsApi* | [**rename_a_tag_v1**](docs/ReachTagsApi.md#rename_a_tag_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid} | Rename a tag
 *VPSActionsApi* | [**get_action_details_v1**](docs/VPSActionsApi.md#get_action_details_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions/{actionId} | Get action details
 *VPSActionsApi* | [**get_actions_v1**](docs/VPSActionsApi.md#get_actions_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions | Get actions
 *VPSBackupsApi* | [**get_backups_v1**](docs/VPSBackupsApi.md#get_backups_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/backups | Get backups
@@ -651,7 +659,10 @@ Class | Method | HTTP request | Description
  - [ReachV1ContactsSegmentsStoreRequestConditionsInner](docs/ReachV1ContactsSegmentsStoreRequestConditionsInner.md)
  - [ReachV1ContactsSegmentsStoreRequestConditionsInnerValue](docs/ReachV1ContactsSegmentsStoreRequestConditionsInnerValue.md)
  - [ReachV1ContactsStoreRequest](docs/ReachV1ContactsStoreRequest.md)
+ - [ReachV1ContactsTagsManageContactsRequest](docs/ReachV1ContactsTagsManageContactsRequest.md)
+ - [ReachV1ContactsTagsStoreRequest](docs/ReachV1ContactsTagsStoreRequest.md)
  - [ReachV1ContactsTagsTagResource](docs/ReachV1ContactsTagsTagResource.md)
+ - [ReachV1ContactsTagsUpdateRequest](docs/ReachV1ContactsTagsUpdateRequest.md)
  - [ReachV1ContactsUpdateRequest](docs/ReachV1ContactsUpdateRequest.md)
  - [ReachV1ContactsUpdateRequestFieldsInner](docs/ReachV1ContactsUpdateRequestFieldsInner.md)
  - [ReachV1ProfilesDomainsDnsRecordStatus](docs/ReachV1ProfilesDomainsDnsRecordStatus.md)

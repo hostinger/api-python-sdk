@@ -272,11 +272,17 @@ Class | Method | HTTP request | Description
 *ReachContactsApi* | [**update_a_contact_v1**](docs/ReachContactsApi.md#update_a_contact_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/contacts/{contactUuid} | Update a contact
 *ReachProfilesApi* | [**get_profile_domain_dns_status_v1**](docs/ReachProfilesApi.md#get_profile_domain_dns_status_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/domains/dns-status | Get profile domain DNS status
 *ReachProfilesApi* | [**list_profiles_v1**](docs/ReachProfilesApi.md#list_profiles_v1) | **GET** /api/reach/v1/profiles | List Profiles
+*ReachSegmentsApi* | [**count_profile_segment_contacts_v1**](docs/ReachSegmentsApi.md#count_profile_segment_contacts_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/segmentation/segments/{segmentUuid}/count | Count profile segment contacts
 *ReachSegmentsApi* | [**create_a_new_contact_segment_v1**](docs/ReachSegmentsApi.md#create_a_new_contact_segment_v1) | **POST** /api/reach/v1/segmentation/segments | Create a new contact segment
+*ReachSegmentsApi* | [**create_a_profile_segment_v1**](docs/ReachSegmentsApi.md#create_a_profile_segment_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/segmentation/segments | Create a profile segment
+*ReachSegmentsApi* | [**delete_a_profile_segment_v1**](docs/ReachSegmentsApi.md#delete_a_profile_segment_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/segmentation/segments/{segmentUuid} | Delete a profile segment
+*ReachSegmentsApi* | [**get_profile_segment_details_v1**](docs/ReachSegmentsApi.md#get_profile_segment_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/segmentation/segments/{segmentUuid} | Get profile segment details
 *ReachSegmentsApi* | [**get_segment_details_v1**](docs/ReachSegmentsApi.md#get_segment_details_v1) | **GET** /api/reach/v1/segmentation/segments/{segmentUuid} | Get segment details
 *ReachSegmentsApi* | [**list_profile_segment_contacts_v1**](docs/ReachSegmentsApi.md#list_profile_segment_contacts_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/segmentation/segments/{segmentUuid}/contacts | List profile segment contacts
+*ReachSegmentsApi* | [**list_profile_segments_v1**](docs/ReachSegmentsApi.md#list_profile_segments_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/segmentation/segments | List profile segments
 *ReachSegmentsApi* | [**list_segment_contacts_v1**](docs/ReachSegmentsApi.md#list_segment_contacts_v1) | **GET** /api/reach/v1/segmentation/segments/{segmentUuid}/contacts | List segment contacts
 *ReachSegmentsApi* | [**list_segments_v1**](docs/ReachSegmentsApi.md#list_segments_v1) | **GET** /api/reach/v1/segmentation/segments | List segments
+*ReachSegmentsApi* | [**update_a_profile_segment_v1**](docs/ReachSegmentsApi.md#update_a_profile_segment_v1) | **PUT** /api/reach/v1/profiles/{profileUuid}/segmentation/segments/{segmentUuid} | Update a profile segment
 *ReachTagsApi* | [**assign_a_contact_to_a_tag_v1**](docs/ReachTagsApi.md#assign_a_contact_to_a_tag_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid}/contacts/{contactUuid} | Assign a contact to a tag
 *ReachTagsApi* | [**assign_contacts_to_a_tag_v1**](docs/ReachTagsApi.md#assign_contacts_to_a_tag_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid}/contacts | Assign contacts to a tag
 *ReachTagsApi* | [**create_or_find_tags_v1**](docs/ReachTagsApi.md#create_or_find_tags_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/tags | Create or find tags
@@ -639,6 +645,7 @@ Class | Method | HTTP request | Description
  - [ReachListContactsV1200Response](docs/ReachListContactsV1200Response.md)
  - [ReachListProfileContactsV1200Response](docs/ReachListProfileContactsV1200Response.md)
  - [ReachListProfileSegmentContactsV1200Response](docs/ReachListProfileSegmentContactsV1200Response.md)
+ - [ReachListProfileSegmentsV1200Response](docs/ReachListProfileSegmentsV1200Response.md)
  - [ReachV1ContactsBulkStoreRequest](docs/ReachV1ContactsBulkStoreRequest.md)
  - [ReachV1ContactsBulkStoreRequestContactsInner](docs/ReachV1ContactsBulkStoreRequestContactsInner.md)
  - [ReachV1ContactsContactDetailsResource](docs/ReachV1ContactsContactDetailsResource.md)
@@ -653,6 +660,11 @@ Class | Method | HTTP request | Description
  - [ReachV1ContactsProfileContactResource](docs/ReachV1ContactsProfileContactResource.md)
  - [ReachV1ContactsProfileContactUpdateResource](docs/ReachV1ContactsProfileContactUpdateResource.md)
  - [ReachV1ContactsSegmentsContactSegmentResource](docs/ReachV1ContactsSegmentsContactSegmentResource.md)
+ - [ReachV1ContactsSegmentsProfileStoreRequest](docs/ReachV1ContactsSegmentsProfileStoreRequest.md)
+ - [ReachV1ContactsSegmentsProfileStoreRequestConditionsInner](docs/ReachV1ContactsSegmentsProfileStoreRequestConditionsInner.md)
+ - [ReachV1ContactsSegmentsProfileUpdateRequest](docs/ReachV1ContactsSegmentsProfileUpdateRequest.md)
+ - [ReachV1ContactsSegmentsSegmentContactsCountResource](docs/ReachV1ContactsSegmentsSegmentContactsCountResource.md)
+ - [ReachV1ContactsSegmentsSegmentListItemResource](docs/ReachV1ContactsSegmentsSegmentListItemResource.md)
  - [ReachV1ContactsSegmentsSegmentResource](docs/ReachV1ContactsSegmentsSegmentResource.md)
  - [ReachV1ContactsSegmentsSegmentationContactResource](docs/ReachV1ContactsSegmentsSegmentationContactResource.md)
  - [ReachV1ContactsSegmentsStoreRequest](docs/ReachV1ContactsSegmentsStoreRequest.md)

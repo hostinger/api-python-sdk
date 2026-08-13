@@ -4,16 +4,16 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**build_agency_plan_website_node_js_assets_v1**](AgencyHostingWebsitesApi.md#build_agency_plan_website_node_js_assets_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/build-assets | Build Agency Plan website NodeJS assets
-[**delete_agency_plan_website_v1**](AgencyHostingWebsitesApi.md#delete_agency_plan_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid} | Delete Agency Plan website
-[**get_agency_plan_website_details_v1**](AgencyHostingWebsitesApi.md#get_agency_plan_website_details_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid} | Get Agency Plan website details
-[**list_running_agency_plan_website_processes_v1**](AgencyHostingWebsitesApi.md#list_running_agency_plan_website_processes_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/processes | List running Agency Plan website processes
+[**build_website_node_js_assets_v1**](AgencyHostingWebsitesApi.md#build_website_node_js_assets_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/build-assets | Build website NodeJS assets
+[**delete_website_v1**](AgencyHostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid} | Delete website
+[**get_website_details_v1**](AgencyHostingWebsitesApi.md#get_website_details_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid} | Get website details
+[**list_website_processes_v1**](AgencyHostingWebsitesApi.md#list_website_processes_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/processes | List website processes
 
 
-# **build_agency_plan_website_node_js_assets_v1**
-> CommonSuccessEmptyResource build_agency_plan_website_node_js_assets_v1(website_uid, agency_hosting_v1_websites_build_assets_request)
+# **build_website_node_js_assets_v1**
+> CommonSuccessEmptyResource build_website_node_js_assets_v1(website_uid, agency_hosting_v1_websites_build_assets_request)
 
-Build Agency Plan website NodeJS assets
+Build website NodeJS assets
 
 Builds and deploys a Node.js application for an Agency Plan website from an already-uploaded archive.
 
@@ -45,12 +45,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     agency_hosting_v1_websites_build_assets_request = hostinger_api.AgencyHostingV1WebsitesBuildAssetsRequest() # AgencyHostingV1WebsitesBuildAssetsRequest | 
 
     try:
-        # Build Agency Plan website NodeJS assets
-        api_response = api_instance.build_agency_plan_website_node_js_assets_v1(website_uid, agency_hosting_v1_websites_build_assets_request)
-        print("The response of AgencyHostingWebsitesApi->build_agency_plan_website_node_js_assets_v1:\n")
+        # Build website NodeJS assets
+        api_response = api_instance.build_website_node_js_assets_v1(website_uid, agency_hosting_v1_websites_build_assets_request)
+        print("The response of AgencyHostingWebsitesApi->build_website_node_js_assets_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingWebsitesApi->build_agency_plan_website_node_js_assets_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingWebsitesApi->build_website_node_js_assets_v1: %s\n" % e)
 ```
 
 
@@ -87,10 +87,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_agency_plan_website_v1**
-> CommonSuccessEmptyResource delete_agency_plan_website_v1(website_uid)
+# **delete_website_v1**
+> CommonSuccessEmptyResource delete_website_v1(website_uid)
 
-Delete Agency Plan website
+Delete website
 
 Permanently deletes an Agency Plan website. Deletion is processed asynchronously: the
 website is immediately transitioned to a deleting state and the underlying server
@@ -119,12 +119,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     website_uid = 'zpwlGlp19' # str | Agency Plan website UID
 
     try:
-        # Delete Agency Plan website
-        api_response = api_instance.delete_agency_plan_website_v1(website_uid)
-        print("The response of AgencyHostingWebsitesApi->delete_agency_plan_website_v1:\n")
+        # Delete website
+        api_response = api_instance.delete_website_v1(website_uid)
+        print("The response of AgencyHostingWebsitesApi->delete_website_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingWebsitesApi->delete_agency_plan_website_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingWebsitesApi->delete_website_v1: %s\n" % e)
 ```
 
 
@@ -159,10 +159,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_agency_plan_website_details_v1**
-> AgencyHostingV1WebsitesWebsiteResource get_agency_plan_website_details_v1(website_uid)
+# **get_website_details_v1**
+> AgencyHostingV1WebsitesWebsiteResource get_website_details_v1(website_uid)
 
-Get Agency Plan website details
+Get website details
 
 Retrieves detailed information about a specific Agency Plan website, including configuration,
 status, metadata, hosting plan details, and resource quotas.
@@ -190,12 +190,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     website_uid = 'zpwlGlp19' # str | Agency Plan website UID
 
     try:
-        # Get Agency Plan website details
-        api_response = api_instance.get_agency_plan_website_details_v1(website_uid)
-        print("The response of AgencyHostingWebsitesApi->get_agency_plan_website_details_v1:\n")
+        # Get website details
+        api_response = api_instance.get_website_details_v1(website_uid)
+        print("The response of AgencyHostingWebsitesApi->get_website_details_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingWebsitesApi->get_agency_plan_website_details_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingWebsitesApi->get_website_details_v1: %s\n" % e)
 ```
 
 
@@ -230,10 +230,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_running_agency_plan_website_processes_v1**
-> List[AgencyHostingV1WebsitesWebsiteProcessResource] list_running_agency_plan_website_processes_v1(website_uid)
+# **list_website_processes_v1**
+> List[AgencyHostingV1WebsitesWebsiteProcessResource] list_website_processes_v1(website_uid)
 
-List running Agency Plan website processes
+List website processes
 
 Lists active and recently completed asynchronous processes for an Agency Plan website.
 
@@ -263,12 +263,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     website_uid = 'zpwlGlp19' # str | Agency Plan website UID
 
     try:
-        # List running Agency Plan website processes
-        api_response = api_instance.list_running_agency_plan_website_processes_v1(website_uid)
-        print("The response of AgencyHostingWebsitesApi->list_running_agency_plan_website_processes_v1:\n")
+        # List website processes
+        api_response = api_instance.list_website_processes_v1(website_uid)
+        print("The response of AgencyHostingWebsitesApi->list_website_processes_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingWebsitesApi->list_running_agency_plan_website_processes_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingWebsitesApi->list_website_processes_v1: %s\n" % e)
 ```
 
 

@@ -4,13 +4,13 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**clear_agency_plan_website_cache_v1**](AgencyHostingCacheApi.md#clear_agency_plan_website_cache_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/cache | Clear Agency Plan website cache
+[**clear_website_cache_v1**](AgencyHostingCacheApi.md#clear_website_cache_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/cache | Clear website cache
 
 
-# **clear_agency_plan_website_cache_v1**
-> CommonSuccessEmptyResource clear_agency_plan_website_cache_v1(website_uid)
+# **clear_website_cache_v1**
+> CommonSuccessEmptyResource clear_website_cache_v1(website_uid)
 
-Clear Agency Plan website cache
+Clear website cache
 
 Clears cache for all domains associated with an Agency Plan website, including its preview domain.
 
@@ -39,12 +39,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     website_uid = 'zpwlGlp19' # str | Agency Plan website UID
 
     try:
-        # Clear Agency Plan website cache
-        api_response = api_instance.clear_agency_plan_website_cache_v1(website_uid)
-        print("The response of AgencyHostingCacheApi->clear_agency_plan_website_cache_v1:\n")
+        # Clear website cache
+        api_response = api_instance.clear_website_cache_v1(website_uid)
+        print("The response of AgencyHostingCacheApi->clear_website_cache_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingCacheApi->clear_agency_plan_website_cache_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingCacheApi->clear_website_cache_v1: %s\n" % e)
 ```
 
 

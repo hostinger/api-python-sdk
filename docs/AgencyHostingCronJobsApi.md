@@ -4,15 +4,15 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_agency_plan_website_cron_job_v1**](AgencyHostingCronJobsApi.md#create_agency_plan_website_cron_job_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs | Create Agency Plan website cron job
-[**delete_agency_plan_website_cron_job_v1**](AgencyHostingCronJobsApi.md#delete_agency_plan_website_cron_job_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs/{uuid} | Delete Agency Plan website cron job
-[**list_agency_plan_website_cron_jobs_v1**](AgencyHostingCronJobsApi.md#list_agency_plan_website_cron_jobs_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs | List Agency Plan website cron jobs
+[**create_website_cron_job_v1**](AgencyHostingCronJobsApi.md#create_website_cron_job_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs | Create website cron job
+[**delete_website_cron_job_v1**](AgencyHostingCronJobsApi.md#delete_website_cron_job_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs/{uuid} | Delete website cron job
+[**list_website_cron_jobs_v1**](AgencyHostingCronJobsApi.md#list_website_cron_jobs_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/cron-jobs | List website cron jobs
 
 
-# **create_agency_plan_website_cron_job_v1**
-> AgencyHostingV1WebsitesCronJobsCronJobResource create_agency_plan_website_cron_job_v1(website_uid, agency_hosting_v1_websites_cron_jobs_create_cron_job_request)
+# **create_website_cron_job_v1**
+> AgencyHostingV1WebsitesCronJobsCronJobResource create_website_cron_job_v1(website_uid, agency_hosting_v1_websites_cron_jobs_create_cron_job_request)
 
-Create Agency Plan website cron job
+Create website cron job
 
 Creates a cron job for an Agency Plan website from a schedule expression and a command.
 
@@ -43,12 +43,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     agency_hosting_v1_websites_cron_jobs_create_cron_job_request = hostinger_api.AgencyHostingV1WebsitesCronJobsCreateCronJobRequest() # AgencyHostingV1WebsitesCronJobsCreateCronJobRequest | 
 
     try:
-        # Create Agency Plan website cron job
-        api_response = api_instance.create_agency_plan_website_cron_job_v1(website_uid, agency_hosting_v1_websites_cron_jobs_create_cron_job_request)
-        print("The response of AgencyHostingCronJobsApi->create_agency_plan_website_cron_job_v1:\n")
+        # Create website cron job
+        api_response = api_instance.create_website_cron_job_v1(website_uid, agency_hosting_v1_websites_cron_jobs_create_cron_job_request)
+        print("The response of AgencyHostingCronJobsApi->create_website_cron_job_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingCronJobsApi->create_agency_plan_website_cron_job_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingCronJobsApi->create_website_cron_job_v1: %s\n" % e)
 ```
 
 
@@ -85,10 +85,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_agency_plan_website_cron_job_v1**
-> CommonSuccessEmptyResource delete_agency_plan_website_cron_job_v1(website_uid, uuid)
+# **delete_website_cron_job_v1**
+> CommonSuccessEmptyResource delete_website_cron_job_v1(website_uid, uuid)
 
-Delete Agency Plan website cron job
+Delete website cron job
 
 Permanently deletes the cron job identified by its uuid from an Agency Plan website.
 
@@ -118,12 +118,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     uuid = '01931d6f-68f5-7b72-8d9e-09c6e1e6aa0e' # str | Unique identifier of the cron job as returned by the list cron jobs endpoint.
 
     try:
-        # Delete Agency Plan website cron job
-        api_response = api_instance.delete_agency_plan_website_cron_job_v1(website_uid, uuid)
-        print("The response of AgencyHostingCronJobsApi->delete_agency_plan_website_cron_job_v1:\n")
+        # Delete website cron job
+        api_response = api_instance.delete_website_cron_job_v1(website_uid, uuid)
+        print("The response of AgencyHostingCronJobsApi->delete_website_cron_job_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingCronJobsApi->delete_agency_plan_website_cron_job_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingCronJobsApi->delete_website_cron_job_v1: %s\n" % e)
 ```
 
 
@@ -159,10 +159,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_agency_plan_website_cron_jobs_v1**
-> AgencyHostingListAgencyPlanWebsiteCronJobsV1200Response list_agency_plan_website_cron_jobs_v1(website_uid, page=page, per_page=per_page)
+# **list_website_cron_jobs_v1**
+> AgencyHostingListWebsiteCronJobsV1200Response list_website_cron_jobs_v1(website_uid, page=page, per_page=per_page)
 
-List Agency Plan website cron jobs
+List website cron jobs
 
 Returns a paginated list of cron jobs configured for an Agency Plan website.
 
@@ -174,7 +174,7 @@ Each entry includes the schedule expression and the command executed on that sch
 
 ```python
 import hostinger_api
-from hostinger_api.models.agency_hosting_list_agency_plan_website_cron_jobs_v1200_response import AgencyHostingListAgencyPlanWebsiteCronJobsV1200Response
+from hostinger_api.models.agency_hosting_list_website_cron_jobs_v1200_response import AgencyHostingListWebsiteCronJobsV1200Response
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -193,12 +193,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Number of items per page (optional) (default to 25)
 
     try:
-        # List Agency Plan website cron jobs
-        api_response = api_instance.list_agency_plan_website_cron_jobs_v1(website_uid, page=page, per_page=per_page)
-        print("The response of AgencyHostingCronJobsApi->list_agency_plan_website_cron_jobs_v1:\n")
+        # List website cron jobs
+        api_response = api_instance.list_website_cron_jobs_v1(website_uid, page=page, per_page=per_page)
+        print("The response of AgencyHostingCronJobsApi->list_website_cron_jobs_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingCronJobsApi->list_agency_plan_website_cron_jobs_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingCronJobsApi->list_website_cron_jobs_v1: %s\n" % e)
 ```
 
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AgencyHostingListAgencyPlanWebsiteCronJobsV1200Response**](AgencyHostingListAgencyPlanWebsiteCronJobsV1200Response.md)
+[**AgencyHostingListWebsiteCronJobsV1200Response**](AgencyHostingListWebsiteCronJobsV1200Response.md)
 
 ### Authorization
 

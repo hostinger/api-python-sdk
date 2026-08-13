@@ -4,16 +4,16 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**change_agency_plan_website_domain_v1**](AgencyHostingDomainsApi.md#change_agency_plan_website_domain_v1) | **PUT** /api/agency-hosting/v1/websites/{website_uid}/domains/{from_domain} | Change Agency Plan website domain
-[**link_domain_to_agency_plan_website_v1**](AgencyHostingDomainsApi.md#link_domain_to_agency_plan_website_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/domains | Link domain to Agency Plan website
-[**list_agency_plan_domains_v1**](AgencyHostingDomainsApi.md#list_agency_plan_domains_v1) | **GET** /api/agency-hosting/v1/domains | List Agency Plan domains
-[**unlink_domain_from_agency_plan_website_v1**](AgencyHostingDomainsApi.md#unlink_domain_from_agency_plan_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/domains/{domain} | Unlink domain from Agency Plan website
+[**change_website_domain_v1**](AgencyHostingDomainsApi.md#change_website_domain_v1) | **PUT** /api/agency-hosting/v1/websites/{website_uid}/domains/{from_domain} | Change website domain
+[**link_domain_to_website_v1**](AgencyHostingDomainsApi.md#link_domain_to_website_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/domains | Link domain to website
+[**list_domains_v1**](AgencyHostingDomainsApi.md#list_domains_v1) | **GET** /api/agency-hosting/v1/domains | List domains
+[**unlink_domain_from_website_v1**](AgencyHostingDomainsApi.md#unlink_domain_from_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/domains/{domain} | Unlink domain from website
 
 
-# **change_agency_plan_website_domain_v1**
-> CommonSuccessEmptyResource change_agency_plan_website_domain_v1(website_uid, from_domain, agency_hosting_v1_domains_change_domain_request)
+# **change_website_domain_v1**
+> CommonSuccessEmptyResource change_website_domain_v1(website_uid, from_domain, agency_hosting_v1_domains_change_domain_request)
 
-Change Agency Plan website domain
+Change website domain
 
 Changes the primary domain for an Agency Plan website.
 
@@ -46,12 +46,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     agency_hosting_v1_domains_change_domain_request = hostinger_api.AgencyHostingV1DomainsChangeDomainRequest() # AgencyHostingV1DomainsChangeDomainRequest | 
 
     try:
-        # Change Agency Plan website domain
-        api_response = api_instance.change_agency_plan_website_domain_v1(website_uid, from_domain, agency_hosting_v1_domains_change_domain_request)
-        print("The response of AgencyHostingDomainsApi->change_agency_plan_website_domain_v1:\n")
+        # Change website domain
+        api_response = api_instance.change_website_domain_v1(website_uid, from_domain, agency_hosting_v1_domains_change_domain_request)
+        print("The response of AgencyHostingDomainsApi->change_website_domain_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDomainsApi->change_agency_plan_website_domain_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDomainsApi->change_website_domain_v1: %s\n" % e)
 ```
 
 
@@ -89,10 +89,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **link_domain_to_agency_plan_website_v1**
-> CommonSuccessEmptyResource link_domain_to_agency_plan_website_v1(website_uid, agency_hosting_v1_domains_link_domain_request)
+# **link_domain_to_website_v1**
+> CommonSuccessEmptyResource link_domain_to_website_v1(website_uid, agency_hosting_v1_domains_link_domain_request)
 
-Link domain to Agency Plan website
+Link domain to website
 
 Links a domain to the specified Agency Plan website so it can serve traffic for that domain.
 
@@ -121,12 +121,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     agency_hosting_v1_domains_link_domain_request = hostinger_api.AgencyHostingV1DomainsLinkDomainRequest() # AgencyHostingV1DomainsLinkDomainRequest | 
 
     try:
-        # Link domain to Agency Plan website
-        api_response = api_instance.link_domain_to_agency_plan_website_v1(website_uid, agency_hosting_v1_domains_link_domain_request)
-        print("The response of AgencyHostingDomainsApi->link_domain_to_agency_plan_website_v1:\n")
+        # Link domain to website
+        api_response = api_instance.link_domain_to_website_v1(website_uid, agency_hosting_v1_domains_link_domain_request)
+        print("The response of AgencyHostingDomainsApi->link_domain_to_website_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDomainsApi->link_domain_to_agency_plan_website_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDomainsApi->link_domain_to_website_v1: %s\n" % e)
 ```
 
 
@@ -163,10 +163,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_agency_plan_domains_v1**
-> AgencyHostingListAgencyPlanDomainsV1200Response list_agency_plan_domains_v1(page=page, per_page=per_page, website_uuids=website_uuids)
+# **list_domains_v1**
+> AgencyHostingListDomainsV1200Response list_domains_v1(page=page, per_page=per_page, website_uuids=website_uuids)
 
-List Agency Plan domains
+List domains
 
 Returns a paginated list of domains associated with Agency Plan websites accessible to the authenticated client.
 
@@ -178,7 +178,7 @@ Use the website_uuids filter to narrow results to specific websites.
 
 ```python
 import hostinger_api
-from hostinger_api.models.agency_hosting_list_agency_plan_domains_v1200_response import AgencyHostingListAgencyPlanDomainsV1200Response
+from hostinger_api.models.agency_hosting_list_domains_v1200_response import AgencyHostingListDomainsV1200Response
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -197,12 +197,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     website_uuids = ['[\"zpwlGlp19\"]'] # List[str] | Filter by website UIDs (optional)
 
     try:
-        # List Agency Plan domains
-        api_response = api_instance.list_agency_plan_domains_v1(page=page, per_page=per_page, website_uuids=website_uuids)
-        print("The response of AgencyHostingDomainsApi->list_agency_plan_domains_v1:\n")
+        # List domains
+        api_response = api_instance.list_domains_v1(page=page, per_page=per_page, website_uuids=website_uuids)
+        print("The response of AgencyHostingDomainsApi->list_domains_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDomainsApi->list_agency_plan_domains_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDomainsApi->list_domains_v1: %s\n" % e)
 ```
 
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AgencyHostingListAgencyPlanDomainsV1200Response**](AgencyHostingListAgencyPlanDomainsV1200Response.md)
+[**AgencyHostingListDomainsV1200Response**](AgencyHostingListDomainsV1200Response.md)
 
 ### Authorization
 
@@ -239,10 +239,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **unlink_domain_from_agency_plan_website_v1**
-> CommonSuccessEmptyResource unlink_domain_from_agency_plan_website_v1(website_uid, domain)
+# **unlink_domain_from_website_v1**
+> CommonSuccessEmptyResource unlink_domain_from_website_v1(website_uid, domain)
 
-Unlink domain from Agency Plan website
+Unlink domain from website
 
 Unlinks a domain from the specified Agency Plan website.
 
@@ -276,12 +276,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     domain = 'mydomain.tld' # str | Domain name
 
     try:
-        # Unlink domain from Agency Plan website
-        api_response = api_instance.unlink_domain_from_agency_plan_website_v1(website_uid, domain)
-        print("The response of AgencyHostingDomainsApi->unlink_domain_from_agency_plan_website_v1:\n")
+        # Unlink domain from website
+        api_response = api_instance.unlink_domain_from_website_v1(website_uid, domain)
+        print("The response of AgencyHostingDomainsApi->unlink_domain_from_website_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDomainsApi->unlink_domain_from_agency_plan_website_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDomainsApi->unlink_domain_from_website_v1: %s\n" % e)
 ```
 
 

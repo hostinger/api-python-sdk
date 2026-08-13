@@ -4,13 +4,13 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list_available_datacenters_for_an_agency_plan_order_v1**](AgencyHostingDatacentersApi.md#list_available_datacenters_for_an_agency_plan_order_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/datacenters | List available datacenters for an Agency Plan order
+[**list_available_datacenters_v1**](AgencyHostingDatacentersApi.md#list_available_datacenters_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/datacenters | List available datacenters
 
 
-# **list_available_datacenters_for_an_agency_plan_order_v1**
-> List[AgencyHostingV1DatacentersDatacenterResource] list_available_datacenters_for_an_agency_plan_order_v1(order_id)
+# **list_available_datacenters_v1**
+> List[AgencyHostingV1DatacentersDatacenterResource] list_available_datacenters_v1(order_id)
 
-List available datacenters for an Agency Plan order
+List available datacenters
 
 Lists the datacenters available for provisioning a new website on the given Agency Plan
 hosting order.
@@ -42,12 +42,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     order_id = 123456 # int | Agency Plan order ID
 
     try:
-        # List available datacenters for an Agency Plan order
-        api_response = api_instance.list_available_datacenters_for_an_agency_plan_order_v1(order_id)
-        print("The response of AgencyHostingDatacentersApi->list_available_datacenters_for_an_agency_plan_order_v1:\n")
+        # List available datacenters
+        api_response = api_instance.list_available_datacenters_v1(order_id)
+        print("The response of AgencyHostingDatacentersApi->list_available_datacenters_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDatacentersApi->list_available_datacenters_for_an_agency_plan_order_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDatacentersApi->list_available_datacenters_v1: %s\n" % e)
 ```
 
 

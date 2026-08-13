@@ -4,17 +4,17 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_agency_plan_website_database_user_v1**](AgencyHostingDatabasesApi.md#create_agency_plan_website_database_user_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/databases/{database_name}/users | Create Agency Plan website database user
-[**create_agency_plan_website_database_v1**](AgencyHostingDatabasesApi.md#create_agency_plan_website_database_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/databases | Create Agency Plan website database
-[**delete_agency_plan_website_database_user_v1**](AgencyHostingDatabasesApi.md#delete_agency_plan_website_database_user_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/databases/{database_name}/users/{database_user_name} | Delete Agency Plan website database user
-[**delete_agency_plan_website_database_v1**](AgencyHostingDatabasesApi.md#delete_agency_plan_website_database_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/databases/{database_name} | Delete Agency Plan website database
-[**list_agency_plan_website_databases_v1**](AgencyHostingDatabasesApi.md#list_agency_plan_website_databases_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/databases | List Agency Plan website databases
+[**create_website_database_user_v1**](AgencyHostingDatabasesApi.md#create_website_database_user_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/databases/{database_name}/users | Create website database user
+[**create_website_database_v1**](AgencyHostingDatabasesApi.md#create_website_database_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/databases | Create website database
+[**delete_website_database_user_v1**](AgencyHostingDatabasesApi.md#delete_website_database_user_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/databases/{database_name}/users/{database_user_name} | Delete website database user
+[**delete_website_database_v1**](AgencyHostingDatabasesApi.md#delete_website_database_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/databases/{database_name} | Delete website database
+[**list_website_databases_v1**](AgencyHostingDatabasesApi.md#list_website_databases_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/databases | List website databases
 
 
-# **create_agency_plan_website_database_user_v1**
-> AgencyHostingV1WebsitesDatabasesDatabaseUserResource create_agency_plan_website_database_user_v1(website_uid, database_name, agency_hosting_v1_websites_databases_users_create_database_user_request)
+# **create_website_database_user_v1**
+> AgencyHostingV1WebsitesDatabasesDatabaseUserResource create_website_database_user_v1(website_uid, database_name, agency_hosting_v1_websites_databases_users_create_database_user_request)
 
-Create Agency Plan website database user
+Create website database user
 
 Creates a user for an existing database on an Agency Plan website.
 
@@ -46,12 +46,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     agency_hosting_v1_websites_databases_users_create_database_user_request = hostinger_api.AgencyHostingV1WebsitesDatabasesUsersCreateDatabaseUserRequest() # AgencyHostingV1WebsitesDatabasesUsersCreateDatabaseUserRequest | 
 
     try:
-        # Create Agency Plan website database user
-        api_response = api_instance.create_agency_plan_website_database_user_v1(website_uid, database_name, agency_hosting_v1_websites_databases_users_create_database_user_request)
-        print("The response of AgencyHostingDatabasesApi->create_agency_plan_website_database_user_v1:\n")
+        # Create website database user
+        api_response = api_instance.create_website_database_user_v1(website_uid, database_name, agency_hosting_v1_websites_databases_users_create_database_user_request)
+        print("The response of AgencyHostingDatabasesApi->create_website_database_user_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDatabasesApi->create_agency_plan_website_database_user_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDatabasesApi->create_website_database_user_v1: %s\n" % e)
 ```
 
 
@@ -89,10 +89,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_agency_plan_website_database_v1**
-> AgencyHostingV1WebsitesDatabasesDatabaseResource create_agency_plan_website_database_v1(website_uid, agency_hosting_v1_websites_databases_create_database_request)
+# **create_website_database_v1**
+> AgencyHostingV1WebsitesDatabasesDatabaseResource create_website_database_v1(website_uid, agency_hosting_v1_websites_databases_create_database_request)
 
-Create Agency Plan website database
+Create website database
 
 Creates a MySQL database with a dedicated user for an Agency Plan website.
 
@@ -123,12 +123,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     agency_hosting_v1_websites_databases_create_database_request = hostinger_api.AgencyHostingV1WebsitesDatabasesCreateDatabaseRequest() # AgencyHostingV1WebsitesDatabasesCreateDatabaseRequest | 
 
     try:
-        # Create Agency Plan website database
-        api_response = api_instance.create_agency_plan_website_database_v1(website_uid, agency_hosting_v1_websites_databases_create_database_request)
-        print("The response of AgencyHostingDatabasesApi->create_agency_plan_website_database_v1:\n")
+        # Create website database
+        api_response = api_instance.create_website_database_v1(website_uid, agency_hosting_v1_websites_databases_create_database_request)
+        print("The response of AgencyHostingDatabasesApi->create_website_database_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDatabasesApi->create_agency_plan_website_database_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDatabasesApi->create_website_database_v1: %s\n" % e)
 ```
 
 
@@ -165,10 +165,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_agency_plan_website_database_user_v1**
-> CommonSuccessEmptyResource delete_agency_plan_website_database_user_v1(website_uid, database_name, database_user_name)
+# **delete_website_database_user_v1**
+> CommonSuccessEmptyResource delete_website_database_user_v1(website_uid, database_name, database_user_name)
 
-Delete Agency Plan website database user
+Delete website database user
 
 Permanently deletes a database user from an Agency Plan website database, revoking all access it had.
 
@@ -199,12 +199,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     database_user_name = 'my_user' # str | Database username as returned by the list databases endpoint.
 
     try:
-        # Delete Agency Plan website database user
-        api_response = api_instance.delete_agency_plan_website_database_user_v1(website_uid, database_name, database_user_name)
-        print("The response of AgencyHostingDatabasesApi->delete_agency_plan_website_database_user_v1:\n")
+        # Delete website database user
+        api_response = api_instance.delete_website_database_user_v1(website_uid, database_name, database_user_name)
+        print("The response of AgencyHostingDatabasesApi->delete_website_database_user_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDatabasesApi->delete_agency_plan_website_database_user_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDatabasesApi->delete_website_database_user_v1: %s\n" % e)
 ```
 
 
@@ -241,10 +241,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_agency_plan_website_database_v1**
-> CommonSuccessEmptyResource delete_agency_plan_website_database_v1(website_uid, database_name)
+# **delete_website_database_v1**
+> CommonSuccessEmptyResource delete_website_database_v1(website_uid, database_name)
 
-Delete Agency Plan website database
+Delete website database
 
 Permanently deletes a MySQL database and all its data from an Agency Plan website, including its users.
 
@@ -274,12 +274,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     database_name = 'my_database' # str | Full database name as returned by the list databases endpoint.
 
     try:
-        # Delete Agency Plan website database
-        api_response = api_instance.delete_agency_plan_website_database_v1(website_uid, database_name)
-        print("The response of AgencyHostingDatabasesApi->delete_agency_plan_website_database_v1:\n")
+        # Delete website database
+        api_response = api_instance.delete_website_database_v1(website_uid, database_name)
+        print("The response of AgencyHostingDatabasesApi->delete_website_database_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDatabasesApi->delete_agency_plan_website_database_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDatabasesApi->delete_website_database_v1: %s\n" % e)
 ```
 
 
@@ -315,10 +315,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_agency_plan_website_databases_v1**
-> AgencyHostingListAgencyPlanWebsiteDatabasesV1200Response list_agency_plan_website_databases_v1(website_uid, page=page, per_page=per_page)
+# **list_website_databases_v1**
+> AgencyHostingListWebsiteDatabasesV1200Response list_website_databases_v1(website_uid, page=page, per_page=per_page)
 
-List Agency Plan website databases
+List website databases
 
 Returns a paginated list of MySQL databases created for an Agency Plan website.
 
@@ -330,7 +330,7 @@ Each entry includes the database's non-system users.
 
 ```python
 import hostinger_api
-from hostinger_api.models.agency_hosting_list_agency_plan_website_databases_v1200_response import AgencyHostingListAgencyPlanWebsiteDatabasesV1200Response
+from hostinger_api.models.agency_hosting_list_website_databases_v1200_response import AgencyHostingListWebsiteDatabasesV1200Response
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -349,12 +349,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Number of items per page (optional) (default to 25)
 
     try:
-        # List Agency Plan website databases
-        api_response = api_instance.list_agency_plan_website_databases_v1(website_uid, page=page, per_page=per_page)
-        print("The response of AgencyHostingDatabasesApi->list_agency_plan_website_databases_v1:\n")
+        # List website databases
+        api_response = api_instance.list_website_databases_v1(website_uid, page=page, per_page=per_page)
+        print("The response of AgencyHostingDatabasesApi->list_website_databases_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingDatabasesApi->list_agency_plan_website_databases_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingDatabasesApi->list_website_databases_v1: %s\n" % e)
 ```
 
 
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AgencyHostingListAgencyPlanWebsiteDatabasesV1200Response**](AgencyHostingListAgencyPlanWebsiteDatabasesV1200Response.md)
+[**AgencyHostingListWebsiteDatabasesV1200Response**](AgencyHostingListWebsiteDatabasesV1200Response.md)
 
 ### Authorization
 

@@ -4,13 +4,13 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**import_agency_plan_website_from_archive_v1**](AgencyHostingFilesApi.md#import_agency_plan_website_from_archive_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/files/import-archive | Import Agency Plan website from archive
+[**import_website_from_archive_v1**](AgencyHostingFilesApi.md#import_website_from_archive_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/files/import-archive | Import website from archive
 
 
-# **import_agency_plan_website_from_archive_v1**
-> CommonSuccessEmptyResource import_agency_plan_website_from_archive_v1(website_uid, agency_hosting_v1_files_import_archive_request)
+# **import_website_from_archive_v1**
+> CommonSuccessEmptyResource import_website_from_archive_v1(website_uid, agency_hosting_v1_files_import_archive_request)
 
-Import Agency Plan website from archive
+Import website from archive
 
 Imports an Agency Plan website from an already-uploaded archive.
 
@@ -43,12 +43,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     agency_hosting_v1_files_import_archive_request = hostinger_api.AgencyHostingV1FilesImportArchiveRequest() # AgencyHostingV1FilesImportArchiveRequest | 
 
     try:
-        # Import Agency Plan website from archive
-        api_response = api_instance.import_agency_plan_website_from_archive_v1(website_uid, agency_hosting_v1_files_import_archive_request)
-        print("The response of AgencyHostingFilesApi->import_agency_plan_website_from_archive_v1:\n")
+        # Import website from archive
+        api_response = api_instance.import_website_from_archive_v1(website_uid, agency_hosting_v1_files_import_archive_request)
+        print("The response of AgencyHostingFilesApi->import_website_from_archive_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingFilesApi->import_agency_plan_website_from_archive_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingFilesApi->import_website_from_archive_v1: %s\n" % e)
 ```
 
 

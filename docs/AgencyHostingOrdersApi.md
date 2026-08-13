@@ -4,13 +4,13 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list_agency_plan_orders_v1**](AgencyHostingOrdersApi.md#list_agency_plan_orders_v1) | **GET** /api/agency-hosting/v1/orders | List Agency Plan orders
+[**list_orders_v1**](AgencyHostingOrdersApi.md#list_orders_v1) | **GET** /api/agency-hosting/v1/orders | List orders
 
 
-# **list_agency_plan_orders_v1**
-> AgencyHostingListAgencyPlanOrdersV1200Response list_agency_plan_orders_v1(page=page, per_page=per_page)
+# **list_orders_v1**
+> AgencyHostingListOrdersV1200Response list_orders_v1(page=page, per_page=per_page)
 
-List Agency Plan orders
+List orders
 
 Returns a paginated list of Agency Plan orders accessible to the authenticated client.
 
@@ -20,7 +20,7 @@ Returns a paginated list of Agency Plan orders accessible to the authenticated c
 
 ```python
 import hostinger_api
-from hostinger_api.models.agency_hosting_list_agency_plan_orders_v1200_response import AgencyHostingListAgencyPlanOrdersV1200Response
+from hostinger_api.models.agency_hosting_list_orders_v1200_response import AgencyHostingListOrdersV1200Response
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -38,12 +38,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     per_page = 25 # int | Number of items per page (optional) (default to 25)
 
     try:
-        # List Agency Plan orders
-        api_response = api_instance.list_agency_plan_orders_v1(page=page, per_page=per_page)
-        print("The response of AgencyHostingOrdersApi->list_agency_plan_orders_v1:\n")
+        # List orders
+        api_response = api_instance.list_orders_v1(page=page, per_page=per_page)
+        print("The response of AgencyHostingOrdersApi->list_orders_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgencyHostingOrdersApi->list_agency_plan_orders_v1: %s\n" % e)
+        print("Exception when calling AgencyHostingOrdersApi->list_orders_v1: %s\n" % e)
 ```
 
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AgencyHostingListAgencyPlanOrdersV1200Response**](AgencyHostingListAgencyPlanOrdersV1200Response.md)
+[**AgencyHostingListOrdersV1200Response**](AgencyHostingListOrdersV1200Response.md)
 
 ### Authorization
 

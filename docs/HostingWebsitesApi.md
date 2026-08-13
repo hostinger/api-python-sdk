@@ -92,18 +92,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_website_v1**
-> CommonSuccessEmptyResource delete_website_v1(domain, hosting_v1_websites_delete_website_request)
+> CommonSuccessEmptyResource delete_website_v1(domain)
 
 Delete website
 
-Permanently deletes a website and all of its data. This action is destructive
-and cannot be undone. Always ask the user for explicit confirmation before
-calling this endpoint.
+This endpoint permanently removes a website and all of its data. This action
+cannot be undone. Before calling it, make sure the user understands the
+consequences and explicitly confirms that they want to proceed.
 
 All website files, databases and related configuration will be removed.
 The hosting plan itself is kept, so a new website can be created on it afterwards.
-
-The confirm field must be boolean true, otherwise the request is rejected.
 
 Supported websites: main and addon domain websites on web hosting plans, and
 Website Builder websites. Parked domains and subdomains cannot be deleted with
@@ -123,7 +121,6 @@ complete. The response returns before the removal finishes.
 ```python
 import hostinger_api
 from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
-from hostinger_api.models.hosting_v1_websites_delete_website_request import HostingV1WebsitesDeleteWebsiteRequest
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -138,11 +135,10 @@ with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.HostingWebsitesApi(api_client)
     domain = 'mydomain.tld' # str | Domain name
-    hosting_v1_websites_delete_website_request = hostinger_api.HostingV1WebsitesDeleteWebsiteRequest() # HostingV1WebsitesDeleteWebsiteRequest | 
 
     try:
         # Delete website
-        api_response = api_instance.delete_website_v1(domain, hosting_v1_websites_delete_website_request)
+        api_response = api_instance.delete_website_v1(domain)
         print("The response of HostingWebsitesApi->delete_website_v1:\n")
         pprint(api_response)
     except Exception as e:
@@ -157,7 +153,6 @@ with hostinger_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| Domain name | 
- **hosting_v1_websites_delete_website_request** | [**HostingV1WebsitesDeleteWebsiteRequest**](HostingV1WebsitesDeleteWebsiteRequest.md)|  | 
 
 ### Return type
 
@@ -169,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details

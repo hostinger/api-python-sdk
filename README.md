@@ -589,7 +589,6 @@ Class | Method | HTTP request | Description
  - [HostingV1PhpUpdatePhpOptionsRequestOptionsValue](docs/HostingV1PhpUpdatePhpOptionsRequestOptionsValue.md)
  - [HostingV1PhpUpdatePhpVersionRequest](docs/HostingV1PhpUpdatePhpVersionRequest.md)
  - [HostingV1WebsitesCreateWebsiteRequest](docs/HostingV1WebsitesCreateWebsiteRequest.md)
- - [HostingV1WebsitesDeleteWebsiteRequest](docs/HostingV1WebsitesDeleteWebsiteRequest.md)
  - [HostingV1WebsitesWebsiteResource](docs/HostingV1WebsitesWebsiteResource.md)
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)

@@ -126,7 +126,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
     max_depth = 5 # int | How many directory levels deep to recurse. (optional) (default to 5)
     max_items = 1000 # int | Max number of entries to return in this page. (optional) (default to 1000)
     offset = 0 # int | Number of entries to skip. Page with offset + item count until reaching total_items. (optional) (default to 0)
-    file_types = hostinger_api.HostingListWebsiteFilesAndDirectoriesV1FileTypesParameter() # HostingListWebsiteFilesAndDirectoriesV1FileTypesParameter | Filter by entry type, e.g. file,directory. Array or comma-separated. Omit for all types. (optional)
+    file_types = ['[\"file\",\"directory\"]'] # List[str] | Filter by entry type, e.g. file,directory. Omit for all types. (optional)
 
     try:
         # List website files and directories
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
  **max_depth** | **int**| How many directory levels deep to recurse. | [optional] [default to 5]
  **max_items** | **int**| Max number of entries to return in this page. | [optional] [default to 1000]
  **offset** | **int**| Number of entries to skip. Page with offset + item count until reaching total_items. | [optional] [default to 0]
- **file_types** | [**HostingListWebsiteFilesAndDirectoriesV1FileTypesParameter**](.md)| Filter by entry type, e.g. file,directory. Array or comma-separated. Omit for all types. | [optional] 
+ **file_types** | [**List[str]**](str.md)| Filter by entry type, e.g. file,directory. Omit for all types. | [optional] 
 
 ### Return type
 

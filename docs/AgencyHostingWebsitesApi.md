@@ -88,13 +88,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_agency_plan_website_v1**
-> AgencyHostingV1WebsitesWebsiteDeletionResource delete_agency_plan_website_v1(website_uid)
+> CommonSuccessEmptyResource delete_agency_plan_website_v1(website_uid)
 
 Delete Agency Plan website
 
-Deletes an Agency Plan website and schedules cleanup of its resources.
-
-This action is irreversible. Website files, databases, and linked domains are removed.
+Permanently deletes an Agency Plan website. Deletion is processed asynchronously: the
+website is immediately transitioned to a deleting state and the underlying server
+resources are removed in the background.
 
 ### Example
 
@@ -102,7 +102,7 @@ This action is irreversible. Website files, databases, and linked domains are re
 
 ```python
 import hostinger_api
-from hostinger_api.models.agency_hosting_v1_websites_website_deletion_resource import AgencyHostingV1WebsitesWebsiteDeletionResource
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AgencyHostingV1WebsitesWebsiteDeletionResource**](AgencyHostingV1WebsitesWebsiteDeletionResource.md)
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success response |  -  |
+**200** | Success empty response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

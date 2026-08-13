@@ -36,6 +36,7 @@ from hostinger_api.api.hosting_cron_jobs_api import HostingCronJobsApi
 from hostinger_api.api.hosting_databases_api import HostingDatabasesApi
 from hostinger_api.api.hosting_datacenters_api import HostingDatacentersApi
 from hostinger_api.api.hosting_domains_api import HostingDomainsApi
+from hostinger_api.api.hosting_files_api import HostingFilesApi
 from hostinger_api.api.hosting_node_js_api import HostingNodeJSApi
 from hostinger_api.api.hosting_orders_api import HostingOrdersApi
 from hostinger_api.api.hosting_php_api import HostingPHPApi

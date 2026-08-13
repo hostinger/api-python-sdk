@@ -169,6 +169,7 @@ Class | Method | HTTP request | Description
 *EcommercePaymentsApi* | [**enable_manual_payment_method_v1**](docs/EcommercePaymentsApi.md#enable_manual_payment_method_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/payment-methods/manual | Enable manual payment method
 *EcommerceProductsApi* | [**create_digital_product_v1**](docs/EcommerceProductsApi.md#create_digital_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/digital | Create digital product
 *EcommerceProductsApi* | [**create_physical_product_v1**](docs/EcommerceProductsApi.md#create_physical_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/physical | Create physical product
+*EcommerceProductsApi* | [**upload_and_attach_a_product_image_v1**](docs/EcommerceProductsApi.md#upload_and_attach_a_product_image_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/images | Upload and attach a product image
 *EcommerceSalesChannelsApi* | [**create_custom_sales_channel_v1**](docs/EcommerceSalesChannelsApi.md#create_custom_sales_channel_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/sales-channels | Create custom sales channel
 *EcommerceSalesChannelsApi* | [**list_sales_channels_v1**](docs/EcommerceSalesChannelsApi.md#list_sales_channels_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/sales-channels | List sales channels
 *EcommerceSalesChannelsApi* | [**update_sales_channel_v1**](docs/EcommerceSalesChannelsApi.md#update_sales_channel_v1) | **PATCH** /api/ecommerce/v1/stores/{store_id}/sales-channels/{sales_channel_id} | Update sales channel
@@ -517,6 +518,8 @@ Class | Method | HTTP request | Description
  - [EcommerceV1ProductCreatePhysicalProductRequest](docs/EcommerceV1ProductCreatePhysicalProductRequest.md)
  - [EcommerceV1ProductProductCreationResource](docs/EcommerceV1ProductProductCreationResource.md)
  - [EcommerceV1ProductProductCreationResourceProduct](docs/EcommerceV1ProductProductCreationResourceProduct.md)
+ - [EcommerceV1ProductProductImageUploadResource](docs/EcommerceV1ProductProductImageUploadResource.md)
+ - [EcommerceV1ProductUploadProductImageRequest](docs/EcommerceV1ProductUploadProductImageRequest.md)
  - [EcommerceV1SalesChannelSalesChannelCreationResource](docs/EcommerceV1SalesChannelSalesChannelCreationResource.md)
  - [EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel](docs/EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel.md)
  - [EcommerceV1SalesChannelSalesChannelListResource](docs/EcommerceV1SalesChannelSalesChannelListResource.md)

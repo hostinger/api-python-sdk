@@ -4,10 +4,84 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**create_a_product_image_upload_urlv1**](EcommerceProductsApi.md#create_a_product_image_upload_urlv1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/images/upload-url | Create a product image upload URL
 [**create_digital_product_v1**](EcommerceProductsApi.md#create_digital_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/digital | Create digital product
 [**create_physical_product_v1**](EcommerceProductsApi.md#create_physical_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/physical | Create physical product
 [**upload_and_attach_a_product_image_v1**](EcommerceProductsApi.md#upload_and_attach_a_product_image_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/images | Upload and attach a product image
 
+
+# **create_a_product_image_upload_urlv1**
+> EcommerceV1ProductProductImageUploadUrlResource create_a_product_image_upload_urlv1(store_id, product_id)
+
+Create a product image upload URL
+
+Returns a signed URL to upload a product image to (multipart/form-data POST). Then call the
+attach-image endpoint with the returned object_name to scan and attach it to the product.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.ecommerce_v1_product_product_image_upload_url_resource import EcommerceV1ProductProductImageUploadUrlResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.EcommerceProductsApi(api_client)
+    store_id = 'store_01J8Z5F8W9K8M4A7B3C2D1E0FG' # str | The ID of the store the product belongs to.
+    product_id = 'prod_01J8Z5F8W9K8M4A7B3C2D1E0FG' # str | The ID of the product the image will be attached to.
+
+    try:
+        # Create a product image upload URL
+        api_response = api_instance.create_a_product_image_upload_urlv1(store_id, product_id)
+        print("The response of EcommerceProductsApi->create_a_product_image_upload_urlv1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling EcommerceProductsApi->create_a_product_image_upload_urlv1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **store_id** | **str**| The ID of the store the product belongs to. | 
+ **product_id** | **str**| The ID of the product the image will be attached to. | 
+
+### Return type
+
+[**EcommerceV1ProductProductImageUploadUrlResource**](EcommerceV1ProductProductImageUploadUrlResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_digital_product_v1**
 > EcommerceV1ProductProductCreationResource create_digital_product_v1(store_id, ecommerce_v1_product_create_digital_product_request)

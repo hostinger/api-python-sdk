@@ -167,6 +167,7 @@ Class | Method | HTTP request | Description
 *DomainsWHOISApi* | [**unset_default_whois_profile_v1**](docs/DomainsWHOISApi.md#unset_default_whois_profile_v1) | **DELETE** /api/domains/v1/whois/default/{whoisId} | Unset default WHOIS profile
 *EcommerceMiscellaneousApi* | [**get_custom_storefront_setup_instructions_v1**](docs/EcommerceMiscellaneousApi.md#get_custom_storefront_setup_instructions_v1) | **GET** /api/ecommerce/v1/miscellaneous/custom-storefront-instructions | Get custom storefront setup instructions
 *EcommercePaymentsApi* | [**enable_manual_payment_method_v1**](docs/EcommercePaymentsApi.md#enable_manual_payment_method_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/payment-methods/manual | Enable manual payment method
+*EcommerceProductsApi* | [**create_a_product_image_upload_urlv1**](docs/EcommerceProductsApi.md#create_a_product_image_upload_urlv1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/images/upload-url | Create a product image upload URL
 *EcommerceProductsApi* | [**create_digital_product_v1**](docs/EcommerceProductsApi.md#create_digital_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/digital | Create digital product
 *EcommerceProductsApi* | [**create_physical_product_v1**](docs/EcommerceProductsApi.md#create_physical_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/physical | Create physical product
 *EcommerceProductsApi* | [**upload_and_attach_a_product_image_v1**](docs/EcommerceProductsApi.md#upload_and_attach_a_product_image_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/images | Upload and attach a product image
@@ -519,6 +520,7 @@ Class | Method | HTTP request | Description
  - [EcommerceV1ProductProductCreationResource](docs/EcommerceV1ProductProductCreationResource.md)
  - [EcommerceV1ProductProductCreationResourceProduct](docs/EcommerceV1ProductProductCreationResourceProduct.md)
  - [EcommerceV1ProductProductImageUploadResource](docs/EcommerceV1ProductProductImageUploadResource.md)
+ - [EcommerceV1ProductProductImageUploadUrlResource](docs/EcommerceV1ProductProductImageUploadUrlResource.md)
  - [EcommerceV1ProductUploadProductImageRequest](docs/EcommerceV1ProductUploadProductImageRequest.md)
  - [EcommerceV1SalesChannelSalesChannelCreationResource](docs/EcommerceV1SalesChannelSalesChannelCreationResource.md)
  - [EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel](docs/EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel.md)

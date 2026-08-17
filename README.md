@@ -98,6 +98,8 @@ Class | Method | HTTP request | Description
 *AgencyHostingDomainsApi* | [**list_domains_v1**](docs/AgencyHostingDomainsApi.md#list_domains_v1) | **GET** /api/agency-hosting/v1/domains | List domains
 *AgencyHostingDomainsApi* | [**unlink_domain_from_website_v1**](docs/AgencyHostingDomainsApi.md#unlink_domain_from_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/domains/{domain} | Unlink domain from website
 *AgencyHostingFilesApi* | [**import_website_from_archive_v1**](docs/AgencyHostingFilesApi.md#import_website_from_archive_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/files/import-archive | Import website from archive
+*AgencyHostingMetricsApi* | [**list_agency_plan_order_disk_usage_metrics_v1**](docs/AgencyHostingMetricsApi.md#list_agency_plan_order_disk_usage_metrics_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/disk-usage-metrics | List Agency Plan order disk usage metrics
+*AgencyHostingMetricsApi* | [**list_order_resource_usage_metrics_v1**](docs/AgencyHostingMetricsApi.md#list_order_resource_usage_metrics_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/resource-usage-metrics | List order resource usage metrics
 *AgencyHostingOrdersApi* | [**list_orders_v1**](docs/AgencyHostingOrdersApi.md#list_orders_v1) | **GET** /api/agency-hosting/v1/orders | List orders
 *AgencyHostingPHPApi* | [**list_available_php_versions_for_a_website_v1**](docs/AgencyHostingPHPApi.md#list_available_php_versions_for_a_website_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/php-settings/versions | List available PHP versions for a website
 *AgencyHostingPHPApi* | [**list_available_php_versions_for_an_order_v1**](docs/AgencyHostingPHPApi.md#list_available_php_versions_for_an_order_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/websites/php-settings/versions | List available PHP versions for an order
@@ -430,8 +432,15 @@ Class | Method | HTTP request | Description
  - [AgencyHostingV1FilesImportArchiveRequest](docs/AgencyHostingV1FilesImportArchiveRequest.md)
  - [AgencyHostingV1FilesUploadUrlResource](docs/AgencyHostingV1FilesUploadUrlResource.md)
  - [AgencyHostingV1OrdersDatacenterResource](docs/AgencyHostingV1OrdersDatacenterResource.md)
+ - [AgencyHostingV1OrdersDiskUsageMetricsLimitsResource](docs/AgencyHostingV1OrdersDiskUsageMetricsLimitsResource.md)
+ - [AgencyHostingV1OrdersDiskUsageMetricsMetricResource](docs/AgencyHostingV1OrdersDiskUsageMetricsMetricResource.md)
+ - [AgencyHostingV1OrdersDiskUsageMetricsMetricsResource](docs/AgencyHostingV1OrdersDiskUsageMetricsMetricsResource.md)
  - [AgencyHostingV1OrdersOrderResource](docs/AgencyHostingV1OrdersOrderResource.md)
  - [AgencyHostingV1OrdersPlanResource](docs/AgencyHostingV1OrdersPlanResource.md)
+ - [AgencyHostingV1OrdersResourceUsageMetricsLimitsResource](docs/AgencyHostingV1OrdersResourceUsageMetricsLimitsResource.md)
+ - [AgencyHostingV1OrdersResourceUsageMetricsMetricResource](docs/AgencyHostingV1OrdersResourceUsageMetricsMetricResource.md)
+ - [AgencyHostingV1OrdersResourceUsageMetricsMetricsResource](docs/AgencyHostingV1OrdersResourceUsageMetricsMetricsResource.md)
+ - [AgencyHostingV1OrdersResourceUsageMetricsWebsiteResource](docs/AgencyHostingV1OrdersResourceUsageMetricsWebsiteResource.md)
  - [AgencyHostingV1PhpExtensionResource](docs/AgencyHostingV1PhpExtensionResource.md)
  - [AgencyHostingV1PhpOptionResource](docs/AgencyHostingV1PhpOptionResource.md)
  - [AgencyHostingV1PhpUpdateExtensionsRequest](docs/AgencyHostingV1PhpUpdateExtensionsRequest.md)

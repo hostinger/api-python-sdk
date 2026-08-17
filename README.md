@@ -262,6 +262,9 @@ Class | Method | HTTP request | Description
 *MailWebhooksApi* | [**regenerate_webhook_secret_v1**](docs/MailWebhooksApi.md#regenerate_webhook_secret_v1) | **POST** /api/mail/v1/webhooks/{webhookId}/regenerate-secret | Regenerate webhook secret
 *MailWebhooksApi* | [**test_webhook_v1**](docs/MailWebhooksApi.md#test_webhook_v1) | **POST** /api/mail/v1/webhooks/{webhookId}/test | Test webhook
 *MailWebhooksApi* | [**update_webhook_v1**](docs/MailWebhooksApi.md#update_webhook_v1) | **PATCH** /api/mail/v1/webhooks/{webhookId} | Update webhook
+*ReachAutomationsApi* | [**get_automation_details_v1**](docs/ReachAutomationsApi.md#get_automation_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/automations/{automationUuid} | Get automation details
+*ReachAutomationsApi* | [**list_automation_steps_v1**](docs/ReachAutomationsApi.md#list_automation_steps_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/automations/{automationUuid}/steps | List automation steps
+*ReachAutomationsApi* | [**list_automations_v1**](docs/ReachAutomationsApi.md#list_automations_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/automations | List automations
 *ReachContactFieldsApi* | [**create_a_contact_field_v1**](docs/ReachContactFieldsApi.md#create_a_contact_field_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/contacts/fields | Create a contact field
 *ReachContactFieldsApi* | [**delete_a_contact_field_v1**](docs/ReachContactFieldsApi.md#delete_a_contact_field_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/contacts/fields/{fieldUuid} | Delete a contact field
 *ReachContactFieldsApi* | [**list_contact_fields_v1**](docs/ReachContactFieldsApi.md#list_contact_fields_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/contacts/fields | List contact fields
@@ -654,10 +657,14 @@ Class | Method | HTTP request | Description
  - [MailV1WebhooksWebhookResource](docs/MailV1WebhooksWebhookResource.md)
  - [MailV1WebhooksWebhookSecretResource](docs/MailV1WebhooksWebhookSecretResource.md)
  - [MailV1WebhooksWebhookTestResultResource](docs/MailV1WebhooksWebhookTestResultResource.md)
+ - [ReachListAutomationsV1200Response](docs/ReachListAutomationsV1200Response.md)
  - [ReachListContactsV1200Response](docs/ReachListContactsV1200Response.md)
  - [ReachListProfileContactsV1200Response](docs/ReachListProfileContactsV1200Response.md)
  - [ReachListProfileSegmentContactsV1200Response](docs/ReachListProfileSegmentContactsV1200Response.md)
  - [ReachListProfileSegmentsV1200Response](docs/ReachListProfileSegmentsV1200Response.md)
+ - [ReachV1AutomationsAutomationEventsResource](docs/ReachV1AutomationsAutomationEventsResource.md)
+ - [ReachV1AutomationsAutomationResource](docs/ReachV1AutomationsAutomationResource.md)
+ - [ReachV1AutomationsStepsAutomationStepResource](docs/ReachV1AutomationsStepsAutomationStepResource.md)
  - [ReachV1ContactsBulkStoreRequest](docs/ReachV1ContactsBulkStoreRequest.md)
  - [ReachV1ContactsBulkStoreRequestContactsInner](docs/ReachV1ContactsBulkStoreRequestContactsInner.md)
  - [ReachV1ContactsContactDetailsResource](docs/ReachV1ContactsContactDetailsResource.md)

@@ -99,6 +99,13 @@ Class | Method | HTTP request | Description
 *AgencyHostingDomainsApi* | [**unlink_domain_from_website_v1**](docs/AgencyHostingDomainsApi.md#unlink_domain_from_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/domains/{domain} | Unlink domain from website
 *AgencyHostingFilesApi* | [**import_website_from_archive_v1**](docs/AgencyHostingFilesApi.md#import_website_from_archive_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/files/import-archive | Import website from archive
 *AgencyHostingOrdersApi* | [**list_orders_v1**](docs/AgencyHostingOrdersApi.md#list_orders_v1) | **GET** /api/agency-hosting/v1/orders | List orders
+*AgencyHostingPHPApi* | [**list_available_php_versions_for_a_website_v1**](docs/AgencyHostingPHPApi.md#list_available_php_versions_for_a_website_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/php-settings/versions | List available PHP versions for a website
+*AgencyHostingPHPApi* | [**list_available_php_versions_for_an_order_v1**](docs/AgencyHostingPHPApi.md#list_available_php_versions_for_an_order_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/websites/php-settings/versions | List available PHP versions for an order
+*AgencyHostingPHPApi* | [**list_php_extensions_for_a_website_v1**](docs/AgencyHostingPHPApi.md#list_php_extensions_for_a_website_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/php-settings/extensions | List PHP extensions for a website
+*AgencyHostingPHPApi* | [**list_php_options_for_a_website_v1**](docs/AgencyHostingPHPApi.md#list_php_options_for_a_website_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/php-settings/options | List PHP options for a website
+*AgencyHostingPHPApi* | [**replace_website_php_extensions_v1**](docs/AgencyHostingPHPApi.md#replace_website_php_extensions_v1) | **PUT** /api/agency-hosting/v1/websites/{website_uid}/php-settings/extensions | Replace website PHP extensions
+*AgencyHostingPHPApi* | [**replace_website_php_options_v1**](docs/AgencyHostingPHPApi.md#replace_website_php_options_v1) | **PUT** /api/agency-hosting/v1/websites/{website_uid}/php-settings/options | Replace website PHP options
+*AgencyHostingPHPApi* | [**update_website_php_version_v1**](docs/AgencyHostingPHPApi.md#update_website_php_version_v1) | **PATCH** /api/agency-hosting/v1/websites/{website_uid}/php-settings/version | Update website PHP version
 *AgencyHostingWebsiteSetupsApi* | [**create_a_new_website_v1**](docs/AgencyHostingWebsiteSetupsApi.md#create_a_new_website_v1) | **POST** /api/agency-hosting/v1/orders/{order_id}/websites/setups | Create a new website
 *AgencyHostingWebsiteSetupsApi* | [**get_website_setup_status_v1**](docs/AgencyHostingWebsiteSetupsApi.md#get_website_setup_status_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/websites/setups/{setup_uuid} | Get website setup status
 *AgencyHostingWebsitesApi* | [**build_website_node_js_assets_v1**](docs/AgencyHostingWebsitesApi.md#build_website_node_js_assets_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/build-assets | Build website NodeJS assets
@@ -422,6 +429,13 @@ Class | Method | HTTP request | Description
  - [AgencyHostingV1OrdersDatacenterResource](docs/AgencyHostingV1OrdersDatacenterResource.md)
  - [AgencyHostingV1OrdersOrderResource](docs/AgencyHostingV1OrdersOrderResource.md)
  - [AgencyHostingV1OrdersPlanResource](docs/AgencyHostingV1OrdersPlanResource.md)
+ - [AgencyHostingV1PhpExtensionResource](docs/AgencyHostingV1PhpExtensionResource.md)
+ - [AgencyHostingV1PhpOptionResource](docs/AgencyHostingV1PhpOptionResource.md)
+ - [AgencyHostingV1PhpUpdateExtensionsRequest](docs/AgencyHostingV1PhpUpdateExtensionsRequest.md)
+ - [AgencyHostingV1PhpUpdateOptionsRequest](docs/AgencyHostingV1PhpUpdateOptionsRequest.md)
+ - [AgencyHostingV1PhpUpdateOptionsRequestOptionsInner](docs/AgencyHostingV1PhpUpdateOptionsRequestOptionsInner.md)
+ - [AgencyHostingV1PhpUpdateVersionRequest](docs/AgencyHostingV1PhpUpdateVersionRequest.md)
+ - [AgencyHostingV1PhpVersionResource](docs/AgencyHostingV1PhpVersionResource.md)
  - [AgencyHostingV1SetupsCreateSetupRequest](docs/AgencyHostingV1SetupsCreateSetupRequest.md)
  - [AgencyHostingV1SetupsCreateSetupRequestClone](docs/AgencyHostingV1SetupsCreateSetupRequestClone.md)
  - [AgencyHostingV1SetupsCreateSetupRequestDeriveDomain](docs/AgencyHostingV1SetupsCreateSetupRequestDeriveDomain.md)

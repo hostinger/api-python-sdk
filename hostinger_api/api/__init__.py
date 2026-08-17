@@ -54,6 +54,7 @@ from hostinger_api.api.reach_automations_api import ReachAutomationsApi
 from hostinger_api.api.reach_campaigns_api import ReachCampaignsApi
 from hostinger_api.api.reach_contact_fields_api import ReachContactFieldsApi
 from hostinger_api.api.reach_contacts_api import ReachContactsApi
+from hostinger_api.api.reach_forms_api import ReachFormsApi
 from hostinger_api.api.reach_profiles_api import ReachProfilesApi
 from hostinger_api.api.reach_segments_api import ReachSegmentsApi
 from hostinger_api.api.reach_tags_api import ReachTagsApi

@@ -282,7 +282,11 @@ Class | Method | HTTP request | Description
 *ReachContactsApi* | [**list_contacts_v1**](docs/ReachContactsApi.md#list_contacts_v1) | **GET** /api/reach/v1/contacts | List contacts
 *ReachContactsApi* | [**list_profile_contacts_v1**](docs/ReachContactsApi.md#list_profile_contacts_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/contacts | List profile contacts
 *ReachContactsApi* | [**update_a_contact_v1**](docs/ReachContactsApi.md#update_a_contact_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/contacts/{contactUuid} | Update a contact
+*ReachFormsApi* | [**delete_form_v1**](docs/ReachFormsApi.md#delete_form_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid} | Delete form
+*ReachFormsApi* | [**get_form_details_v1**](docs/ReachFormsApi.md#get_form_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid} | Get form details
+*ReachFormsApi* | [**list_forms_v1**](docs/ReachFormsApi.md#list_forms_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/forms | List forms
 *ReachProfilesApi* | [**get_profile_domain_dns_status_v1**](docs/ReachProfilesApi.md#get_profile_domain_dns_status_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/domains/dns-status | Get profile domain DNS status
+*ReachProfilesApi* | [**get_remaining_plan_limits_v1**](docs/ReachProfilesApi.md#get_remaining_plan_limits_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/limits | Get remaining plan limits
 *ReachProfilesApi* | [**list_profiles_v1**](docs/ReachProfilesApi.md#list_profiles_v1) | **GET** /api/reach/v1/profiles | List Profiles
 *ReachSegmentsApi* | [**count_profile_segment_contacts_v1**](docs/ReachSegmentsApi.md#count_profile_segment_contacts_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/segmentation/segments/{segmentUuid}/count | Count profile segment contacts
 *ReachSegmentsApi* | [**create_a_new_contact_segment_v1**](docs/ReachSegmentsApi.md#create_a_new_contact_segment_v1) | **POST** /api/reach/v1/segmentation/segments | Create a new contact segment
@@ -663,6 +667,7 @@ Class | Method | HTTP request | Description
  - [ReachListAutomationsV1200Response](docs/ReachListAutomationsV1200Response.md)
  - [ReachListCampaignsV1200Response](docs/ReachListCampaignsV1200Response.md)
  - [ReachListContactsV1200Response](docs/ReachListContactsV1200Response.md)
+ - [ReachListFormsV1200Response](docs/ReachListFormsV1200Response.md)
  - [ReachListProfileContactsV1200Response](docs/ReachListProfileContactsV1200Response.md)
  - [ReachListProfileSegmentContactsV1200Response](docs/ReachListProfileSegmentContactsV1200Response.md)
  - [ReachListProfileSegmentsV1200Response](docs/ReachListProfileSegmentsV1200Response.md)
@@ -705,10 +710,17 @@ Class | Method | HTTP request | Description
  - [ReachV1ContactsTagsUpdateRequest](docs/ReachV1ContactsTagsUpdateRequest.md)
  - [ReachV1ContactsUpdateRequest](docs/ReachV1ContactsUpdateRequest.md)
  - [ReachV1ContactsUpdateRequestFieldsInner](docs/ReachV1ContactsUpdateRequestFieldsInner.md)
+ - [ReachV1FormsFormDetailsResource](docs/ReachV1FormsFormDetailsResource.md)
+ - [ReachV1FormsFormResource](docs/ReachV1FormsFormResource.md)
+ - [ReachV1FormsFormTagResource](docs/ReachV1FormsFormTagResource.md)
+ - [ReachV1FormsFormTemplateDetailsResource](docs/ReachV1FormsFormTemplateDetailsResource.md)
+ - [ReachV1FormsFormTemplateResource](docs/ReachV1FormsFormTemplateResource.md)
  - [ReachV1ProfilesDomainsDnsRecordStatus](docs/ReachV1ProfilesDomainsDnsRecordStatus.md)
  - [ReachV1ProfilesDomainsDnsRecordStatusActualInner](docs/ReachV1ProfilesDomainsDnsRecordStatusActualInner.md)
  - [ReachV1ProfilesDomainsDnsRecordStatusSuggestedInner](docs/ReachV1ProfilesDomainsDnsRecordStatusSuggestedInner.md)
  - [ReachV1ProfilesDomainsDnsStatusResource](docs/ReachV1ProfilesDomainsDnsStatusResource.md)
+ - [ReachV1ProfilesPlanLimitUsageResource](docs/ReachV1ProfilesPlanLimitUsageResource.md)
+ - [ReachV1ProfilesPlanLimitsResource](docs/ReachV1ProfilesPlanLimitsResource.md)
  - [ReachV1ProfilesProfileResource](docs/ReachV1ProfilesProfileResource.md)
  - [ReachV1ProfilesProfileResourceLimits](docs/ReachV1ProfilesProfileResourceLimits.md)
  - [ReachV1ProfilesProfileResourceProfilesInner](docs/ReachV1ProfilesProfileResourceProfilesInner.md)

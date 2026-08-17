@@ -265,6 +265,9 @@ Class | Method | HTTP request | Description
 *ReachAutomationsApi* | [**get_automation_details_v1**](docs/ReachAutomationsApi.md#get_automation_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/automations/{automationUuid} | Get automation details
 *ReachAutomationsApi* | [**list_automation_steps_v1**](docs/ReachAutomationsApi.md#list_automation_steps_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/automations/{automationUuid}/steps | List automation steps
 *ReachAutomationsApi* | [**list_automations_v1**](docs/ReachAutomationsApi.md#list_automations_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/automations | List automations
+*ReachCampaignsApi* | [**get_campaign_details_v1**](docs/ReachCampaignsApi.md#get_campaign_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid} | Get campaign details
+*ReachCampaignsApi* | [**get_campaign_performance_v1**](docs/ReachCampaignsApi.md#get_campaign_performance_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid}/statistics | Get campaign performance
+*ReachCampaignsApi* | [**list_campaigns_v1**](docs/ReachCampaignsApi.md#list_campaigns_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns | List campaigns
 *ReachContactFieldsApi* | [**create_a_contact_field_v1**](docs/ReachContactFieldsApi.md#create_a_contact_field_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/contacts/fields | Create a contact field
 *ReachContactFieldsApi* | [**delete_a_contact_field_v1**](docs/ReachContactFieldsApi.md#delete_a_contact_field_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/contacts/fields/{fieldUuid} | Delete a contact field
 *ReachContactFieldsApi* | [**list_contact_fields_v1**](docs/ReachContactFieldsApi.md#list_contact_fields_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/contacts/fields | List contact fields
@@ -658,6 +661,7 @@ Class | Method | HTTP request | Description
  - [MailV1WebhooksWebhookSecretResource](docs/MailV1WebhooksWebhookSecretResource.md)
  - [MailV1WebhooksWebhookTestResultResource](docs/MailV1WebhooksWebhookTestResultResource.md)
  - [ReachListAutomationsV1200Response](docs/ReachListAutomationsV1200Response.md)
+ - [ReachListCampaignsV1200Response](docs/ReachListCampaignsV1200Response.md)
  - [ReachListContactsV1200Response](docs/ReachListContactsV1200Response.md)
  - [ReachListProfileContactsV1200Response](docs/ReachListProfileContactsV1200Response.md)
  - [ReachListProfileSegmentContactsV1200Response](docs/ReachListProfileSegmentContactsV1200Response.md)
@@ -665,6 +669,11 @@ Class | Method | HTTP request | Description
  - [ReachV1AutomationsAutomationEventsResource](docs/ReachV1AutomationsAutomationEventsResource.md)
  - [ReachV1AutomationsAutomationResource](docs/ReachV1AutomationsAutomationResource.md)
  - [ReachV1AutomationsStepsAutomationStepResource](docs/ReachV1AutomationsStepsAutomationStepResource.md)
+ - [ReachV1CampaignsCampaignDeliveryResource](docs/ReachV1CampaignsCampaignDeliveryResource.md)
+ - [ReachV1CampaignsCampaignDetailsResource](docs/ReachV1CampaignsCampaignDetailsResource.md)
+ - [ReachV1CampaignsCampaignResource](docs/ReachV1CampaignsCampaignResource.md)
+ - [ReachV1CampaignsCampaignStatisticsResource](docs/ReachV1CampaignsCampaignStatisticsResource.md)
+ - [ReachV1CampaignsCampaignSummaryStatisticsResource](docs/ReachV1CampaignsCampaignSummaryStatisticsResource.md)
  - [ReachV1ContactsBulkStoreRequest](docs/ReachV1ContactsBulkStoreRequest.md)
  - [ReachV1ContactsBulkStoreRequestContactsInner](docs/ReachV1ContactsBulkStoreRequestContactsInner.md)
  - [ReachV1ContactsContactDetailsResource](docs/ReachV1ContactsContactDetailsResource.md)

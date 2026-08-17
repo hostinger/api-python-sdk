@@ -41,6 +41,7 @@ from hostinger_api.api.hosting_files_api import HostingFilesApi
 from hostinger_api.api.hosting_node_js_api import HostingNodeJSApi
 from hostinger_api.api.hosting_orders_api import HostingOrdersApi
 from hostinger_api.api.hosting_php_api import HostingPHPApi
+from hostinger_api.api.hosting_redirects_api import HostingRedirectsApi
 from hostinger_api.api.hosting_websites_api import HostingWebsitesApi
 from hostinger_api.api.mail_api_tokens_api import MailAPITokensApi
 from hostinger_api.api.mail_aliases_api import MailAliasesApi

@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** | Database last update date in ISO 8601 format. | [optional] 
 **disk_usage_mb** | **int** | Current database disk usage in megabytes. | [optional] 
 **max_size_mb** | **int** | Maximum allowed database size in megabytes. | [optional] 
+**host** | **str** | MySQL hostname for remote connections. Same value as hPanel Remote MySQL. Identical for every database on this account. Not the database user grant host. | [optional] 
+**port** | **int** | MySQL port for remote connections. Always 3306. | [optional] 
 
 ## Example
 

@@ -5,6 +5,7 @@ All URIs are relative to *https://developers.hostinger.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**activate_word_press_theme_v1**](WordPressThemesApi.md#activate_word_press_theme_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/themes/activate | Activate WordPress theme
+[**deploy_word_press_theme_v1**](WordPressThemesApi.md#deploy_word_press_theme_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/wordpress/themes/deploy | Deploy WordPress theme
 [**install_word_press_theme_v1**](WordPressThemesApi.md#install_word_press_theme_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/themes/install | Install WordPress theme
 [**list_installed_word_press_themes_v1**](WordPressThemesApi.md#list_installed_word_press_themes_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/themes | List installed WordPress themes
 [**list_word_press_themes_v1**](WordPressThemesApi.md#list_word_press_themes_v1) | **GET** /api/hosting/v1/wordpress/themes | List WordPress themes
@@ -88,6 +89,85 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deploy_word_press_theme_v1**
+> CommonSuccessEmptyResource deploy_word_press_theme_v1(username, domain, word_press_v1_themes_deploy_theme_request)
+
+Deploy WordPress theme
+
+Deploy a WordPress theme from an already uploaded directory.
+
+This endpoint allows you to deploy a WordPress theme that has been uploaded to the website's directory.
+The theme can be optionally activated after deployment.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.word_press_v1_themes_deploy_theme_request import WordPressV1ThemesDeployThemeRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.WordPressThemesApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    word_press_v1_themes_deploy_theme_request = hostinger_api.WordPressV1ThemesDeployThemeRequest() # WordPressV1ThemesDeployThemeRequest | 
+
+    try:
+        # Deploy WordPress theme
+        api_response = api_instance.deploy_word_press_theme_v1(username, domain, word_press_v1_themes_deploy_theme_request)
+        print("The response of WordPressThemesApi->deploy_word_press_theme_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling WordPressThemesApi->deploy_word_press_theme_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **word_press_v1_themes_deploy_theme_request** | [**WordPressV1ThemesDeployThemeRequest**](WordPressV1ThemesDeployThemeRequest.md)|  | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
 **422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |

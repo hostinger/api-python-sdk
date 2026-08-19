@@ -97,6 +97,7 @@ Class | Method | HTTP request | Description
 *AgencyHostingDomainsApi* | [**link_domain_to_website_v1**](docs/AgencyHostingDomainsApi.md#link_domain_to_website_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/domains | Link domain to website
 *AgencyHostingDomainsApi* | [**list_domains_v1**](docs/AgencyHostingDomainsApi.md#list_domains_v1) | **GET** /api/agency-hosting/v1/domains | List domains
 *AgencyHostingDomainsApi* | [**unlink_domain_from_website_v1**](docs/AgencyHostingDomainsApi.md#unlink_domain_from_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid}/domains/{domain} | Unlink domain from website
+*AgencyHostingFilesApi* | [**generate_upload_urlv1**](docs/AgencyHostingFilesApi.md#generate_upload_urlv1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/files/upload-urls | Generate upload URL
 *AgencyHostingFilesApi* | [**import_website_from_archive_v1**](docs/AgencyHostingFilesApi.md#import_website_from_archive_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/files/import-archive | Import website from archive
 *AgencyHostingMetricsApi* | [**list_agency_plan_order_disk_usage_metrics_v1**](docs/AgencyHostingMetricsApi.md#list_agency_plan_order_disk_usage_metrics_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/disk-usage-metrics | List Agency Plan order disk usage metrics
 *AgencyHostingMetricsApi* | [**list_order_resource_usage_metrics_v1**](docs/AgencyHostingMetricsApi.md#list_order_resource_usage_metrics_v1) | **GET** /api/agency-hosting/v1/orders/{order_id}/resource-usage-metrics | List order resource usage metrics
@@ -215,14 +216,17 @@ Class | Method | HTTP request | Description
 *HostingDomainsApi* | [**list_website_parked_domains_v1**](docs/HostingDomainsApi.md#list_website_parked_domains_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/parked-domains | List website parked domains
 *HostingDomainsApi* | [**list_website_subdomains_v1**](docs/HostingDomainsApi.md#list_website_subdomains_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/subdomains | List website subdomains
 *HostingDomainsApi* | [**verify_domain_ownership_v1**](docs/HostingDomainsApi.md#verify_domain_ownership_v1) | **POST** /api/hosting/v1/domains/verify-ownership | Verify domain ownership
+*HostingFilesApi* | [**generate_upload_urlv1**](docs/HostingFilesApi.md#generate_upload_urlv1) | **POST** /api/hosting/v1/files/upload-urls | Generate upload URL
 *HostingFilesApi* | [**get_website_file_content_v1**](docs/HostingFilesApi.md#get_website_file_content_v1) | **GET** /api/hosting/v1/accounts/{username}/domains/{domain}/files/content | Get website file content
 *HostingFilesApi* | [**list_website_files_and_directories_v1**](docs/HostingFilesApi.md#list_website_files_and_directories_v1) | **GET** /api/hosting/v1/accounts/{username}/domains/{domain}/files | List website files and directories
 *HostingNodeJSApi* | [**create_node_js_build_from_archive_v1**](docs/HostingNodeJSApi.md#create_node_js_build_from_archive_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/from-archive | Create NodeJS build from archive
 *HostingNodeJSApi* | [**get_node_js_build_logs_v1**](docs/HostingNodeJSApi.md#get_node_js_build_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid}/logs | Get NodeJS build logs
+*HostingNodeJSApi* | [**get_node_js_build_settings_from_archive_v1**](docs/HostingNodeJSApi.md#get_node_js_build_settings_from_archive_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/from-archive | Get Node.js build settings from archive
 *HostingNodeJSApi* | [**list_node_js_builds_v1**](docs/HostingNodeJSApi.md#list_node_js_builds_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | List NodeJS builds
 *HostingNodeJSApi* | [**list_node_js_vulnerabilities_v1**](docs/HostingNodeJSApi.md#list_node_js_vulnerabilities_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/vulnerabilities | List Node.js vulnerabilities
 *HostingNodeJSApi* | [**patch_node_js_vulnerabilities_v1**](docs/HostingNodeJSApi.md#patch_node_js_vulnerabilities_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/vulnerabilities/patch | Patch Node.js vulnerabilities
 *HostingNodeJSApi* | [**restart_node_js_application_v1**](docs/HostingNodeJSApi.md#restart_node_js_application_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/server/restart | Restart Node.js application
+*HostingNodeJSApi* | [**start_node_js_build_v1**](docs/HostingNodeJSApi.md#start_node_js_build_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | Start Node.js build
 *HostingOrdersApi* | [**list_orders_v1**](docs/HostingOrdersApi.md#list_orders_v1) | **GET** /api/hosting/v1/orders | List orders
 *HostingPHPApi* | [**get_php_details_v1**](docs/HostingPHPApi.md#get_php_details_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/php/details | Get PHP details
 *HostingPHPApi* | [**get_php_info_v1**](docs/HostingPHPApi.md#get_php_info_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/php/php-info | Get PHP info
@@ -235,6 +239,7 @@ Class | Method | HTTP request | Description
 *HostingRedirectsApi* | [**list_website_redirects_v1**](docs/HostingRedirectsApi.md#list_website_redirects_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/redirects | List website redirects
 *HostingWebsitesApi* | [**create_website_v1**](docs/HostingWebsitesApi.md#create_website_v1) | **POST** /api/hosting/v1/websites | Create website
 *HostingWebsitesApi* | [**delete_website_v1**](docs/HostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/hosting/v1/websites/{domain} | Delete website
+*HostingWebsitesApi* | [**deploy_static_site_archive_v1**](docs/HostingWebsitesApi.md#deploy_static_site_archive_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/deploy | Deploy static site archive
 *HostingWebsitesApi* | [**list_websites_v1**](docs/HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
 *MailAPITokensApi* | [**create_api_token_v1**](docs/MailAPITokensApi.md#create_api_token_v1) | **POST** /api/mail/v1/orders/{orderId}/api-tokens | Create API token
 *MailAPITokensApi* | [**list_api_tokens_v1**](docs/MailAPITokensApi.md#list_api_tokens_v1) | **GET** /api/mail/v1/api-tokens | List API tokens
@@ -387,6 +392,7 @@ Class | Method | HTTP request | Description
 *WordPressInstallationsApi* | [**delete_word_press_installation_v1**](docs/WordPressInstallationsApi.md#delete_word_press_installation_v1) | **DELETE** /api/hosting/v1/accounts/{username}/wordpress/{software} | Delete WordPress installation
 *WordPressInstallationsApi* | [**detect_word_press_installations_v1**](docs/WordPressInstallationsApi.md#detect_word_press_installations_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/installations/detect | Detect WordPress installations
 *WordPressInstallationsApi* | [**get_installation_jwt_token_v1**](docs/WordPressInstallationsApi.md#get_installation_jwt_token_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/jwt-token | Get installation JWT token
+*WordPressInstallationsApi* | [**import_word_press_website_v1**](docs/WordPressInstallationsApi.md#import_word_press_website_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/wordpress/import | Import WordPress website
 *WordPressInstallationsApi* | [**install_word_press_v1**](docs/WordPressInstallationsApi.md#install_word_press_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/installations | Install WordPress
 *WordPressInstallationsApi* | [**list_available_word_press_core_updates_v1**](docs/WordPressInstallationsApi.md#list_available_word_press_core_updates_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/updates | List available WordPress core updates
 *WordPressInstallationsApi* | [**list_word_press_installations_v1**](docs/WordPressInstallationsApi.md#list_word_press_installations_v1) | **GET** /api/hosting/v1/wordpress/installations | List WordPress installations
@@ -402,6 +408,7 @@ Class | Method | HTTP request | Description
 *WordPressPluginsApi* | [**activate_word_press_plugin_v1**](docs/WordPressPluginsApi.md#activate_word_press_plugin_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/activate | Activate WordPress plugin
 *WordPressPluginsApi* | [**check_if_woo_commerce_is_installed_v1**](docs/WordPressPluginsApi.md#check_if_woo_commerce_is_installed_v1) | **GET** /api/hosting/v1/wordpress/plugins/is-woocommerce-installed | Check if WooCommerce is installed
 *WordPressPluginsApi* | [**deactivate_word_press_plugin_v1**](docs/WordPressPluginsApi.md#deactivate_word_press_plugin_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/deactivate | Deactivate WordPress plugin
+*WordPressPluginsApi* | [**deploy_word_press_plugin_v1**](docs/WordPressPluginsApi.md#deploy_word_press_plugin_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/wordpress/plugins/deploy | Deploy WordPress plugin
 *WordPressPluginsApi* | [**install_word_press_plugins_v1**](docs/WordPressPluginsApi.md#install_word_press_plugins_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/install | Install WordPress plugins
 *WordPressPluginsApi* | [**list_available_word_press_plugins_v1**](docs/WordPressPluginsApi.md#list_available_word_press_plugins_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/available | List available WordPress plugins
 *WordPressPluginsApi* | [**list_installed_word_press_plugins_v1**](docs/WordPressPluginsApi.md#list_installed_word_press_plugins_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins | List installed WordPress plugins
@@ -411,6 +418,7 @@ Class | Method | HTTP request | Description
 *WordPressPluginsApi* | [**update_hostinger_word_press_plugin_v1**](docs/WordPressPluginsApi.md#update_hostinger_word_press_plugin_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/hostinger/update | Update Hostinger WordPress plugin
 *WordPressPluginsApi* | [**update_word_press_plugins_v1**](docs/WordPressPluginsApi.md#update_word_press_plugins_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/update | Update WordPress plugins
 *WordPressThemesApi* | [**activate_word_press_theme_v1**](docs/WordPressThemesApi.md#activate_word_press_theme_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/themes/activate | Activate WordPress theme
+*WordPressThemesApi* | [**deploy_word_press_theme_v1**](docs/WordPressThemesApi.md#deploy_word_press_theme_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/wordpress/themes/deploy | Deploy WordPress theme
 *WordPressThemesApi* | [**install_word_press_theme_v1**](docs/WordPressThemesApi.md#install_word_press_theme_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/themes/install | Install WordPress theme
 *WordPressThemesApi* | [**list_installed_word_press_themes_v1**](docs/WordPressThemesApi.md#list_installed_word_press_themes_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/themes | List installed WordPress themes
 *WordPressThemesApi* | [**list_word_press_themes_v1**](docs/WordPressThemesApi.md#list_word_press_themes_v1) | **GET** /api/hosting/v1/wordpress/themes | List WordPress themes
@@ -611,13 +619,19 @@ Class | Method | HTTP request | Description
  - [HostingV1FilesFileContentResource](docs/HostingV1FilesFileContentResource.md)
  - [HostingV1FilesFilesResource](docs/HostingV1FilesFilesResource.md)
  - [HostingV1FilesFilesResourceItemsInner](docs/HostingV1FilesFilesResourceItemsInner.md)
+ - [HostingV1FilesGenerateUploadUrlRequest](docs/HostingV1FilesGenerateUploadUrlRequest.md)
+ - [HostingV1FilesUploadUrlResource](docs/HostingV1FilesUploadUrlResource.md)
  - [HostingV1NodeJsBuildLogsResource](docs/HostingV1NodeJsBuildLogsResource.md)
  - [HostingV1NodeJsBuildOptionsResource](docs/HostingV1NodeJsBuildOptionsResource.md)
  - [HostingV1NodeJsBuildResource](docs/HostingV1NodeJsBuildResource.md)
+ - [HostingV1NodeJsBuildSettingsResource](docs/HostingV1NodeJsBuildSettingsResource.md)
  - [HostingV1NodeJsCreateFromArchiveRequest](docs/HostingV1NodeJsCreateFromArchiveRequest.md)
+ - [HostingV1NodeJsGetBuildSettingsRequest](docs/HostingV1NodeJsGetBuildSettingsRequest.md)
  - [HostingV1NodeJsPatchResultResource](docs/HostingV1NodeJsPatchResultResource.md)
  - [HostingV1NodeJsPatchVulnerabilitiesRequest](docs/HostingV1NodeJsPatchVulnerabilitiesRequest.md)
  - [HostingV1NodeJsSourceOptionsResource](docs/HostingV1NodeJsSourceOptionsResource.md)
+ - [HostingV1NodeJsStartBuildRequest](docs/HostingV1NodeJsStartBuildRequest.md)
+ - [HostingV1NodeJsStartBuildRequestSourceOptions](docs/HostingV1NodeJsStartBuildRequestSourceOptions.md)
  - [HostingV1NodeJsVulnerabilityResource](docs/HostingV1NodeJsVulnerabilityResource.md)
  - [HostingV1OrdersOrderResource](docs/HostingV1OrdersOrderResource.md)
  - [HostingV1OrdersPlanResource](docs/HostingV1OrdersPlanResource.md)
@@ -633,6 +647,7 @@ Class | Method | HTTP request | Description
  - [HostingV1RedirectsDeleteRedirectRequest](docs/HostingV1RedirectsDeleteRedirectRequest.md)
  - [HostingV1RedirectsRedirectResource](docs/HostingV1RedirectsRedirectResource.md)
  - [HostingV1WebsitesCreateWebsiteRequest](docs/HostingV1WebsitesCreateWebsiteRequest.md)
+ - [HostingV1WebsitesDeployArchiveRequest](docs/HostingV1WebsitesDeployArchiveRequest.md)
  - [HostingV1WebsitesWebsiteResource](docs/HostingV1WebsitesWebsiteResource.md)
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)
@@ -803,6 +818,7 @@ Class | Method | HTTP request | Description
  - [WordPressV1InstallationsCheckIsValidRequest](docs/WordPressV1InstallationsCheckIsValidRequest.md)
  - [WordPressV1InstallationsCheckIsValidResultResource](docs/WordPressV1InstallationsCheckIsValidResultResource.md)
  - [WordPressV1InstallationsDeleteInstallationRequest](docs/WordPressV1InstallationsDeleteInstallationRequest.md)
+ - [WordPressV1InstallationsImportWordPressRequest](docs/WordPressV1InstallationsImportWordPressRequest.md)
  - [WordPressV1InstallationsInstallWordPressRequest](docs/WordPressV1InstallationsInstallWordPressRequest.md)
  - [WordPressV1InstallationsInstallWordPressRequestCredentials](docs/WordPressV1InstallationsInstallWordPressRequestCredentials.md)
  - [WordPressV1InstallationsInstallWordPressRequestDatabase](docs/WordPressV1InstallationsInstallWordPressRequestDatabase.md)
@@ -822,6 +838,7 @@ Class | Method | HTTP request | Description
  - [WordPressV1PluginsActivatePluginRequest](docs/WordPressV1PluginsActivatePluginRequest.md)
  - [WordPressV1PluginsAvailablePluginResource](docs/WordPressV1PluginsAvailablePluginResource.md)
  - [WordPressV1PluginsDeactivatePluginRequest](docs/WordPressV1PluginsDeactivatePluginRequest.md)
+ - [WordPressV1PluginsDeployPluginRequest](docs/WordPressV1PluginsDeployPluginRequest.md)
  - [WordPressV1PluginsInstallPluginsRequest](docs/WordPressV1PluginsInstallPluginsRequest.md)
  - [WordPressV1PluginsInstalledPluginResource](docs/WordPressV1PluginsInstalledPluginResource.md)
  - [WordPressV1PluginsPluginResource](docs/WordPressV1PluginsPluginResource.md)
@@ -833,6 +850,7 @@ Class | Method | HTTP request | Description
  - [WordPressV1PluginsUpdatePluginsRequest](docs/WordPressV1PluginsUpdatePluginsRequest.md)
  - [WordPressV1PluginsWoocommerceInstalledResource](docs/WordPressV1PluginsWoocommerceInstalledResource.md)
  - [WordPressV1ThemesActivateThemeRequest](docs/WordPressV1ThemesActivateThemeRequest.md)
+ - [WordPressV1ThemesDeployThemeRequest](docs/WordPressV1ThemesDeployThemeRequest.md)
  - [WordPressV1ThemesInstallThemeRequest](docs/WordPressV1ThemesInstallThemeRequest.md)
  - [WordPressV1ThemesInstalledThemeResource](docs/WordPressV1ThemesInstalledThemeResource.md)
  - [WordPressV1ThemesThemeResource](docs/WordPressV1ThemesThemeResource.md)

@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**delete_word_press_installation_v1**](WordPressInstallationsApi.md#delete_word_press_installation_v1) | **DELETE** /api/hosting/v1/accounts/{username}/wordpress/{software} | Delete WordPress installation
 [**detect_word_press_installations_v1**](WordPressInstallationsApi.md#detect_word_press_installations_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/installations/detect | Detect WordPress installations
 [**get_installation_jwt_token_v1**](WordPressInstallationsApi.md#get_installation_jwt_token_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/jwt-token | Get installation JWT token
+[**import_word_press_website_v1**](WordPressInstallationsApi.md#import_word_press_website_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/wordpress/import | Import WordPress website
 [**install_word_press_v1**](WordPressInstallationsApi.md#install_word_press_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/installations | Install WordPress
 [**list_available_word_press_core_updates_v1**](WordPressInstallationsApi.md#list_available_word_press_core_updates_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/updates | List available WordPress core updates
 [**list_word_press_installations_v1**](WordPressInstallationsApi.md#list_word_press_installations_v1) | **GET** /api/hosting/v1/wordpress/installations | List WordPress installations
@@ -321,6 +322,88 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_word_press_website_v1**
+> CommonSuccessEmptyResource import_word_press_website_v1(username, domain, word_press_v1_installations_import_word_press_request)
+
+Import WordPress website
+
+Import WordPress website to the specified domain.
+
+WARNING: this overwrites the website's existing contents and cannot be undone —
+verify this is intended before calling this endpoint.
+
+This endpoint allows you to import a WordPress website from archive and
+database files that have been uploaded to the website's directory.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.word_press_v1_installations_import_word_press_request import WordPressV1InstallationsImportWordPressRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.WordPressInstallationsApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    word_press_v1_installations_import_word_press_request = hostinger_api.WordPressV1InstallationsImportWordPressRequest() # WordPressV1InstallationsImportWordPressRequest | 
+
+    try:
+        # Import WordPress website
+        api_response = api_instance.import_word_press_website_v1(username, domain, word_press_v1_installations_import_word_press_request)
+        print("The response of WordPressInstallationsApi->import_word_press_website_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling WordPressInstallationsApi->import_word_press_website_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **word_press_v1_installations_import_word_press_request** | [**WordPressV1InstallationsImportWordPressRequest**](WordPressV1InstallationsImportWordPressRequest.md)|  | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

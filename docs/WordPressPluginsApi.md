@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**activate_word_press_plugin_v1**](WordPressPluginsApi.md#activate_word_press_plugin_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/activate | Activate WordPress plugin
 [**check_if_woo_commerce_is_installed_v1**](WordPressPluginsApi.md#check_if_woo_commerce_is_installed_v1) | **GET** /api/hosting/v1/wordpress/plugins/is-woocommerce-installed | Check if WooCommerce is installed
 [**deactivate_word_press_plugin_v1**](WordPressPluginsApi.md#deactivate_word_press_plugin_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/deactivate | Deactivate WordPress plugin
+[**deploy_word_press_plugin_v1**](WordPressPluginsApi.md#deploy_word_press_plugin_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/wordpress/plugins/deploy | Deploy WordPress plugin
 [**install_word_press_plugins_v1**](WordPressPluginsApi.md#install_word_press_plugins_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/install | Install WordPress plugins
 [**list_available_word_press_plugins_v1**](WordPressPluginsApi.md#list_available_word_press_plugins_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins/available | List available WordPress plugins
 [**list_installed_word_press_plugins_v1**](WordPressPluginsApi.md#list_installed_word_press_plugins_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/plugins | List installed WordPress plugins
@@ -246,6 +247,85 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deploy_word_press_plugin_v1**
+> CommonSuccessEmptyResource deploy_word_press_plugin_v1(username, domain, word_press_v1_plugins_deploy_plugin_request)
+
+Deploy WordPress plugin
+
+Deploy a WordPress plugin from an already uploaded directory.
+
+This endpoint allows you to deploy a WordPress plugin that has been uploaded to the website's directory.
+The plugin will be activated and made available in the WordPress admin panel.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.word_press_v1_plugins_deploy_plugin_request import WordPressV1PluginsDeployPluginRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.WordPressPluginsApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    word_press_v1_plugins_deploy_plugin_request = hostinger_api.WordPressV1PluginsDeployPluginRequest() # WordPressV1PluginsDeployPluginRequest | 
+
+    try:
+        # Deploy WordPress plugin
+        api_response = api_instance.deploy_word_press_plugin_v1(username, domain, word_press_v1_plugins_deploy_plugin_request)
+        print("The response of WordPressPluginsApi->deploy_word_press_plugin_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling WordPressPluginsApi->deploy_word_press_plugin_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **word_press_v1_plugins_deploy_plugin_request** | [**WordPressV1PluginsDeployPluginRequest**](WordPressV1PluginsDeployPluginRequest.md)|  | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
 **422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |

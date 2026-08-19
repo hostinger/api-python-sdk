@@ -6,10 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_node_js_build_from_archive_v1**](HostingNodeJSApi.md#create_node_js_build_from_archive_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/from-archive | Create NodeJS build from archive
 [**get_node_js_build_logs_v1**](HostingNodeJSApi.md#get_node_js_build_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid}/logs | Get NodeJS build logs
+[**get_node_js_build_settings_from_archive_v1**](HostingNodeJSApi.md#get_node_js_build_settings_from_archive_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/from-archive | Get Node.js build settings from archive
 [**list_node_js_builds_v1**](HostingNodeJSApi.md#list_node_js_builds_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | List NodeJS builds
 [**list_node_js_vulnerabilities_v1**](HostingNodeJSApi.md#list_node_js_vulnerabilities_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/vulnerabilities | List Node.js vulnerabilities
 [**patch_node_js_vulnerabilities_v1**](HostingNodeJSApi.md#patch_node_js_vulnerabilities_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/vulnerabilities/patch | Patch Node.js vulnerabilities
 [**restart_node_js_application_v1**](HostingNodeJSApi.md#restart_node_js_application_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/server/restart | Restart Node.js application
+[**start_node_js_build_v1**](HostingNodeJSApi.md#start_node_js_build_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | Start Node.js build
 
 
 # **create_node_js_build_from_archive_v1**
@@ -18,6 +20,9 @@ Method | HTTP request | Description
 Create NodeJS build from archive
 
 Upload a project archive, auto-detect build settings, and immediately start a Node.js build.
+
+WARNING: on success this overwrites the website's existing contents and cannot be
+undone — verify this is intended before calling this endpoint.
 
 This is the recommended single-step approach for deploying a Node.js application.
 The archive is uploaded to the website's file storage, build settings are auto-detected
@@ -168,6 +173,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**HostingV1NodeJsBuildLogsResource**](HostingV1NodeJsBuildLogsResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_node_js_build_settings_from_archive_v1**
+> HostingV1NodeJsBuildSettingsResource get_node_js_build_settings_from_archive_v1(username, domain, archive_path)
+
+Get Node.js build settings from archive
+
+Auto-detect Node.js build settings from a package.json inside an archive already on the server.
+
+Use this before calling `Start Node.js Build` to preview what settings will be used,
+or to let the user review and override values (framework, node version, root directory,
+output directory, build script) before committing to a build.
+
+The archive must already be present on the website's file storage. Use the
+`Generate Upload URL` endpoint to obtain credentials and upload the archive first.
+To upload an archive and start a build in one step without inspecting settings first,
+use the `Create Node.js Build from Archive` endpoint instead.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_node_js_build_settings_resource import HostingV1NodeJsBuildSettingsResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    archive_path = 'example.zip' # str | The path to the archive file relative to the document root of the vhost
+
+    try:
+        # Get Node.js build settings from archive
+        api_response = api_instance.get_node_js_build_settings_from_archive_v1(username, domain, archive_path)
+        print("The response of HostingNodeJSApi->get_node_js_build_settings_from_archive_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->get_node_js_build_settings_from_archive_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **archive_path** | **str**| The path to the archive file relative to the document root of the vhost | 
+
+### Return type
+
+[**HostingV1NodeJsBuildSettingsResource**](HostingV1NodeJsBuildSettingsResource.md)
 
 ### Authorization
 
@@ -523,6 +612,96 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success empty response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **start_node_js_build_v1**
+> HostingV1NodeJsBuildResource start_node_js_build_v1(username, domain, hosting_v1_node_js_start_build_request)
+
+Start Node.js build
+
+Start a Node.js build process using files already present on the website's file storage.
+
+WARNING: on success this overwrites the website's existing contents and cannot be
+undone — verify this is intended before calling this endpoint.
+
+The `source_type` must be `archive` and `source_options.archive_path` must point to an
+existing archive file on the server (relative to the website document root).
+Use the `Generate Upload URL` endpoint to obtain credentials and upload the archive first.
+
+To auto-detect build settings from an archive before starting, first call the
+`Get Node.js Build Settings from Archive` endpoint. To upload an archive and start
+a build in one step, use the `Create Node.js Build from Archive` endpoint instead.
+
+The returned build `uuid` can be used to poll progress and retrieve logs via
+the `Get Node.js Build Logs` endpoint.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_node_js_build_resource import HostingV1NodeJsBuildResource
+from hostinger_api.models.hosting_v1_node_js_start_build_request import HostingV1NodeJsStartBuildRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    hosting_v1_node_js_start_build_request = hostinger_api.HostingV1NodeJsStartBuildRequest() # HostingV1NodeJsStartBuildRequest | 
+
+    try:
+        # Start Node.js build
+        api_response = api_instance.start_node_js_build_v1(username, domain, hosting_v1_node_js_start_build_request)
+        print("The response of HostingNodeJSApi->start_node_js_build_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->start_node_js_build_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **hosting_v1_node_js_start_build_request** | [**HostingV1NodeJsStartBuildRequest**](HostingV1NodeJsStartBuildRequest.md)|  | 
+
+### Return type
+
+[**HostingV1NodeJsBuildResource**](HostingV1NodeJsBuildResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

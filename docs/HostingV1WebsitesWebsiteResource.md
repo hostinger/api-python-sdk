@@ -5,15 +5,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domain** | **str** | Website domain | [optional] 
-**vhost_type** | **str** | Virtual host type | [optional] 
+**domain** | **str** | Website domain. Null for U4S websites with no domain attached. | [optional] 
+**vhost_type** | **str** | Virtual host type. Only present for CloudLinux websites. | [optional] 
 **is_enabled** | **bool** | Whether website is enabled | [optional] 
-**username** | **str** | Username | [optional] 
+**username** | **str** | Username. Not applicable for U4S websites. | [optional] 
 **client_id** | **int** | Client ID | [optional] 
 **order_id** | **int** | Order ID | [optional] 
 **created_at** | **datetime** | Creation date | [optional] 
-**root_directory** | **str** | Root directory path | [optional] 
+**root_directory** | **str** | Root directory path. Only present for CloudLinux websites. | [optional] 
 **parent_domain** | **str** | Parent domain | [optional] 
+**website_type** | **str** | Type of website detected on the underlying platform. | [optional] 
+**horizons_uuid** | **str** | Horizons UUID. Only present for horizons websites. | [optional] 
 
 ## Example
 

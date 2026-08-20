@@ -26,8 +26,11 @@ from hostinger_api.api.domains_move_api import DomainsMoveApi
 from hostinger_api.api.domains_portfolio_api import DomainsPortfolioApi
 from hostinger_api.api.domains_transfer_api import DomainsTransferApi
 from hostinger_api.api.domains_whois_api import DomainsWHOISApi
+from hostinger_api.api.ecommerce_discounts_api import EcommerceDiscountsApi
 from hostinger_api.api.ecommerce_miscellaneous_api import EcommerceMiscellaneousApi
+from hostinger_api.api.ecommerce_orders_api import EcommerceOrdersApi
 from hostinger_api.api.ecommerce_payments_api import EcommercePaymentsApi
+from hostinger_api.api.ecommerce_product_variants_api import EcommerceProductVariantsApi
 from hostinger_api.api.ecommerce_products_api import EcommerceProductsApi
 from hostinger_api.api.ecommerce_sales_channels_api import EcommerceSalesChannelsApi
 from hostinger_api.api.ecommerce_shipping_api import EcommerceShippingApi

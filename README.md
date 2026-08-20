@@ -176,13 +176,28 @@ Class | Method | HTTP request | Description
 *DomainsWHOISApi* | [**get_whois_profile_v1**](docs/DomainsWHOISApi.md#get_whois_profile_v1) | **GET** /api/domains/v1/whois/{whoisId} | Get WHOIS profile
 *DomainsWHOISApi* | [**set_whois_profile_as_default_v1**](docs/DomainsWHOISApi.md#set_whois_profile_as_default_v1) | **PUT** /api/domains/v1/whois/default/{whoisId} | Set WHOIS profile as default
 *DomainsWHOISApi* | [**unset_default_whois_profile_v1**](docs/DomainsWHOISApi.md#unset_default_whois_profile_v1) | **DELETE** /api/domains/v1/whois/default/{whoisId} | Unset default WHOIS profile
+*EcommerceDiscountsApi* | [**create_a_discount_v1**](docs/EcommerceDiscountsApi.md#create_a_discount_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/discounts | Create a discount
+*EcommerceDiscountsApi* | [**list_discounts_v1**](docs/EcommerceDiscountsApi.md#list_discounts_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/discounts | List discounts
 *EcommerceMiscellaneousApi* | [**get_custom_storefront_setup_instructions_v1**](docs/EcommerceMiscellaneousApi.md#get_custom_storefront_setup_instructions_v1) | **GET** /api/ecommerce/v1/miscellaneous/custom-storefront-instructions | Get custom storefront setup instructions
+*EcommerceOrdersApi* | [**cancel_an_order_v1**](docs/EcommerceOrdersApi.md#cancel_an_order_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/orders/{order_id}/cancel | Cancel an order
+*EcommerceOrdersApi* | [**fulfil_an_order_v1**](docs/EcommerceOrdersApi.md#fulfil_an_order_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/orders/{order_id}/fulfill | Fulfil an order
+*EcommerceOrdersApi* | [**list_orders_v1**](docs/EcommerceOrdersApi.md#list_orders_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/orders | List orders
+*EcommerceOrdersApi* | [**retrieve_an_order_v1**](docs/EcommerceOrdersApi.md#retrieve_an_order_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/orders/{order_id} | Retrieve an order
+*EcommercePaymentsApi* | [**create_a_payment_provider_connect_link_v1**](docs/EcommercePaymentsApi.md#create_a_payment_provider_connect_link_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/payment-providers/{provider_id}/connect-link | Create a payment provider connect link
 *EcommercePaymentsApi* | [**enable_manual_payment_method_v1**](docs/EcommercePaymentsApi.md#enable_manual_payment_method_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/payment-methods/manual | Enable manual payment method
+*EcommercePaymentsApi* | [**list_store_payment_providers_v1**](docs/EcommercePaymentsApi.md#list_store_payment_providers_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/payment-providers | List store payment providers
+*EcommerceProductVariantsApi* | [**create_a_product_variant_v1**](docs/EcommerceProductVariantsApi.md#create_a_product_variant_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/variants | Create a product variant
+*EcommerceProductVariantsApi* | [**delete_a_product_variant_v1**](docs/EcommerceProductVariantsApi.md#delete_a_product_variant_v1) | **DELETE** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/variants/{variant_id} | Delete a product variant
+*EcommerceProductVariantsApi* | [**list_product_variants_v1**](docs/EcommerceProductVariantsApi.md#list_product_variants_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/variants | List product variants
+*EcommerceProductVariantsApi* | [**update_product_variants_in_batch_v1**](docs/EcommerceProductVariantsApi.md#update_product_variants_in_batch_v1) | **PATCH** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/variants/batch | Update product variants in batch
 *EcommerceProductsApi* | [**create_a_product_image_upload_urlv1**](docs/EcommerceProductsApi.md#create_a_product_image_upload_urlv1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/images/upload-url | Create a product image upload URL
 *EcommerceProductsApi* | [**create_digital_product_v1**](docs/EcommerceProductsApi.md#create_digital_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/digital | Create digital product
 *EcommerceProductsApi* | [**create_physical_product_v1**](docs/EcommerceProductsApi.md#create_physical_product_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/physical | Create physical product
+*EcommerceProductsApi* | [**delete_a_product_v1**](docs/EcommerceProductsApi.md#delete_a_product_v1) | **DELETE** /api/ecommerce/v1/stores/{store_id}/products/{product_id} | Delete a product
+*EcommerceProductsApi* | [**list_products_v1**](docs/EcommerceProductsApi.md#list_products_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/products | List products
+*EcommerceProductsApi* | [**update_a_product_v1**](docs/EcommerceProductsApi.md#update_a_product_v1) | **PATCH** /api/ecommerce/v1/stores/{store_id}/products/{product_id} | Update a product
 *EcommerceProductsApi* | [**upload_and_attach_a_product_image_v1**](docs/EcommerceProductsApi.md#upload_and_attach_a_product_image_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/products/{product_id}/images | Upload and attach a product image
-*EcommerceSalesChannelsApi* | [**create_custom_sales_channel_v1**](docs/EcommerceSalesChannelsApi.md#create_custom_sales_channel_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/sales-channels | Create custom sales channel
+*EcommerceSalesChannelsApi* | [**create_a_sales_channel_v1**](docs/EcommerceSalesChannelsApi.md#create_a_sales_channel_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/sales-channels | Create a sales channel
 *EcommerceSalesChannelsApi* | [**list_sales_channels_v1**](docs/EcommerceSalesChannelsApi.md#list_sales_channels_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/sales-channels | List sales channels
 *EcommerceSalesChannelsApi* | [**update_sales_channel_v1**](docs/EcommerceSalesChannelsApi.md#update_sales_channel_v1) | **PATCH** /api/ecommerce/v1/stores/{store_id}/sales-channels/{sales_channel_id} | Update sales channel
 *EcommerceShippingApi* | [**set_store_shipping_v1**](docs/EcommerceShippingApi.md#set_store_shipping_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/shipping | Set store shipping
@@ -562,16 +577,51 @@ Class | Method | HTTP request | Description
  - [DomainsV1WHOISProfileResource](docs/DomainsV1WHOISProfileResource.md)
  - [DomainsV1WHOISStoreRequest](docs/DomainsV1WHOISStoreRequest.md)
  - [EcommerceGetStoresV1200Response](docs/EcommerceGetStoresV1200Response.md)
+ - [EcommerceListDiscountsV1200Response](docs/EcommerceListDiscountsV1200Response.md)
+ - [EcommerceListOrdersV1200Response](docs/EcommerceListOrdersV1200Response.md)
+ - [EcommerceListProductVariantsV1200Response](docs/EcommerceListProductVariantsV1200Response.md)
+ - [EcommerceListProductsV1200Response](docs/EcommerceListProductsV1200Response.md)
+ - [EcommerceV1DiscountCreateDiscountRequest](docs/EcommerceV1DiscountCreateDiscountRequest.md)
+ - [EcommerceV1DiscountDiscountResource](docs/EcommerceV1DiscountDiscountResource.md)
+ - [EcommerceV1DiscountDiscountResponseResource](docs/EcommerceV1DiscountDiscountResponseResource.md)
  - [EcommerceV1MiscellaneousCustomStorefrontInstructionsResource](docs/EcommerceV1MiscellaneousCustomStorefrontInstructionsResource.md)
+ - [EcommerceV1OrderCancelRequest](docs/EcommerceV1OrderCancelRequest.md)
+ - [EcommerceV1OrderFulfillRequest](docs/EcommerceV1OrderFulfillRequest.md)
+ - [EcommerceV1OrderFulfillRequestItemsInner](docs/EcommerceV1OrderFulfillRequestItemsInner.md)
+ - [EcommerceV1OrderOrderDetailResource](docs/EcommerceV1OrderOrderDetailResource.md)
+ - [EcommerceV1OrderOrderDetailResourceBillingAddress](docs/EcommerceV1OrderOrderDetailResourceBillingAddress.md)
+ - [EcommerceV1OrderOrderDetailResourceFulfillmentsInner](docs/EcommerceV1OrderOrderDetailResourceFulfillmentsInner.md)
+ - [EcommerceV1OrderOrderDetailResourceFulfillmentsInnerTrackingInner](docs/EcommerceV1OrderOrderDetailResourceFulfillmentsInnerTrackingInner.md)
+ - [EcommerceV1OrderOrderDetailResourceItemsInner](docs/EcommerceV1OrderOrderDetailResourceItemsInner.md)
+ - [EcommerceV1OrderOrderDetailResourceShippingAddress](docs/EcommerceV1OrderOrderDetailResourceShippingAddress.md)
+ - [EcommerceV1OrderOrderDetailResponseResource](docs/EcommerceV1OrderOrderDetailResponseResource.md)
+ - [EcommerceV1OrderOrderResource](docs/EcommerceV1OrderOrderResource.md)
+ - [EcommerceV1OrderOrderResponseResource](docs/EcommerceV1OrderOrderResponseResource.md)
  - [EcommerceV1PaymentEnableManualPaymentRequest](docs/EcommerceV1PaymentEnableManualPaymentRequest.md)
  - [EcommerceV1PaymentManualPaymentResource](docs/EcommerceV1PaymentManualPaymentResource.md)
  - [EcommerceV1PaymentManualPaymentResourcePaymentMethod](docs/EcommerceV1PaymentManualPaymentResourcePaymentMethod.md)
+ - [EcommerceV1PaymentProviderPaymentProviderConnectLinkResource](docs/EcommerceV1PaymentProviderPaymentProviderConnectLinkResource.md)
+ - [EcommerceV1PaymentProviderPaymentProviderConnectLinkResourceData](docs/EcommerceV1PaymentProviderPaymentProviderConnectLinkResourceData.md)
+ - [EcommerceV1PaymentProviderPaymentProviderListResource](docs/EcommerceV1PaymentProviderPaymentProviderListResource.md)
+ - [EcommerceV1PaymentProviderPaymentProviderListResourceData](docs/EcommerceV1PaymentProviderPaymentProviderListResourceData.md)
+ - [EcommerceV1PaymentProviderPaymentProviderListResourceDataAvailableInner](docs/EcommerceV1PaymentProviderPaymentProviderListResourceDataAvailableInner.md)
+ - [EcommerceV1PaymentProviderPaymentProviderListResourceDataConnectedInner](docs/EcommerceV1PaymentProviderPaymentProviderListResourceDataConnectedInner.md)
  - [EcommerceV1ProductCreateDigitalProductRequest](docs/EcommerceV1ProductCreateDigitalProductRequest.md)
  - [EcommerceV1ProductCreatePhysicalProductRequest](docs/EcommerceV1ProductCreatePhysicalProductRequest.md)
  - [EcommerceV1ProductProductCreationResource](docs/EcommerceV1ProductProductCreationResource.md)
  - [EcommerceV1ProductProductCreationResourceProduct](docs/EcommerceV1ProductProductCreationResourceProduct.md)
+ - [EcommerceV1ProductProductDeletedResource](docs/EcommerceV1ProductProductDeletedResource.md)
+ - [EcommerceV1ProductProductDeletedResourceData](docs/EcommerceV1ProductProductDeletedResourceData.md)
  - [EcommerceV1ProductProductImageUploadResource](docs/EcommerceV1ProductProductImageUploadResource.md)
  - [EcommerceV1ProductProductImageUploadUrlResource](docs/EcommerceV1ProductProductImageUploadUrlResource.md)
+ - [EcommerceV1ProductProductResource](docs/EcommerceV1ProductProductResource.md)
+ - [EcommerceV1ProductProductResourceMediaInner](docs/EcommerceV1ProductProductResourceMediaInner.md)
+ - [EcommerceV1ProductProductResourcePriceRange](docs/EcommerceV1ProductProductResourcePriceRange.md)
+ - [EcommerceV1ProductProductResourceVariantsInner](docs/EcommerceV1ProductProductResourceVariantsInner.md)
+ - [EcommerceV1ProductProductResourceVariantsInnerOptionsInner](docs/EcommerceV1ProductProductResourceVariantsInnerOptionsInner.md)
+ - [EcommerceV1ProductProductResourceVariantsInnerPricesInner](docs/EcommerceV1ProductProductResourceVariantsInnerPricesInner.md)
+ - [EcommerceV1ProductProductResponseResource](docs/EcommerceV1ProductProductResponseResource.md)
+ - [EcommerceV1ProductUpdateRequest](docs/EcommerceV1ProductUpdateRequest.md)
  - [EcommerceV1ProductUploadProductImageRequest](docs/EcommerceV1ProductUploadProductImageRequest.md)
  - [EcommerceV1SalesChannelSalesChannelCreationResource](docs/EcommerceV1SalesChannelSalesChannelCreationResource.md)
  - [EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel](docs/EcommerceV1SalesChannelSalesChannelCreationResourceSalesChannel.md)
@@ -593,6 +643,18 @@ Class | Method | HTTP request | Description
  - [EcommerceV1StoreStoreRequest](docs/EcommerceV1StoreStoreRequest.md)
  - [EcommerceV1StoreStoreRequestSalesChannel](docs/EcommerceV1StoreStoreRequestSalesChannel.md)
  - [EcommerceV1StoreStoreResource](docs/EcommerceV1StoreStoreResource.md)
+ - [EcommerceV1VariantBatchUpdateVariantsRequest](docs/EcommerceV1VariantBatchUpdateVariantsRequest.md)
+ - [EcommerceV1VariantBatchUpdateVariantsRequestVariantsInner](docs/EcommerceV1VariantBatchUpdateVariantsRequestVariantsInner.md)
+ - [EcommerceV1VariantBatchUpdateVariantsRequestVariantsInnerPricesInner](docs/EcommerceV1VariantBatchUpdateVariantsRequestVariantsInnerPricesInner.md)
+ - [EcommerceV1VariantCreateVariantRequest](docs/EcommerceV1VariantCreateVariantRequest.md)
+ - [EcommerceV1VariantCreateVariantRequestOptionsInner](docs/EcommerceV1VariantCreateVariantRequestOptionsInner.md)
+ - [EcommerceV1VariantCreateVariantRequestPricesInner](docs/EcommerceV1VariantCreateVariantRequestPricesInner.md)
+ - [EcommerceV1VariantVariantDeletedResource](docs/EcommerceV1VariantVariantDeletedResource.md)
+ - [EcommerceV1VariantVariantDeletedResourceData](docs/EcommerceV1VariantVariantDeletedResourceData.md)
+ - [EcommerceV1VariantVariantListResponseResource](docs/EcommerceV1VariantVariantListResponseResource.md)
+ - [EcommerceV1VariantVariantResource](docs/EcommerceV1VariantVariantResource.md)
+ - [EcommerceV1VariantVariantResourceOptionsInner](docs/EcommerceV1VariantVariantResourceOptionsInner.md)
+ - [EcommerceV1VariantVariantResponseResource](docs/EcommerceV1VariantVariantResponseResource.md)
  - [HorizonsV1WebsitesCreateWebsiteRequest](docs/HorizonsV1WebsitesCreateWebsiteRequest.md)
  - [HorizonsV1WebsitesCreateWebsiteRequestMessageInner](docs/HorizonsV1WebsitesCreateWebsiteRequestMessageInner.md)
  - [HorizonsV1WebsitesCreatedWebsiteResource](docs/HorizonsV1WebsitesCreatedWebsiteResource.md)

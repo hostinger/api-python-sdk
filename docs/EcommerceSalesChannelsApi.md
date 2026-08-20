@@ -4,18 +4,19 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_custom_sales_channel_v1**](EcommerceSalesChannelsApi.md#create_custom_sales_channel_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/sales-channels | Create custom sales channel
+[**create_a_sales_channel_v1**](EcommerceSalesChannelsApi.md#create_a_sales_channel_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/sales-channels | Create a sales channel
 [**list_sales_channels_v1**](EcommerceSalesChannelsApi.md#list_sales_channels_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/sales-channels | List sales channels
 [**update_sales_channel_v1**](EcommerceSalesChannelsApi.md#update_sales_channel_v1) | **PATCH** /api/ecommerce/v1/stores/{store_id}/sales-channels/{sales_channel_id} | Update sales channel
 
 
-# **create_custom_sales_channel_v1**
-> EcommerceV1SalesChannelSalesChannelCreationResource create_custom_sales_channel_v1(store_id, ecommerce_v1_sales_channel_store_request)
+# **create_a_sales_channel_v1**
+> EcommerceV1SalesChannelSalesChannelCreationResource create_a_sales_channel_v1(store_id, ecommerce_v1_sales_channel_store_request)
 
-Create custom sales channel
+Create a sales channel
 
-Create a custom sales channel for a store. Build your own frontend and keep your catalog,
-orders, shipping and payments in sync through the Ecommerce API.
+Create a sales channel for a store. A "custom" channel is headless: build your own frontend and keep
+your catalog, orders, shipping and payments in sync through the Ecommerce API. A "quick-link" channel
+is a hosted one-page store whose handle is auto-generated.
 
 ### Example
 
@@ -42,12 +43,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     ecommerce_v1_sales_channel_store_request = hostinger_api.EcommerceV1SalesChannelStoreRequest() # EcommerceV1SalesChannelStoreRequest | 
 
     try:
-        # Create custom sales channel
-        api_response = api_instance.create_custom_sales_channel_v1(store_id, ecommerce_v1_sales_channel_store_request)
-        print("The response of EcommerceSalesChannelsApi->create_custom_sales_channel_v1:\n")
+        # Create a sales channel
+        api_response = api_instance.create_a_sales_channel_v1(store_id, ecommerce_v1_sales_channel_store_request)
+        print("The response of EcommerceSalesChannelsApi->create_a_sales_channel_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling EcommerceSalesChannelsApi->create_custom_sales_channel_v1: %s\n" % e)
+        print("Exception when calling EcommerceSalesChannelsApi->create_a_sales_channel_v1: %s\n" % e)
 ```
 
 

@@ -114,6 +114,7 @@ Class | Method | HTTP request | Description
 *AgencyHostingWebsitesApi* | [**build_website_node_js_assets_v1**](docs/AgencyHostingWebsitesApi.md#build_website_node_js_assets_v1) | **POST** /api/agency-hosting/v1/websites/{website_uid}/build-assets | Build website NodeJS assets
 *AgencyHostingWebsitesApi* | [**delete_website_v1**](docs/AgencyHostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/agency-hosting/v1/websites/{website_uid} | Delete website
 *AgencyHostingWebsitesApi* | [**get_website_details_v1**](docs/AgencyHostingWebsitesApi.md#get_website_details_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid} | Get website details
+*AgencyHostingWebsitesApi* | [**list_agency_plan_websites_v1**](docs/AgencyHostingWebsitesApi.md#list_agency_plan_websites_v1) | **GET** /api/agency-hosting/v1/websites | List Agency Plan websites
 *AgencyHostingWebsitesApi* | [**list_website_processes_v1**](docs/AgencyHostingWebsitesApi.md#list_website_processes_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/processes | List website processes
 *AgencyHostingWordPressApi* | [**change_word_press_version_v1**](docs/AgencyHostingWordPressApi.md#change_word_press_version_v1) | **PATCH** /api/agency-hosting/v1/websites/{website_uid}/wordpress/settings/version | Change WordPress version
 *AgencyHostingWordPressApi* | [**get_word_press_settings_v1**](docs/AgencyHostingWordPressApi.md#get_word_press_settings_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/wordpress/settings | Get WordPress settings
@@ -428,6 +429,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AgencyHostingListAgencyPlanWebsitesV1200Response](docs/AgencyHostingListAgencyPlanWebsitesV1200Response.md)
  - [AgencyHostingListDomainsV1200Response](docs/AgencyHostingListDomainsV1200Response.md)
  - [AgencyHostingListOrdersV1200Response](docs/AgencyHostingListOrdersV1200Response.md)
  - [AgencyHostingListWebsiteCronJobsV1200Response](docs/AgencyHostingListWebsiteCronJobsV1200Response.md)
@@ -467,6 +469,7 @@ Class | Method | HTTP request | Description
  - [AgencyHostingV1SetupsWebsiteSetupResource](docs/AgencyHostingV1SetupsWebsiteSetupResource.md)
  - [AgencyHostingV1SetupsWebsiteSetupStatusResource](docs/AgencyHostingV1SetupsWebsiteSetupStatusResource.md)
  - [AgencyHostingV1WebsitesBuildAssetsRequest](docs/AgencyHostingV1WebsitesBuildAssetsRequest.md)
+ - [AgencyHostingV1WebsitesBuilderWebsiteDetailsResource](docs/AgencyHostingV1WebsitesBuilderWebsiteDetailsResource.md)
  - [AgencyHostingV1WebsitesCronJobsCreateCronJobRequest](docs/AgencyHostingV1WebsitesCronJobsCreateCronJobRequest.md)
  - [AgencyHostingV1WebsitesCronJobsCronJobResource](docs/AgencyHostingV1WebsitesCronJobsCronJobResource.md)
  - [AgencyHostingV1WebsitesCustomSslCertResource](docs/AgencyHostingV1WebsitesCustomSslCertResource.md)
@@ -474,8 +477,13 @@ Class | Method | HTTP request | Description
  - [AgencyHostingV1WebsitesDatabasesDatabaseResource](docs/AgencyHostingV1WebsitesDatabasesDatabaseResource.md)
  - [AgencyHostingV1WebsitesDatabasesDatabaseUserResource](docs/AgencyHostingV1WebsitesDatabasesDatabaseUserResource.md)
  - [AgencyHostingV1WebsitesDatabasesUsersCreateDatabaseUserRequest](docs/AgencyHostingV1WebsitesDatabasesUsersCreateDatabaseUserRequest.md)
+ - [AgencyHostingV1WebsitesH5gWebsiteDetailsResource](docs/AgencyHostingV1WebsitesH5gWebsiteDetailsResource.md)
+ - [AgencyHostingV1WebsitesPlanResource](docs/AgencyHostingV1WebsitesPlanResource.md)
  - [AgencyHostingV1WebsitesSslCertResource](docs/AgencyHostingV1WebsitesSslCertResource.md)
+ - [AgencyHostingV1WebsitesU4sWebsiteDetailsResource](docs/AgencyHostingV1WebsitesU4sWebsiteDetailsResource.md)
  - [AgencyHostingV1WebsitesWebsiteDomainDetailsResource](docs/AgencyHostingV1WebsitesWebsiteDomainDetailsResource.md)
+ - [AgencyHostingV1WebsitesWebsiteListItemResource](docs/AgencyHostingV1WebsitesWebsiteListItemResource.md)
+ - [AgencyHostingV1WebsitesWebsiteListItemResourceDetails](docs/AgencyHostingV1WebsitesWebsiteListItemResourceDetails.md)
  - [AgencyHostingV1WebsitesWebsiteOrderPlanResource](docs/AgencyHostingV1WebsitesWebsiteOrderPlanResource.md)
  - [AgencyHostingV1WebsitesWebsiteOrderPlanResourceParameters](docs/AgencyHostingV1WebsitesWebsiteOrderPlanResourceParameters.md)
  - [AgencyHostingV1WebsitesWebsiteOrderResource](docs/AgencyHostingV1WebsitesWebsiteOrderResource.md)

@@ -609,7 +609,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.WordPressInstallationsApi(api_client)
     username = 'cl_user123' # str | Filter by specific username (optional)
-    domain = 'example.com' # str | Filter by domain name (exact match) (optional)
+    domain = 'example.com' # str | Filter by domain name (case-insensitive substring match) (optional)
     ownership = 'owned' # str | Filter by ownership type. Defaults to \"owned\". Use \"all\" to include both owned and managed installations. (optional)
 
     try:
@@ -629,7 +629,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**| Filter by specific username | [optional] 
- **domain** | **str**| Filter by domain name (exact match) | [optional] 
+ **domain** | **str**| Filter by domain name (case-insensitive substring match) | [optional] 
  **ownership** | **str**| Filter by ownership type. Defaults to \&quot;owned\&quot;. Use \&quot;all\&quot; to include both owned and managed installations. | [optional] 
 
 ### Return type

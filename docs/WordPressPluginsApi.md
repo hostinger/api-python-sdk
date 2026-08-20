@@ -128,7 +128,7 @@ configuration = hostinger_api.Configuration(
 with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.WordPressPluginsApi(api_client)
-    domain = 'example.com' # str | Filter by domain name (exact match) (optional)
+    domain = 'example.com' # str | Filter by domain name (case-insensitive substring match) (optional)
 
     try:
         # Check if WooCommerce is installed
@@ -146,7 +146,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **domain** | **str**| Filter by domain name (exact match) | [optional] 
+ **domain** | **str**| Filter by domain name (case-insensitive substring match) | [optional] 
 
 ### Return type
 

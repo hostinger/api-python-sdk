@@ -508,7 +508,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
     username = 'u123456789' # str | 
     page = 1 # int | Page number (optional)
     per_page = 25 # int | Number of items per page (optional) (default to 25)
-    domain = 'example.com' # str | Filter by domain name (exact match) (optional)
+    domain = 'example.com' # str | Filter by domain name (case-insensitive substring match) (optional)
     is_assigned = true # bool | When used with domain, return only databases assigned to that domain. (optional)
     search = 'test_db' # str | Search databases by name, user, or creation date. (optional)
 
@@ -531,7 +531,7 @@ Name | Type | Description  | Notes
  **username** | **str**|  | 
  **page** | **int**| Page number | [optional] 
  **per_page** | **int**| Number of items per page | [optional] [default to 25]
- **domain** | **str**| Filter by domain name (exact match) | [optional] 
+ **domain** | **str**| Filter by domain name (case-insensitive substring match) | [optional] 
  **is_assigned** | **bool**| When used with domain, return only databases assigned to that domain. | [optional] 
  **search** | **str**| Search databases by name, user, or creation date. | [optional] 
 

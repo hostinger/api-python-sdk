@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_websites_v1**
-> HostingListWebsitesV1200Response list_websites_v1(page=page, per_page=per_page, username=username, order_id=order_id, is_enabled=is_enabled, domain=domain)
+> HostingListWebsitesV1200Response list_websites_v1(page=page, per_page=per_page, username=username, order_id=order_id, is_enabled=is_enabled, domain=domain, website_types=website_types)
 
 List websites
 
@@ -284,8 +284,11 @@ website detected on the underlying platform (`wordpress`, `builder`,
 `vhost_type`, `username`, and `root_directory`, only apply to
 CloudLinux websites and are null for other platforms.
 
-Use the available query parameters to filter results by username,
-order ID, enabled status, or domain name for more targeted results.
+Use `website_types` to list only websites of a given detected type, e.g. only
+WordPress websites (`website_types=wordpress`) or only Node.js websites
+(`website_types=nodejs`). Combine with the other available query parameters to
+filter by username, order ID, enabled status, or domain name for more targeted
+results.
 
 ### Example
 
@@ -312,11 +315,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     username = 'cl_user123' # str | Filter by specific username (optional)
     order_id = 123 # int | Order ID (optional)
     is_enabled = true # bool | Filter by enabled status (optional)
-    domain = 'example.com' # str | Filter by domain name (exact match) (optional)
+    domain = 'example.com' # str | Filter by domain name (case-insensitive substring match) (optional)
+    website_types = ['[\"wordpress\",\"nodejs\"]'] # List[str] | Filter by detected website type, e.g. wordpress,nodejs. Accepts a comma-separated list. (optional)
 
     try:
         # List websites
-        api_response = api_instance.list_websites_v1(page=page, per_page=per_page, username=username, order_id=order_id, is_enabled=is_enabled, domain=domain)
+        api_response = api_instance.list_websites_v1(page=page, per_page=per_page, username=username, order_id=order_id, is_enabled=is_enabled, domain=domain, website_types=website_types)
         print("The response of HostingWebsitesApi->list_websites_v1:\n")
         pprint(api_response)
     except Exception as e:
@@ -335,7 +339,8 @@ Name | Type | Description  | Notes
  **username** | **str**| Filter by specific username | [optional] 
  **order_id** | **int**| Order ID | [optional] 
  **is_enabled** | **bool**| Filter by enabled status | [optional] 
- **domain** | **str**| Filter by domain name (exact match) | [optional] 
+ **domain** | **str**| Filter by domain name (case-insensitive substring match) | [optional] 
+ **website_types** | [**List[str]**](str.md)| Filter by detected website type, e.g. wordpress,nodejs. Accepts a comma-separated list. | [optional] 
 
 ### Return type
 

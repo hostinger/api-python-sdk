@@ -108,8 +108,6 @@ output directory, build script) before committing to a build.
 
 The archive must already be present on the website's file storage. Use the
 `Generate Upload URL` endpoint to obtain credentials and upload the archive first.
-To upload an archive and start a build in one step without inspecting settings first,
-use the `Create Node.js Build from Archive` endpoint instead.
 
 ### Example
 
@@ -533,8 +531,7 @@ existing archive file on the server (relative to the website document root).
 Use the `Generate Upload URL` endpoint to obtain credentials and upload the archive first.
 
 To auto-detect build settings from an archive before starting, first call the
-`Get Node.js Build Settings from Archive` endpoint. To upload an archive and start
-a build in one step, use the `Create Node.js Build from Archive` endpoint instead.
+`Get Node.js Build Settings from Archive` endpoint.
 
 The returned build `uuid` can be used to poll progress and retrieve logs via
 the `Get Node.js Build Logs` endpoint.

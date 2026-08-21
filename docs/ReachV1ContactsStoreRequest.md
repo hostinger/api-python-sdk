@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **surname** | **str** |  | [optional] 
 **phone** | **str** | Phone number in E.164 format (leading \&quot;+\&quot; then 7-15 digits) | [optional] 
 **note** | **str** |  | [optional] 
+**tag_uuids** | **List[str]** | Existing tags to attach to the created contact | [optional] 
 
 ## Example
 

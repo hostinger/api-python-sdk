@@ -13,7 +13,9 @@ Method | HTTP request | Description
 [**list_profile_segment_contacts_v1**](ReachSegmentsApi.md#list_profile_segment_contacts_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/segmentation/segments/{segmentUuid}/contacts | List profile segment contacts
 [**list_profile_segments_v1**](ReachSegmentsApi.md#list_profile_segments_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/segmentation/segments | List profile segments
 [**list_segment_contacts_v1**](ReachSegmentsApi.md#list_segment_contacts_v1) | **GET** /api/reach/v1/segmentation/segments/{segmentUuid}/contacts | List segment contacts
+[**list_segment_filter_attributes_v1**](ReachSegmentsApi.md#list_segment_filter_attributes_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/segmentation/filters/attributes | List segment filter attributes
 [**list_segments_v1**](ReachSegmentsApi.md#list_segments_v1) | **GET** /api/reach/v1/segmentation/segments | List segments
+[**preview_contacts_matching_conditions_v1**](ReachSegmentsApi.md#preview_contacts_matching_conditions_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/segmentation/filters/contacts | Preview contacts matching conditions
 [**update_a_profile_segment_v1**](ReachSegmentsApi.md#update_a_profile_segment_v1) | **PUT** /api/reach/v1/profiles/{profileUuid}/segmentation/segments/{segmentUuid} | Update a profile segment
 
 
@@ -713,6 +715,83 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_segment_filter_attributes_v1**
+> ReachV1ContactsSegmentsSegmentFilterAttributesResource list_segment_filter_attributes_v1(profile_uuid)
+
+List segment filter attributes
+
+List every attribute a segment condition can filter on, with the operators each attribute
+accepts, the value format they expect and, where the value is constrained, the allowed
+values.
+
+The list is profile specific: it includes the profile's custom contact fields, its tags and
+its 20 most recently published campaigns, so the valid attributes cannot be hardcoded. Read
+it before creating or updating a segment to discover the valid `attribute`, `operator` and
+`value` combinations.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.reach_v1_contacts_segments_segment_filter_attributes_resource import ReachV1ContactsSegmentsSegmentFilterAttributesResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.ReachSegmentsApi(api_client)
+    profile_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Profile uuid parameter
+
+    try:
+        # List segment filter attributes
+        api_response = api_instance.list_segment_filter_attributes_v1(profile_uuid)
+        print("The response of ReachSegmentsApi->list_segment_filter_attributes_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ReachSegmentsApi->list_segment_filter_attributes_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_uuid** | **str**| Profile uuid parameter | 
+
+### Return type
+
+[**ReachV1ContactsSegmentsSegmentFilterAttributesResource**](ReachV1ContactsSegmentsSegmentFilterAttributesResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_segments_v1**
 > List[ReachV1ContactsSegmentsContactSegmentResource] list_segments_v1()
 
@@ -780,6 +859,87 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **preview_contacts_matching_conditions_v1**
+> ReachListProfileContactsV1200Response preview_contacts_matching_conditions_v1(profile_uuid, reach_v1_contacts_segments_profile_filter_contacts_request)
+
+Preview contacts matching conditions
+
+Preview the contacts matching a set of conditions without saving a segment.
+
+The body is the same set of conditions accepted when creating or updating a segment, so this
+is how to check who a filter reaches, and how many, before persisting it. Nothing is stored
+and no contact is modified.
+
+Call the segment filter attributes endpoint first to discover the valid `attribute`,
+`operator` and `value` combinations.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.reach_list_profile_contacts_v1200_response import ReachListProfileContactsV1200Response
+from hostinger_api.models.reach_v1_contacts_segments_profile_filter_contacts_request import ReachV1ContactsSegmentsProfileFilterContactsRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.ReachSegmentsApi(api_client)
+    profile_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Profile uuid parameter
+    reach_v1_contacts_segments_profile_filter_contacts_request = hostinger_api.ReachV1ContactsSegmentsProfileFilterContactsRequest() # ReachV1ContactsSegmentsProfileFilterContactsRequest | 
+
+    try:
+        # Preview contacts matching conditions
+        api_response = api_instance.preview_contacts_matching_conditions_v1(profile_uuid, reach_v1_contacts_segments_profile_filter_contacts_request)
+        print("The response of ReachSegmentsApi->preview_contacts_matching_conditions_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ReachSegmentsApi->preview_contacts_matching_conditions_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_uuid** | **str**| Profile uuid parameter | 
+ **reach_v1_contacts_segments_profile_filter_contacts_request** | [**ReachV1ContactsSegmentsProfileFilterContactsRequest**](ReachV1ContactsSegmentsProfileFilterContactsRequest.md)|  | 
+
+### Return type
+
+[**ReachListProfileContactsV1200Response**](ReachListProfileContactsV1200Response.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

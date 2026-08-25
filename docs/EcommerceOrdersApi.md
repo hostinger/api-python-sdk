@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancel_an_order_v1**](EcommerceOrdersApi.md#cancel_an_order_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/orders/{order_id}/cancel | Cancel an order
 [**fulfil_an_order_v1**](EcommerceOrdersApi.md#fulfil_an_order_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/orders/{order_id}/fulfill | Fulfil an order
-[**list_orders_v1**](EcommerceOrdersApi.md#list_orders_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/orders | List orders
+[**list_store_orders_v1**](EcommerceOrdersApi.md#list_store_orders_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/orders | List store orders
 [**retrieve_an_order_v1**](EcommerceOrdersApi.md#retrieve_an_order_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/orders/{order_id} | Retrieve an order
 
 
@@ -163,10 +163,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_orders_v1**
-> EcommerceListOrdersV1200Response list_orders_v1(store_id, status=status, payment_status=payment_status, fulfillment_status=fulfillment_status, email=email, display_id=display_id, q=q, created_at_from=created_at_from, created_at_to=created_at_to, page=page)
+# **list_store_orders_v1**
+> EcommerceListStoreOrdersV1200Response list_store_orders_v1(store_id, status=status, payment_status=payment_status, fulfillment_status=fulfillment_status, email=email, display_id=display_id, q=q, created_at_from=created_at_from, created_at_to=created_at_to, page=page)
 
-List orders
+List store orders
 
 List a store's orders newest first as summaries. Filter by status, payment or fulfilment
 status, customer email, order number or a free-text query. Amounts are in the smallest
@@ -178,7 +178,7 @@ currency unit. Retrieve a single order for its line items, addresses and fulfilm
 
 ```python
 import hostinger_api
-from hostinger_api.models.ecommerce_list_orders_v1200_response import EcommerceListOrdersV1200Response
+from hostinger_api.models.ecommerce_list_store_orders_v1200_response import EcommerceListStoreOrdersV1200Response
 from hostinger_api.rest import ApiException
 from pprint import pprint
 
@@ -204,12 +204,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     page = 1 # int | Page number (optional)
 
     try:
-        # List orders
-        api_response = api_instance.list_orders_v1(store_id, status=status, payment_status=payment_status, fulfillment_status=fulfillment_status, email=email, display_id=display_id, q=q, created_at_from=created_at_from, created_at_to=created_at_to, page=page)
-        print("The response of EcommerceOrdersApi->list_orders_v1:\n")
+        # List store orders
+        api_response = api_instance.list_store_orders_v1(store_id, status=status, payment_status=payment_status, fulfillment_status=fulfillment_status, email=email, display_id=display_id, q=q, created_at_from=created_at_from, created_at_to=created_at_to, page=page)
+        print("The response of EcommerceOrdersApi->list_store_orders_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling EcommerceOrdersApi->list_orders_v1: %s\n" % e)
+        print("Exception when calling EcommerceOrdersApi->list_store_orders_v1: %s\n" % e)
 ```
 
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EcommerceListOrdersV1200Response**](EcommerceListOrdersV1200Response.md)
+[**EcommerceListStoreOrdersV1200Response**](EcommerceListStoreOrdersV1200Response.md)
 
 ### Authorization
 

@@ -7,8 +7,10 @@ Method | HTTP request | Description
 [**get_node_js_build_logs_v1**](HostingNodeJSApi.md#get_node_js_build_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid}/logs | Get NodeJS build logs
 [**get_node_js_build_settings_from_archive_v1**](HostingNodeJSApi.md#get_node_js_build_settings_from_archive_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/from-archive | Get Node.js build settings from archive
 [**list_node_js_builds_v1**](HostingNodeJSApi.md#list_node_js_builds_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | List NodeJS builds
+[**list_node_js_environment_variables_v1**](HostingNodeJSApi.md#list_node_js_environment_variables_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/env | List Node.js environment variables
 [**list_node_js_vulnerabilities_v1**](HostingNodeJSApi.md#list_node_js_vulnerabilities_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/vulnerabilities | List Node.js vulnerabilities
 [**patch_node_js_vulnerabilities_v1**](HostingNodeJSApi.md#patch_node_js_vulnerabilities_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/vulnerabilities/patch | Patch Node.js vulnerabilities
+[**replace_node_js_environment_variables_v1**](HostingNodeJSApi.md#replace_node_js_environment_variables_v1) | **PUT** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/env | Replace Node.js environment variables
 [**restart_node_js_application_v1**](HostingNodeJSApi.md#restart_node_js_application_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/server/restart | Restart Node.js application
 [**start_node_js_build_v1**](HostingNodeJSApi.md#start_node_js_build_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | Start Node.js build
 
@@ -259,6 +261,85 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_node_js_environment_variables_v1**
+> List[HostingV1NodeJsEnvVarResource] list_node_js_environment_variables_v1(username, domain)
+
+List Node.js environment variables
+
+Lists the Node.js environment variables currently set for the website. Values are always
+masked as `********` and cannot be read back through this API. Use this endpoint to see
+which keys are configured or to verify a change, not to read values.
+
+To change variables, use the `Replace Node.js environment variables` endpoint. It replaces
+the whole set, so never copy the masked values from this response into that request; send
+the full desired set with real values taken from the project `.env` file or the user
+prompt instead.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_node_js_env_var_resource import HostingV1NodeJsEnvVarResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+
+    try:
+        # List Node.js environment variables
+        api_response = api_instance.list_node_js_environment_variables_v1(username, domain)
+        print("The response of HostingNodeJSApi->list_node_js_environment_variables_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->list_node_js_environment_variables_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+
+### Return type
+
+[**List[HostingV1NodeJsEnvVarResource]**](HostingV1NodeJsEnvVarResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_node_js_vulnerabilities_v1**
 > List[HostingV1NodeJsVulnerabilityResource] list_node_js_vulnerabilities_v1(username, domain, severities=severities)
 
@@ -432,6 +513,95 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **replace_node_js_environment_variables_v1**
+> CommonSuccessEmptyResource replace_node_js_environment_variables_v1(username, domain, hosting_v1_node_js_set_build_env_vars_request)
+
+Replace Node.js environment variables
+
+Replaces the website's Node.js environment variables with the ones provided. This is a
+full replace: any variable not in the request is deleted, and sending an empty `env_vars`
+array deletes every variable. Saving writes the values and restarts the running Node.js
+process.
+
+A restart is enough for apps that read environment variables at process start, such as
+Express or NestJS. It is not enough for frameworks that bake variables into the build.
+Next.js standalone is one of those: build-time values (including `NEXT_PUBLIC_*`) need a
+fresh build. After this call, use the `Start Node.js build` endpoint so those apps
+pick up the new values.
+
+The `List Node.js environment variables` endpoint returns masked values (`********`), so
+never copy values from it into this request. Always send the full desired set with real
+values taken from the project `.env` file or the user prompt.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.models.hosting_v1_node_js_set_build_env_vars_request import HostingV1NodeJsSetBuildEnvVarsRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    hosting_v1_node_js_set_build_env_vars_request = hostinger_api.HostingV1NodeJsSetBuildEnvVarsRequest() # HostingV1NodeJsSetBuildEnvVarsRequest | 
+
+    try:
+        # Replace Node.js environment variables
+        api_response = api_instance.replace_node_js_environment_variables_v1(username, domain, hosting_v1_node_js_set_build_env_vars_request)
+        print("The response of HostingNodeJSApi->replace_node_js_environment_variables_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->replace_node_js_environment_variables_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **hosting_v1_node_js_set_build_env_vars_request** | [**HostingV1NodeJsSetBuildEnvVarsRequest**](HostingV1NodeJsSetBuildEnvVarsRequest.md)|  | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
 **422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |

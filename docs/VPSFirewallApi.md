@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**delete_firewall_v1**](VPSFirewallApi.md#delete_firewall_v1) | **DELETE** /api/vps/v1/firewall/{firewallId} | Delete firewall
 [**get_firewall_details_v1**](VPSFirewallApi.md#get_firewall_details_v1) | **GET** /api/vps/v1/firewall/{firewallId} | Get firewall details
 [**get_firewall_list_v1**](VPSFirewallApi.md#get_firewall_list_v1) | **GET** /api/vps/v1/firewall | Get firewall list
+[**replace_all_firewall_rules_in_group_v1**](VPSFirewallApi.md#replace_all_firewall_rules_in_group_v1) | **PUT** /api/vps/v1/firewall/{firewallId}/rules | Replace all firewall rules in group
 [**sync_firewall_v1**](VPSFirewallApi.md#sync_firewall_v1) | **POST** /api/vps/v1/firewall/{firewallId}/sync/{virtualMachineId} | Sync firewall
 [**update_firewall_rule_v1**](VPSFirewallApi.md#update_firewall_rule_v1) | **PUT** /api/vps/v1/firewall/{firewallId}/rules/{ruleId} | Update firewall rule
 
@@ -614,6 +615,86 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **replace_all_firewall_rules_in_group_v1**
+> VPSV1FirewallFirewallResource replace_all_firewall_rules_in_group_v1(firewall_id, vpsv1_firewall_rules_replace_request, sync=sync)
+
+Replace all firewall rules in group
+
+Replaces all firewall rules within a specified firewall group with the provided set of rules
+in a single atomic operation, instead of creating or deleting rules one by one.
+
+Any virtual machine using this firewall group will need to be synchronized after replacing rules;
+pass the "sync" query parameter to trigger synchronization immediately.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.vpsv1_firewall_firewall_resource import VPSV1FirewallFirewallResource
+from hostinger_api.models.vpsv1_firewall_rules_replace_request import VPSV1FirewallRulesReplaceRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
+    firewall_id = 9449049 # int | Firewall ID
+    vpsv1_firewall_rules_replace_request = hostinger_api.VPSV1FirewallRulesReplaceRequest() # VPSV1FirewallRulesReplaceRequest | 
+    sync = True # bool | Synchronize the firewall group to all its virtual machines after replacing the rules (optional)
+
+    try:
+        # Replace all firewall rules in group
+        api_response = api_instance.replace_all_firewall_rules_in_group_v1(firewall_id, vpsv1_firewall_rules_replace_request, sync=sync)
+        print("The response of VPSFirewallApi->replace_all_firewall_rules_in_group_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling VPSFirewallApi->replace_all_firewall_rules_in_group_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **firewall_id** | **int**| Firewall ID | 
+ **vpsv1_firewall_rules_replace_request** | [**VPSV1FirewallRulesReplaceRequest**](VPSV1FirewallRulesReplaceRequest.md)|  | 
+ **sync** | **bool**| Synchronize the firewall group to all its virtual machines after replacing the rules | [optional] 
+
+### Return type
+
+[**VPSV1FirewallFirewallResource**](VPSV1FirewallFirewallResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

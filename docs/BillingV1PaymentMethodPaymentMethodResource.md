@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **is_suspended** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **expires_at** | **datetime** |  | [optional] 
+**suspended_at** | **datetime** |  | [optional] 
 
 ## Example
 

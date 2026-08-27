@@ -621,7 +621,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **replace_all_firewall_rules_in_group_v1**
-> VPSV1FirewallFirewallResource replace_all_firewall_rules_in_group_v1(firewall_id, vpsv1_firewall_rules_replace_request, sync=sync)
+> VPSV1FirewallFirewallResource replace_all_firewall_rules_in_group_v1(firewall_id, vpsv1_firewall_rules_replace_request)
 
 Replace all firewall rules in group
 
@@ -629,7 +629,7 @@ Replaces all firewall rules within a specified firewall group with the provided 
 in a single atomic operation, instead of creating or deleting rules one by one.
 
 Any virtual machine using this firewall group will need to be synchronized after replacing rules;
-pass the "sync" query parameter to trigger synchronization immediately.
+pass the "sync" parameter to trigger synchronization immediately.
 
 ### Example
 
@@ -654,11 +654,10 @@ with hostinger_api.ApiClient(configuration) as api_client:
     api_instance = hostinger_api.VPSFirewallApi(api_client)
     firewall_id = 9449049 # int | Firewall ID
     vpsv1_firewall_rules_replace_request = hostinger_api.VPSV1FirewallRulesReplaceRequest() # VPSV1FirewallRulesReplaceRequest | 
-    sync = True # bool | Synchronize the firewall group to all its virtual machines after replacing the rules (optional)
 
     try:
         # Replace all firewall rules in group
-        api_response = api_instance.replace_all_firewall_rules_in_group_v1(firewall_id, vpsv1_firewall_rules_replace_request, sync=sync)
+        api_response = api_instance.replace_all_firewall_rules_in_group_v1(firewall_id, vpsv1_firewall_rules_replace_request)
         print("The response of VPSFirewallApi->replace_all_firewall_rules_in_group_v1:\n")
         pprint(api_response)
     except Exception as e:
@@ -674,7 +673,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **firewall_id** | **int**| Firewall ID | 
  **vpsv1_firewall_rules_replace_request** | [**VPSV1FirewallRulesReplaceRequest**](VPSV1FirewallRulesReplaceRequest.md)|  | 
- **sync** | **bool**| Synchronize the firewall group to all its virtual machines after replacing the rules | [optional] 
 
 ### Return type
 

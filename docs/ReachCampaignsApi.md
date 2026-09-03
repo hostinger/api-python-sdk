@@ -4,10 +4,89 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**create_a_draft_campaign_v1**](ReachCampaignsApi.md#create_a_draft_campaign_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/campaigns | Create a draft campaign
 [**get_campaign_details_v1**](ReachCampaignsApi.md#get_campaign_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid} | Get campaign details
 [**get_campaign_performance_v1**](ReachCampaignsApi.md#get_campaign_performance_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid}/statistics | Get campaign performance
 [**list_campaigns_v1**](ReachCampaignsApi.md#list_campaigns_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns | List campaigns
 
+
+# **create_a_draft_campaign_v1**
+> ReachV1CampaignsCreatedCampaignResource create_a_draft_campaign_v1(profile_uuid, reach_v1_campaigns_store_request)
+
+Create a draft campaign
+
+Create a campaign in a profile.
+
+The campaign is created as a draft, so nothing is sent and no contact is touched. It has no
+audience yet either - targeting and scheduling are not part of this request, the draft is
+finished and sent from the Reach interface.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.reach_v1_campaigns_created_campaign_resource import ReachV1CampaignsCreatedCampaignResource
+from hostinger_api.models.reach_v1_campaigns_store_request import ReachV1CampaignsStoreRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.ReachCampaignsApi(api_client)
+    profile_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Profile uuid parameter
+    reach_v1_campaigns_store_request = hostinger_api.ReachV1CampaignsStoreRequest() # ReachV1CampaignsStoreRequest | 
+
+    try:
+        # Create a draft campaign
+        api_response = api_instance.create_a_draft_campaign_v1(profile_uuid, reach_v1_campaigns_store_request)
+        print("The response of ReachCampaignsApi->create_a_draft_campaign_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ReachCampaignsApi->create_a_draft_campaign_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_uuid** | **str**| Profile uuid parameter | 
+ **reach_v1_campaigns_store_request** | [**ReachV1CampaignsStoreRequest**](ReachV1CampaignsStoreRequest.md)|  | 
+
+### Return type
+
+[**ReachV1CampaignsCreatedCampaignResource**](ReachV1CampaignsCreatedCampaignResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_campaign_details_v1**
 > ReachV1CampaignsCampaignDetailsResource get_campaign_details_v1(profile_uuid, campaign_uuid)

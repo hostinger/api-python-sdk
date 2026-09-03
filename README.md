@@ -299,6 +299,7 @@ Class | Method | HTTP request | Description
 *ReachAutomationsApi* | [**get_automation_details_v1**](docs/ReachAutomationsApi.md#get_automation_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/automations/{automationUuid} | Get automation details
 *ReachAutomationsApi* | [**list_automation_steps_v1**](docs/ReachAutomationsApi.md#list_automation_steps_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/automations/{automationUuid}/steps | List automation steps
 *ReachAutomationsApi* | [**list_automations_v1**](docs/ReachAutomationsApi.md#list_automations_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/automations | List automations
+*ReachCampaignsApi* | [**create_a_draft_campaign_v1**](docs/ReachCampaignsApi.md#create_a_draft_campaign_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/campaigns | Create a draft campaign
 *ReachCampaignsApi* | [**get_campaign_details_v1**](docs/ReachCampaignsApi.md#get_campaign_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid} | Get campaign details
 *ReachCampaignsApi* | [**get_campaign_performance_v1**](docs/ReachCampaignsApi.md#get_campaign_performance_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid}/statistics | Get campaign performance
 *ReachCampaignsApi* | [**list_campaigns_v1**](docs/ReachCampaignsApi.md#list_campaigns_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns | List campaigns
@@ -345,6 +346,8 @@ Class | Method | HTTP request | Description
 *ReachTagsApi* | [**remove_a_contact_from_a_tag_v1**](docs/ReachTagsApi.md#remove_a_contact_from_a_tag_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid}/contacts/{contactUuid} | Remove a contact from a tag
 *ReachTagsApi* | [**remove_contacts_from_a_tag_v1**](docs/ReachTagsApi.md#remove_contacts_from_a_tag_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid}/contacts | Remove contacts from a tag
 *ReachTagsApi* | [**rename_a_tag_v1**](docs/ReachTagsApi.md#rename_a_tag_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/tags/{tagUuid} | Rename a tag
+*ReachTemplatesApi* | [**create_an_email_template_v1**](docs/ReachTemplatesApi.md#create_an_email_template_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/templates | Create an email template
+*ReachTemplatesApi* | [**list_email_templates_v1**](docs/ReachTemplatesApi.md#list_email_templates_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/templates | List email templates
 *VPSActionsApi* | [**get_action_details_v1**](docs/VPSActionsApi.md#get_action_details_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions/{actionId} | Get action details
 *VPSActionsApi* | [**get_actions_v1**](docs/VPSActionsApi.md#get_actions_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/actions | Get actions
 *VPSBackupsApi* | [**get_backups_v1**](docs/VPSBackupsApi.md#get_backups_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/backups | Get backups
@@ -803,6 +806,9 @@ Class | Method | HTTP request | Description
  - [ReachV1CampaignsCampaignResource](docs/ReachV1CampaignsCampaignResource.md)
  - [ReachV1CampaignsCampaignStatisticsResource](docs/ReachV1CampaignsCampaignStatisticsResource.md)
  - [ReachV1CampaignsCampaignSummaryStatisticsResource](docs/ReachV1CampaignsCampaignSummaryStatisticsResource.md)
+ - [ReachV1CampaignsCreatedCampaignResource](docs/ReachV1CampaignsCreatedCampaignResource.md)
+ - [ReachV1CampaignsStoreRequest](docs/ReachV1CampaignsStoreRequest.md)
+ - [ReachV1CampaignsStoreRequestMetadata](docs/ReachV1CampaignsStoreRequestMetadata.md)
  - [ReachV1ContactsBulkStoreRequest](docs/ReachV1ContactsBulkStoreRequest.md)
  - [ReachV1ContactsBulkStoreRequestContactsInner](docs/ReachV1ContactsBulkStoreRequestContactsInner.md)
  - [ReachV1ContactsContactDetailsResource](docs/ReachV1ContactsContactDetailsResource.md)
@@ -856,6 +862,8 @@ Class | Method | HTTP request | Description
  - [ReachV1ProfilesProfileResource](docs/ReachV1ProfilesProfileResource.md)
  - [ReachV1ProfilesProfileResourceLimits](docs/ReachV1ProfilesProfileResourceLimits.md)
  - [ReachV1ProfilesProfileResourceProfilesInner](docs/ReachV1ProfilesProfileResourceProfilesInner.md)
+ - [ReachV1TemplatesStoreRequest](docs/ReachV1TemplatesStoreRequest.md)
+ - [ReachV1TemplatesTemplateResource](docs/ReachV1TemplatesTemplateResource.md)
  - [VPSV1ActionActionResource](docs/VPSV1ActionActionResource.md)
  - [VPSV1ActionListResponse](docs/VPSV1ActionListResponse.md)
  - [VPSV1BackupBackupResource](docs/VPSV1BackupBackupResource.md)

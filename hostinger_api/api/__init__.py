@@ -64,6 +64,7 @@ from hostinger_api.api.reach_forms_api import ReachFormsApi
 from hostinger_api.api.reach_profiles_api import ReachProfilesApi
 from hostinger_api.api.reach_segments_api import ReachSegmentsApi
 from hostinger_api.api.reach_tags_api import ReachTagsApi
+from hostinger_api.api.reach_templates_api import ReachTemplatesApi
 from hostinger_api.api.vps_actions_api import VPSActionsApi
 from hostinger_api.api.vps_backups_api import VPSBackupsApi
 from hostinger_api.api.vps_data_centers_api import VPSDataCentersApi

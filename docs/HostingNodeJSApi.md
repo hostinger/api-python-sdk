@@ -4,8 +4,13 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**analyse_failed_node_js_build_v1**](HostingNodeJSApi.md#analyse_failed_node_js_build_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid}/analysis | Analyse failed Node.js build
+[**clear_node_js_runtime_logs_v1**](HostingNodeJSApi.md#clear_node_js_runtime_logs_v1) | **DELETE** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/runtime-logs | Clear Node.js runtime logs
+[**get_node_js_build_details_v1**](HostingNodeJSApi.md#get_node_js_build_details_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid} | Get Node.js build details
 [**get_node_js_build_logs_v1**](HostingNodeJSApi.md#get_node_js_build_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid}/logs | Get NodeJS build logs
 [**get_node_js_build_settings_from_archive_v1**](HostingNodeJSApi.md#get_node_js_build_settings_from_archive_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/from-archive | Get Node.js build settings from archive
+[**get_node_js_build_settings_v1**](HostingNodeJSApi.md#get_node_js_build_settings_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings | Get Node.js build settings
+[**get_node_js_runtime_logs_v1**](HostingNodeJSApi.md#get_node_js_runtime_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/runtime-logs | Get Node.js runtime logs
 [**list_node_js_builds_v1**](HostingNodeJSApi.md#list_node_js_builds_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | List NodeJS builds
 [**list_node_js_environment_variables_v1**](HostingNodeJSApi.md#list_node_js_environment_variables_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/env | List Node.js environment variables
 [**list_node_js_vulnerabilities_v1**](HostingNodeJSApi.md#list_node_js_vulnerabilities_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/vulnerabilities | List Node.js vulnerabilities
@@ -13,7 +18,243 @@ Method | HTTP request | Description
 [**replace_node_js_environment_variables_v1**](HostingNodeJSApi.md#replace_node_js_environment_variables_v1) | **PUT** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/env | Replace Node.js environment variables
 [**restart_node_js_application_v1**](HostingNodeJSApi.md#restart_node_js_application_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/server/restart | Restart Node.js application
 [**start_node_js_build_v1**](HostingNodeJSApi.md#start_node_js_build_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | Start Node.js build
+[**update_node_js_build_settings_v1**](HostingNodeJSApi.md#update_node_js_build_settings_v1) | **PUT** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings | Update Node.js build settings
 
+
+# **analyse_failed_node_js_build_v1**
+> HostingV1NodeJsBuildAnalysisResource analyse_failed_node_js_build_v1(username, domain, uuid)
+
+Analyse failed Node.js build
+
+Returns an AI analysis of why a build failed and how to fix it, based on the build logs,
+the project file list and package.json. Only builds in the `failed` state can be analysed;
+any other state returns 422. When no analysis could be produced both `analysis` and
+`solution` are null, in which case read `Get NodeJS build logs` instead.
+
+Each call runs the analysis again, so call it once per failed build and keep the result.
+Limited to 5 calls per minute per API client (429 above that).
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_node_js_build_analysis_resource import HostingV1NodeJsBuildAnalysisResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    uuid = '123e4567-e89b-12d3-a456-426614174000' # str | Build UUID
+
+    try:
+        # Analyse failed Node.js build
+        api_response = api_instance.analyse_failed_node_js_build_v1(username, domain, uuid)
+        print("The response of HostingNodeJSApi->analyse_failed_node_js_build_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->analyse_failed_node_js_build_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **uuid** | **str**| Build UUID | 
+
+### Return type
+
+[**HostingV1NodeJsBuildAnalysisResource**](HostingV1NodeJsBuildAnalysisResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **clear_node_js_runtime_logs_v1**
+> CommonSuccessEmptyResource clear_node_js_runtime_logs_v1(username, domain)
+
+Clear Node.js runtime logs
+
+Empties the Node.js application's runtime log file. This cannot be undone, so confirm with
+the user before calling it. Returns success even when no log file exists yet.
+
+Use it before reproducing a problem so the next `Get Node.js runtime logs` call returns
+only fresh entries; start that call with `period` again instead of reusing a `from_line`
+from before the clear.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+
+    try:
+        # Clear Node.js runtime logs
+        api_response = api_instance.clear_node_js_runtime_logs_v1(username, domain)
+        print("The response of HostingNodeJSApi->clear_node_js_runtime_logs_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->clear_node_js_runtime_logs_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_node_js_build_details_v1**
+> HostingV1NodeJsBuildResource get_node_js_build_details_v1(username, domain, uuid)
+
+Get Node.js build details
+
+Returns one build by UUID: its state (`pending`, `running`, `completed`, `failed`), the
+options it ran with and timestamps. Poll this while a build is pending or running. When it
+is failed, read `Get NodeJS build logs` and `Analyse failed Node.js build` for the cause.
+Returns 404 when the UUID does not belong to a build of this website.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_node_js_build_resource import HostingV1NodeJsBuildResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    uuid = '123e4567-e89b-12d3-a456-426614174000' # str | Build UUID
+
+    try:
+        # Get Node.js build details
+        api_response = api_instance.get_node_js_build_details_v1(username, domain, uuid)
+        print("The response of HostingNodeJSApi->get_node_js_build_details_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->get_node_js_build_details_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **uuid** | **str**| Build UUID | 
+
+### Return type
+
+[**HostingV1NodeJsBuildResource**](HostingV1NodeJsBuildResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_node_js_build_logs_v1**
 > HostingV1NodeJsBuildLogsResource get_node_js_build_logs_v1(username, domain, uuid, from_line=from_line)
@@ -158,6 +399,176 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**HostingV1NodeJsBuildSettingsResource**](HostingV1NodeJsBuildSettingsResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_node_js_build_settings_v1**
+> HostingV1NodeJsStoredBuildSettingsResource get_node_js_build_settings_v1(username, domain)
+
+Get Node.js build settings
+
+Returns the build settings stored for the website: framework (`app_type`), Node.js version,
+root and output directory, build script, entry file and package manager. Stored settings
+drive Git auto-deployment builds. A build started through the API uses the values sent in
+that request and saves them here only when no settings exist yet.
+
+Returns 404 until the first build or the first settings update stores them. Use this after
+a failed build to check whether the framework or the entry file were detected wrong, then
+fix them with the `Update Node.js build settings` endpoint.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_node_js_stored_build_settings_resource import HostingV1NodeJsStoredBuildSettingsResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+
+    try:
+        # Get Node.js build settings
+        api_response = api_instance.get_node_js_build_settings_v1(username, domain)
+        print("The response of HostingNodeJSApi->get_node_js_build_settings_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->get_node_js_build_settings_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+
+### Return type
+
+[**HostingV1NodeJsStoredBuildSettingsResource**](HostingV1NodeJsStoredBuildSettingsResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_node_js_runtime_logs_v1**
+> HostingV1NodeJsRuntimeLogsResource get_node_js_runtime_logs_v1(username, domain, period=period, from_line=from_line, limit=limit, levels=levels)
+
+Get Node.js runtime logs
+
+Returns the Node.js application's runtime console log entries, oldest first, each with
+timestamp, level and message. On the first call send `period` (`1h`, `1d`, `1w` or `1m`)
+and optionally `levels` and `limit` (1-5000, default 1000); when more entries match than
+`limit`, the newest are kept.
+
+To poll for new entries send `total_lines + 1` from the previous response as `from_line`
+and omit `period`; `period` and `from_line` cannot be combined. Lines that are not JSON
+with a timestamp, level and message are skipped, so `logs` may hold fewer than `limit`
+entries while `total_lines` counts every raw line. Entries with a timestamp before
+`last_deployed_at` belong to the previous deployment. Returns an empty `logs` list when
+the application has not written a log file yet.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_node_js_runtime_logs_resource import HostingV1NodeJsRuntimeLogsResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    period = '1h' # str | Time window for the first fetch. Required when `from_line` is not sent. (optional)
+    from_line = 5042 # int | 1-based line of the log file to start from. For polling send `total_lines + 1` from the previous response. Cannot be combined with `period`. (optional)
+    limit = 1000 # int | Maximum number of log entries to return. When more entries match, the newest are kept. (optional) (default to 1000)
+    levels = ['[\"ERROR\",\"WARN\"]'] # List[str] | Return only entries with these log levels, sent as a comma-separated list, e.g. ERROR,WARN. Matching runs on the raw log line, so entries written with numeric levels (for example by pino) are excluded while this filter is set. (optional)
+
+    try:
+        # Get Node.js runtime logs
+        api_response = api_instance.get_node_js_runtime_logs_v1(username, domain, period=period, from_line=from_line, limit=limit, levels=levels)
+        print("The response of HostingNodeJSApi->get_node_js_runtime_logs_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->get_node_js_runtime_logs_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **period** | **str**| Time window for the first fetch. Required when &#x60;from_line&#x60; is not sent. | [optional] 
+ **from_line** | **int**| 1-based line of the log file to start from. For polling send &#x60;total_lines + 1&#x60; from the previous response. Cannot be combined with &#x60;period&#x60;. | [optional] 
+ **limit** | **int**| Maximum number of log entries to return. When more entries match, the newest are kept. | [optional] [default to 1000]
+ **levels** | [**List[str]**](str.md)| Return only entries with these log levels, sent as a comma-separated list, e.g. ERROR,WARN. Matching runs on the raw log line, so entries written with numeric levels (for example by pino) are excluded while this filter is set. | [optional] 
+
+### Return type
+
+[**HostingV1NodeJsRuntimeLogsResource**](HostingV1NodeJsRuntimeLogsResource.md)
 
 ### Authorization
 
@@ -754,6 +1165,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**HostingV1NodeJsBuildResource**](HostingV1NodeJsBuildResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_node_js_build_settings_v1**
+> HostingV1NodeJsStoredBuildSettingsResource update_node_js_build_settings_v1(username, domain, hosting_v1_node_js_update_build_settings_request)
+
+Update Node.js build settings
+
+Replaces the build settings stored for the website. Send the full set: `node_version` is
+required and every nullable field you omit is stored as null. Creates the settings when
+none exist yet.
+
+This does not start a build. Stored settings drive Git auto-deployment builds; a build
+started through the API uses the values sent in that request, so to rebuild with corrected
+settings call `Start Node.js build` with the same values. Typical fixes: a wrong `app_type`
+after auto-detection, or a missing `entry_file` for express, fastify, nest, nuxt and hono
+apps.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_node_js_stored_build_settings_resource import HostingV1NodeJsStoredBuildSettingsResource
+from hostinger_api.models.hosting_v1_node_js_update_build_settings_request import HostingV1NodeJsUpdateBuildSettingsRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    hosting_v1_node_js_update_build_settings_request = hostinger_api.HostingV1NodeJsUpdateBuildSettingsRequest() # HostingV1NodeJsUpdateBuildSettingsRequest | 
+
+    try:
+        # Update Node.js build settings
+        api_response = api_instance.update_node_js_build_settings_v1(username, domain, hosting_v1_node_js_update_build_settings_request)
+        print("The response of HostingNodeJSApi->update_node_js_build_settings_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->update_node_js_build_settings_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **hosting_v1_node_js_update_build_settings_request** | [**HostingV1NodeJsUpdateBuildSettingsRequest**](HostingV1NodeJsUpdateBuildSettingsRequest.md)|  | 
+
+### Return type
+
+[**HostingV1NodeJsStoredBuildSettingsResource**](HostingV1NodeJsStoredBuildSettingsResource.md)
 
 ### Authorization
 

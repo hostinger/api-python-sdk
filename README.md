@@ -372,6 +372,7 @@ Class | Method | HTTP request | Description
 *VPSFirewallApi* | [**get_firewall_details_v1**](docs/VPSFirewallApi.md#get_firewall_details_v1) | **GET** /api/vps/v1/firewall/{firewallId} | Get firewall details
 *VPSFirewallApi* | [**get_firewall_list_v1**](docs/VPSFirewallApi.md#get_firewall_list_v1) | **GET** /api/vps/v1/firewall | Get firewall list
 *VPSFirewallApi* | [**replace_all_firewall_rules_in_group_v1**](docs/VPSFirewallApi.md#replace_all_firewall_rules_in_group_v1) | **PUT** /api/vps/v1/firewall/{firewallId}/rules | Replace all firewall rules in group
+*VPSFirewallApi* | [**sync_firewall_to_all_assigned_vms_v1**](docs/VPSFirewallApi.md#sync_firewall_to_all_assigned_vms_v1) | **POST** /api/vps/v1/firewall/{firewallId}/sync | Sync firewall to all assigned VMs
 *VPSFirewallApi* | [**sync_firewall_v1**](docs/VPSFirewallApi.md#sync_firewall_v1) | **POST** /api/vps/v1/firewall/{firewallId}/sync/{virtualMachineId} | Sync firewall
 *VPSFirewallApi* | [**update_firewall_rule_v1**](docs/VPSFirewallApi.md#update_firewall_rule_v1) | **PUT** /api/vps/v1/firewall/{firewallId}/rules/{ruleId} | Update firewall rule
 *VPSMalwareScannerApi* | [**get_scan_metrics_v1**](docs/VPSMalwareScannerApi.md#get_scan_metrics_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/monarx | Get scan metrics

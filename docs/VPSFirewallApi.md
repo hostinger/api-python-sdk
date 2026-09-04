@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**get_firewall_details_v1**](VPSFirewallApi.md#get_firewall_details_v1) | **GET** /api/vps/v1/firewall/{firewallId} | Get firewall details
 [**get_firewall_list_v1**](VPSFirewallApi.md#get_firewall_list_v1) | **GET** /api/vps/v1/firewall | Get firewall list
 [**replace_all_firewall_rules_in_group_v1**](VPSFirewallApi.md#replace_all_firewall_rules_in_group_v1) | **PUT** /api/vps/v1/firewall/{firewallId}/rules | Replace all firewall rules in group
+[**sync_firewall_to_all_assigned_vms_v1**](VPSFirewallApi.md#sync_firewall_to_all_assigned_vms_v1) | **POST** /api/vps/v1/firewall/{firewallId}/sync | Sync firewall to all assigned VMs
 [**sync_firewall_v1**](VPSFirewallApi.md#sync_firewall_v1) | **POST** /api/vps/v1/firewall/{firewallId}/sync/{virtualMachineId} | Sync firewall
 [**update_firewall_rule_v1**](VPSFirewallApi.md#update_firewall_rule_v1) | **PUT** /api/vps/v1/firewall/{firewallId}/rules/{ruleId} | Update firewall rule
 
@@ -698,10 +699,88 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **sync_firewall_to_all_assigned_vms_v1**
+> CommonSuccessEmptyResource sync_firewall_to_all_assigned_vms_v1(firewall_id)
+
+Sync firewall to all assigned VMs
+
+Sync a firewall's rules to every virtual machine it's assigned to.
+
+Firewall can lose sync with a virtual machine if the firewall has new rules added, removed or updated.
+
+Use this endpoint to apply updated firewall rules to all VPS instances assigned to the firewall.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.VPSFirewallApi(api_client)
+    firewall_id = 9449049 # int | Firewall ID
+
+    try:
+        # Sync firewall to all assigned VMs
+        api_response = api_instance.sync_firewall_to_all_assigned_vms_v1(firewall_id)
+        print("The response of VPSFirewallApi->sync_firewall_to_all_assigned_vms_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling VPSFirewallApi->sync_firewall_to_all_assigned_vms_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **firewall_id** | **int**| Firewall ID | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **sync_firewall_v1**
 > VPSV1ActionActionResource sync_firewall_v1(firewall_id, virtual_machine_id)
 
 Sync firewall
+
+Deprecated: use `POST /api/vps/v1/firewall/{firewallId}/sync` instead, which syncs the firewall
+to all virtual machines assigned to it.
 
 Sync a firewall for a specified virtual machine.
 

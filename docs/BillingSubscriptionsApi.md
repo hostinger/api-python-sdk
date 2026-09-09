@@ -236,6 +236,9 @@ the existing billing infrastructure. Use the
 
 If no payment method is provided, your default payment method will be used automatically.
 
+If the response is `202 Accepted`, the payment is still being processed and the renewal will
+complete asynchronously once the payment is confirmed.
+
 Use this endpoint to renew any subscription available in your account.
 
 ### Example
@@ -299,6 +302,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
+**202** | Payment is being processed, the order will complete asynchronously |  -  |
 **422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |

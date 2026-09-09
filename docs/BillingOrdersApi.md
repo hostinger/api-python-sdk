@@ -21,6 +21,9 @@ up the `item_id` values available for purchase.
 
 If no payment method is provided, your default payment method will be used automatically.
 
+If the response is `202 Accepted`, the payment is still being processed and the order will
+complete asynchronously once the payment is confirmed.
+
 This endpoint only places the order. Product-specific provisioning
 (e.g. VPS setup or domain registration) is not performed here — once the
 order completes, use the relevant product endpoints or
@@ -87,6 +90,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
+**202** | Payment is being processed, the order will complete asynchronously |  -  |
 **422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |

@@ -701,6 +701,10 @@ If registration fails, login to [hPanel](https://hpanel.hostinger.com/) and chec
 
 If no payment method is provided, your default payment method will be used automatically.
 
+If the response is `202 Accepted`, the payment is still being processed and the domain was
+**not** registered. Once the order completes, register the domain from
+[hPanel](https://hpanel.hostinger.com/).
+
 If no WHOIS information is provided, default contact information for that TLD will be used.
 Before making request, ensure WHOIS information for desired TLD exists in your account.
 
@@ -767,6 +771,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
+**202** | Payment is being processed, the order will complete asynchronously |  -  |
 **422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |

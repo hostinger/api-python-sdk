@@ -153,6 +153,7 @@ Class | Method | HTTP request | Description
 *DomainsMoveApi* | [**reject_incoming_domain_move_v1**](docs/DomainsMoveApi.md#reject_incoming_domain_move_v1) | **DELETE** /api/domains/v1/move/incoming/{domain} | Reject incoming domain move
 *DomainsMoveApi* | [**start_outgoing_domain_move_v1**](docs/DomainsMoveApi.md#start_outgoing_domain_move_v1) | **POST** /api/domains/v1/move/outgoing/{domain} | Start outgoing domain move
 *DomainsPortfolioApi* | [**claim_free_domain_v1**](docs/DomainsPortfolioApi.md#claim_free_domain_v1) | **POST** /api/domains/v1/portfolio/claim | Claim free domain
+*DomainsPortfolioApi* | [**complete_domain_setup_v1**](docs/DomainsPortfolioApi.md#complete_domain_setup_v1) | **POST** /api/domains/v1/portfolio/{domain}/setup | Complete domain setup
 *DomainsPortfolioApi* | [**disable_domain_lock_v1**](docs/DomainsPortfolioApi.md#disable_domain_lock_v1) | **DELETE** /api/domains/v1/portfolio/{domain}/domain-lock | Disable domain lock
 *DomainsPortfolioApi* | [**disable_privacy_protection_v1**](docs/DomainsPortfolioApi.md#disable_privacy_protection_v1) | **DELETE** /api/domains/v1/portfolio/{domain}/privacy-protection | Disable privacy protection
 *DomainsPortfolioApi* | [**enable_domain_lock_v1**](docs/DomainsPortfolioApi.md#enable_domain_lock_v1) | **PUT** /api/domains/v1/portfolio/{domain}/domain-lock | Enable domain lock
@@ -589,6 +590,7 @@ Class | Method | HTTP request | Description
  - [DomainsV1PortfolioClaimResource](docs/DomainsV1PortfolioClaimResource.md)
  - [DomainsV1PortfolioPurchaseRequest](docs/DomainsV1PortfolioPurchaseRequest.md)
  - [DomainsV1PortfolioRenewalRenewalInformationResource](docs/DomainsV1PortfolioRenewalRenewalInformationResource.md)
+ - [DomainsV1PortfolioSetupRequest](docs/DomainsV1PortfolioSetupRequest.md)
  - [DomainsV1PortfolioUpdateNameserversRequest](docs/DomainsV1PortfolioUpdateNameserversRequest.md)
  - [DomainsV1TransferClaimRequest](docs/DomainsV1TransferClaimRequest.md)
  - [DomainsV1TransferTransferResource](docs/DomainsV1TransferTransferResource.md)

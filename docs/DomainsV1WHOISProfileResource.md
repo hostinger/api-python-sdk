@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **tld** | **str** | TLD to which contact profile can be applied to | [optional] 
 **country** | **str** | ISO 3166 2-letter country code | [optional] 
 **entity_type** | **str** | WHOIS profile entity type | [optional] 
+**is_default** | **bool** | Whether the profile is pre-selected when registering new domains of its TLD | [optional] 
 **whois_details** | **object** | WHOIS profile details | [optional] 
 **tld_details** | **object** | TLD details | [optional] 
 **created_at** | **datetime** |  | [optional] 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **build_script** | **str** | Build script that will be ran to build the application | 
 **entry_file** | **str** | The main entry point file for the application | [optional] 
 **package_manager** | **str** | Package manager | [optional] 
-**source_type** | **str** | The source type of the files | 
+**source_type** | **str** | Where the files come from: &#x60;archive&#x60; (an uploaded archive on the website) or &#x60;git&#x60; (a branch of a repository reachable through a Git installation). | 
 **source_options** | [**HostingV1NodeJsStartBuildRequestSourceOptions**](HostingV1NodeJsStartBuildRequestSourceOptions.md) |  | 
 
 ## Example

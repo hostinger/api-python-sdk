@@ -1,11 +1,17 @@
 # HostingV1NodeJsSourceOptionsResource
 
+Which keys carry values depends on the parent source_type; the others are null.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **archive_path** | **str** | Present if sourceType is \&quot;archive\&quot; | [optional] 
+**owner** | **str** | Repository owner login (present if source_type is \&quot;git\&quot;) | 
+**repository** | **str** | Repository name without the .git suffix (present if source_type is \&quot;git\&quot;) | 
+**branch** | **str** | Branch that was built (present if source_type is \&quot;git\&quot;) | 
+**installation_uuid** | **str** | Git installation used to access the repository (present if source_type is \&quot;git\&quot;) | 
+**commit** | [**HostingV1GitGitCommitResource**](HostingV1GitGitCommitResource.md) |  | 
 
 ## Example
 

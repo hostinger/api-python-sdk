@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**list_account_databases_v1**](HostingDatabasesApi.md#list_account_databases_v1) | **GET** /api/hosting/v1/accounts/{username}/databases | List account databases
 [**list_database_remote_connections_v1**](HostingDatabasesApi.md#list_database_remote_connections_v1) | **GET** /api/hosting/v1/accounts/{username}/databases/remote-connections | List database remote connections
 [**repair_database_v1**](HostingDatabasesApi.md#repair_database_v1) | **PATCH** /api/hosting/v1/accounts/{username}/databases/{name}/repair | Repair database
+[**setup_website_database_v1**](HostingDatabasesApi.md#setup_website_database_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/databases/setup | Setup website database
 
 
 # **change_database_password_v1**
@@ -703,6 +704,101 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success empty response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **setup_website_database_v1**
+> HostingV1DatabasesWebsiteDatabaseResource setup_website_database_v1(username, domain, hosting_v1_databases_setup_database_request=hosting_v1_databases_setup_database_request)
+
+Setup website database
+
+Creates a new MySQL database for the website and writes its connection details into the
+website's environment variables, then restarts the application. The platform generates the
+password (and the database name and user, unless supplied). The password is never returned;
+the application reads it from the environment.
+
+Written variables: `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` and
+`DATABASE_URL` (`mysql://user:password@host:port/name`, user and password percent-encoded).
+Existing variables are kept. If the website already has any variable with one of these
+names the call fails with 422 and nothing is created; the `Replace Node.js environment
+variables` endpoint removes them.
+
+After this call the variables are ordinary environment variables: the
+`Replace Node.js environment variables` endpoint changes or removes them like any other.
+
+A restart is enough for apps that read environment variables at process start, such as
+Express or NestJS. Frameworks that bake variables into the build output (Next.js,
+`NEXT_PUBLIC_*`) see the new values only after a fresh build (`Start Node.js build` endpoint).
+
+A password in the request is ignored; the platform always generates it. The optional `name`
+and `user` are identifiers, not secrets.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_databases_setup_database_request import HostingV1DatabasesSetupDatabaseRequest
+from hostinger_api.models.hosting_v1_databases_website_database_resource import HostingV1DatabasesWebsiteDatabaseResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingDatabasesApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    hosting_v1_databases_setup_database_request = hostinger_api.HostingV1DatabasesSetupDatabaseRequest() # HostingV1DatabasesSetupDatabaseRequest |  (optional)
+
+    try:
+        # Setup website database
+        api_response = api_instance.setup_website_database_v1(username, domain, hosting_v1_databases_setup_database_request=hosting_v1_databases_setup_database_request)
+        print("The response of HostingDatabasesApi->setup_website_database_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingDatabasesApi->setup_website_database_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **hosting_v1_databases_setup_database_request** | [**HostingV1DatabasesSetupDatabaseRequest**](HostingV1DatabasesSetupDatabaseRequest.md)|  | [optional] 
+
+### Return type
+
+[**HostingV1DatabasesWebsiteDatabaseResource**](HostingV1DatabasesWebsiteDatabaseResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

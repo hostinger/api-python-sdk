@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | **str** | Domain name for the website. Cannot start with \&quot;www.\&quot; | 
-**order_id** | **int** | ID of the associated order | 
+**order_id** | **int** | Hosting order ID to create this website on. Choose the order whose hosting plan should host the new website. List orders to find available IDs. | 
 **datacenter_code** | **str** | Datacenter code. This parameter is required when creating the first website on a new hosting plan. | [optional] 
 
 ## Example

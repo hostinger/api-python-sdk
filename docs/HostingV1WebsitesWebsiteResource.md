@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | **str** | Website domain. Null for U4S websites with no domain attached. | [optional] 
 **vhost_type** | **str** | Virtual host type. Only present for CloudLinux websites. | [optional] 
-**is_enabled** | **bool** | Whether website is enabled | [optional] 
+**is_enabled** | **bool** | True unless the website is suspended. Not a readiness signal: a website that is still being set up is enabled too, see the list website setups endpoint. | [optional] 
 **username** | **str** | Username. Not applicable for U4S websites. | [optional] 
 **client_id** | **int** | Client ID | [optional] 
 **order_id** | **int** | Order ID | [optional] 

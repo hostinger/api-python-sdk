@@ -282,6 +282,7 @@ Class | Method | HTTP request | Description
 *HostingWebsitesApi* | [**create_website_v1**](docs/HostingWebsitesApi.md#create_website_v1) | **POST** /api/hosting/v1/websites | Create website
 *HostingWebsitesApi* | [**delete_website_v1**](docs/HostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/hosting/v1/websites/{domain} | Delete website
 *HostingWebsitesApi* | [**deploy_static_site_archive_v1**](docs/HostingWebsitesApi.md#deploy_static_site_archive_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/deploy | Deploy static site archive
+*HostingWebsitesApi* | [**list_website_setups_v1**](docs/HostingWebsitesApi.md#list_website_setups_v1) | **GET** /api/hosting/v1/onboardings | List website setups
 *HostingWebsitesApi* | [**list_websites_v1**](docs/HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
 *MailAPITokensApi* | [**create_api_token_v1**](docs/MailAPITokensApi.md#create_api_token_v1) | **POST** /api/mail/v1/orders/{orderId}/api-tokens | Create API token
 *MailAPITokensApi* | [**list_api_tokens_v1**](docs/MailAPITokensApi.md#list_api_tokens_v1) | **GET** /api/mail/v1/api-tokens | List API tokens
@@ -759,6 +760,7 @@ Class | Method | HTTP request | Description
  - [HostingV1NodeJsStoredBuildSettingsResource](docs/HostingV1NodeJsStoredBuildSettingsResource.md)
  - [HostingV1NodeJsUpdateBuildSettingsRequest](docs/HostingV1NodeJsUpdateBuildSettingsRequest.md)
  - [HostingV1NodeJsVulnerabilityResource](docs/HostingV1NodeJsVulnerabilityResource.md)
+ - [HostingV1OnboardingsOnboardingResource](docs/HostingV1OnboardingsOnboardingResource.md)
  - [HostingV1OrdersOrderResource](docs/HostingV1OrdersOrderResource.md)
  - [HostingV1OrdersPlanResource](docs/HostingV1OrdersPlanResource.md)
  - [HostingV1PhpPhpDetailsResource](docs/HostingV1PhpPhpDetailsResource.md)

@@ -17,6 +17,10 @@ Generate upload URL
 Generate a file browser upload URL with authentication credentials
 for uploading files directly to a website's file storage.
 
+While the website is still being set up (`status: running` on the list website setups
+endpoint) this endpoint returns 409 with a `Retry-After` header: wait that many
+seconds and retry, or poll the website setups until the status is `completed`.
+
 Returns `url`, `auth_key` and `rest_auth_key`. Use these to upload a file to the
 website's `public_html` directory via the TUS resumable upload protocol (TUS 1.0.0).
 Send `X-Auth: {auth_key}` and `X-Auth-Rest: {rest_auth_key}` headers on every request
@@ -113,6 +117,7 @@ Name | Type | Description  | Notes
 **200** | Success response |  -  |
 **422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
+**409** | Conflict response. &#x60;Retry-After&#x60;, when present, is the number of seconds to wait before retrying. |  * Retry-After - Seconds to wait before retrying the request <br>  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

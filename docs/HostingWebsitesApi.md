@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**create_website_v1**](HostingWebsitesApi.md#create_website_v1) | **POST** /api/hosting/v1/websites | Create website
 [**delete_website_v1**](HostingWebsitesApi.md#delete_website_v1) | **DELETE** /api/hosting/v1/websites/{domain} | Delete website
 [**deploy_static_site_archive_v1**](HostingWebsitesApi.md#deploy_static_site_archive_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/deploy | Deploy static site archive
+[**list_website_setups_v1**](HostingWebsitesApi.md#list_website_setups_v1) | **GET** /api/hosting/v1/onboardings | List website setups
 [**list_websites_v1**](HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
 
 
@@ -27,8 +28,11 @@ in the selected datacenter.
 
 Subsequent websites will be hosted on the same datacenter automatically.
 
-Website creation takes up to a few minutes to complete. Check the
-websites list endpoint to see when your new website becomes available.
+Website creation is asynchronous and takes up to a few minutes. Poll the list website
+setups endpoint with the `domain` filter every 10 to 15 seconds and wait for `status:
+completed` before uploading files, deploying or creating databases. While the setup is
+`running`, endpoints that operate on the website may respond with `404` or `409`.
+`is_enabled` on the websites list reflects suspension, not readiness.
 
 ### Example
 
@@ -269,6 +273,86 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_website_setups_v1**
+> List[HostingV1OnboardingsOnboardingResource] list_website_setups_v1(domain=domain)
+
+List website setups
+
+Returns the website setups started in the last 24 hours for the hosting accounts
+accessible to the authenticated client, newest first.
+
+Meant for polling right after creating a website: the website shows up in the
+websites list before its server-side setup has finished, and while the setup is
+`running` endpoints that operate on that website may respond with `404` or `409`.
+Poll this endpoint with the `domain` filter every 10 to 15 seconds and wait for
+`status: completed` before uploading files, deploying or creating databases.
+`failed` means the setup stopped before finishing or has not reported progress for
+over an hour. Setups older than 24 hours are not listed.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_onboardings_onboarding_resource import HostingV1OnboardingsOnboardingResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingWebsitesApi(api_client)
+    domain = 'example.com' # str | Filter by domain name (exact match) (optional)
+
+    try:
+        # List website setups
+        api_response = api_instance.list_website_setups_v1(domain=domain)
+        print("The response of HostingWebsitesApi->list_website_setups_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingWebsitesApi->list_website_setups_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **domain** | **str**| Filter by domain name (exact match) | [optional] 
+
+### Return type
+
+[**List[HostingV1OnboardingsOnboardingResource]**](HostingV1OnboardingsOnboardingResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_websites_v1**
 > HostingListWebsitesV1200Response list_websites_v1(page=page, per_page=per_page, username=username, order_id=order_id, is_enabled=is_enabled, domain=domain, website_types=website_types)
 
@@ -292,6 +376,11 @@ WordPress websites (`website_types=wordpress`) or only Node.js websites
 (`website_types=nodejs`). Combine with the other available query parameters to
 filter by username, order ID, enabled status, or domain name for more targeted
 results.
+
+A website appears in this list before its server-side setup has finished, and
+`is_enabled` reflects suspension, not readiness. To know when a newly created website
+is ready for file, deploy or database operations, poll the list website setups
+endpoint instead.
 
 ### Example
 

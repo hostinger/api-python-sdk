@@ -171,6 +171,7 @@ Class | Method | HTTP request | Description
 *DomainsTransferApi* | [**claim_free_domain_transfer_v1**](docs/DomainsTransferApi.md#claim_free_domain_transfer_v1) | **POST** /api/domains/v1/transfers/claim | Claim free domain transfer
 *DomainsTransferApi* | [**get_transfer_list_v1**](docs/DomainsTransferApi.md#get_transfer_list_v1) | **GET** /api/domains/v1/transfers | Get transfer list
 *DomainsTransferApi* | [**get_transfer_v1**](docs/DomainsTransferApi.md#get_transfer_v1) | **GET** /api/domains/v1/transfers/{domain} | Get transfer
+*DomainsTransferApi* | [**start_domain_transfer_v1**](docs/DomainsTransferApi.md#start_domain_transfer_v1) | **POST** /api/domains/v1/transfers | Start domain transfer
 *DomainsWHOISApi* | [**cancel_pending_irtp_verification_v1**](docs/DomainsWHOISApi.md#cancel_pending_irtp_verification_v1) | **DELETE** /api/domains/v1/irtp/{domain} | Cancel pending IRTP verification
 *DomainsWHOISApi* | [**change_whois_profile_for_domain_v1**](docs/DomainsWHOISApi.md#change_whois_profile_for_domain_v1) | **PUT** /api/domains/v1/whois/change | Change WHOIS profile for domain
 *DomainsWHOISApi* | [**create_whois_profile_v1**](docs/DomainsWHOISApi.md#create_whois_profile_v1) | **POST** /api/domains/v1/whois | Create WHOIS profile
@@ -609,6 +610,7 @@ Class | Method | HTTP request | Description
  - [DomainsV1PortfolioSetupRequest](docs/DomainsV1PortfolioSetupRequest.md)
  - [DomainsV1PortfolioUpdateNameserversRequest](docs/DomainsV1PortfolioUpdateNameserversRequest.md)
  - [DomainsV1TransferClaimRequest](docs/DomainsV1TransferClaimRequest.md)
+ - [DomainsV1TransferTransferRequest](docs/DomainsV1TransferTransferRequest.md)
  - [DomainsV1TransferTransferResource](docs/DomainsV1TransferTransferResource.md)
  - [DomainsV1WHOISChangeUpdateRequest](docs/DomainsV1WHOISChangeUpdateRequest.md)
  - [DomainsV1WHOISProfileResource](docs/DomainsV1WHOISProfileResource.md)

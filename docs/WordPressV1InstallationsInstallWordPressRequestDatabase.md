@@ -1,13 +1,13 @@
 # WordPressV1InstallationsInstallWordPressRequestDatabase
 
-Optional. If the named database already exists, it will be used for this WordPress install. Otherwise a new database is created with a generated name and random credentials.
+Optional. If the named database already exists on the account, it is used for this WordPress install. Otherwise a new database is created with this name, or with a generated name when database is omitted or null. A new database gets a random database user and counts toward the plan's database limit.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Database name (username prefix added if missing) | [optional] 
-**password** | **str** |  | [optional] 
+**password** | **str** | Password for a new database. Random when omitted or null. Ignored when the named database already exists. | [optional] 
 
 ## Example
 

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**deploy_static_site_archive_v1**](HostingWebsitesApi.md#deploy_static_site_archive_v1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/deploy | Deploy static site archive
 [**list_website_setups_v1**](HostingWebsitesApi.md#list_website_setups_v1) | **GET** /api/hosting/v1/onboardings | List website setups
 [**list_websites_v1**](HostingWebsitesApi.md#list_websites_v1) | **GET** /api/hosting/v1/websites | List websites
+[**start_website_setup_v1**](HostingWebsitesApi.md#start_website_setup_v1) | **POST** /api/hosting/v1/orders/{order_id}/onboardings | Start website setup
 
 
 # **create_website_v1**
@@ -277,20 +278,24 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_website_setups_v1**
-> List[HostingV1OnboardingsOnboardingResource] list_website_setups_v1(domain=domain)
+> List[HostingV1OnboardingsOnboardingResource] list_website_setups_v1(order_id=order_id, subscription_id=subscription_id, domain=domain)
 
 List website setups
 
 Returns the website setups started in the last 24 hours for the hosting accounts
-accessible to the authenticated client, newest first.
+accessible to the authenticated client, newest first. Narrow the list with the
+`order_id`, `subscription_id` or `domain` filters.
 
-Meant for polling right after creating a website: the website shows up in the
-websites list before its server-side setup has finished, and while the setup is
-`running` endpoints that operate on that website may respond with `404` or `409`.
-Poll this endpoint with the `domain` filter every 10 to 15 seconds and wait for
-`status: completed` before uploading files, deploying or creating databases.
+Meant for polling right after creating a website or starting a website setup: the
+website shows up in the websites list before its server-side setup has finished, and
+while the setup is `running` endpoints that operate on that website may respond with
+`404` or `409`. Poll this endpoint with the `domain` filter every 10 to 15 seconds and
+wait for `status: completed` before uploading files, deploying or creating databases.
 `failed` means the setup stopped before finishing or has not reported progress for
 over an hour. Setups older than 24 hours are not listed.
+
+`type` is the website type the setup was started with (`wordpress`, `headless_wordpress`,
+`headless_ecommerce`, `headless_pocketbase`), or `null` for an empty website.
 
 ### Example
 
@@ -312,11 +317,13 @@ configuration = hostinger_api.Configuration(
 with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.HostingWebsitesApi(api_client)
+    order_id = 123 # int | Order ID (optional)
+    subscription_id = 'sub_abc123' # str | Filter by hosting order subscription ID (optional)
     domain = 'example.com' # str | Filter by domain name (exact match) (optional)
 
     try:
         # List website setups
-        api_response = api_instance.list_website_setups_v1(domain=domain)
+        api_response = api_instance.list_website_setups_v1(order_id=order_id, subscription_id=subscription_id, domain=domain)
         print("The response of HostingWebsitesApi->list_website_setups_v1:\n")
         pprint(api_response)
     except Exception as e:
@@ -330,6 +337,8 @@ with hostinger_api.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **order_id** | **int**| Order ID | [optional] 
+ **subscription_id** | **str**| Filter by hosting order subscription ID | [optional] 
  **domain** | **str**| Filter by domain name (exact match) | [optional] 
 
 ### Return type
@@ -456,6 +465,100 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **start_website_setup_v1**
+> HostingV1OnboardingsOnboardingResource start_website_setup_v1(order_id, hosting_v1_onboardings_start_onboarding_request)
+
+Start website setup
+
+Starts a website setup on a Web or Cloud hosting order and returns the created setup
+right away; the website itself is provisioned asynchronously. Poll the list website
+setups endpoint with the `domain` filter every 10 to 15 seconds and wait for
+`status: completed` before uploading files, deploying or creating databases.
+
+Omit `type` for an empty website. `type: wordpress` installs WordPress in the website
+root with the admin user, email and password from `wordpress`, the domain as the site
+title, and `en_US` when `wordpress.language` is omitted. The headless types
+(`headless_wordpress`, `headless_ecommerce`, `headless_pocketbase`) create a headless
+website; `headless_wordpress` additionally installs WordPress into the `cms` directory
+of the website root with generated credentials.
+
+Omit `domain` to set the website up on a generated temporary free subdomain.
+
+The order must already have a hosting account: to create the first website on a new
+hosting plan use the create website endpoint, which takes the `datacenter_code`.
+Returns 404 when the order does not exist or is not accessible to the authenticated
+client, and 409 with a `Retry-After` header while a setup for the same domain is still
+running.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_onboardings_onboarding_resource import HostingV1OnboardingsOnboardingResource
+from hostinger_api.models.hosting_v1_onboardings_start_onboarding_request import HostingV1OnboardingsStartOnboardingRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingWebsitesApi(api_client)
+    order_id = 12345 # int | Hosting order ID. List orders to find available IDs.
+    hosting_v1_onboardings_start_onboarding_request = hostinger_api.HostingV1OnboardingsStartOnboardingRequest() # HostingV1OnboardingsStartOnboardingRequest | 
+
+    try:
+        # Start website setup
+        api_response = api_instance.start_website_setup_v1(order_id, hosting_v1_onboardings_start_onboarding_request)
+        print("The response of HostingWebsitesApi->start_website_setup_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingWebsitesApi->start_website_setup_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **order_id** | **int**| Hosting order ID. List orders to find available IDs. | 
+ **hosting_v1_onboardings_start_onboarding_request** | [**HostingV1OnboardingsStartOnboardingRequest**](HostingV1OnboardingsStartOnboardingRequest.md)|  | 
+
+### Return type
+
+[**HostingV1OnboardingsOnboardingResource**](HostingV1OnboardingsOnboardingResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**404** | Error response |  -  |
+**409** | Conflict response. &#x60;Retry-After&#x60;, when present, is the number of seconds to wait before retrying. |  * Retry-After - Seconds to wait before retrying the request <br>  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

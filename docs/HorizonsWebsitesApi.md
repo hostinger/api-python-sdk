@@ -356,6 +356,10 @@ Get website
 Get the link for the user to open their website in Hostinger Horizons interface.\n
 Use this tool when the user wants the link to an existing website, or when you need its
 website URL before or after editing it.\n
+`is_in_progress` is true while changes are being generated or the website is being published;
+wait until it is false before publishing. `published_at` is when the website was last published,
+`is_template` is whether its published pages show the "Use template" banner, and
+`has_ecommerce_store` is whether it has an online store.\n
 Websites can be edited with the `Edit website` tool, or by the user in Hostinger Horizons
 interface in the provided website URL.
 
@@ -423,7 +427,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **publish_website_v1**
-> HorizonsV1WebsitesPublishedWebsiteResource publish_website_v1(website_id)
+> HorizonsV1WebsitesPublishedWebsiteResource publish_website_v1(website_id, horizons_v1_websites_publish_website_request=horizons_v1_websites_publish_website_request)
 
 Publish website
 
@@ -431,6 +435,9 @@ Publish a Hostinger Horizons website so its latest changes go live.\n
 Use this tool when the user asks to publish, deploy or make their website live.\n
 This tool starts the publish process and returns the URL the website will be live on.
 Publishing happens asynchronously and takes a few minutes.\n
+Set `is_template` only when the user explicitly asks to share the website as a template:
+true adds a "Use template" banner to its published pages that copies the website into the
+visitor's own account, and false removes it. Leave it out to keep the current setting.\n
 After invoking this tool, your chat reply must be EXACTLY 1 sentence summarizing
 that the website is being published and you should provide the published URL to the user immediately.
 
@@ -440,6 +447,7 @@ that the website is being published and you should provide the published URL to 
 
 ```python
 import hostinger_api
+from hostinger_api.models.horizons_v1_websites_publish_website_request import HorizonsV1WebsitesPublishWebsiteRequest
 from hostinger_api.models.horizons_v1_websites_published_website_resource import HorizonsV1WebsitesPublishedWebsiteResource
 from hostinger_api.rest import ApiException
 from pprint import pprint
@@ -455,10 +463,11 @@ with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.HorizonsWebsitesApi(api_client)
     website_id = '123e4567-e89b-12d3-a456-426614174000' # str | The website ID
+    horizons_v1_websites_publish_website_request = hostinger_api.HorizonsV1WebsitesPublishWebsiteRequest() # HorizonsV1WebsitesPublishWebsiteRequest |  (optional)
 
     try:
         # Publish website
-        api_response = api_instance.publish_website_v1(website_id)
+        api_response = api_instance.publish_website_v1(website_id, horizons_v1_websites_publish_website_request=horizons_v1_websites_publish_website_request)
         print("The response of HorizonsWebsitesApi->publish_website_v1:\n")
         pprint(api_response)
     except Exception as e:
@@ -473,6 +482,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **website_id** | **str**| The website ID | 
+ **horizons_v1_websites_publish_website_request** | [**HorizonsV1WebsitesPublishWebsiteRequest**](HorizonsV1WebsitesPublishWebsiteRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -484,7 +494,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -492,6 +502,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

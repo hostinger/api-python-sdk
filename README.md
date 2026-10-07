@@ -704,6 +704,7 @@ Class | Method | HTTP request | Description
  - [HorizonsV1WebsitesCreatedWebsiteResource](docs/HorizonsV1WebsitesCreatedWebsiteResource.md)
  - [HorizonsV1WebsitesEditWebsiteRequest](docs/HorizonsV1WebsitesEditWebsiteRequest.md)
  - [HorizonsV1WebsitesEditWebsiteRequestMessageInner](docs/HorizonsV1WebsitesEditWebsiteRequestMessageInner.md)
+ - [HorizonsV1WebsitesPublishWebsiteRequest](docs/HorizonsV1WebsitesPublishWebsiteRequest.md)
  - [HorizonsV1WebsitesPublishedWebsiteResource](docs/HorizonsV1WebsitesPublishedWebsiteResource.md)
  - [HorizonsV1WebsitesWebsiteResource](docs/HorizonsV1WebsitesWebsiteResource.md)
  - [HorizonsV1WebsitesWebsiteUrlResource](docs/HorizonsV1WebsitesWebsiteUrlResource.md)

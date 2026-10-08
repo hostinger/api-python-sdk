@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **renewal_price** | **int** | Renewal price in cents | [optional] 
 **is_auto_renewed** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
-**expires_at** | **datetime** |  | [optional] 
-**next_billing_at** | **datetime** |  | [optional] 
+**expires_at** | **datetime** | Final date when the subscription will be or was cancelled and expire. Set when a cancellation is scheduled (e.g. after auto-renewal is disabled) or the subscription is already cancelled; &#x60;null&#x60; otherwise. | [optional] 
+**next_billing_at** | **datetime** | Date when the next charge will happen while the subscription is auto-renewing. Only relevant when &#x60;is_auto_renewed&#x60; is &#x60;true&#x60;; ignore it otherwise. | [optional] 
 
 ## Example
 

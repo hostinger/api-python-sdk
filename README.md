@@ -425,6 +425,9 @@ Class | Method | HTTP request | Description
 *VPSPublicKeysApi* | [**get_public_keys_v1**](docs/VPSPublicKeysApi.md#get_public_keys_v1) | **GET** /api/vps/v1/public-keys | Get public keys
 *VPSRecoveryApi* | [**start_recovery_mode_v1**](docs/VPSRecoveryApi.md#start_recovery_mode_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/recovery | Start recovery mode
 *VPSRecoveryApi* | [**stop_recovery_mode_v1**](docs/VPSRecoveryApi.md#stop_recovery_mode_v1) | **DELETE** /api/vps/v1/virtual-machines/{virtualMachineId}/recovery | Stop recovery mode
+*VPSSSHKeysApi* | [**add_virtual_machine_ssh_keys_v1**](docs/VPSSSHKeysApi.md#add_virtual_machine_ssh_keys_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/ssh-keys | Add virtual machine SSH keys
+*VPSSSHKeysApi* | [**list_virtual_machine_ssh_keys_v1**](docs/VPSSSHKeysApi.md#list_virtual_machine_ssh_keys_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/ssh-keys | List virtual machine SSH keys
+*VPSSSHKeysApi* | [**remove_virtual_machine_ssh_keys_v1**](docs/VPSSSHKeysApi.md#remove_virtual_machine_ssh_keys_v1) | **DELETE** /api/vps/v1/virtual-machines/{virtualMachineId}/ssh-keys | Remove virtual machine SSH keys
 *VPSSnapshotsApi* | [**create_snapshot_v1**](docs/VPSSnapshotsApi.md#create_snapshot_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Create snapshot
 *VPSSnapshotsApi* | [**delete_snapshot_v1**](docs/VPSSnapshotsApi.md#delete_snapshot_v1) | **DELETE** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Delete snapshot
 *VPSSnapshotsApi* | [**get_snapshot_v1**](docs/VPSSnapshotsApi.md#get_snapshot_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Get snapshot
@@ -958,6 +961,9 @@ Class | Method | HTTP request | Description
  - [VPSV1PublicKeyPublicKeyResource](docs/VPSV1PublicKeyPublicKeyResource.md)
  - [VPSV1PublicKeyStoreRequest](docs/VPSV1PublicKeyStoreRequest.md)
  - [VPSV1SnapshotSnapshotResource](docs/VPSV1SnapshotSnapshotResource.md)
+ - [VPSV1SshKeyDestroyRequest](docs/VPSV1SshKeyDestroyRequest.md)
+ - [VPSV1SshKeySshKeyResource](docs/VPSV1SshKeySshKeyResource.md)
+ - [VPSV1SshKeyStoreRequest](docs/VPSV1SshKeyStoreRequest.md)
  - [VPSV1TemplateTemplateResource](docs/VPSV1TemplateTemplateResource.md)
  - [VPSV1VirtualMachineDockerManagerUpRequest](docs/VPSV1VirtualMachineDockerManagerUpRequest.md)
  - [VPSV1VirtualMachineHostnameUpdateRequest](docs/VPSV1VirtualMachineHostnameUpdateRequest.md)

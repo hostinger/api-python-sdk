@@ -15,6 +15,8 @@ Method | HTTP request | Description
 
 Attach public key
 
+Deprecated: use `POST /api/vps/v1/virtual-machines/{virtualMachineId}/ssh-keys` instead.
+
 Attach existing public keys from your account to a specified virtual machine.
 
 Multiple keys can be attached to a single virtual machine.
@@ -93,6 +95,9 @@ Name | Type | Description  | Notes
 
 Create public key
 
+Deprecated: account-level public keys have no direct replacement. Root SSH keys are now managed per
+virtual machine via `POST /api/vps/v1/virtual-machines/{virtualMachineId}/ssh-keys`.
+
 Add a new public key to your account.
 
 Use this endpoint to register SSH keys for VPS authentication.
@@ -167,6 +172,9 @@ Name | Type | Description  | Notes
 
 Delete public key
 
+Deprecated: account-level public keys have no direct replacement. Root SSH keys are now managed per
+virtual machine via `DELETE /api/vps/v1/virtual-machines/{virtualMachineId}/ssh-keys`.
+
 Delete a public key from your account. 
 
 **Deleting public key from account does not remove it from virtual machine** 
@@ -240,6 +248,9 @@ Name | Type | Description  | Notes
 > VPSV1PublicKeyListResponse get_public_keys_v1(page=page)
 
 Get public keys
+
+Deprecated: account-level public keys have no direct replacement. Root SSH keys are now managed per
+virtual machine via `GET /api/vps/v1/virtual-machines/{virtualMachineId}/ssh-keys`.
 
 Retrieve public keys associated with your account.
 

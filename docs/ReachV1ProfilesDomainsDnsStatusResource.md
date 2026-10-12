@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **spf** | [**ReachV1ProfilesDomainsDnsRecordStatus**](ReachV1ProfilesDomainsDnsRecordStatus.md) |  | [optional] 
 **dkim** | [**ReachV1ProfilesDomainsDnsRecordStatus**](ReachV1ProfilesDomainsDnsRecordStatus.md) |  | [optional] 
 **dmarc** | [**ReachV1ProfilesDomainsDnsRecordStatus**](ReachV1ProfilesDomainsDnsRecordStatus.md) |  | [optional] 
+**a** | [**ReachV1ProfilesDomainsDnsRecordStatus**](ReachV1ProfilesDomainsDnsRecordStatus.md) |  | [optional] 
 
 ## Example
 

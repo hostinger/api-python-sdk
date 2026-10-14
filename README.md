@@ -451,6 +451,7 @@ Class | Method | HTTP request | Description
 *VPSVirtualMachineApi* | [**setup_purchased_virtual_machine_v1**](docs/VPSVirtualMachineApi.md#setup_purchased_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/setup | Setup purchased virtual machine
 *VPSVirtualMachineApi* | [**start_virtual_machine_v1**](docs/VPSVirtualMachineApi.md#start_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/start | Start virtual machine
 *VPSVirtualMachineApi* | [**stop_virtual_machine_v1**](docs/VPSVirtualMachineApi.md#stop_virtual_machine_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/stop | Stop virtual machine
+*WordPressAIContentApi* | [**generate_images_v1**](docs/WordPressAIContentApi.md#generate_images_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/{software}/content/images/generate | Generate images
 *WordPressAIToolsApi* | [**set_ai_option_status_v1**](docs/WordPressAIToolsApi.md#set_ai_option_status_v1) | **PATCH** /api/hosting/v1/accounts/{username}/wordpress/{software}/hostinger-plugins/ai-option/status | Set AI option status
 *WordPressAIToolsApi* | [**show_ai_option_status_v1**](docs/WordPressAIToolsApi.md#show_ai_option_status_v1) | **GET** /api/hosting/v1/accounts/{username}/wordpress/{software}/hostinger-plugins/ai-option/status | Show AI option status
 *WordPressInstallationsApi* | [**check_if_word_press_installations_are_valid_v1**](docs/WordPressInstallationsApi.md#check_if_word_press_installations_are_valid_v1) | **POST** /api/hosting/v1/accounts/{username}/wordpress/installations/check-is-valid | Check if WordPress installations are valid
@@ -987,6 +988,8 @@ Class | Method | HTTP request | Description
  - [VPSV1VirtualMachineSetupRequestPublicKey](docs/VPSV1VirtualMachineSetupRequestPublicKey.md)
  - [VPSV1VirtualMachineVirtualMachineResource](docs/VPSV1VirtualMachineVirtualMachineResource.md)
  - [WordPressV1CommonVulnerabilityResource](docs/WordPressV1CommonVulnerabilityResource.md)
+ - [WordPressV1ContentGenerateImagesRequest](docs/WordPressV1ContentGenerateImagesRequest.md)
+ - [WordPressV1ContentGeneratedImagesResource](docs/WordPressV1ContentGeneratedImagesResource.md)
  - [WordPressV1HostingerPluginsAiOptionStatusResource](docs/WordPressV1HostingerPluginsAiOptionStatusResource.md)
  - [WordPressV1HostingerPluginsUpdateAiOptionStatusRequest](docs/WordPressV1HostingerPluginsUpdateAiOptionStatusRequest.md)
  - [WordPressV1InstallationsCheckIsValidRequest](docs/WordPressV1InstallationsCheckIsValidRequest.md)

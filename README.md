@@ -255,6 +255,7 @@ Class | Method | HTTP request | Description
 *HostingGitApi* | [**list_git_installations_v1**](docs/HostingGitApi.md#list_git_installations_v1) | **GET** /api/hosting/v1/git/installations | List Git installations
 *HostingGitApi* | [**list_website_git_repositories_v1**](docs/HostingGitApi.md#list_website_git_repositories_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/git/repositories | List website Git repositories
 *HostingGitApi* | [**update_git_auto_deployment_settings_v1**](docs/HostingGitApi.md#update_git_auto_deployment_settings_v1) | **PUT** /api/hosting/v1/accounts/{username}/websites/{domain}/git/auto-deployments/settings | Update Git auto-deployment settings
+*HostingHeadlessApi* | [**submit_headless_build_report_v1**](docs/HostingHeadlessApi.md#submit_headless_build_report_v1) | **POST** /api/hosting/v1/headless/agent-reports | Submit headless build report
 *HostingNodeJSApi* | [**analyse_failed_node_js_build_v1**](docs/HostingNodeJSApi.md#analyse_failed_node_js_build_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid}/analysis | Analyse failed Node.js build
 *HostingNodeJSApi* | [**clear_node_js_runtime_logs_v1**](docs/HostingNodeJSApi.md#clear_node_js_runtime_logs_v1) | **DELETE** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/runtime-logs | Clear Node.js runtime logs
 *HostingNodeJSApi* | [**get_node_js_build_details_v1**](docs/HostingNodeJSApi.md#get_node_js_build_details_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid} | Get Node.js build details
@@ -761,6 +762,12 @@ Class | Method | HTTP request | Description
  - [HostingV1GitUpdateGitAutoDeploymentSettingsRequest](docs/HostingV1GitUpdateGitAutoDeploymentSettingsRequest.md)
  - [HostingV1GitWebsiteGitRepositoryResource](docs/HostingV1GitWebsiteGitRepositoryResource.md)
  - [HostingV1GitWebsiteGitRepositoryWebhookResource](docs/HostingV1GitWebsiteGitRepositoryWebhookResource.md)
+ - [HostingV1HeadlessAgentReportResource](docs/HostingV1HeadlessAgentReportResource.md)
+ - [HostingV1HeadlessStoreAgentReportRequest](docs/HostingV1HeadlessStoreAgentReportRequest.md)
+ - [HostingV1HeadlessStoreAgentReportRequestConsent](docs/HostingV1HeadlessStoreAgentReportRequestConsent.md)
+ - [HostingV1HeadlessStoreAgentReportRequestInfo](docs/HostingV1HeadlessStoreAgentReportRequestInfo.md)
+ - [HostingV1HeadlessStoreAgentReportRequestRun](docs/HostingV1HeadlessStoreAgentReportRequestRun.md)
+ - [HostingV1HeadlessStoreAgentReportRequestTiming](docs/HostingV1HeadlessStoreAgentReportRequestTiming.md)
  - [HostingV1NodeJsBuildAnalysisResource](docs/HostingV1NodeJsBuildAnalysisResource.md)
  - [HostingV1NodeJsBuildLogsResource](docs/HostingV1NodeJsBuildLogsResource.md)
  - [HostingV1NodeJsBuildOptionsResource](docs/HostingV1NodeJsBuildOptionsResource.md)

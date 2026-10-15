@@ -7,7 +7,8 @@ Website type, domain and WordPress settings for a new website setup
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **str** | Website type. Omit or &#x60;null&#x60; for an empty website. &#x60;wordpress&#x60; installs WordPress in the website root and requires &#x60;wordpress&#x60;. The headless types (&#x60;headless_wordpress&#x60;, &#x60;headless_ecommerce&#x60;, &#x60;headless_pocketbase&#x60;) create a headless website; &#x60;headless_wordpress&#x60; additionally installs WordPress into the &#x60;cms&#x60; directory with generated credentials. | [optional] 
-**domain** | **str** | Customer-owned domain. Cannot start with \&quot;www.\&quot;. Omit or &#x60;null&#x60; to set the website up on a generated temporary free subdomain. | [optional] 
+**domain** | **str** | Customer-owned domain. Cannot start with \&quot;www.\&quot; and can have at most one subdomain level, e.g. &#x60;blog.example.com&#x60;. Omit or &#x60;null&#x60; to set the website up on a generated temporary free subdomain. | [optional] 
+**datacenter_code** | **str** | Datacenter for the hosting account when the order does not have one yet. Omit to use the order&#39;s default datacenter. Ignored when the order already has a hosting account. List available datacenters to find valid codes. | [optional] 
 **wordpress** | [**HostingV1OnboardingsStartOnboardingRequestWordpress**](HostingV1OnboardingsStartOnboardingRequestWordpress.md) |  | [optional] 
 
 ## Example

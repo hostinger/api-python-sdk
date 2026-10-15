@@ -4,22 +4,22 @@ All URIs are relative to *https://developers.hostinger.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_website_scan_v1**](AgentReadinessScansApi.md#get_website_scan_v1) | **GET** /api/agent-readiness/v1/scans/{domain} | Get website scan
-[**run_website_scan_v1**](AgentReadinessScansApi.md#run_website_scan_v1) | **POST** /api/agent-readiness/v1/scans | Run website scan
+[**get_agent_readiness_scan_v1**](AgentReadinessScansApi.md#get_agent_readiness_scan_v1) | **GET** /api/agent-readiness/v1/scans/{domain} | Get agent readiness scan
+[**run_agent_readiness_scan_v1**](AgentReadinessScansApi.md#run_agent_readiness_scan_v1) | **POST** /api/agent-readiness/v1/scans | Run agent readiness scan
 
 
-# **get_website_scan_v1**
-> AgentReadinessV1ScansScanResource get_website_scan_v1(domain)
+# **get_agent_readiness_scan_v1**
+> AgentReadinessV1ScansScanResource get_agent_readiness_scan_v1(domain)
 
-Get website scan
+Get agent readiness scan
 
 Get the latest agent readiness scan of a website.\n
-Scans started with the `Run website scan` operation are asynchronous. While the status is `pending`,
-the result fields are null; wait a few seconds and call this operation again until the status is
+Scans started with the `Run agent readiness scan` operation are asynchronous. While the status is
+`pending`, the result fields are null; wait a few seconds and call this operation again until the status is
 `completed` or `failed`. A `failed` scan is not retried; run the scan again.\n
 A completed scan has a 0-100 score, a letter grade, a score per category, and the result of every
 check with the evidence found and how to fix it. Check names are listed by the `List checks` operation.\n
-Returns 404 when the domain has never been scanned; use the `Run website scan` operation first.
+Returns 404 when the domain has never been scanned; use the `Run agent readiness scan` operation first.
 
 ### Example
 
@@ -44,12 +44,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     domain = 'example.com' # str | Domain name the scan was run for
 
     try:
-        # Get website scan
-        api_response = api_instance.get_website_scan_v1(domain)
-        print("The response of AgentReadinessScansApi->get_website_scan_v1:\n")
+        # Get agent readiness scan
+        api_response = api_instance.get_agent_readiness_scan_v1(domain)
+        print("The response of AgentReadinessScansApi->get_agent_readiness_scan_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgentReadinessScansApi->get_website_scan_v1: %s\n" % e)
+        print("Exception when calling AgentReadinessScansApi->get_agent_readiness_scan_v1: %s\n" % e)
 ```
 
 
@@ -84,15 +84,15 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **run_website_scan_v1**
-> AgentReadinessV1ScansScanResource run_website_scan_v1(agent_readiness_v1_scans_run_scan_request)
+# **run_agent_readiness_scan_v1**
+> AgentReadinessV1ScansScanResource run_agent_readiness_scan_v1(agent_readiness_v1_scans_run_scan_request)
 
-Run website scan
+Run agent readiness scan
 
 Start a scan of how ready a public website is for AI agents to discover, read and act on.\n
 Scanning is asynchronous: this operation only starts the scan, and the returned scan is usually `pending`
-with no results yet. To get the results, poll the `Get website scan` operation with the same domain every
-few seconds until its status is `completed` or `failed`. The scan itself is limited to 60 seconds,
+with no results yet. To get the results, poll the `Get agent readiness scan` operation with the same
+domain every few seconds until its status is `completed` or `failed`. The scan itself is limited to 60 seconds,
 plus any time it waits in the queue. A `failed` scan is not retried; run this operation again.\n
 Starting a scan for a domain that already has a pending scan from the last 5 minutes
 returns that scan instead of starting a new one.
@@ -121,12 +121,12 @@ with hostinger_api.ApiClient(configuration) as api_client:
     agent_readiness_v1_scans_run_scan_request = hostinger_api.AgentReadinessV1ScansRunScanRequest() # AgentReadinessV1ScansRunScanRequest | 
 
     try:
-        # Run website scan
-        api_response = api_instance.run_website_scan_v1(agent_readiness_v1_scans_run_scan_request)
-        print("The response of AgentReadinessScansApi->run_website_scan_v1:\n")
+        # Run agent readiness scan
+        api_response = api_instance.run_agent_readiness_scan_v1(agent_readiness_v1_scans_run_scan_request)
+        print("The response of AgentReadinessScansApi->run_agent_readiness_scan_v1:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AgentReadinessScansApi->run_website_scan_v1: %s\n" % e)
+        print("Exception when calling AgentReadinessScansApi->run_agent_readiness_scan_v1: %s\n" % e)
 ```
 
 

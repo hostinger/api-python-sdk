@@ -123,6 +123,9 @@ Class | Method | HTTP request | Description
 *AgencyHostingWordPressApi* | [**change_word_press_version_v1**](docs/AgencyHostingWordPressApi.md#change_word_press_version_v1) | **PATCH** /api/agency-hosting/v1/websites/{website_uid}/wordpress/settings/version | Change WordPress version
 *AgencyHostingWordPressApi* | [**get_word_press_settings_v1**](docs/AgencyHostingWordPressApi.md#get_word_press_settings_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/wordpress/settings | Get WordPress settings
 *AgencyHostingWordPressApi* | [**list_available_word_press_versions_v1**](docs/AgencyHostingWordPressApi.md#list_available_word_press_versions_v1) | **GET** /api/agency-hosting/v1/websites/{website_uid}/wordpress/settings/versions | List available WordPress versions
+*AgentReadinessChecksApi* | [**list_checks_v1**](docs/AgentReadinessChecksApi.md#list_checks_v1) | **GET** /api/agent-readiness/v1/checks | List checks
+*AgentReadinessScansApi* | [**get_website_scan_v1**](docs/AgentReadinessScansApi.md#get_website_scan_v1) | **GET** /api/agent-readiness/v1/scans/{domain} | Get website scan
+*AgentReadinessScansApi* | [**run_website_scan_v1**](docs/AgentReadinessScansApi.md#run_website_scan_v1) | **POST** /api/agent-readiness/v1/scans | Run website scan
 *BillingCatalogApi* | [**get_catalog_item_list_v1**](docs/BillingCatalogApi.md#get_catalog_item_list_v1) | **GET** /api/billing/v1/catalog | Get catalog item list
 *BillingOrdersApi* | [**create_purchase_order_v1**](docs/BillingOrdersApi.md#create_purchase_order_v1) | **POST** /api/billing/v1/orders | Create purchase order
 *BillingPaymentMethodsApi* | [**delete_payment_method_v1**](docs/BillingPaymentMethodsApi.md#delete_payment_method_v1) | **DELETE** /api/billing/v1/payment-methods/{paymentMethodId} | Delete payment method
@@ -566,6 +569,12 @@ Class | Method | HTTP request | Description
  - [AgencyHostingV1WordPressChangeVersionRequest](docs/AgencyHostingV1WordPressChangeVersionRequest.md)
  - [AgencyHostingV1WordPressSettingsResource](docs/AgencyHostingV1WordPressSettingsResource.md)
  - [AgencyHostingV1WordPressVersionResource](docs/AgencyHostingV1WordPressVersionResource.md)
+ - [AgentReadinessV1ChecksCheckResource](docs/AgentReadinessV1ChecksCheckResource.md)
+ - [AgentReadinessV1ScansCategoriesResource](docs/AgentReadinessV1ScansCategoriesResource.md)
+ - [AgentReadinessV1ScansCategoryScoreResource](docs/AgentReadinessV1ScansCategoryScoreResource.md)
+ - [AgentReadinessV1ScansCheckResultResource](docs/AgentReadinessV1ScansCheckResultResource.md)
+ - [AgentReadinessV1ScansRunScanRequest](docs/AgentReadinessV1ScansRunScanRequest.md)
+ - [AgentReadinessV1ScansScanResource](docs/AgentReadinessV1ScansScanResource.md)
  - [BillingV1CatalogCatalogItemPriceResource](docs/BillingV1CatalogCatalogItemPriceResource.md)
  - [BillingV1CatalogCatalogItemResource](docs/BillingV1CatalogCatalogItemResource.md)
  - [BillingV1OrderOrderBillingAddressResource](docs/BillingV1OrderOrderBillingAddressResource.md)

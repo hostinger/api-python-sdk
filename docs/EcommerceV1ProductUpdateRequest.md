@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **name** | **str** | The product name. | [optional] 
 **description** | **str** | The product description. | [optional] 
 **status** | **str** | Set \&quot;published\&quot; to make the product buyable, \&quot;draft\&quot; to hide it, or \&quot;archived\&quot; to retire it. | [optional] 
+**seo_settings** | [**EcommerceV1ProductUpdateRequestSeoSettings**](EcommerceV1ProductUpdateRequestSeoSettings.md) |  | [optional] 
+**collection_changes** | [**EcommerceV1ProductUpdateRequestCollectionChanges**](EcommerceV1ProductUpdateRequestCollectionChanges.md) |  | [optional] 
 
 ## Example
 

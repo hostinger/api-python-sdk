@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **price** | **int** | Price in the smallest currency unit (e.g. cents). Must be positive. | 
 **description** | **str** | The product description. | [optional] 
 **currency** | **str** | ISO 4217 currency code. Defaults to the store&#39;s default currency when omitted. | [optional] 
+**seo_settings** | [**EcommerceV1ProductCreatePhysicalProductRequestSeoSettings**](EcommerceV1ProductCreatePhysicalProductRequestSeoSettings.md) |  | [optional] 
 
 ## Example
 

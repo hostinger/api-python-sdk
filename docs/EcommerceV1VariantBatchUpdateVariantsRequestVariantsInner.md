@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **variant_id** | **str** | The id of the variant to update. | 
 **title** | **str** | The variant title. | [optional] 
+**sku** | **str** | The variant SKU. | [optional] 
 **inventory_quantity** | **int** | Units in stock. | [optional] 
 **manage_inventory** | **bool** | Whether stock is tracked for this variant. | [optional] 
 **prices** | [**List[EcommerceV1VariantBatchUpdateVariantsRequestVariantsInnerPricesInner]**](EcommerceV1VariantBatchUpdateVariantsRequestVariantsInnerPricesInner.md) | The full list of prices for the variant, replacing the existing ones. A free item is amount: 0. | [optional] 

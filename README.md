@@ -220,6 +220,10 @@ Class | Method | HTTP request | Description
 *HorizonsWebsitesApi* | [**get_website_list_v1**](docs/HorizonsWebsitesApi.md#get_website_list_v1) | **GET** /api/horizons/v1/websites | Get website list
 *HorizonsWebsitesApi* | [**get_website_v1**](docs/HorizonsWebsitesApi.md#get_website_v1) | **GET** /api/horizons/v1/websites/{websiteId} | Get website
 *HorizonsWebsitesApi* | [**publish_website_v1**](docs/HorizonsWebsitesApi.md#publish_website_v1) | **POST** /api/horizons/v1/websites/{websiteId}/publish | Publish website
+*HostingCDNApi* | [**disable_cdnv1**](docs/HostingCDNApi.md#disable_cdnv1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/cdn/disable | Disable CDN
+*HostingCDNApi* | [**enable_cdnv1**](docs/HostingCDNApi.md#enable_cdnv1) | **POST** /api/hosting/v1/accounts/{username}/websites/{domain}/cdn/enable | Enable CDN
+*HostingCDNApi* | [**get_cdn_status_v1**](docs/HostingCDNApi.md#get_cdn_status_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/cdn/status | Get CDN status
+*HostingCDNApi* | [**purge_cdn_cache_v1**](docs/HostingCDNApi.md#purge_cdn_cache_v1) | **DELETE** /api/hosting/v1/accounts/{username}/websites/{domain}/cdn/purge | Purge CDN cache
 *HostingCacheApi* | [**clear_website_cache_v1**](docs/HostingCacheApi.md#clear_website_cache_v1) | **DELETE** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/clear | Clear website cache
 *HostingCacheApi* | [**toggle_cacheless_mode_v1**](docs/HostingCacheApi.md#toggle_cacheless_mode_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cacheless-mode/toggle | Toggle cacheless mode
 *HostingCacheApi* | [**toggle_website_cache_v1**](docs/HostingCacheApi.md#toggle_website_cache_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/toggle | Toggle website cache
@@ -738,6 +742,7 @@ Class | Method | HTTP request | Description
  - [HostingListWebsitesV1200Response](docs/HostingListWebsitesV1200Response.md)
  - [HostingV1CacheToggleCacheRequest](docs/HostingV1CacheToggleCacheRequest.md)
  - [HostingV1CacheToggleCachelessModeRequest](docs/HostingV1CacheToggleCachelessModeRequest.md)
+ - [HostingV1CdnCdnStatusResource](docs/HostingV1CdnCdnStatusResource.md)
  - [HostingV1CronJobsCreateCronJobRequest](docs/HostingV1CronJobsCreateCronJobRequest.md)
  - [HostingV1CronJobsCronJobOutputResource](docs/HostingV1CronJobsCronJobOutputResource.md)
  - [HostingV1CronJobsCronJobResource](docs/HostingV1CronJobsCronJobResource.md)

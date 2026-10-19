@@ -417,19 +417,29 @@ Install WordPress
 Install WordPress on an existing website.
 
 The website must already exist before calling this endpoint. To create a new
-website first, use POST /api/hosting/v1/websites and poll
-GET /api/hosting/v1/websites until it appears.
+website first, use POST /api/hosting/v1/orders/{order_id}/onboardings
+(`hosting_websites_start-setup`) and poll GET /api/hosting/v1/onboardings
+(`hosting_websites_list-setups`) with the `domain` filter until its `status` is
+`completed`.
 
-Call GET /api/hosting/v1/wordpress/installations filtered by username and
-domain before proceeding to check whether WordPress is already installed on
-the target domain/path. If WordPress already exists and `overwrite` is false
-(the default), the async job will fail.
+Send `type: headless` to turn a headless website (for example one created by
+`hosting_websites_start-setup` with `type: headless_empty`) into a headless WordPress
+website: WordPress is installed into the `cms` directory with the Hostinger headless
+MU plugin and the website is marked as a headless WordPress website. `directory` is
+not allowed with it. The target website must already be headless: the headless
+install rewrites the root `.htaccess`, so on any other website the request is
+rejected with 422.
+
+Call GET /api/hosting/v1/wordpress/installations (`wordpress_installations_list`)
+filtered by username and domain before proceeding to check whether WordPress is
+already installed on the target domain/path. If WordPress already exists and
+`overwrite` is false (the default), the async job will fail.
 
 This operation is asynchronous: a successful response only means the install
 job has been queued, not that WordPress is ready. Installation typically
-takes 1-2 minutes. Poll GET /api/hosting/v1/wordpress/installations filtered
-by username and domain to track progress. When the installation appears in
-that list, WordPress is ready.
+takes 1-2 minutes. Poll GET /api/hosting/v1/wordpress/installations
+(`wordpress_installations_list`) filtered by username and domain to track
+progress. When the installation appears in that list, WordPress is ready.
 
 Returns 422 when the account already uses all the databases its plan allows,
 unless `database.name` is an existing database on the account.

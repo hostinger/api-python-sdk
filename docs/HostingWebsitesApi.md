@@ -297,8 +297,9 @@ wait for `status: completed` before uploading files, deploying or creating datab
 `failed` means the setup stopped before finishing or has not reported progress for
 over an hour. Setups older than 24 hours are not listed.
 
-`type` is the website type the setup was started with (`wordpress`, `headless_wordpress`,
-`headless_ecommerce`, `headless_pocketbase`), or `null` for an empty website.
+`type` is the website type the setup was started with (`wordpress`, `headless_empty`,
+`headless_wordpress`, `headless_ecommerce`, `headless_pocketbase`), or `null` for an empty
+website.
 
 ### Example
 
@@ -479,17 +480,25 @@ Start website setup
 
 Starts a website setup on a Web or Cloud hosting order and returns the created setup
 right away; the website itself is provisioned asynchronously. Poll the list website
-setups endpoint with the `domain` filter every 10 to 15 seconds and wait for
-`status: completed` before uploading files, deploying or creating databases.
+setups endpoint (`hosting_websites_list-setups`) with the `domain` filter every 10 to 15
+seconds and wait for `status: completed` before uploading files, deploying or creating
+databases.
 
 Omit `type` for an empty website. `type: wordpress` installs WordPress in the website
 root with the admin user, email and password from `wordpress`, the domain as the site
 title, and `en_US` when `wordpress.language` is omitted. The headless types
-(`headless_wordpress`, `headless_ecommerce`, `headless_pocketbase`) create a headless
-website; `headless_wordpress` additionally installs WordPress into the `cms` directory
-of the website root with generated credentials.
+(`headless_empty`, `headless_wordpress`, `headless_ecommerce`, `headless_pocketbase`)
+create a headless website; `headless_wordpress` additionally installs WordPress into the
+`cms` directory of the website root with generated credentials. `headless_empty` installs
+nothing: WordPress can be added later through
+`POST /api/hosting/v1/accounts/{username}/wordpress/installations`
+(`wordpress_installations_install`) with `type: headless`.
 
-Omit `domain` to set the website up on a generated temporary free subdomain.
+Omit `domain` to set the website up on a generated temporary free subdomain. To know the
+free subdomain before the call, so a timed-out call can be looked up and retried on the
+same domain, generate one through `POST /api/hosting/v1/domains/free-subdomains`
+(`hosting_domains_generate-free-subdomain`) and send it as `domain`. It is accepted for
+24 hours, only from the client that generated it.
 
 When the order has no hosting account yet, the setup creates one first, in the datacenter
 given by `datacenter_code` or the order's default datacenter when it is omitted.

@@ -357,9 +357,15 @@ Class | Method | HTTP request | Description
 *ReachContactsApi* | [**list_contacts_v1**](docs/ReachContactsApi.md#list_contacts_v1) | **GET** /api/reach/v1/contacts | List contacts
 *ReachContactsApi* | [**list_profile_contacts_v1**](docs/ReachContactsApi.md#list_profile_contacts_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/contacts | List profile contacts
 *ReachContactsApi* | [**update_a_contact_v1**](docs/ReachContactsApi.md#update_a_contact_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/contacts/{contactUuid} | Update a contact
+*ReachFormsApi* | [**add_form_submitter_tags_v1**](docs/ReachFormsApi.md#add_form_submitter_tags_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid}/tags | Add form submitter tags
+*ReachFormsApi* | [**create_form_v1**](docs/ReachFormsApi.md#create_form_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/forms | Create form
 *ReachFormsApi* | [**delete_form_v1**](docs/ReachFormsApi.md#delete_form_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid} | Delete form
+*ReachFormsApi* | [**duplicate_form_v1**](docs/ReachFormsApi.md#duplicate_form_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid}/duplicate | Duplicate form
 *ReachFormsApi* | [**get_form_details_v1**](docs/ReachFormsApi.md#get_form_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid} | Get form details
 *ReachFormsApi* | [**list_forms_v1**](docs/ReachFormsApi.md#list_forms_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/forms | List forms
+*ReachFormsApi* | [**remove_form_submitter_tag_v1**](docs/ReachFormsApi.md#remove_form_submitter_tag_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid}/tags | Remove form submitter tag
+*ReachFormsApi* | [**update_form_template_v1**](docs/ReachFormsApi.md#update_form_template_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid}/template | Update form template
+*ReachFormsApi* | [**update_form_v1**](docs/ReachFormsApi.md#update_form_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid} | Update form
 *ReachProfilesApi* | [**connect_sending_domain_v1**](docs/ReachProfilesApi.md#connect_sending_domain_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/domains | Connect sending domain
 *ReachProfilesApi* | [**delete_sending_domain_v1**](docs/ReachProfilesApi.md#delete_sending_domain_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/domains | Delete sending domain
 *ReachProfilesApi* | [**get_connected_sending_domain_v1**](docs/ReachProfilesApi.md#get_connected_sending_domain_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/domains | Get connected sending domain
@@ -943,11 +949,17 @@ Class | Method | HTTP request | Description
  - [ReachV1ContactsTagsUpdateRequest](docs/ReachV1ContactsTagsUpdateRequest.md)
  - [ReachV1ContactsUpdateRequest](docs/ReachV1ContactsUpdateRequest.md)
  - [ReachV1ContactsUpdateRequestFieldsInner](docs/ReachV1ContactsUpdateRequestFieldsInner.md)
+ - [ReachV1FormsAssignTagsRequest](docs/ReachV1FormsAssignTagsRequest.md)
  - [ReachV1FormsFormDetailsResource](docs/ReachV1FormsFormDetailsResource.md)
  - [ReachV1FormsFormResource](docs/ReachV1FormsFormResource.md)
  - [ReachV1FormsFormTagResource](docs/ReachV1FormsFormTagResource.md)
  - [ReachV1FormsFormTemplateDetailsResource](docs/ReachV1FormsFormTemplateDetailsResource.md)
  - [ReachV1FormsFormTemplateResource](docs/ReachV1FormsFormTemplateResource.md)
+ - [ReachV1FormsFormTemplateVersionResource](docs/ReachV1FormsFormTemplateVersionResource.md)
+ - [ReachV1FormsRemoveTagRequest](docs/ReachV1FormsRemoveTagRequest.md)
+ - [ReachV1FormsStoreRequest](docs/ReachV1FormsStoreRequest.md)
+ - [ReachV1FormsUpdateRequest](docs/ReachV1FormsUpdateRequest.md)
+ - [ReachV1FormsUpdateTemplateRequest](docs/ReachV1FormsUpdateTemplateRequest.md)
  - [ReachV1ProfilesDomainsConnectRequest](docs/ReachV1ProfilesDomainsConnectRequest.md)
  - [ReachV1ProfilesDomainsDisconnectRequest](docs/ReachV1ProfilesDomainsDisconnectRequest.md)
  - [ReachV1ProfilesDomainsDnsRecordStatus](docs/ReachV1ProfilesDomainsDnsRecordStatus.md)

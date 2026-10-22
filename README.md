@@ -268,6 +268,7 @@ Class | Method | HTTP request | Description
 *HostingNodeJSApi* | [**get_node_js_build_details_v1**](docs/HostingNodeJSApi.md#get_node_js_build_details_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid} | Get Node.js build details
 *HostingNodeJSApi* | [**get_node_js_build_logs_v1**](docs/HostingNodeJSApi.md#get_node_js_build_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid}/logs | Get NodeJS build logs
 *HostingNodeJSApi* | [**get_node_js_build_settings_from_archive_v1**](docs/HostingNodeJSApi.md#get_node_js_build_settings_from_archive_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/from-archive | Get Node.js build settings from archive
+*HostingNodeJSApi* | [**get_node_js_build_settings_from_repository_v1**](docs/HostingNodeJSApi.md#get_node_js_build_settings_from_repository_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/from-repository | Get Node.js build settings from repository
 *HostingNodeJSApi* | [**get_node_js_build_settings_v1**](docs/HostingNodeJSApi.md#get_node_js_build_settings_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings | Get Node.js build settings
 *HostingNodeJSApi* | [**get_node_js_runtime_logs_v1**](docs/HostingNodeJSApi.md#get_node_js_runtime_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/runtime-logs | Get Node.js runtime logs
 *HostingNodeJSApi* | [**list_node_js_builds_v1**](docs/HostingNodeJSApi.md#list_node_js_builds_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | List NodeJS builds
@@ -800,6 +801,7 @@ Class | Method | HTTP request | Description
  - [HostingV1NodeJsBuildSettingsResource](docs/HostingV1NodeJsBuildSettingsResource.md)
  - [HostingV1NodeJsCreateFromArchiveRequest](docs/HostingV1NodeJsCreateFromArchiveRequest.md)
  - [HostingV1NodeJsEnvVarResource](docs/HostingV1NodeJsEnvVarResource.md)
+ - [HostingV1NodeJsGetBuildSettingsFromRepositoryRequest](docs/HostingV1NodeJsGetBuildSettingsFromRepositoryRequest.md)
  - [HostingV1NodeJsGetBuildSettingsRequest](docs/HostingV1NodeJsGetBuildSettingsRequest.md)
  - [HostingV1NodeJsLogEntryResource](docs/HostingV1NodeJsLogEntryResource.md)
  - [HostingV1NodeJsPatchResultResource](docs/HostingV1NodeJsPatchResultResource.md)

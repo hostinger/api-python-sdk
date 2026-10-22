@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_node_js_build_details_v1**](HostingNodeJSApi.md#get_node_js_build_details_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid} | Get Node.js build details
 [**get_node_js_build_logs_v1**](HostingNodeJSApi.md#get_node_js_build_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/{uuid}/logs | Get NodeJS build logs
 [**get_node_js_build_settings_from_archive_v1**](HostingNodeJSApi.md#get_node_js_build_settings_from_archive_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/from-archive | Get Node.js build settings from archive
+[**get_node_js_build_settings_from_repository_v1**](HostingNodeJSApi.md#get_node_js_build_settings_from_repository_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings/from-repository | Get Node.js build settings from repository
 [**get_node_js_build_settings_v1**](HostingNodeJSApi.md#get_node_js_build_settings_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds/settings | Get Node.js build settings
 [**get_node_js_runtime_logs_v1**](HostingNodeJSApi.md#get_node_js_runtime_logs_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/runtime-logs | Get Node.js runtime logs
 [**list_node_js_builds_v1**](HostingNodeJSApi.md#list_node_js_builds_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/nodejs/builds | List NodeJS builds
@@ -395,6 +396,95 @@ Name | Type | Description  | Notes
  **username** | **str**|  | 
  **domain** | **str**| Domain name | 
  **archive_path** | **str**| The path to the archive file relative to the document root of the vhost | 
+
+### Return type
+
+[**HostingV1NodeJsBuildSettingsResource**](HostingV1NodeJsBuildSettingsResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_node_js_build_settings_from_repository_v1**
+> HostingV1NodeJsBuildSettingsResource get_node_js_build_settings_from_repository_v1(username, domain, owner, repository, branch, installation_uuid)
+
+Get Node.js build settings from repository
+
+Determine the build settings for a Node.js application from the package.json file of a branch
+in a Git repository. Use before starting a Git-source build to find out the auto-detected
+settings instead of guessing them.
+
+The repository is read through a Git installation: take `installation_uuid` from
+`List Git installations` and `owner` and `repository` from `List Git installation repositories`.
+
+Returns 422 when the installation is not found, the repository or branch is not found, or
+the branch has no package.json.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_node_js_build_settings_resource import HostingV1NodeJsBuildSettingsResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingNodeJSApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+    owner = 'octocat' # str | Repository owner login. GitLab group paths use slashes.
+    repository = 'my-site' # str | Repository name without the .git suffix
+    branch = 'main' # str | Branch whose package.json is inspected
+    installation_uuid = '018f5e2a-1234-7890-abcd-1234567890ab' # str | Git installation used to access the repository, taken from `List Git installations`
+
+    try:
+        # Get Node.js build settings from repository
+        api_response = api_instance.get_node_js_build_settings_from_repository_v1(username, domain, owner, repository, branch, installation_uuid)
+        print("The response of HostingNodeJSApi->get_node_js_build_settings_from_repository_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingNodeJSApi->get_node_js_build_settings_from_repository_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+ **owner** | **str**| Repository owner login. GitLab group paths use slashes. | 
+ **repository** | **str**| Repository name without the .git suffix | 
+ **branch** | **str**| Branch whose package.json is inspected | 
+ **installation_uuid** | **str**| Git installation used to access the repository, taken from &#x60;List Git installations&#x60; | 
 
 ### Return type
 

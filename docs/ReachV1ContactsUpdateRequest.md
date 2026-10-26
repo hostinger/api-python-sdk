@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **phone** | **str** | Phone number in E.164 format (leading \&quot;+\&quot; then 7-15 digits) | [optional] 
 **subscription_status** | **str** |  | [optional] 
 **note** | **str** |  | [optional] 
-**fields** | [**List[ReachV1ContactsUpdateRequestFieldsInner]**](ReachV1ContactsUpdateRequestFieldsInner.md) | Set custom field values. Omit to leave untouched, send an empty array to clear them all. | [optional] 
+**fields** | [**List[ReachV1ContactsBulkStoreRequestContactsInnerFieldsInner]**](ReachV1ContactsBulkStoreRequestContactsInnerFieldsInner.md) | Set custom field values. Omit to leave untouched, send an empty array to clear them all. | [optional] 
 
 ## Example
 

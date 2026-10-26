@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **phone** | **str** | Phone number in E.164 format (leading \&quot;+\&quot; then 7-15 digits) | [optional] 
 **note** | **str** |  | [optional] 
 **tag_uuids** | **List[str]** | Existing tags to attach to the created contact | [optional] 
+**fields** | [**List[ReachV1ContactsBulkStoreRequestContactsInnerFieldsInner]**](ReachV1ContactsBulkStoreRequestContactsInnerFieldsInner.md) | Custom field values to set on the contact. When a contact with this email already exists, only fields that have no value yet are filled. Unknown field UUIDs and values that do not match the field type are skipped. | [optional] 
 
 ## Example
 

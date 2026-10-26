@@ -20,7 +20,10 @@ typing-extensions = ">= 4.7.1"
 pytest = ">= 9.0.3"
 pytest-cov = ">= 2.8.1"
 tox = ">= 3.9.0"
-filelock = ">= 3.20.3"
+filelock = [
+  { version = ">= 4.2.1", python = ">= 3.11" },
+  { version = ">= 3.20.3", python = "< 3.11" },
+]
 flake8 = ">= 4.0.0"
 types-python-dateutil = ">= 2.8.19.14"
 mypy = ">= 1.5"

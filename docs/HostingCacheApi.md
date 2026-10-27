@@ -5,6 +5,7 @@ All URIs are relative to *https://developers.hostinger.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**clear_website_cache_v1**](HostingCacheApi.md#clear_website_cache_v1) | **DELETE** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/clear | Clear website cache
+[**get_cache_status_v1**](HostingCacheApi.md#get_cache_status_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/status | Get cache status
 [**toggle_cacheless_mode_v1**](HostingCacheApi.md#toggle_cacheless_mode_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cacheless-mode/toggle | Toggle cacheless mode
 [**toggle_website_cache_v1**](HostingCacheApi.md#toggle_website_cache_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/toggle | Toggle website cache
 
@@ -88,6 +89,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_cache_status_v1**
+> HostingV1CacheCacheStatusResource get_cache_status_v1(username, domain)
+
+Get cache status
+
+Returns the caching state of the website: whether server-side caching is enabled and whether
+development (cacheless) mode is on. Works for the main domain, addon websites, parked domains
+and subdomains of the account; each reports its own settings and does not inherit them from
+its parent website.
+
+`is_enabled` is the setting changed by `Toggle website cache` and reflects a toggle
+immediately. `is_cacheless_mode_enabled` is true while development mode is on; caching is then
+bypassed even when `is_enabled` is true. `Toggle cacheless mode` is applied in the background,
+so this flag can take a few minutes to follow it.
+
+The domain must be the exact website name as listed on the account, without a `www.` prefix.
+Returns 404 when the domain is not a website on the account.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.hosting_v1_cache_cache_status_resource import HostingV1CacheCacheStatusResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.HostingCacheApi(api_client)
+    username = 'u123456789' # str | 
+    domain = 'mydomain.tld' # str | Domain name
+
+    try:
+        # Get cache status
+        api_response = api_instance.get_cache_status_v1(username, domain)
+        print("The response of HostingCacheApi->get_cache_status_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling HostingCacheApi->get_cache_status_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **domain** | **str**| Domain name | 
+
+### Return type
+
+[**HostingV1CacheCacheStatusResource**](HostingV1CacheCacheStatusResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **toggle_cacheless_mode_v1**
 > CommonSuccessEmptyResource toggle_cacheless_mode_v1(username, domain, hosting_v1_cache_toggle_cacheless_mode_request)
 
@@ -97,6 +181,9 @@ Turns development (cacheless) mode on or off, based on the enabled flag. When en
 is cached, effectively turning off all caching for the website; use it while actively developing,
 testing changes, debugging issues, or when real-time updates must be visible. Disable it after
 finishing development work to restore the performance benefits of caching.
+
+The change is applied in the background and can take a few minutes. Use `Get cache status` to
+check the current state.
 
 ### Example
 
@@ -177,7 +264,8 @@ faster page loads, reduced server load, and improved user experience; recommende
 websites. Disabling may impact performance; to temporarily bypass caching while developing or
 debugging, prefer toggling cacheless mode instead.
 
-Does nothing if caching is already in the requested state.
+Does nothing if caching is already in the requested state. Use `Get cache status` to check the
+current state.
 
 ### Example
 

@@ -225,6 +225,7 @@ Class | Method | HTTP request | Description
 *HostingCDNApi* | [**get_cdn_status_v1**](docs/HostingCDNApi.md#get_cdn_status_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/cdn/status | Get CDN status
 *HostingCDNApi* | [**purge_cdn_cache_v1**](docs/HostingCDNApi.md#purge_cdn_cache_v1) | **DELETE** /api/hosting/v1/accounts/{username}/websites/{domain}/cdn/purge | Purge CDN cache
 *HostingCacheApi* | [**clear_website_cache_v1**](docs/HostingCacheApi.md#clear_website_cache_v1) | **DELETE** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/clear | Clear website cache
+*HostingCacheApi* | [**get_cache_status_v1**](docs/HostingCacheApi.md#get_cache_status_v1) | **GET** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/status | Get cache status
 *HostingCacheApi* | [**toggle_cacheless_mode_v1**](docs/HostingCacheApi.md#toggle_cacheless_mode_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cacheless-mode/toggle | Toggle cacheless mode
 *HostingCacheApi* | [**toggle_website_cache_v1**](docs/HostingCacheApi.md#toggle_website_cache_v1) | **PATCH** /api/hosting/v1/accounts/{username}/websites/{domain}/cache/toggle | Toggle website cache
 *HostingCronJobsApi* | [**create_account_cron_job_v1**](docs/HostingCronJobsApi.md#create_account_cron_job_v1) | **POST** /api/hosting/v1/accounts/{username}/cron-jobs | Create account cron job
@@ -754,6 +755,7 @@ Class | Method | HTTP request | Description
  - [HostingListOrdersV1200Response](docs/HostingListOrdersV1200Response.md)
  - [HostingListWebsiteRedirectsV1200Response](docs/HostingListWebsiteRedirectsV1200Response.md)
  - [HostingListWebsitesV1200Response](docs/HostingListWebsitesV1200Response.md)
+ - [HostingV1CacheCacheStatusResource](docs/HostingV1CacheCacheStatusResource.md)
  - [HostingV1CacheToggleCacheRequest](docs/HostingV1CacheToggleCacheRequest.md)
  - [HostingV1CacheToggleCachelessModeRequest](docs/HostingV1CacheToggleCachelessModeRequest.md)
  - [HostingV1CdnCdnStatusResource](docs/HostingV1CdnCdnStatusResource.md)

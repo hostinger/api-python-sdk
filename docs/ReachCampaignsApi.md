@@ -97,7 +97,8 @@ Get a single campaign with its sender, subject, template reference, targeting an
 progress.
 
 This describes how the campaign was set up and how far it has got. For opens, clicks and
-unsubscribes use the campaign statistics endpoint.
+unsubscribes use the campaign statistics endpoint. The email content is not included: pass
+`template_uuid` to the get email template endpoint to read its HTML.
 
 ### Example
 

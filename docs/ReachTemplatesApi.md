@@ -5,6 +5,7 @@ All URIs are relative to *https://developers.hostinger.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_an_email_template_v1**](ReachTemplatesApi.md#create_an_email_template_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/templates | Create an email template
+[**get_email_template_v1**](ReachTemplatesApi.md#get_email_template_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/templates/{templateUuid} | Get email template
 [**list_email_templates_v1**](ReachTemplatesApi.md#list_email_templates_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/templates | List email templates
 
 
@@ -86,6 +87,83 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_email_template_v1**
+> ReachV1TemplatesTemplateDetailsResource get_email_template_v1(profile_uuid, template_uuid)
+
+Get email template
+
+Get one email template of the profile with its full HTML in `template_content`.
+
+A campaign's email content is its template: to read what a campaign sends, get the campaign
+and pass its `template_uuid` here. The HTML can be large, so fetch it only when the content
+itself is needed, never to browse or pick templates - the list email templates endpoint does
+that without content. Personalization tags such as `{{name}}` come back unrendered.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.reach_v1_templates_template_details_resource import ReachV1TemplatesTemplateDetailsResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.ReachTemplatesApi(api_client)
+    profile_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Profile uuid parameter
+    template_uuid = '550e8400-e29b-41d4-a716-446655440000' # str | Template uuid parameter
+
+    try:
+        # Get email template
+        api_response = api_instance.get_email_template_v1(profile_uuid, template_uuid)
+        print("The response of ReachTemplatesApi->get_email_template_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ReachTemplatesApi->get_email_template_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_uuid** | **str**| Profile uuid parameter | 
+ **template_uuid** | **str**| Template uuid parameter | 
+
+### Return type
+
+[**ReachV1TemplatesTemplateDetailsResource**](ReachV1TemplatesTemplateDetailsResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_email_templates_v1**
 > List[ReachV1TemplatesTemplateResource] list_email_templates_v1(profile_uuid)
 
@@ -94,8 +172,9 @@ List email templates
 Get a list of the email templates in a profile, most recently updated first.
 
 Templates are the reusable email bodies a campaign is built from. The list is not paginated
-and only the metadata is returned - the template content itself is not exposed. Use the
-`uuid` of a template as the `template_uuid` when creating a campaign.
+and only the metadata is returned, without the HTML content. Use the `uuid` of a template
+as the `template_uuid` when creating a campaign. To read one template's HTML use the get
+email template endpoint, and only when the content itself is needed.
 
 ### Example
 

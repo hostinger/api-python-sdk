@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hostinger_api"
-version = "4.4.3"
+version = "4.4.4"
 description = "Hostinger API"
 authors = ["Hostinger <devs@hostinger.com>"]
 license = "MIT"

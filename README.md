@@ -369,6 +369,7 @@ Class | Method | HTTP request | Description
 *ReachFormsApi* | [**update_form_template_v1**](docs/ReachFormsApi.md#update_form_template_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid}/template | Update form template
 *ReachFormsApi* | [**update_form_v1**](docs/ReachFormsApi.md#update_form_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/forms/{formUuid} | Update form
 *ReachIntegrationsApi* | [**connect_ai_website_builder_site_v1**](docs/ReachIntegrationsApi.md#connect_ai_website_builder_site_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/websites/website-builder | Connect AI Website Builder site
+*ReachIntegrationsApi* | [**connect_ecommerce_store_v1**](docs/ReachIntegrationsApi.md#connect_ecommerce_store_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/ecommerce/stores/{storeId} | Connect Ecommerce store
 *ReachIntegrationsApi* | [**disconnect_ai_website_builder_site_v1**](docs/ReachIntegrationsApi.md#disconnect_ai_website_builder_site_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/websites/website-builder | Disconnect AI Website Builder site
 *ReachIntegrationsApi* | [**disconnect_ecommerce_store_v1**](docs/ReachIntegrationsApi.md#disconnect_ecommerce_store_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/ecommerce/stores/{storeId} | Disconnect Ecommerce store
 *ReachIntegrationsApi* | [**disconnect_word_press_site_v1**](docs/ReachIntegrationsApi.md#disconnect_word_press_site_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/websites/wordpress | Disconnect WordPress site
@@ -990,6 +991,8 @@ Class | Method | HTTP request | Description
  - [ReachV1ProfilesProfileResourceProfilesInner](docs/ReachV1ProfilesProfileResourceProfilesInner.md)
  - [ReachV1ProfilesSettingsSettingsResource](docs/ReachV1ProfilesSettingsSettingsResource.md)
  - [ReachV1ProfilesSettingsUpdateRequest](docs/ReachV1ProfilesSettingsUpdateRequest.md)
+ - [ReachV1StoresConnectionResource](docs/ReachV1StoresConnectionResource.md)
+ - [ReachV1StoresConnectionResourceStore](docs/ReachV1StoresConnectionResourceStore.md)
  - [ReachV1StoresStoreResource](docs/ReachV1StoresStoreResource.md)
  - [ReachV1StoresStoreResourceSalesChannelsInner](docs/ReachV1StoresStoreResourceSalesChannelsInner.md)
  - [ReachV1TemplatesStoreRequest](docs/ReachV1TemplatesStoreRequest.md)

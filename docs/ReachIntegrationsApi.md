@@ -5,6 +5,7 @@ All URIs are relative to *https://developers.hostinger.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**connect_ai_website_builder_site_v1**](ReachIntegrationsApi.md#connect_ai_website_builder_site_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/websites/website-builder | Connect AI Website Builder site
+[**connect_ecommerce_store_v1**](ReachIntegrationsApi.md#connect_ecommerce_store_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/ecommerce/stores/{storeId} | Connect Ecommerce store
 [**disconnect_ai_website_builder_site_v1**](ReachIntegrationsApi.md#disconnect_ai_website_builder_site_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/websites/website-builder | Disconnect AI Website Builder site
 [**disconnect_ecommerce_store_v1**](ReachIntegrationsApi.md#disconnect_ecommerce_store_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/ecommerce/stores/{storeId} | Disconnect Ecommerce store
 [**disconnect_word_press_site_v1**](ReachIntegrationsApi.md#disconnect_word_press_site_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/websites/wordpress | Disconnect WordPress site
@@ -90,6 +91,87 @@ Name | Type | Description  | Notes
 **200** | Success empty response |  -  |
 **401** | Unauthenticated response |  -  |
 **422** | Validation error response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **connect_ecommerce_store_v1**
+> ReachV1StoresConnectionResource connect_ecommerce_store_v1(profile_uuid, store_id)
+
+Connect Ecommerce store
+
+Connect one of the customer's eCommerce stores to the profile, so Reach receives its
+customers and orders.
+
+Take `store_id` from the list eCommerce stores endpoint. Fails with not found
+(`ECOMMERCE_STORE_NOT_FOUND`) when the store is not one of the customer's own stores, also
+when the eCommerce service cannot be reached. Fails with a conflict
+(`ECOMMERCE_CONNECTION_ALREADY_EXISTS`) when the store is connected to any profile or this
+profile already has a store - to move a store to another plan, disconnect it from the
+profile that holds it first.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.reach_v1_stores_connection_resource import ReachV1StoresConnectionResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.ReachIntegrationsApi(api_client)
+    profile_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Profile uuid parameter
+    store_id = 'ec_123' # str | Hostinger eCommerce store ID, as returned by the eCommerce stores list
+
+    try:
+        # Connect Ecommerce store
+        api_response = api_instance.connect_ecommerce_store_v1(profile_uuid, store_id)
+        print("The response of ReachIntegrationsApi->connect_ecommerce_store_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ReachIntegrationsApi->connect_ecommerce_store_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_uuid** | **str**| Profile uuid parameter | 
+ **store_id** | **str**| Hostinger eCommerce store ID, as returned by the eCommerce stores list | 
+
+### Return type
+
+[**ReachV1StoresConnectionResource**](ReachV1StoresConnectionResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**409** | Conflict response. &#x60;Retry-After&#x60;, when present, is the number of seconds to wait before retrying. |  * Retry-After - Seconds to wait before retrying the request <br>  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -185,8 +267,8 @@ Reach stops receiving the store's customers and orders, and its products and cou
 removed from Reach; contacts and past orders stay. Take `store_id` from the list eCommerce
 stores endpoint; for a store that is `connected_to_other_profile`, call this with that
 profile. Also succeeds when the store is not connected to this profile, so success is not
-proof that anything was disconnected. Confirm the store and the plan with the customer
-before calling.
+proof that anything was disconnected. To move the store to another plan, connect it to the
+new profile afterwards. Confirm the store and the plan with the customer before calling.
 
 ### Example
 
@@ -418,8 +500,8 @@ Get all of the customer's Hostinger eCommerce stores, each with its `store_id` a
 
 A store is connected to at most one profile. `connected_to_other_profile` does not name that
 profile - call this for each profile to find it. The list is empty, not an error, when the
-eCommerce service cannot be reached. Pass `store_id` to the disconnect eCommerce store
-endpoint. Connecting an AI Website Builder site connects the store selling on it.
+eCommerce service cannot be reached. Pass `store_id` to the connect or disconnect eCommerce
+store endpoint.
 
 ### Example
 

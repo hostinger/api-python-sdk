@@ -678,6 +678,7 @@ Class | Method | HTTP request | Description
  - [EcommerceV1OrderOrderDetailResourceItemsInner](docs/EcommerceV1OrderOrderDetailResourceItemsInner.md)
  - [EcommerceV1OrderOrderDetailResourceShippingAddress](docs/EcommerceV1OrderOrderDetailResourceShippingAddress.md)
  - [EcommerceV1OrderOrderDetailResponseResource](docs/EcommerceV1OrderOrderDetailResponseResource.md)
+ - [EcommerceV1OrderOrderMetadataResource](docs/EcommerceV1OrderOrderMetadataResource.md)
  - [EcommerceV1OrderOrderResource](docs/EcommerceV1OrderOrderResource.md)
  - [EcommerceV1OrderOrderResponseResource](docs/EcommerceV1OrderOrderResponseResource.md)
  - [EcommerceV1PaymentEnableManualPaymentRequest](docs/EcommerceV1PaymentEnableManualPaymentRequest.md)

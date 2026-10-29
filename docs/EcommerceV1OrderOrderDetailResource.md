@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **item_count** | **int** | Number of distinct line items. | [optional] 
 **created_at** | **datetime** | ISO timestamp of when the order was created. | [optional] 
 **merchant_note** | **str** | Internal note visible only to the merchant. | [optional] 
+**metadata** | [**EcommerceV1OrderOrderMetadataResource**](EcommerceV1OrderOrderMetadataResource.md) |  | [optional] 
 **subtotal** | **int** | Subtotal in the smallest currency unit. | [optional] 
 **discount_total** | **int** | Discount total in the smallest currency unit. | [optional] 
 **tax_total** | **int** | Tax total in the smallest currency unit. | [optional] 

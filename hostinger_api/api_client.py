@@ -88,7 +88,7 @@ class ApiClient:
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'hostinger_api-python/4.6.1'
+        self.user_agent = 'hostinger_api-python/4.6.2'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
@@ -194,6 +194,9 @@ class ApiClient:
                 collection_formats
             )
             for k, v in path_params:
+                # empty values and dot segments survive encoding and collapse or resolve away, changing the endpoint
+                if str(v) in ('', '.', '..'):
+                    raise ApiValueError('Invalid value for path parameter `%s`' % k)
                 # specified safe chars, encode everything
                 resource_path = resource_path.replace(
                     '{%s}' % k,

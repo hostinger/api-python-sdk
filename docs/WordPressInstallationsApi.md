@@ -418,12 +418,12 @@ Install WordPress on an existing website.
 
 The website must already exist before calling this endpoint. To create a new
 website first, use POST /api/hosting/v1/orders/{order_id}/onboardings
-(`hosting_websites_start-setup`) and poll GET /api/hosting/v1/onboardings
+(`hosting_websites_create`) and poll GET /api/hosting/v1/onboardings
 (`hosting_websites_list-setups`) with the `domain` filter until its `status` is
 `completed`.
 
 Send `type: headless` to turn a headless website (for example one created by
-`hosting_websites_start-setup` with `type: headless_empty`) into a headless WordPress
+`hosting_websites_create` with `type: headless_empty`) into a headless WordPress
 website: WordPress is installed into the `cms` directory with the Hostinger headless
 MU plugin and the website is marked as a headless WordPress website. `directory` is
 not allowed with it. The target website must already be headless: the headless

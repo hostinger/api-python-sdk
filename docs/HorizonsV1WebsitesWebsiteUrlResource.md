@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **published_at** | **datetime** | When the website was last published, or null if it has never been published | [optional] 
 **is_template** | **bool** | Whether the website is published as a template, so its published pages show a \&quot;Use template\&quot; banner | [optional] 
 **is_in_progress** | **bool** | Whether Hostinger Horizons is still generating changes or publishing the website. Publishing is refused while it is true, and editing while changes are being generated. An unfinished template migration also refuses publishing, with its own error, without setting this flag. | [optional] 
+**is_generating** | **bool** | Whether Hostinger Horizons is generating changes to the website. Editing and publishing are refused while it is true | [optional] 
+**actions_in_progress** | **List[str]** | What is running on the website right now: &#x60;website_publish&#x60; while it is being published right now, when publishing is refused; empty otherwise. An unfinished template migration also refuses publishing, with its own error, without appearing here. | [optional] 
 **has_ecommerce_store** | **bool** | Whether the website has an ecommerce store | [optional] 
 
 ## Example

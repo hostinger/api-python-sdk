@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain** | **str** | Domain name | 
-**auth_code** | **str** | Authorization code from the current registrar | 
+**auth_code** | **str** | EPP code that authorizes this transfer, which the domain owner gets from the current registrar. Required only for TLDs whose transfers use one. | [optional] 
 **domain_contacts** | [**DomainsV1PortfolioClaimRequestDomainContacts**](DomainsV1PortfolioClaimRequestDomainContacts.md) |  | [optional] 
 **should_keep_ns** | **bool** | Keep the existing nameservers of the domain | [optional] [default to True]
 

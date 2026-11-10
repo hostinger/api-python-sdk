@@ -8,6 +8,11 @@ Name | Type | Description | Notes
 **domain** | **str** | Domain name | [optional] 
 **status** | **str** | Domain status | [optional] 
 **expires_at** | **datetime** | Domain expiration date | [optional] 
+**is_grace_period** | **bool** | Whether the domain is in its post-expiration grace period | [optional] 
+**grace_period_ends_at** | **datetime** | When the grace period ends, set even when the domain is not in it | [optional] 
+**is_redemption_period** | **bool** | Whether the domain is in its redemption period | [optional] 
+**redemption_period_ends_at** | **datetime** | When the redemption period ends, set even when the domain is not in it | [optional] 
+**is_renewable** | **bool** | Whether the domain can be renewed | [optional] 
 
 ## Example
 

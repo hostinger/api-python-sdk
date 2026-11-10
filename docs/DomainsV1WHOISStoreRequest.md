@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **tld** | **str** | TLD of the domain (without leading dot) | 
 **country** | **str** | ISO 3166 2-letter country code | 
 **entity_type** | **str** | Legal entity type | 
-**tld_details** | **object** | TLD details | [optional] 
-**whois_details** | **object** | WHOIS details | 
+**tld_details** | **object** | TLD-specific details. The required keys depend on the TLD, country and entity type. | [optional] 
+**whois_details** | **object** | WHOIS contact details. The required keys depend on the TLD, country and entity type, and can be country-specific (e.g. &#x60;state_lt&#x60; and &#x60;zip_lt&#x60; instead of &#x60;state&#x60; and &#x60;zip&#x60; for Lithuania). | 
 
 ## Example
 

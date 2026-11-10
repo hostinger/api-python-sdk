@@ -170,6 +170,8 @@ Retrieve snapshot for a specified virtual machine.
 
 Use this endpoint to view current VPS snapshot information.
 
+Returns 404 when the virtual machine has no snapshot.
+
 ### Example
 
 * Bearer Authentication (apiToken):
@@ -229,6 +231,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **401** | Unauthenticated response |  -  |
+**404** | Error response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

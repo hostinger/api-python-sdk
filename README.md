@@ -641,6 +641,7 @@ Class | Method | HTTP request | Description
  - [DomainsV1DomainDomainExtendedResourceDomainContacts](docs/DomainsV1DomainDomainExtendedResourceDomainContacts.md)
  - [DomainsV1DomainDomainExtendedResourceNameServers](docs/DomainsV1DomainDomainExtendedResourceNameServers.md)
  - [DomainsV1DomainDomainResource](docs/DomainsV1DomainDomainResource.md)
+ - [DomainsV1DomainDomainVerificationResource](docs/DomainsV1DomainDomainVerificationResource.md)
  - [DomainsV1ForwardingForwardingResource](docs/DomainsV1ForwardingForwardingResource.md)
  - [DomainsV1ForwardingStoreRequest](docs/DomainsV1ForwardingStoreRequest.md)
  - [DomainsV1ForwardingUpdateRequest](docs/DomainsV1ForwardingUpdateRequest.md)

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **status** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **expires_at** | **datetime** |  | [optional] 
+**verification** | [**DomainsV1DomainDomainVerificationResource**](DomainsV1DomainDomainVerificationResource.md) |  | [optional] 
 
 ## Example
 

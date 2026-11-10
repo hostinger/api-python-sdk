@@ -142,7 +142,8 @@ The domain is set up with the default nameservers and with privacy protection. U
 
 A successful response means the setup request was accepted, not that the domain is already
 registered. Poll `Get domain list` for the outcome, the domain appears in `Get domain details`
-only once it is registered.
+only once it is registered. When the domain is held for verification, its `verification` field
+in `Get domain list` says what registration waits for.
 
 Use this endpoint to finish registering a domain that is awaiting setup on your account.
 
@@ -593,6 +594,10 @@ Get domain details
 
 Retrieve detailed information for specified domain.
 
+A domain is found here only once it is registered. Until then, `Get domain list` shows it, and
+its `verification` field says what registration waits for when the domain is held for
+verification.
+
 Use this endpoint to view comprehensive domain configuration and status.
 
 ### Example
@@ -668,6 +673,10 @@ Retrieve all domains associated with your account.
 A plan can include both a free domain (`type: free_domain`) and a free domain
 transfer (`type: free_domain_transfer`). They are alternatives: claiming one
 removes the other, which may still be listed for a short time after the claim.
+
+A domain held for verification before it is registered has `status: pending_verification`,
+and its `verification` field says what registration waits for: a manual review, an SMS code,
+or owner contact verification.
 
 Use this endpoint to view user's domain portfolio.
 

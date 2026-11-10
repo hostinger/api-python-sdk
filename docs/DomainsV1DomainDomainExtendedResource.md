@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **var_60_days_lock_expires_at** | **datetime** |  | [optional] 
 **registered_at** | **datetime** |  | [optional] 
 **expires_at** | **datetime** |  | [optional] 
+**contact_verification** | [**DomainsV1DomainDomainContactVerificationResource**](DomainsV1DomainDomainContactVerificationResource.md) |  | [optional] 
 
 ## Example
 

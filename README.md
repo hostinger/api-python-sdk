@@ -637,6 +637,8 @@ Class | Method | HTTP request | Description
  - [DomainsV1AvailabilityAlternativesFromDomainRequest](docs/DomainsV1AvailabilityAlternativesFromDomainRequest.md)
  - [DomainsV1AvailabilityAvailabilityRequest](docs/DomainsV1AvailabilityAvailabilityRequest.md)
  - [DomainsV1AvailabilityAvailabilityResource](docs/DomainsV1AvailabilityAvailabilityResource.md)
+ - [DomainsV1DomainDomainContactVerificationChannelResource](docs/DomainsV1DomainDomainContactVerificationChannelResource.md)
+ - [DomainsV1DomainDomainContactVerificationResource](docs/DomainsV1DomainDomainContactVerificationResource.md)
  - [DomainsV1DomainDomainExtendedResource](docs/DomainsV1DomainDomainExtendedResource.md)
  - [DomainsV1DomainDomainExtendedResourceDomainContacts](docs/DomainsV1DomainDomainExtendedResourceDomainContacts.md)
  - [DomainsV1DomainDomainExtendedResourceNameServers](docs/DomainsV1DomainDomainExtendedResourceNameServers.md)

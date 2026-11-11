@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     strategy:
       matrix:
         python-version: [ "3.11", "3.12" ]
@@ -55,61 +57,57 @@ jobs:
 
       - name: Create release
         if: steps.version.outputs.released == 'true'
-        uses: ncipollo/release-action@v1
-        with:
-          tag: v${{ steps.version.outputs.version }}
-          generateReleaseNotes: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: gh release create "v$VERSION" --target "$GITHUB_SHA" --generate-notes
 
-  publish:
+  package:
     runs-on: ubuntu-latest
     needs: [release]
     if: needs.release.outputs.released == 'true'
     permissions:
-      id-token: write
+      contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v4
         with:
           python-version: "3.x"
 
-      - name: deps
-        run: python -m pip install -U build
-
       - name: build
-        run: python -m build
-
-      - name: mint API token
-        id: mint-token
         run: |
-          # retrieve the ambient OIDC token
-          resp=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
-            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=pypi")
-          oidc_token=$(jq -r '.value' <<< "${resp}")
+          python -m pip install -U build
+          python -m build
 
-          # exchange the OIDC token for an API token
-          resp=$(curl -X POST https://pypi.org/_/oidc/mint-token -d "{\"token\": \"${oidc_token}\"}")
-          api_token=$(jq -r '.token' <<< "${resp}")
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
 
-          # mask the newly minted API token, so that we don't accidentally leak it
-          echo "::add-mask::${api_token}"
-
-          # see the next step in the workflow for an example of using this step output
-          echo "api-token=${api_token}" >> "${GITHUB_OUTPUT}"
+  # PyPI trusted publishing trusts this whole workflow file, so only this job holds id-token: write, and it
+  # installs and runs nothing but the pinned publish action on the distributions the package job built.
+  publish:
+    runs-on: ubuntu-latest
+    needs: [package]
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
 
       - name: publish
-        # gh-action-pypi-publish uses TWINE_PASSWORD automatically
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ steps.mint-token.outputs.api-token }}
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
 
   notify-failure:
-    needs: [build, release, publish]
+    needs: [build, release, package, publish]
     if: failure()
     runs-on: ubuntu-latest
     steps:
       - name: Notify Slack on release failure
-        uses: slackapi/slack-github-action@v4.0.0
+        uses: slackapi/slack-github-action@dcb1066f776dd043e64d0e8ba94ca15cc7e1875d # v4.0.0
         with:
           errors: true
           webhook: ${{ secrets.PLATFORM_INCIDENT_SLACK_CHANNEL_WEBHOOK }}

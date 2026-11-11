@@ -12,7 +12,7 @@
 """  # noqa: E501
 
 
-__version__ = "4.13.1"
+__version__ = "4.13.2"
 
 # import apis into sdk package
 from hostinger_api.api.agency_hosting_cache_api import AgencyHostingCacheApi

@@ -489,10 +489,14 @@ root with the admin user, email and password from `wordpress`, the domain as the
 title, and `en_US` when `wordpress.language` is omitted. The headless types
 (`headless_empty`, `headless_wordpress`, `headless_ecommerce`, `headless_pocketbase`)
 create a headless website; `headless_wordpress` additionally installs WordPress into the
-`cms` directory of the website root with generated credentials. `headless_empty` installs
-nothing: WordPress can be added later through
-`POST /api/hosting/v1/accounts/{username}/wordpress/installations`
-(`wordpress_installations_install`) with `type: headless`.
+`cms` directory of the website root with generated credentials. `headless_pocketbase`
+marks the website as a headless PocketBase website but installs nothing: create its
+PocketBase backend with `Create PocketBase backend`
+(`POST /api/hosting/v1/accounts/{username}/websites/{domain}/pocketbase`) once the setup
+is `completed`. `headless_empty` installs nothing either: WordPress can be added later
+through `POST /api/hosting/v1/accounts/{username}/wordpress/installations`
+(`wordpress_installations_install`) with `type: headless`, or a PocketBase backend through
+the same PocketBase endpoint.
 
 Omit `domain` to set the website up on a generated temporary free subdomain; the created
 setup returns it as `domain`. REST clients that need to know the free subdomain before the

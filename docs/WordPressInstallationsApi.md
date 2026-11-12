@@ -426,9 +426,11 @@ Send `type: headless` to turn a headless website (for example one created by
 `hosting_websites_create` with `type: headless_empty`) into a headless WordPress
 website: WordPress is installed into the `cms` directory with the Hostinger headless
 MU plugin and the website is marked as a headless WordPress website. `directory` is
-not allowed with it. The target website must already be headless: the headless
-install rewrites the root `.htaccess`, so on any other website the request is
-rejected with 422.
+not allowed with it. The target website must be an empty headless website
+(`headless_empty`): the headless install rewrites the root `.htaccess`, so any other
+website, including a headless website that already has WordPress or a PocketBase
+backend, is rejected with 422. To replace a PocketBase backend with WordPress, delete
+it first with `Delete PocketBase backend`.
 
 Call GET /api/hosting/v1/wordpress/installations (`wordpress_installations_list`)
 filtered by username and domain before proceeding to check whether WordPress is

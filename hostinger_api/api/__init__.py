@@ -52,6 +52,7 @@ from hostinger_api.api.hosting_headless_api import HostingHeadlessApi
 from hostinger_api.api.hosting_node_js_api import HostingNodeJSApi
 from hostinger_api.api.hosting_orders_api import HostingOrdersApi
 from hostinger_api.api.hosting_php_api import HostingPHPApi
+from hostinger_api.api.hosting_pocket_base_api import HostingPocketBaseApi
 from hostinger_api.api.hosting_redirects_api import HostingRedirectsApi
 from hostinger_api.api.hosting_ssl_api import HostingSSLApi
 from hostinger_api.api.hosting_websites_api import HostingWebsitesApi

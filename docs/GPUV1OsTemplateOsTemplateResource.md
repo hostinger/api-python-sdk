@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **id** | **int** | OS template ID | [optional] 
 **name** | **str** |  | [optional] 
 **kb_url** | **str** | Knowledge base article about the template | [optional] 
-**image** | **str** | Icon image ID | [optional] 
 **dark_image_id** | **str** | Dark theme icon image ID | [optional] 
 **light_image_id** | **str** | Light theme icon image ID | [optional] 
 

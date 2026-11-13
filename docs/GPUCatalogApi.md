@@ -11,14 +11,14 @@ Method | HTTP request | Description
 
 
 # **get_pool_groups_v1**
-> List[GPUV1PoolPoolGroupResource] get_pool_groups_v1(currency=currency)
+> List[GPUV1PoolPoolGroupResource] get_pool_groups_v1()
 
 Get pool groups
 
 Retrieve GPU pool groups, ordered by name.
 
 Each group bundles the pools of one GPU model and lists its currently available pools,
-whether any of them is available and the lowest hourly price among its instance types.
+whether any of them is available and the lowest hourly price, in credits, among its instance types.
 The price is returned even when the group is out of stock.
 
 Use this endpoint to show which GPU models can be ordered and from what price.
@@ -43,11 +43,10 @@ configuration = hostinger_api.Configuration(
 with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.GPUCatalogApi(api_client)
-    currency = 'EUR' # str | Currency of the returned prices, `USD` by default (optional)
 
     try:
         # Get pool groups
-        api_response = api_instance.get_pool_groups_v1(currency=currency)
+        api_response = api_instance.get_pool_groups_v1()
         print("The response of GPUCatalogApi->get_pool_groups_v1:\n")
         pprint(api_response)
     except Exception as e:
@@ -58,10 +57,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **currency** | **str**| Currency of the returned prices, &#x60;USD&#x60; by default | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -157,6 +153,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **401** | Unauthenticated response |  -  |
+**404** | Error response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -301,6 +298,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
 **401** | Unauthenticated response |  -  |
+**404** | Error response |  -  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

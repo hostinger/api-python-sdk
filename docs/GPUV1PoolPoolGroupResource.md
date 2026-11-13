@@ -7,9 +7,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | GPU pool group ID | [optional] 
 **name** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
+**feature** | **str** |  | [optional] 
 **vram** | **int** | Total VRAM in bytes | [optional] 
 **is_available** | **bool** | Whether the group has any available pools | [optional] 
-**min_price_per_hour** | **float** | Lowest hourly price of the group instance types, in the requested currency | [optional] 
+**min_price_per_hour** | **int** | Lowest hourly price of the group instance types, in credits | [optional] 
 **pools** | [**List[GPUV1PoolPoolResource]**](GPUV1PoolPoolResource.md) | Array of [&#x60;GPU.V1.Pool.PoolResource&#x60;](#model/gpuv1poolpoolresource) | [optional] 
 
 ## Example

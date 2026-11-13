@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **status** | **str** |  | [optional] 
 **action_lock** | **str** | Whether an action is in progress on the instance | [optional] 
+**action_lock_reason** | **str** | Action in progress on the instance, &#x60;null&#x60; when unlocked | [optional] 
 **pool** | [**GPUV1PoolPoolResource**](GPUV1PoolPoolResource.md) |  | [optional] 
 **pool_instance** | [**GPUV1PoolPoolInstanceResource**](GPUV1PoolPoolInstanceResource.md) |  | [optional] 
 **os_template** | [**GPUV1OsTemplateOsTemplateResource**](GPUV1OsTemplateOsTemplateResource.md) |  | [optional] 

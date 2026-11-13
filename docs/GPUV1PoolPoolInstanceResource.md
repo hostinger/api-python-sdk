@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **cpu_cores** | **int** | Number of CPU cores | [optional] 
 **ram** | **int** | Total RAM in bytes | [optional] 
 **storage** | **int** | Total storage in bytes | [optional] 
-**price_per_hour** | **int** | Hourly price in cents (USD) | [optional] 
+**price_per_hour** | **int** | Hourly price in credits | [optional] 
 
 ## Example
 

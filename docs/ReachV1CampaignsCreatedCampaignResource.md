@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **sender_name** | **str** |  | [optional] 
 **sender_email** | **str** |  | [optional] 
 **template_uuid** | **str** |  | [optional] 
-**status** | **str** | Always &#x60;draft&#x60; for a campaign that was just created. | [optional] 
+**status** | **str** | Always &#x60;draft&#x60; for a campaign that was just created; the current status after an update. | [optional] 
 **type** | **str** |  | [optional] 
 **is_all_contacts** | **bool** | Whether the campaign targets every contact instead of selected segments. | [optional] 
 **metadata** | **Dict[str, str]** | The stored extra fields, including the ones Reach sets itself. | [optional] 

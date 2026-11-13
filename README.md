@@ -362,6 +362,8 @@ Class | Method | HTTP request | Description
 *ReachCampaignsApi* | [**get_campaign_details_v1**](docs/ReachCampaignsApi.md#get_campaign_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid} | Get campaign details
 *ReachCampaignsApi* | [**get_campaign_performance_v1**](docs/ReachCampaignsApi.md#get_campaign_performance_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid}/statistics | Get campaign performance
 *ReachCampaignsApi* | [**list_campaigns_v1**](docs/ReachCampaignsApi.md#list_campaigns_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns | List campaigns
+*ReachCampaignsApi* | [**send_campaign_v1**](docs/ReachCampaignsApi.md#send_campaign_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid}/send | Send campaign
+*ReachCampaignsApi* | [**update_campaign_v1**](docs/ReachCampaignsApi.md#update_campaign_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid} | Update campaign
 *ReachContactFieldsApi* | [**create_a_contact_field_v1**](docs/ReachContactFieldsApi.md#create_a_contact_field_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/contacts/fields | Create a contact field
 *ReachContactFieldsApi* | [**delete_a_contact_field_v1**](docs/ReachContactFieldsApi.md#delete_a_contact_field_v1) | **DELETE** /api/reach/v1/profiles/{profileUuid}/contacts/fields/{fieldUuid} | Delete a contact field
 *ReachContactFieldsApi* | [**list_contact_fields_v1**](docs/ReachContactFieldsApi.md#list_contact_fields_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/contacts/fields | List contact fields
@@ -967,6 +969,7 @@ Class | Method | HTTP request | Description
  - [ReachV1CampaignsCreatedCampaignResource](docs/ReachV1CampaignsCreatedCampaignResource.md)
  - [ReachV1CampaignsStoreRequest](docs/ReachV1CampaignsStoreRequest.md)
  - [ReachV1CampaignsStoreRequestMetadata](docs/ReachV1CampaignsStoreRequestMetadata.md)
+ - [ReachV1CampaignsUpdateRequest](docs/ReachV1CampaignsUpdateRequest.md)
  - [ReachV1ContactsBulkStoreRequest](docs/ReachV1ContactsBulkStoreRequest.md)
  - [ReachV1ContactsBulkStoreRequestContactsInner](docs/ReachV1ContactsBulkStoreRequestContactsInner.md)
  - [ReachV1ContactsBulkStoreRequestContactsInnerFieldsInner](docs/ReachV1ContactsBulkStoreRequestContactsInnerFieldsInner.md)

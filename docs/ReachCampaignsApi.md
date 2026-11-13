@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**get_campaign_details_v1**](ReachCampaignsApi.md#get_campaign_details_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid} | Get campaign details
 [**get_campaign_performance_v1**](ReachCampaignsApi.md#get_campaign_performance_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid}/statistics | Get campaign performance
 [**list_campaigns_v1**](ReachCampaignsApi.md#list_campaigns_v1) | **GET** /api/reach/v1/profiles/{profileUuid}/campaigns | List campaigns
+[**send_campaign_v1**](ReachCampaignsApi.md#send_campaign_v1) | **POST** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid}/send | Send campaign
+[**update_campaign_v1**](ReachCampaignsApi.md#update_campaign_v1) | **PATCH** /api/reach/v1/profiles/{profileUuid}/campaigns/{campaignUuid} | Update campaign
 
 
 # **create_a_draft_campaign_v1**
@@ -321,6 +323,167 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **send_campaign_v1**
+> CommonSuccessEmptyResource send_campaign_v1(profile_uuid, campaign_uuid)
+
+Send campaign
+
+Send a campaign now to the audience stored on it.
+
+This is irreversible: once accepted, the emails go out and cannot be recalled. Confirm with the
+customer before calling. The campaign needs a subject, sender, template and audience first - set
+them with the update endpoint. Delivery is asynchronous, so success means accepted, not delivered:
+the campaign moves to `sending` and later to `publish`, or to `failed`. Read the campaign to follow
+it. The request is rejected when the campaign has no recipients, its sender domain is not verified
+or is blocked, the plan's sending limits would be exceeded, or the campaign is already being sent.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.common_success_empty_resource import CommonSuccessEmptyResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.ReachCampaignsApi(api_client)
+    profile_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Profile uuid parameter
+    campaign_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Campaign uuid parameter
+
+    try:
+        # Send campaign
+        api_response = api_instance.send_campaign_v1(profile_uuid, campaign_uuid)
+        print("The response of ReachCampaignsApi->send_campaign_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ReachCampaignsApi->send_campaign_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_uuid** | **str**| Profile uuid parameter | 
+ **campaign_uuid** | **str**| Campaign uuid parameter | 
+
+### Return type
+
+[**CommonSuccessEmptyResource**](CommonSuccessEmptyResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success empty response |  -  |
+**401** | Unauthenticated response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_campaign_v1**
+> ReachV1CampaignsCreatedCampaignResource update_campaign_v1(profile_uuid, campaign_uuid, reach_v1_campaigns_update_request)
+
+Update campaign
+
+Update a campaign's content, sender, template and audience.
+
+Only `draft`, `scheduled` and `failed` campaigns can be updated; a campaign that is sending or
+already sent is rejected. Updating a `failed` campaign moves it back to `draft`. Audience changes
+replace rather than merge: `all_contacts: true` targets every contact of the profile, while
+`segment_uuids` replaces the segments currently targeted. Leave both out to keep the audience as
+it is. This does not send the campaign - use the send endpoint for that.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.reach_v1_campaigns_created_campaign_resource import ReachV1CampaignsCreatedCampaignResource
+from hostinger_api.models.reach_v1_campaigns_update_request import ReachV1CampaignsUpdateRequest
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.ReachCampaignsApi(api_client)
+    profile_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Profile uuid parameter
+    campaign_uuid = '550e8400-e09b-41d4-a716-400055000000' # str | Campaign uuid parameter
+    reach_v1_campaigns_update_request = hostinger_api.ReachV1CampaignsUpdateRequest() # ReachV1CampaignsUpdateRequest | 
+
+    try:
+        # Update campaign
+        api_response = api_instance.update_campaign_v1(profile_uuid, campaign_uuid, reach_v1_campaigns_update_request)
+        print("The response of ReachCampaignsApi->update_campaign_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ReachCampaignsApi->update_campaign_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **profile_uuid** | **str**| Profile uuid parameter | 
+ **campaign_uuid** | **str**| Campaign uuid parameter | 
+ **reach_v1_campaigns_update_request** | [**ReachV1CampaignsUpdateRequest**](ReachV1CampaignsUpdateRequest.md)|  | 
+
+### Return type
+
+[**ReachV1CampaignsCreatedCampaignResource**](ReachV1CampaignsCreatedCampaignResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 

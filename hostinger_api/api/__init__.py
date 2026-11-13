@@ -39,6 +39,7 @@ from hostinger_api.api.ecommerce_sales_channels_api import EcommerceSalesChannel
 from hostinger_api.api.ecommerce_shipping_api import EcommerceShippingApi
 from hostinger_api.api.ecommerce_stores_api import EcommerceStoresApi
 from hostinger_api.api.gpu_catalog_api import GPUCatalogApi
+from hostinger_api.api.gpu_exposed_services_api import GPUExposedServicesApi
 from hostinger_api.api.gpu_instances_api import GPUInstancesApi
 from hostinger_api.api.horizons_websites_api import HorizonsWebsitesApi
 from hostinger_api.api.hosting_cdn_api import HostingCDNApi

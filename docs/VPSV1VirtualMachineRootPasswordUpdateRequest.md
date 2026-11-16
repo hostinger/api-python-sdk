@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**password** | **str** | Root password for the virtual machine | 
+**password** | **str** | Root password for the virtual machine. 12 to 50 characters with an uppercase letter, a lowercase letter, a number and at least one of -().&amp;@?&#39;#;/,+ (no other symbols). Known compromised passwords are rejected. | 
 
 ## Example
 

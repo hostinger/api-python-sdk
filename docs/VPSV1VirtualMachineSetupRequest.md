@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **template_id** | **int** | Template ID | 
 **data_center_id** | **int** | Data center ID | 
 **post_install_script_id** | **int** | Post-install script ID | [optional] 
-**password** | **str** | Password for the virtual machine. If not provided, random password will be generated. Password will not be shown in the response. | [optional] 
+**password** | **str** | Password for the virtual machine. If not provided, random password will be generated. Password will not be shown in the response. Used as both the root and the panel password, so it must pass both rules: 12 to 50 characters with an uppercase letter, a lowercase letter, a number and at least one of # + ? @ (no other symbols). Known compromised passwords are rejected. | [optional] 
 **hostname** | **str** | Override default hostname of the virtual machine | [optional] 
 **install_monarx** | **bool** | Install Monarx malware scanner (if supported) | [optional] [default to False]
 **enable_backups** | **bool** | Enable weekly backup schedule | [optional] [default to True]

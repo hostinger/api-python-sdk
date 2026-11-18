@@ -1,12 +1,13 @@
 # HostingV1NodeJsStartBuildRequestSourceOptions
 
-Source-specific options. For `archive` send `archive_path`. For `git` send `owner`, `repository`, `branch` and `installation_uuid`, taken from `List Git installations` and `List Git installation repositories`.
+Source-specific options. For `archive` send `archive_path` and a `message` describing the change. For `git` send `owner`, `repository`, `branch` and `installation_uuid`, taken from `List Git installations` and `List Git installation repositories`.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **archive_path** | **str** | The path to the archive file relative to the document root of the vhost (required if source is \&quot;archive\&quot;) | [optional] 
+**message** | **str** | Short summary of what this deployment changes, shown in the website&#39;s deployment history the way a commit message is for git deployments. Without it the history only shows the archive file name, so always send one: keep the first line under 72 characters and describe the change, not the upload. Only used if source is \&quot;archive\&quot;. | [optional] 
 **owner** | **str** | Repository owner login (required if source is \&quot;git\&quot;). GitLab group paths use slashes. | [optional] 
 **repository** | **str** | Repository name without the .git suffix (required if source is \&quot;git\&quot;) | [optional] 
 **branch** | **str** | Branch to build (required if source is \&quot;git\&quot;) | [optional] 

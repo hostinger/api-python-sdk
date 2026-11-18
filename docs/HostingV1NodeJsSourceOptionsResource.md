@@ -7,6 +7,7 @@ Which keys carry values depends on the parent source_type; the others are null.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **archive_path** | **str** | Present if sourceType is \&quot;archive\&quot; | [optional] 
+**message** | **str** | Summary of the deployment given when it was started (present if source_type is \&quot;archive\&quot; and one was sent) | [optional] 
 **owner** | **str** | Repository owner login (present if source_type is \&quot;git\&quot;) | 
 **repository** | **str** | Repository name without the .git suffix (present if source_type is \&quot;git\&quot;) | 
 **branch** | **str** | Branch that was built (present if source_type is \&quot;git\&quot;) | 

@@ -20,6 +20,7 @@ from hostinger_api.api.billing_catalog_api import BillingCatalogApi
 from hostinger_api.api.billing_orders_api import BillingOrdersApi
 from hostinger_api.api.billing_payment_methods_api import BillingPaymentMethodsApi
 from hostinger_api.api.billing_subscriptions_api import BillingSubscriptionsApi
+from hostinger_api.api.dns_propagation_api import DNSPropagationApi
 from hostinger_api.api.dns_snapshot_api import DNSSnapshotApi
 from hostinger_api.api.dns_zone_api import DNSZoneApi
 from hostinger_api.api.domain_access_verifier_verifications_api import DomainAccessVerifierVerificationsApi

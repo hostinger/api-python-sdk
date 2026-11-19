@@ -135,6 +135,7 @@ Class | Method | HTTP request | Description
 *BillingSubscriptionsApi* | [**enable_auto_renewal_v1**](docs/BillingSubscriptionsApi.md#enable_auto_renewal_v1) | **PATCH** /api/billing/v1/subscriptions/{subscriptionId}/auto-renewal/enable | Enable auto-renewal
 *BillingSubscriptionsApi* | [**get_subscription_list_v1**](docs/BillingSubscriptionsApi.md#get_subscription_list_v1) | **GET** /api/billing/v1/subscriptions | Get subscription list
 *BillingSubscriptionsApi* | [**renew_subscription_v1**](docs/BillingSubscriptionsApi.md#renew_subscription_v1) | **POST** /api/billing/v1/subscriptions/{subscriptionId}/renew | Renew subscription
+*DNSPropagationApi* | [**check_dns_record_propagation_v1**](docs/DNSPropagationApi.md#check_dns_record_propagation_v1) | **GET** /api/dns/v1/propagation/{domain}/{type} | Check DNS record propagation
 *DNSSnapshotApi* | [**get_dns_snapshot_list_v1**](docs/DNSSnapshotApi.md#get_dns_snapshot_list_v1) | **GET** /api/dns/v1/snapshots/{domain} | Get DNS snapshot list
 *DNSSnapshotApi* | [**get_dns_snapshot_v1**](docs/DNSSnapshotApi.md#get_dns_snapshot_v1) | **GET** /api/dns/v1/snapshots/{domain}/{snapshotId} | Get DNS snapshot
 *DNSSnapshotApi* | [**restore_dns_snapshot_v1**](docs/DNSSnapshotApi.md#restore_dns_snapshot_v1) | **POST** /api/dns/v1/snapshots/{domain}/{snapshotId}/restore | Restore DNS snapshot
@@ -629,6 +630,10 @@ Class | Method | HTTP request | Description
  - [BillingV1SubscriptionSubscriptionResource](docs/BillingV1SubscriptionSubscriptionResource.md)
  - [CommonSchemaPaginationMetaSchema](docs/CommonSchemaPaginationMetaSchema.md)
  - [CommonSuccessEmptyResource](docs/CommonSuccessEmptyResource.md)
+ - [DNSV1PropagationAuthoritativeAnswerResource](docs/DNSV1PropagationAuthoritativeAnswerResource.md)
+ - [DNSV1PropagationNameserverAnswerResource](docs/DNSV1PropagationNameserverAnswerResource.md)
+ - [DNSV1PropagationPropagationReportResource](docs/DNSV1PropagationPropagationReportResource.md)
+ - [DNSV1PropagationVantagePointResource](docs/DNSV1PropagationVantagePointResource.md)
  - [DNSV1SnapshotSnapshotResource](docs/DNSV1SnapshotSnapshotResource.md)
  - [DNSV1SnapshotSnapshotWithContentResource](docs/DNSV1SnapshotSnapshotWithContentResource.md)
  - [DNSV1ZoneDestroyRequest](docs/DNSV1ZoneDestroyRequest.md)

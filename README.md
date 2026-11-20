@@ -467,7 +467,6 @@ Class | Method | HTTP request | Description
 *VPSPostInstallScriptsApi* | [**get_post_install_script_v1**](docs/VPSPostInstallScriptsApi.md#get_post_install_script_v1) | **GET** /api/vps/v1/post-install-scripts/{postInstallScriptId} | Get post-install script
 *VPSPostInstallScriptsApi* | [**get_post_install_scripts_v1**](docs/VPSPostInstallScriptsApi.md#get_post_install_scripts_v1) | **GET** /api/vps/v1/post-install-scripts | Get post-install scripts
 *VPSPostInstallScriptsApi* | [**update_post_install_script_v1**](docs/VPSPostInstallScriptsApi.md#update_post_install_script_v1) | **PUT** /api/vps/v1/post-install-scripts/{postInstallScriptId} | Update post-install script
-*VPSPublicKeysApi* | [**attach_public_key_v1**](docs/VPSPublicKeysApi.md#attach_public_key_v1) | **POST** /api/vps/v1/public-keys/attach/{virtualMachineId} | Attach public key
 *VPSPublicKeysApi* | [**create_public_key_v1**](docs/VPSPublicKeysApi.md#create_public_key_v1) | **POST** /api/vps/v1/public-keys | Create public key
 *VPSPublicKeysApi* | [**delete_public_key_v1**](docs/VPSPublicKeysApi.md#delete_public_key_v1) | **DELETE** /api/vps/v1/public-keys/{publicKeyId} | Delete public key
 *VPSPublicKeysApi* | [**get_public_keys_v1**](docs/VPSPublicKeysApi.md#get_public_keys_v1) | **GET** /api/vps/v1/public-keys | Get public keys
@@ -480,7 +479,6 @@ Class | Method | HTTP request | Description
 *VPSSnapshotsApi* | [**delete_snapshot_v1**](docs/VPSSnapshotsApi.md#delete_snapshot_v1) | **DELETE** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Delete snapshot
 *VPSSnapshotsApi* | [**get_snapshot_v1**](docs/VPSSnapshotsApi.md#get_snapshot_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot | Get snapshot
 *VPSSnapshotsApi* | [**restore_snapshot_v1**](docs/VPSSnapshotsApi.md#restore_snapshot_v1) | **POST** /api/vps/v1/virtual-machines/{virtualMachineId}/snapshot/restore | Restore snapshot
-*VPSVirtualMachineApi* | [**get_attached_public_keys_v1**](docs/VPSVirtualMachineApi.md#get_attached_public_keys_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/public-keys | Get attached public keys
 *VPSVirtualMachineApi* | [**get_metrics_v1**](docs/VPSVirtualMachineApi.md#get_metrics_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId}/metrics | Get metrics
 *VPSVirtualMachineApi* | [**get_virtual_machine_details_v1**](docs/VPSVirtualMachineApi.md#get_virtual_machine_details_v1) | **GET** /api/vps/v1/virtual-machines/{virtualMachineId} | Get virtual machine details
 *VPSVirtualMachineApi* | [**get_virtual_machines_v1**](docs/VPSVirtualMachineApi.md#get_virtual_machines_v1) | **GET** /api/vps/v1/virtual-machines | Get virtual machines
@@ -1071,7 +1069,6 @@ Class | Method | HTTP request | Description
  - [VPSV1PostInstallScriptListResponse](docs/VPSV1PostInstallScriptListResponse.md)
  - [VPSV1PostInstallScriptPostInstallScriptResource](docs/VPSV1PostInstallScriptPostInstallScriptResource.md)
  - [VPSV1PostInstallScriptStoreRequest](docs/VPSV1PostInstallScriptStoreRequest.md)
- - [VPSV1PublicKeyAttachRequest](docs/VPSV1PublicKeyAttachRequest.md)
  - [VPSV1PublicKeyListResponse](docs/VPSV1PublicKeyListResponse.md)
  - [VPSV1PublicKeyPublicKeyResource](docs/VPSV1PublicKeyPublicKeyResource.md)
  - [VPSV1PublicKeyStoreRequest](docs/VPSV1PublicKeyStoreRequest.md)

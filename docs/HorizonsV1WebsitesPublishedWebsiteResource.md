@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | **str** | Always &#x60;publishing&#x60; - the build runs asynchronously after this response | 
 **published_url** | **str** | The URL the published website will be live on in a few minutes | 
-**website_url** | **str** | The website URL for the user to track progress in Hostinger Horizons interface | 
+**website_url** | **str** | The website URL for the user to track progress in Hostinger AI Builder interface | 
 **website_id** | **str** | The website ID | 
 
 ## Example

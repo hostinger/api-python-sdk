@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **domain** | **str** | The domain the website is published on, if it has been published | [optional] 
 **status** | **str** | The website status | 
 **created_at** | **datetime** | The website creation date | 
-**website_url** | **str** | The website URL for the user to access their website in Hostinger Horizons interface | 
+**website_url** | **str** | The website URL for the user to access their website in Hostinger AI Builder interface | 
 
 ## Example
 

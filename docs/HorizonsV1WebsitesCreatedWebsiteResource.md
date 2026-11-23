@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **website_url** | **str** | The website URL for the user to access their website in Hostinger AI Builder interface | 
 **website_id** | **str** | The website ID | 
+**task** | [**HorizonsV1WebsitesBuildTaskResource**](HorizonsV1WebsitesBuildTaskResource.md) |  | [optional] 
 
 ## Example
 

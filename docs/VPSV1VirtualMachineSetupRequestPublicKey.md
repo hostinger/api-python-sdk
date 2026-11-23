@@ -1,6 +1,6 @@
 # VPSV1VirtualMachineSetupRequestPublicKey
 
-Use SSH key
+Use SSH key. Deprecated: use ssh_keys instead
 
 ## Properties
 

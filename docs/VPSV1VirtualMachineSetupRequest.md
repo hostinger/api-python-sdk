@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **ns1** | **str** | Name server 1 | [optional] 
 **ns2** | **str** | Name server 2 | [optional] 
 **public_key** | [**VPSV1VirtualMachineSetupRequestPublicKey**](VPSV1VirtualMachineSetupRequestPublicKey.md) |  | [optional] 
+**ssh_keys** | **List[str]** | SSH public keys to add to the virtual machine | [optional] 
 
 ## Example
 

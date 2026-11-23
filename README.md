@@ -215,6 +215,12 @@ Class | Method | HTTP request | Description
 *EcommerceStoresApi* | [**delete_store_v1**](docs/EcommerceStoresApi.md#delete_store_v1) | **DELETE** /api/ecommerce/v1/stores/{store_id} | Delete store
 *EcommerceStoresApi* | [**get_store_metadata_v1**](docs/EcommerceStoresApi.md#get_store_metadata_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/metadata | Get store metadata
 *EcommerceStoresApi* | [**get_stores_v1**](docs/EcommerceStoresApi.md#get_stores_v1) | **GET** /api/ecommerce/v1/stores | Get stores
+*EcommerceWebhooksApi* | [**create_an_ecommerce_webhook_v1**](docs/EcommerceWebhooksApi.md#create_an_ecommerce_webhook_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/webhooks | Create an ecommerce webhook
+*EcommerceWebhooksApi* | [**delete_an_ecommerce_webhook_v1**](docs/EcommerceWebhooksApi.md#delete_an_ecommerce_webhook_v1) | **DELETE** /api/ecommerce/v1/stores/{store_id}/webhooks/{endpoint_id} | Delete an ecommerce webhook
+*EcommerceWebhooksApi* | [**get_an_ecommerce_webhook_v1**](docs/EcommerceWebhooksApi.md#get_an_ecommerce_webhook_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/webhooks/{endpoint_id} | Get an ecommerce webhook
+*EcommerceWebhooksApi* | [**list_ecommerce_webhooks_v1**](docs/EcommerceWebhooksApi.md#list_ecommerce_webhooks_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/webhooks | List ecommerce webhooks
+*EcommerceWebhooksApi* | [**rotate_an_ecommerce_webhook_secret_v1**](docs/EcommerceWebhooksApi.md#rotate_an_ecommerce_webhook_secret_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/webhooks/{endpoint_id}/rotate-secret | Rotate an ecommerce webhook secret
+*EcommerceWebhooksApi* | [**update_an_ecommerce_webhook_v1**](docs/EcommerceWebhooksApi.md#update_an_ecommerce_webhook_v1) | **PATCH** /api/ecommerce/v1/stores/{store_id}/webhooks/{endpoint_id} | Update an ecommerce webhook
 *GPUCatalogApi* | [**get_pool_groups_v1**](docs/GPUCatalogApi.md#get_pool_groups_v1) | **GET** /api/gpu/v1/pools/groups | Get pool groups
 *GPUCatalogApi* | [**get_pool_instance_types_v1**](docs/GPUCatalogApi.md#get_pool_instance_types_v1) | **GET** /api/gpu/v1/pools/{poolId}/instances | Get pool instance types
 *GPUCatalogApi* | [**get_pool_list_v1**](docs/GPUCatalogApi.md#get_pool_list_v1) | **GET** /api/gpu/v1/pools | Get pool list
@@ -768,6 +774,13 @@ Class | Method | HTTP request | Description
  - [EcommerceV1VariantVariantResource](docs/EcommerceV1VariantVariantResource.md)
  - [EcommerceV1VariantVariantResourceOptionsInner](docs/EcommerceV1VariantVariantResourceOptionsInner.md)
  - [EcommerceV1VariantVariantResponseResource](docs/EcommerceV1VariantVariantResponseResource.md)
+ - [EcommerceV1WebhookStoreRequest](docs/EcommerceV1WebhookStoreRequest.md)
+ - [EcommerceV1WebhookUpdateRequest](docs/EcommerceV1WebhookUpdateRequest.md)
+ - [EcommerceV1WebhookWebhookCreationResource](docs/EcommerceV1WebhookWebhookCreationResource.md)
+ - [EcommerceV1WebhookWebhookEndpointResource](docs/EcommerceV1WebhookWebhookEndpointResource.md)
+ - [EcommerceV1WebhookWebhookListResource](docs/EcommerceV1WebhookWebhookListResource.md)
+ - [EcommerceV1WebhookWebhookResource](docs/EcommerceV1WebhookWebhookResource.md)
+ - [EcommerceV1WebhookWebhookSecretResource](docs/EcommerceV1WebhookWebhookSecretResource.md)
  - [GPUV1ExposedServiceExposedServiceResource](docs/GPUV1ExposedServiceExposedServiceResource.md)
  - [GPUV1ExposedServiceStoreRequest](docs/GPUV1ExposedServiceStoreRequest.md)
  - [GPUV1InstanceInstanceListResource](docs/GPUV1InstanceInstanceListResource.md)

@@ -172,6 +172,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
@@ -537,6 +538,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success empty response |  -  |
+**422** | Validation error response |  -  |
 **401** | Unauthenticated response |  -  |
 **500** | Error response |  -  |
 
@@ -564,7 +566,7 @@ The move is also refused unless the domain:
 - is not a premium domain
 - is not still processing a recent renewal
 
-A move refused for one of these rules is rejected with a 404 status code and error code 2048,
+A move refused for one of these rules is rejected with a 422 status code and error code 2048,
 with a message naming the rule. The receiving account is checked first, and when it cannot
 be used the message stays generic.
 

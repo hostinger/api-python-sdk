@@ -49,7 +49,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = hostinger_api.DNSPropagationApi(api_client)
     domain = 'www.mydomain.tld' # str | Domain or host name to check, either a domain or a subdomain
-    type = 'A' # str | DNS record type to check. One of: A, AAAA, CNAME, MX, SRV, TXT, CAA
+    type = 'A' # str | DNS record type to check, uppercase. One of: A, AAAA, CAA, CNAME, DNAME, DNSKEY, HTTPS, LOC, MX, NS, PTR, SOA, SRV, SSHFP, SVCB, TLSA, TXT, URI. PTR takes the reverse name, e.g. 10.2.0.192.in-addr.arpa, not the IP address. SOA exists only at a zone's apex. DS and ALIAS cannot be checked.
 
     try:
         # Check DNS record propagation
@@ -68,7 +68,7 @@ with hostinger_api.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **domain** | **str**| Domain or host name to check, either a domain or a subdomain | 
- **type** | **str**| DNS record type to check. One of: A, AAAA, CNAME, MX, SRV, TXT, CAA | 
+ **type** | **str**| DNS record type to check, uppercase. One of: A, AAAA, CAA, CNAME, DNAME, DNSKEY, HTTPS, LOC, MX, NS, PTR, SOA, SRV, SSHFP, SVCB, TLSA, TXT, URI. PTR takes the reverse name, e.g. 10.2.0.192.in-addr.arpa, not the IP address. SOA exists only at a zone&#39;s apex. DS and ALIAS cannot be checked. | 
 
 ### Return type
 

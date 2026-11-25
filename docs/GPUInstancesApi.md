@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_instance_v1**](GPUInstancesApi.md#create_instance_v1) | **POST** /api/gpu/v1/instances | Create instance
 [**delete_instance_v1**](GPUInstancesApi.md#delete_instance_v1) | **DELETE** /api/gpu/v1/instances/{instanceId} | Delete instance
+[**get_instance_credentials_v1**](GPUInstancesApi.md#get_instance_credentials_v1) | **GET** /api/gpu/v1/instances/{instanceId}/credentials | Get instance credentials
 [**get_instance_details_v1**](GPUInstancesApi.md#get_instance_details_v1) | **GET** /api/gpu/v1/instances/{instanceId} | Get instance details
 [**get_instance_metrics_v1**](GPUInstancesApi.md#get_instance_metrics_v1) | **GET** /api/gpu/v1/instances/{instanceId}/metrics | Get instance metrics
 [**get_instances_v1**](GPUInstancesApi.md#get_instances_v1) | **GET** /api/gpu/v1/instances | Get instances
@@ -165,6 +166,83 @@ Name | Type | Description  | Notes
 **200** | Success empty response |  -  |
 **401** | Unauthenticated response |  -  |
 **404** | Error response |  -  |
+**500** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_instance_credentials_v1**
+> GPUV1InstanceCredentialsResource get_instance_credentials_v1(instance_id)
+
+Get instance credentials
+
+Retrieve SSH connection credentials (hostname, port, username and password) of a specified GPU instance.
+
+Credentials become available once the instance is provisioned; until then the endpoint responds with
+`409 Conflict`, so retry later.
+
+Use this endpoint to connect to a GPU instance over SSH.
+
+### Example
+
+* Bearer Authentication (apiToken):
+
+```python
+import hostinger_api
+from hostinger_api.models.gpuv1_instance_credentials_resource import GPUV1InstanceCredentialsResource
+from hostinger_api.rest import ApiException
+from pprint import pprint
+
+
+# Configure Bearer authorization: apiToken
+configuration = hostinger_api.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with hostinger_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = hostinger_api.GPUInstancesApi(api_client)
+    instance_id = 6325 # int | GPU instance ID
+
+    try:
+        # Get instance credentials
+        api_response = api_instance.get_instance_credentials_v1(instance_id)
+        print("The response of GPUInstancesApi->get_instance_credentials_v1:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling GPUInstancesApi->get_instance_credentials_v1: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instance_id** | **int**| GPU instance ID | 
+
+### Return type
+
+[**GPUV1InstanceCredentialsResource**](GPUV1InstanceCredentialsResource.md)
+
+### Authorization
+
+[apiToken](../README.md#apiToken)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success response |  -  |
+**401** | Unauthenticated response |  -  |
+**404** | Error response |  -  |
+**409** | Conflict response. &#x60;Retry-After&#x60;, when present, is the number of seconds to wait before retrying. |  * Retry-After - Seconds to wait before retrying the request <br>  |
 **500** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

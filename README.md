@@ -230,6 +230,7 @@ Class | Method | HTTP request | Description
 *GPUExposedServicesApi* | [**get_exposed_services_v1**](docs/GPUExposedServicesApi.md#get_exposed_services_v1) | **GET** /api/gpu/v1/instances/{instanceId}/exposed-services | Get exposed services
 *GPUInstancesApi* | [**create_instance_v1**](docs/GPUInstancesApi.md#create_instance_v1) | **POST** /api/gpu/v1/instances | Create instance
 *GPUInstancesApi* | [**delete_instance_v1**](docs/GPUInstancesApi.md#delete_instance_v1) | **DELETE** /api/gpu/v1/instances/{instanceId} | Delete instance
+*GPUInstancesApi* | [**get_instance_credentials_v1**](docs/GPUInstancesApi.md#get_instance_credentials_v1) | **GET** /api/gpu/v1/instances/{instanceId}/credentials | Get instance credentials
 *GPUInstancesApi* | [**get_instance_details_v1**](docs/GPUInstancesApi.md#get_instance_details_v1) | **GET** /api/gpu/v1/instances/{instanceId} | Get instance details
 *GPUInstancesApi* | [**get_instance_metrics_v1**](docs/GPUInstancesApi.md#get_instance_metrics_v1) | **GET** /api/gpu/v1/instances/{instanceId}/metrics | Get instance metrics
 *GPUInstancesApi* | [**get_instances_v1**](docs/GPUInstancesApi.md#get_instances_v1) | **GET** /api/gpu/v1/instances | Get instances
@@ -784,6 +785,7 @@ Class | Method | HTTP request | Description
  - [EcommerceV1WebhookWebhookSecretResource](docs/EcommerceV1WebhookWebhookSecretResource.md)
  - [GPUV1ExposedServiceExposedServiceResource](docs/GPUV1ExposedServiceExposedServiceResource.md)
  - [GPUV1ExposedServiceStoreRequest](docs/GPUV1ExposedServiceStoreRequest.md)
+ - [GPUV1InstanceCredentialsResource](docs/GPUV1InstanceCredentialsResource.md)
  - [GPUV1InstanceInstanceListResource](docs/GPUV1InstanceInstanceListResource.md)
  - [GPUV1InstanceInstanceResource](docs/GPUV1InstanceInstanceResource.md)
  - [GPUV1InstanceStoreRequest](docs/GPUV1InstanceStoreRequest.md)

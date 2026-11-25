@@ -221,7 +221,6 @@ Class | Method | HTTP request | Description
 *EcommerceWebhooksApi* | [**list_ecommerce_webhooks_v1**](docs/EcommerceWebhooksApi.md#list_ecommerce_webhooks_v1) | **GET** /api/ecommerce/v1/stores/{store_id}/webhooks | List ecommerce webhooks
 *EcommerceWebhooksApi* | [**rotate_an_ecommerce_webhook_secret_v1**](docs/EcommerceWebhooksApi.md#rotate_an_ecommerce_webhook_secret_v1) | **POST** /api/ecommerce/v1/stores/{store_id}/webhooks/{endpoint_id}/rotate-secret | Rotate an ecommerce webhook secret
 *EcommerceWebhooksApi* | [**update_an_ecommerce_webhook_v1**](docs/EcommerceWebhooksApi.md#update_an_ecommerce_webhook_v1) | **PATCH** /api/ecommerce/v1/stores/{store_id}/webhooks/{endpoint_id} | Update an ecommerce webhook
-*GPUCatalogApi* | [**get_pool_groups_v1**](docs/GPUCatalogApi.md#get_pool_groups_v1) | **GET** /api/gpu/v1/pools/groups | Get pool groups
 *GPUCatalogApi* | [**get_pool_instance_types_v1**](docs/GPUCatalogApi.md#get_pool_instance_types_v1) | **GET** /api/gpu/v1/pools/{poolId}/instances | Get pool instance types
 *GPUCatalogApi* | [**get_pool_list_v1**](docs/GPUCatalogApi.md#get_pool_list_v1) | **GET** /api/gpu/v1/pools | Get pool list
 *GPUCatalogApi* | [**get_pool_os_templates_v1**](docs/GPUCatalogApi.md#get_pool_os_templates_v1) | **GET** /api/gpu/v1/pools/{poolId}/instances/{poolInstanceId}/os-templates | Get pool OS templates
@@ -792,7 +791,6 @@ Class | Method | HTTP request | Description
  - [GPUV1LlmModelVariantLlmModelVariantResource](docs/GPUV1LlmModelVariantLlmModelVariantResource.md)
  - [GPUV1MetricsMetricsResource](docs/GPUV1MetricsMetricsResource.md)
  - [GPUV1OsTemplateOsTemplateResource](docs/GPUV1OsTemplateOsTemplateResource.md)
- - [GPUV1PoolPoolGroupResource](docs/GPUV1PoolPoolGroupResource.md)
  - [GPUV1PoolPoolInstanceResource](docs/GPUV1PoolPoolInstanceResource.md)
  - [GPUV1PoolPoolResource](docs/GPUV1PoolPoolResource.md)
  - [GPUV1RegionRegionResource](docs/GPUV1RegionRegionResource.md)
